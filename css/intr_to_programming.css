@@ -1,0 +1,214 @@
+/* ********** Custom Properties ********** */
+:root {
+  --color-paragraph: #121720;
+  --color-white: #f8f8f7;
+  --color-h2: #946b1a;
+  --color-black: #1e2327;
+  --color-acento: #2980b9;
+  --max-width: 800px;
+  --text-black: black;
+  --open: #218d18;
+
+  /* Extendidas desde el CSS */
+  --color-code-bg: #2d2d2d;
+  --color-code-text: #f8f8f2;
+  --color-code-title: #66d9ef;
+  --color-comment: #6a9955;
+  --color-var-name: #ff79c6;
+  --color-volver-bg: #10b338;
+  --color-volver-hover: #da3b3b;
+  --color-article-bg: #f5f5f5;
+  --color-article-alt-bg: #f8f9fa;
+  --color-article-border: #667eea;
+  --color-link: #0066cc;
+  --color-link-hover: #004080;
+  --footer-bg-color: #0fa11b; /* asumido por uso en social-links */
+}
+
+/* ********** Reset ********** */
+
+ul, ol, li, a {
+  color: var(--text-black);     
+  font-family: Arial, sans-serif; 
+  font-size: 16px;  
+  text-decoration: none; 
+  text-decoration: double;
+}
+
+/* ********** Aprendo y comparto ********** */
+
+body {
+  background: var(--color-black);
+} 
+
+.page-title {
+  background: var(--color-acento);
+  color: var(--color-black);
+  padding: 0.5rem;
+}
+
+.page-title h1 {
+  margin: 0;
+  text-align: center;
+  /* font-size: 1.5rem; */
+  font-weight: 800;
+}
+
+.content-narrow {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.content-narrow h2 {
+  margin-top: 1.5rem;
+ /*  font-size: 1.25rem; */
+  text-align: center;
+  color: var(--color-white);
+}
+
+.content-narrow h2 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: var(--color-white);
+  padding: 15px 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  font-size: 1.5em;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.content-narrow h3 {
+  margin-top: 0;
+  /* font-size: 1rem; */
+  color: var(--color-black);
+}
+
+.content-narrow p {
+  color: var(--color-black);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.content-narrow > article {
+  height: auto;
+  background: #F5F5F5;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.content-narrow > article {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-left: 5px solid #667eea;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.content-narrow ul {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--color-black);
+}
+
+details {
+  margin-top: 0.5rem;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--color-acento);
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary {
+  color: var(--open);
+}
+
+/* Estilo codigo */
+.code-window {
+  background: var(--color-code-bg);
+  color: var(--color-code-text);
+  padding: 1rem;
+  border-radius: 8px;
+  font-family: monospace;
+  overflow-x: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  /* width: 100%; */
+}
+
+.code-window pre {
+  margin-left: -8rem;
+}
+
+.code-window h3 {
+  margin-top: 0;
+  color: var(--color-code-title);
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+
+.comment {
+  color: var(--color-comment);
+  font-style: italic;
+}
+
+.var-name {
+  color: var(--color-var-name);
+  font-weight: bold;
+}
+
+/*  */
+
+.volver {
+  display: inline-block;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  padding: 1.5em 2em;
+  background: var(--color-volver-bg);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--color-black);
+  position: fixed;
+  position: sticky;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: clamp(0.9rem, 2vw, 1rem)
+}
+
+.volver:hover {
+  background: var(--color-volver-hover);
+}
+
+pre {
+  overflow-x: auto; /* scroll horizontal si el contenido es más ancho que el contenedor */
+  white-space: pre; /* mantener espacios y saltos de línea */
+}
+
+
+/* ********** Article Links Styles ********** */
+
+article a {
+  color: var(--color-link);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+article a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}

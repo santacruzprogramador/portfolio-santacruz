@@ -1,0 +1,2949 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ========================= -->
+  <!-- METADATOS BÁSICOS -->
+  <!-- ========================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ========================= -->
+  <!-- SEO PRINCIPAL -->
+  <!-- ========================= -->
+  <title>Introducción a SQL | Fundamentos de bases de datos relacionales</title>
+  <meta
+    name="description"
+    content="Introducción a SQL: aprende consultas básicas, SELECT, INSERT, UPDATE, DELETE y fundamentos de bases de datos relacionales."
+  >
+
+  <!-- ========================= -->
+  <!-- AUTOR -->
+  <!-- ========================= -->
+  <meta name="author" content="José Alberto Santacruz">
+  <meta name="robots" content="index, follow">
+
+  <!-- ========================= -->
+  <!-- URL CANÓNICA -->
+  <!-- ========================= -->
+  <link
+    rel="canonical"
+    href="https://santacruzprogramador.github.io/santacruzjose/pages/intro-sql.html"
+  >
+
+  <!-- ========================= -->
+  <!-- OPEN GRAPH -->
+  <!-- ========================= -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Introducción a SQL">
+  <meta
+    property="og:description"
+    content="Guía inicial para aprender SQL y trabajar con bases de datos relacionales."
+  >
+  <meta
+    property="og:url"
+    content="https://santacruzprogramador.github.io/santacruzjose/pages/intro-sql.html"
+  >
+  <meta
+    property="og:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+  <meta property="og:site_name" content="Portfolio José Santacruz">
+
+  <!-- ========================= -->
+  <!-- TWITTER CARD -->
+  <!-- ========================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Introducción a SQL">
+  <meta
+    name="twitter:description"
+    content="Aprende SQL desde cero y entiende cómo funcionan las bases de datos relacionales."
+  >
+  <meta
+    name="twitter:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+
+  <!-- ========================= -->
+  <!-- FAVICON -->
+  <!-- ========================= -->
+  <link
+    rel="icon"
+    href="../assets/favicon/favicon.ico"
+    type="image/x-icon"
+  >
+
+  <!-- ========================= -->
+  <!-- COLOR TEMA -->
+  <!-- ========================= -->
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- ========================= -->
+  <!-- ESTILOS -->
+  <!-- ========================= -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/intr_to_programming.css">
+  <link rel="stylesheet" href="../components/contact-modal/contact-modal.css">
+</head>
+
+<body>
+
+  <header class="page-title">
+    <h1 class="">Introducción a SQL</h1>
+  </header>
+
+<span class="comment"></span>
+
+  <a href="../#sql" class="volver">← Inicio</a>
+  <main class="container section">
+
+    <section class="content-narrow">
+      <h2>Guía Teórica de SQL</h2>
+
+      <article id="modelo-relacional" aria-label="¿Qué es el modelo relacional?">
+        <h3>¿Qué es el modelo relacional (SQL)?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p><strong>SQL (Structured Query Language)</strong></p>
+
+          <p><strong>Definición:</strong><br>
+          SQL es un lenguaje estándar para gestionar y manipular bases de datos <strong>relacionales</strong>. 
+          Permite organizar los datos en <strong>tablas</strong> con filas y columnas y seguir un esquema bien definido que establece cómo deben organizarse. 
+          Con SQL se pueden realizar operaciones como consultas, inserciones, actualizaciones y eliminaciones de datos.</p>
+
+          <p><strong>Características principales:</strong></p>
+          <ol>
+            <li><strong>Modelo relacional:</strong> Trabaja con tablas, filas y columnas.</li>
+            <li><strong>Esquema fijo:</strong> La estructura de los datos debe estar predefinida.</li>
+            <li><strong>Operaciones estándar:</strong> Permite <strong>crear</strong>, <strong>leer</strong>, <strong>actualizar</strong> y <strong>eliminar</strong> datos.</li>
+            <li><strong>Lenguaje universal:</strong> SQL es usado en la mayoría de los sistemas de gestión de bases de datos relacionales (RDBMS).</li>
+            <li><strong>Consultas complejas:</strong> Permite unir tablas, filtrar, agrupar y ordenar información.</li>
+          </ol>
+        </details>
+      </article>
+
+      <article id="historia-sql" aria-label="¿Cuál es la historia de SQL?">
+        <h3>¿Cuál es la historia de SQL?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+            <p>
+              SQL fue desarrollado en la década de 1970 por IBM como parte del proyecto <strong>System R</strong>.  
+              Se basó en los principios de las bases de datos relacionales propuestos por <strong>Edgar F. Codd</strong>.  
+              <br><br>
+              - En <strong>1986</strong>, se convirtió en un estándar oficial de ANSI. <br>
+              - En <strong>1987</strong>, fue aprobado por la ISO.  
+            </p>
+        </details>
+      </article>
+
+      <article id="para-que-sirve-sql" aria-label="¿Para qué sirve SQL?">
+        <h3>¿Para qué sirve SQL?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+            <p>
+              SQL es fundamental para la <strong>administración de bases de datos</strong>. Se utiliza para:  
+              <br><br>
+              - Recuperar información específica. <br>
+              - Administrar estructuras de datos como <strong>tablas</strong> y <strong>relaciones</strong>. <br>
+              - Controlar accesos y permisos.  
+              <br><br>
+              Es ampliamente usado en <strong>aplicaciones empresariales</strong>, <strong>sitios web</strong> y <strong>análisis de datos</strong>.
+            </p>
+        </details>
+      </article>
+
+      <article id="tipos-sgbd" aria-label="Tipos de sistemas gestores de bases de datos">
+        <h3>¿Qué tipos de sistemas gestores de bases de datos (SGBDs) existen?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Un <strong>gestor SQL</strong> o <strong>Sistema Gestor de Bases de Datos (SGBD)</strong> es un software que permite 
+            <strong>crear, administrar y manipular bases de datos</strong> mediante el lenguaje SQL 
+            (Structured Query Language). Su función principal es facilitar el almacenamiento, consulta y 
+            modificación eficiente de la información.
+          </p>
+          <p>
+            Algunos de los <strong>SGBDs</strong> más utilizados son:
+            <ul>
+              <li><strong>MySQL:</strong> Popular en aplicaciones web por su rapidez y facilidad de uso.</li>
+              <li><strong>PostgreSQL:</strong> Muy completo y compatible con estándares avanzados de SQL.</li>
+              <li><strong>Microsoft SQL Server:</strong> Usado en entornos empresariales de Microsoft.</li>
+              <li><strong>Oracle Database:</strong> Ideal para grandes volúmenes de datos y alto rendimiento.</li>
+              <li><strong>SQLite:</strong> Ligero y sin servidor, común en aplicaciones móviles.</li>
+              <li><strong>MariaDB:</strong> Derivado de MySQL, con mejor rendimiento y seguridad.</li>
+            </ul>
+          </p>
+        </details>
+      </article>
+
+      <article id="gestion-bases-datos" aria-label="Herramientas para gestionar bases de datos locales">
+        <h3>¿Qué herramientas permiten gestionar bases de datos locales?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Entre las principales herramientas destacan:
+            <ul>
+              <li><strong>DBeaver</strong> – Interfaz gráfica para MySQL, PostgreSQL y SQLite.</li>
+              <li><strong>MySQL Workbench</strong> – Herramienta oficial de MySQL.</li>
+              <li><strong>HeidiSQL</strong> – Ligera y compatible con MySQL, MariaDB y PostgreSQL.</li>
+              <li><strong>pgAdmin</strong> – Para administrar PostgreSQL.</li>
+              <li><strong>SQL Server Management Studio (SSMS)</strong> – Oficial de Microsoft para SQL Server.</li>
+              <li><strong>phpMyAdmin</strong> – Gestión de MySQL y MariaDB desde el navegador.</li>
+            </ul>
+            <p>Si necesitas trabajar sin internet, <strong>SQLite</strong> o un servidor <strong>MySQL/PostgreSQL local</strong> son excelentes opciones.</p>
+          </p>
+        </details>
+      </article>
+
+      <article id="tipos-datos-sql" aria-label="Tipos de datos en SQL">
+        <h3>¿Cuáles son los tipos de datos en SQL?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            En SQL, los principales <strong>tipos de datos</strong> son:
+            <ul>
+              <li><strong>VARCHAR</strong>: Cadena de texto variable, con una longitud máxima especificada.</li>
+              <li><strong>CHAR</strong>: Cadena de texto fija, con una longitud específica.</li>
+              <li><strong>INT</strong>: Número entero, positivo o negativo.</li>
+              <li><strong>BIGINT</strong>: Número entero grande.</li>
+              <li><strong>FLOAT</strong>: Número decimal de precisión simple.</li>
+              <li><strong>DOUBLE</strong>: Número decimal de doble precisión.</li>
+              <li><strong>DECIMAL</strong>: Número decimal con precisión fija.</li>
+              <li><strong>BLOB</strong>: Objeto binario grande para almacenar datos binarios.</li>
+              <li><strong>DATE</strong>: Fecha (año, mes y día).</li>
+              <li><strong>TIME</strong>: Hora (horas, minutos y segundos).</li>
+              <li><strong>DATETIME</strong>: Fecha y hora combinadas.</li>
+              <li><strong>TIMESTAMP</strong>: Marca de tiempo específica.</li>
+              <li><strong>BOOLEAN</strong>: Valor verdadero o falso.</li>
+              <li><strong>BIN</strong>: Datos binarios como imágenes o archivos.</li>
+              <li><strong>JSON</strong>: Datos estructurados en formato JSON.</li>
+            </ul>
+          </p>
+        </details>
+      </article>
+
+      <article id="tipos-sentencias-sql" aria-label="Tipos de sentencias SQL">
+        <h3>¿Qué tipos de sentencias existen en SQL?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            En <strong>SQL</strong>, las sentencias se dividen en categorías según la función que cumplen 
+            dentro de una base de datos. Esta clasificación permite organizar el lenguaje de manera clara 
+            y facilitar su uso en distintas operaciones.
+          </p>
+          <p>
+            <strong>Principales divisiones:</strong>
+            <ul>
+              <li>
+                <strong>Data Definition Language (DDL)</strong>  
+                Estas sentencias se utilizan para <em>definir y modificar la estructura</em> de la base de datos.  
+                Ejemplos:  
+                <ul>
+                  <li><code>CREATE</code>: Crea bases de datos, tablas o vistas.</li>
+                  <li><code>ALTER</code>: Modifica la estructura de una tabla (agregar o eliminar columnas, cambiar tipos de datos, etc.).</li>
+                  <li><code>DROP</code>: Elimina tablas, vistas o bases de datos.</li>
+                  <li><code>TRUNCATE</code>: Borra todos los registros de una tabla, pero mantiene su estructura.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Data Manipulation Language (DML)</strong>  
+                Son sentencias que permiten <em>trabajar directamente con los datos</em> dentro de las tablas.  
+                Ejemplos:  
+                <ul>
+                  <li><code>SELECT</code>: Consulta y obtiene datos.</li>
+                  <li><code>INSERT</code>: Inserta nuevos registros.</li>
+                  <li><code>UPDATE</code>: Actualiza registros existentes.</li>
+                  <li><code>DELETE</code>: Elimina registros.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Data Control Language (DCL)</strong>  
+                Sirven para <em>gestionar los permisos y accesos</em> de los usuarios a la base de datos.  
+                Ejemplos:  
+                <ul>
+                  <li><code>GRANT</code>: Concede permisos a los usuarios.</li>
+                  <li><code>REVOKE</code>: Revoca permisos otorgados.</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Transaction Control Language (TCL)</strong>  
+                Se utilizan para <em>manejar transacciones</em>, asegurando que las operaciones sobre los datos sean consistentes.  
+                Ejemplos:  
+                <ul>
+                  <li><code>COMMIT</code>: Confirma los cambios realizados en la base de datos.</li>
+                  <li><code>ROLLBACK</code>: Revierte los cambios si ocurre un error.</li>
+                  <li><code>SET TRANSACTION</code>: Define propiedades para una transacción.</li>
+                </ul>
+              </li>
+            </ul>
+          </p>
+          <p>
+            <strong>En resumen:</strong>  
+            Las sentencias se dividen de esta forma porque cada grupo cumple un propósito distinto:  
+            <em>definir estructuras (DDL), manipular datos (DML), controlar accesos (DCL) y asegurar 
+            la integridad en operaciones (TCL).</em>
+          </p>
+        </details>
+      </article>
+
+      <article id="comandos-funciones-sql" aria-label="Comandos y funciones básicas de SQL">
+        <h3>¿Cuáles son los comandos y funciones básicas en SQL?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            <strong>Comandos principales:</strong>
+            <ul>
+              <li><strong>SELECT</strong>: Recupera datos de una o varias tablas.</li>
+              <li><strong>INSERT</strong>: Agrega nuevos datos a una tabla.</li>
+              <li><strong>UPDATE</strong>: Actualiza los datos existentes en una tabla.</li>
+              <li><strong>DELETE</strong>: Elimina datos de una tabla.</li>
+              <li><strong>CREATE</strong>: Crea una nueva tabla, vista o índice.</li>
+              <li><strong>ALTER</strong>: Modifica la estructura de una tabla existente.</li>
+              <li><strong>DROP</strong>: Elimina una tabla, vista o índice.</li>
+              <li><strong>GRANT</strong>: Concede permisos a usuarios.</li>
+              <li><strong>REVOKE</strong>: Retira permisos concedidos.</li>
+              <li><strong>JOIN</strong>: Une datos de varias tablas en base a una columna común.</li>
+              <li><strong>UNION</strong>: Combina resultados de múltiples consultas.</li>
+              <li><strong>GROUP BY</strong>: Agrupa resultados en base a columnas.</li>
+              <li><strong>HAVING</strong>: Filtra resultados agrupados.</li>
+              <li><strong>ORDER BY</strong>: Ordena resultados por columnas.</li>
+              <li><strong>LIMIT</strong>: Limita la cantidad de filas devueltas.</li>
+            </ul>
+          </p>
+          <p>
+            <strong>Funciones más usadas:</strong>
+            <ul>
+              <li><strong>AVG()</strong>: Promedio de una columna numérica.</li>
+              <li><strong>COUNT()</strong>: Número de filas o valores distintos.</li>
+              <li><strong>MAX()</strong>: Valor máximo de una columna.</li>
+              <li><strong>MIN()</strong>: Valor mínimo de una columna.</li>
+              <li><strong>SUM()</strong>: Suma de valores de una columna.</li>
+              <li><strong>CONCAT()</strong>: Combina cadenas de texto.</li>
+              <li><strong>UPPER()</strong>: Convierte a mayúsculas.</li>
+              <li><strong>LOWER()</strong>: Convierte a minúsculas.</li>
+              <li><strong>LEFT()</strong>: Devuelve los primeros caracteres de un texto.</li>
+              <li><strong>RIGHT()</strong>: Devuelve los últimos caracteres de un texto.</li>
+              <li><strong>DATE()</strong>: Extrae valores de fecha y hora.</li>
+              <li><strong>YEAR()</strong>: Devuelve el año de una fecha.</li>
+              <li><strong>MONTH()</strong>: Devuelve el mes de una fecha.</li>
+              <li><strong>DAY()</strong>: Devuelve el día de una fecha.</li>
+              <li><strong>ROUND()</strong>: Redondea valores numéricos.</li>
+            </ul>
+          </p>
+        </details>
+      </article>
+
+    </section>
+
+    <section class="content-narrow">
+    
+    <h2>Guía Práctica de SQL</h2>
+
+    <article id="herramientas-necesarias" aria-label="Herramientas necesarias para SQL">
+      <h3>¿Qué herramientas necesito instalar y cómo descargarlas?</h3>
+      <details>
+        <summary>Leer explicación</summary>
+        <p>
+          Para trabajar con bases de datos SQL localmente, necesitas instalar estas herramientas. A continuación, los pasos para descargar e instalar cada una:
+          <ol>
+            <li>
+              <strong>MySQL</strong> – Gestor de bases de datos:
+              <ol>
+                <li>Ir a la página oficial: <a href="https://www.mysql.com/downloads/" target="_blank" rel="noopener">https://www.mysql.com/downloads/</a></li>
+                <li>Seleccionar tu sistema operativo (Windows, macOS, Linux).</li>
+                <li>Descargar el instalador MySQL Installer (Windows) o el paquete correspondiente para tu SO.</li>
+                <li>Ejecutar el instalador y seguir las instrucciones predeterminadas.</li>
+                <li>Elegir instalar el servidor MySQL y la herramienta opcional MySQL Workbench si deseas gestión visual.</li>
+              </ol>
+            </li>
+            <li>
+              <strong>XAMPP</strong> – Servidor local con Apache y MySQL/MariaDB:
+              <ol>
+                <li>Ir a la página oficial: <a href="https://www.apachefriends.org/es/download.html" target="_blank" rel="noopener">https://www.apachefriends.org/es/download.html</a></li>
+                <li>Seleccionar el instalador para tu sistema operativo.</li>
+                <li>Ejecutar el instalador y dejar seleccionadas las opciones predeterminadas (Apache y MySQL/MariaDB).</li>
+                <li>Finalizar la instalación y abrir el XAMPP Control Panel.</li>
+                <li>Iniciar los servicios de Apache y MySQL haciendo click en <em>Start</em>.</li>
+              </ol>
+            </li>
+            <li>
+              <strong>DBeaver Community</strong> – Cliente SQL para gestión visual:
+              <ol>
+                <li>Ir a la página oficial: <a href="https://dbeaver.io/download/" target="_blank" rel="noopener">https://dbeaver.io/download/</a></li>
+                <li>Elegir la edición Community gratuita y descargar el instalador según tu sistema operativo.</li>
+                <li>Ejecutar el instalador y aceptar las opciones predeterminadas.</li>
+                <li>Abrir DBeaver y crear una nueva conexión de base de datos: seleccionar MySQL/MariaDB, host <code>localhost</code>, puerto <code>3306</code>, usuario <code>root</code> (contraseña vacía por defecto en XAMPP).</li>
+                <li>Probar conexión y finalizar la configuración.</li>
+              </ol>
+            </li>
+          </ol>
+        </p>
+      </details>
+    </article>
+
+    <article id="sql-best-practices" aria-label="Sintaxis SQL y buenas prácticas">
+      <h3>Sintaxis SQL y buenas prácticas</h3>
+      <details>
+        <summary>Leer explicación</summary>
+        <p>
+          Las <strong>buenas prácticas</strong> en SQL son un conjunto de recomendaciones que facilitan la <strong>lectura</strong>, <strong>mantenimiento</strong> y <strong>eficiencia</strong> del código. 
+          Incluyen usar <strong>mayúsculas</strong> para comandos, <strong>nombres claros y consistentes</strong> para tablas y columnas, <strong>indentación adecuada</strong> y <strong>comentarios descriptivos</strong>.
+        </p>
+
+        <pre class="code-window">
+          <code>
+<span class="comment">
+-----------------------------------------------------------
+-- Sintaxis SQL y buenas prácticas
+-----------------------------------------------------------
+
+-- Este es un comentario de una linea
+
+/*
+Este es un comentario
+de varias
+líneas
+
+SQL, NO distingue entre MAYÚSCULAS y minúsculas pero:
+
+- Comandos y palabras reservadas de SQL van en MAYÚSCULAS.
+- Nombres de objetos y datos van en minúsculas con _snake_case_.
+- Para strings usar comillas simples ('').
+- Todas las sentencias terminan con punto y coma (;).
+*/
+</span>
+
+<span class="comment">-- Mostrar todas las bases de datos existentes</span>
+SHOW DATABASES;
+
+<span class="comment">-- Crear una nueva base de datos llamada demo_sql</span>
+CREATE DATABASE demo_sql;
+
+<span class="comment">-- Seleccionar la base de datos para trabajar con ella</span>
+USE demo_sql;
+
+<span class="comment">-- Crear la base de datos solo si no existe</span>
+CREATE DATABASE IF NOT EXISTS demo_sql;
+
+<span class="comment">-- Eliminar la base de datos (¡pierde todos los datos!)</span>
+DROP DATABASE demo_sql;
+
+<span class="comment">-- Eliminar la base de datos solo si existe</span>
+DROP DATABASE IF EXISTS demo_sql;
+          </code>
+        </pre>
+      </details>
+    </article>
+
+    <article id="gestion-usuarios" aria-label="Gestión de usuarios y creación/eliminación de bases de datos">
+      <h3>Gestionando Usuarios: Creación y eliminación de BDs</h3>
+      <details>
+        <summary>Leer explicación</summary>
+        <p>
+          Se muestran operaciones básicas para:  
+          - Crear y eliminar bases de datos de forma controlada.  
+          - Administrar usuarios en MySQL (creación, privilegios, revocación y eliminación).  
+          Estos pasos son esenciales para mantener seguridad y orden en el servidor.
+        </p>
+        <pre class="code-window">
+          <code>
+<span class="comment">
+-----------------------------------------------------------
+-- Gestionando Usuarios
+-----------------------------------------------------------
+</span>
+
+<span class="comment">-- Preparando la BD para nuevos temas</span>
+SHOW DATABASES;
+DROP DATABASE IF EXISTS demo_sql;
+CREATE DATABASE IF NOT EXISTS demo_sql;
+USE demo_sql;
+
+<span class="comment">
+-----------------------------------------------------------
+-- Operaciones de administración de usuarios
+-----------------------------------------------------------
+</span>
+
+<span class="comment">
+-- Crear un usuario 'usuario_1' para el host 'localhost' con la contraseña 'qwerty'.
+</span>
+CREATE USER 'usuario_1'@'localhost' IDENTIFIED BY 'qwerty';
+
+<span class="comment">
+-- (Opción adicional) Crear un usuario para acceso remoto: 
+-- Esto permite conexiones desde cualquier host ('%') en lugar de solo localhost.
+</span>
+CREATE USER 'usuario_remoto'@'%' IDENTIFIED BY 'qwerty';
+
+<span class="comment">
+-- Asignar privilegios al usuario 'usuario_1' sobre la base de datos 'curso_sql'.
+-- Esto es esencial para que el usuario pueda realizar operaciones sobre dicha base de datos.
+</span>
+GRANT ALL PRIVILEGES ON curso_sql.* TO 'usuario_1'@'localhost';
+
+<span class="comment">
+-- Actualizar los privilegios aplicados en el servidor MySQL.
+</span>
+FLUSH PRIVILEGES;
+
+<span class="comment">
+-- Mostrar los privilegios asignados al usuario "usuario_1".
+</span>
+SHOW GRANTS FOR 'usuario_1'@'localhost';
+
+<span class="comment">
+-- Revocar todos los privilegios asignados al usuario 'usuario_1'.
+</span>
+REVOKE ALL PRIVILEGES ON curso_sql.* FROM 'usuario_1'@'localhost';
+
+<span class="comment">-- Eliminar el usuario 'usuario_1' de forma segura.</span>
+DROP USER IF EXISTS 'usuario_1'@'localhost';
+
+<span class="comment">-- Eliminar múltiples usuarios de una sola vez.</span>
+DROP USER IF EXISTS 'usuario_1'@'localhost', 'usuario_remoto'@'localhost';
+
+<span class="comment">-- Consultar la tabla interna 'mysql.user' para mostrar usuarios y hosts.</span>
+SELECT User, Host FROM mysql.user;
+
+<span class="comment">-- Mostrar el usuario autenticado en la sesión actual.</span>
+SELECT USER();  
+
+<span class="comment">-- Mostrar el usuario que MySQL usa para la autenticación y permisos.</span>
+SELECT CURRENT_USER();  
+          </code>
+        </pre>
+      </details>
+    </article>
+
+    <article id="creando_modificando_entidades" aria-label="Creando y modificando entidades SQL">
+      <h3>Creando y modificando entidades (tablas)</h3>
+      <details>
+        <summary>Leer explicación</summary>
+        <p>
+          Este bloque muestra cómo crear, modificar y gestionar tablas en MySQL, incluyendo claves primarias, foráneas, renombrado de columnas y tablas, y gestión de columnas específicas.
+          Se recomienda siempre usar <em>snake_case</em> para nombres de tablas y columnas, y utilizar <strong>comentarios</strong> para documentar cada cambio.
+        </p>
+        <pre class="code-window">
+          <code>
+<span class="comment">
+--------------------------------------------------------------
+-- Creando y modificando entidades(tablas)
+--------------------------------------------------------------
+</span>
+
+<span class="comment">-- Preparando la BD para nuevos temas</span>
+show databases;
+drop database demo_sql;
+create database demo_sql;
+use demo_sql;
+
+<span class="comment">-- Tabla que contiene el perfil completo de los usuarios</span>
+CREATE TABLE user_profiles (
+    user_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,     <span class="comment">-- Identificador único del perfil, autoincremental</span>
+    first_name VARCHAR(30) NOT NULL,                     <span class="comment">-- Nombre del usuario, obligatorio</span>
+    last_name VARCHAR(30) NOT NULL,                      <span class="comment">-- Apellidos del usuario, obligatorio</span>
+    email VARCHAR(50) UNIQUE,                            <span class="comment">-- Correo electrónico, debe ser único</span>
+    address VARCHAR(100) DEFAULT 'No address',           <span class="comment">-- Dirección, valor por defecto si no se especifica</span>
+    age INT DEFAULT 0                                    <span class="comment">-- Edad, valor por defecto 0</span>
+);
+
+<span class="comment">-- Tabla para almacenar la información de los usuarios</span>
+CREATE TABLE usuarios (
+    nombre VARCHAR(30),        <span class="comment">-- Nombre del usuario</span>
+    correo VARCHAR(30),        <span class="comment">-- Correo electrónico del usuario</span>
+    contraseña INT             <span class="comment">-- Contraseña del usuario (se recomienda usar un tipo de dato más seguro, como VARCHAR o HASH)</span>
+);
+
+<span class="comment">-- Tabla para almacenar los productos disponibles en la tienda</span>
+CREATE TABLE productos (
+    name VARCHAR(50),         <span class="comment">-- Nombre del producto</span>
+    description TEXT,         <span class="comment">-- Descripción detallada del producto</span>
+    price DECIMAL(10,2),      <span class="comment">-- Precio del producto con dos decimales</span>
+    stock INT                 <span class="comment">-- Cantidad de unidades disponibles en inventario</span>
+);
+
+<span class="comment">-- Tabla para registrar las órdenes de compra realizadas por los usuarios</span>
+CREATE TABLE orden (
+    quantity INT,             <span class="comment">-- Cantidad de productos en la orden</span>
+    tracking_number VARCHAR(50) <span class="comment">-- Número de seguimiento del pedido</span>
+);
+
+<span class="comment">
+-------------------------------------------------
+-- Cambio de nombre de tablas en la base de datos
+-------------------------------------------------
+</span>
+
+<span class="comment">-- Mostrar las tablas antes de la modificación y después de la modificación</span>
+SHOW TABLES;
+
+<span class="comment">-- Renombrar la tabla 'usuarios' a 'users' manteniendo su estructura y datos</span>
+ALTER TABLE usuarios RENAME TO users;  
+
+<span class="comment">-- Renombrar múltiples tablas en una sola instrucción: 'productos' a 'products' y 'orden' a 'orders'</span>
+RENAME TABLE productos TO products, orden TO orders;  
+
+<span class="comment">
+---------------------------------------------------------
+-- Definición de claves primarias y relación entre tablas
+---------------------------------------------------------
+</span>
+
+DESCRIBE users;  
+DESCRIBE products;  
+DESCRIBE orders;
+DESCRIBE user_profiles;
+
+<span class="comment">-- Agregar una clave primaria a la tabla 'users'</span>
+ALTER TABLE users ADD COLUMN id INT PRIMARY KEY AUTO_INCREMENT;
+
+<span class="comment">-- Agregar clave primaria a la tabla 'products'</span>
+ALTER TABLE products ADD COLUMN id INT PRIMARY KEY AUTO_INCREMENT;
+
+<span class="comment">-- Agregar clave primaria a la tabla 'orders'</span>
+ALTER TABLE orders ADD COLUMN id INT PRIMARY KEY AUTO_INCREMENT;
+
+<span class="comment">-- Agregar clave foránea en 'orders' para relacionarla con 'users'</span>
+ALTER TABLE orders ADD COLUMN user_id INT, 
+ADD CONSTRAINT fk_orders_users FOREIGN KEY (user_id) REFERENCES users(id);
+
+<span class="comment">-- Agregar clave foránea en 'orders' para relacionarla con 'products'</span>
+ALTER TABLE orders ADD COLUMN product_id INT, 
+ADD CONSTRAINT fk_orders_products FOREIGN KEY (product_id) REFERENCES products(id);
+
+<span class="comment">
+---------------------------------------------------------------------------------------------------
+-- Gestión de la columna 'birthday' en la entidad 'usuarios': Adición, modificación y eliminación
+---------------------------------------------------------------------------------------------------
+</span>
+
+DESCRIBE users;  
+
+<span class="comment">-- Agrega una nueva columna llamada 'birthday' de tipo VARCHAR(15) a la tabla 'users'</span>
+ALTER TABLE users ADD COLUMN birthday VARCHAR(15);
+
+<span class="comment">-- Modifica la columna 'birthday' para cambiar su tipo de dato a DATE</span>
+ALTER TABLE users MODIFY birthday DATE;
+
+<span class="comment">-- Elimina la columna 'birthday' de la tabla 'usuarios', borrando todos sus datos.</span>
+ALTER TABLE users DROP COLUMN birthday;
+
+<span class="comment">
+--------------------------------------------------------------------------------------------
+-- Modificación de la columna 'contraseña': Cambio de tipo de dato y renombrado a 'password'
+--------------------------------------------------------------------------------------------
+</span>
+
+DESCRIBE users;  
+
+<span class="comment">-- Cambiar el tipo de dato de 'contraseña' a VARCHAR(255) para almacenar contraseñas encriptadas</span>
+ALTER TABLE users MODIFY COLUMN contraseña VARCHAR(255);
+
+<span class="comment">-- Renombrar la columna 'contraseña' a 'password'</span>
+ALTER TABLE users CHANGE COLUMN contraseña password VARCHAR(255);
+
+<span class="comment">-- Eliminar la columna 'password' de la tabla 'users'</span>
+ALTER TABLE users DROP COLUMN password;
+
+<span class="comment">
+-----------------------------------------------------------------------
+-- Cambio de nombre de columnas: 'nombre' a 'name' y 'correo' a 'email'
+-----------------------------------------------------------------------
+</span>
+
+DESCRIBE users;  
+
+<span class="comment">-- Renombrar la columna 'nombre' a 'name' manteniendo el mismo tipo de dato</span>
+ALTER TABLE users CHANGE COLUMN nombre name VARCHAR(30);
+
+<span class="comment">-- Renombrar la columna 'correo' a 'email' manteniendo el mismo tipo de dato</span>
+ALTER TABLE users CHANGE COLUMN correo email VARCHAR(30);
+
+<span class="comment">-- Mostrar todas las tablas</span>
+show tables;
+
+<span class="comment">-- Consultar las entidades modificadas con claves primarias y foráneas, nombres de tablas y atributos en inglés, y nuevos tipos de datos</span>
+SELECT * FROM orders;  
+SELECT * FROM products;  
+SELECT * FROM users;  
+          </code>
+        </pre>
+
+      </details>
+    </article>
+
+    <article id="sentencias-sql" aria-label="Sentencias, Cláusulas y Operadores en MySQL">
+      <h3>Sentencias, Cláusulas y Operadores en MySQL</h3>
+      <details>
+        <summary>Leer explicación</summary>
+        <p>
+        En este artículo se muestran ejemplos completos de sentencias <strong>SQL</strong> en <strong>MySQL</strong>, incluyendo <strong>creación de bases de datos</strong>, <strong>tablas</strong>, <strong>inserciones</strong>, <strong>consultas</strong>, <strong>operadores</strong>, <strong>funciones matemáticas</strong> y de <strong>agrupamiento</strong>. Cada <strong>comentario de SQL</strong> está resaltado para mejor comprensión.
+        </p>
+
+        <pre class="code-window">
+          <code>
+<span class="comment">---------------------------------------------------------------------------------</span>
+<span class="comment">-- Sentencias, Cláusulas y Operadores en MySQL</span>
+<span class="comment">---------------------------------------------------------------------------------</span>
+
+<span class="comment">-- Preparando la BD para nuevos temas</span>
+show databases;
+drop database demo_sql;
+create database demo_sql;
+use demo_sql;
+
+<span class="comment">-- Crear tabla 'empleados' con distintos tipos de datos</span>
+CREATE TABLE empleados (
+    id INT PRIMARY KEY AUTO_INCREMENT,         <span class="comment">-- Clave primaria con autoincremento</span>
+    nombre VARCHAR(50),                        <span class="comment">-- Nombre del empleado</span>
+    edad INT,                                  <span class="comment">-- Edad del empleado</span>
+    salario DECIMAL(10, 2),                    <span class="comment">-- Salario en formato numérico</span>
+    fecha_ingreso DATE,                        <span class="comment">-- Fecha en que el empleado fue contratado</span>
+    departamento VARCHAR(30)                   <span class="comment">-- Departamento al que pertenece el empleado</span>
+);
+
+<span class="comment">----------------------------------------------------------------</span>
+<span class="comment">-- Sentencia INSERT</span>
+<span class="comment">----------------------------------------------------------------</span>
+
+<span class="comment">-- Insertar algunos datos en la tabla 'empleados'</span>
+INSERT INTO empleados (nombre, edad, salario, fecha_ingreso, departamento)
+VALUES 
+('Juan Pérez', 30, 3500.50, '2019-05-01', 'Ventas'),
+('Ana Gómez', 28, 4200.75, '2020-03-15', 'Marketing'),
+('Luis López', 35, 4800.00, '2018-06-20', 'Ventas'),
+('Sofía Martínez', 25, 3900.20, '2021-08-25', 'TI'),
+('Carlos Fernández', 32, 4600.10, '2017-07-11', 'Marketing'),
+('Marta Ruiz', 40, 5500.30, '2015-12-10', 'Ventas'),
+('Pedro Sánchez', 22, 3300.40, '2022-01-15', 'TI'),
+('Lucía García', 29, 4800.50, '2019-09-05', 'Ventas'),
+('Javier Torres', 27, 4200.60, '2020-06-25', 'Marketing'),
+('Raúl Díaz', 33, 5000.00, '2016-02-19', 'TI'),
+('Elena Pérez', 38, 5700.70, '2018-11-10', 'Ventas'),
+('Ricardo Martínez', 31, 4500.80, '2020-04-22', 'Marketing'),
+('Isabel González', 26, 4300.90, '2021-07-30', 'TI'),
+('Fernando Rodríguez', 34, 4700.00, '2017-03-12', 'Ventas'),
+('Paula Herrera', 29, 3900.60, '2021-09-04', 'Marketing'),
+('David Jiménez', 32, 5000.20, '2019-05-10', 'TI'),
+('Ana Ramírez', 36, 5300.00, '2018-08-23', 'Ventas'),
+('María López', 31, 4600.50, '2020-02-28', 'Marketing'),
+('Óscar Ruiz', 28, 4200.80, '2021-03-12', 'TI'),
+('José Rodríguez', 39, 5500.30, '2017-06-01', 'Ventas'),
+('Cristina Fernández', 25, 3900.40, '2021-05-15', 'Marketing'),
+('Santiago Gómez', 30, 4500.70, '2019-01-14', 'TI'),
+('Rosa Martínez', 33, 5000.90, '2018-09-09', 'Ventas'),
+('Antonio Sánchez', 37, 5700.00, '2017-02-02', 'Marketing'),
+('Beatriz López', 28, 4300.50, '2020-07-18', 'TI'),
+('Héctor Ruiz', 32, 4600.60, '2016-11-28', 'Ventas'),
+('Patricia González', 29, 4800.70, '2020-04-12', 'Marketing'),
+('Alejandro Jiménez', 34, 4900.80, '2018-03-20', 'TI'),
+('Carmen Rodríguez', 26, 4000.00, '2021-10-03', 'Ventas'),
+('Juan Carlos Fernández', 31, 4700.50, '2019-06-07', 'Marketing'),
+('Luis González', 35, 5200.60, '2017-09-13', 'TI'),
+('Silvia Ramírez', 30, 4300.80, '2021-04-21', 'Ventas'),
+('Víctor Pérez', 38, 5400.00, '2016-05-05', 'Marketing'),
+('Alba Torres', 33, 4800.10, '2018-04-18', 'TI'),
+('Daniel Martínez', 27, 4600.30, '2020-09-25', 'Ventas'),
+('Eva Sánchez', 39, 5500.40, '2015-10-10', 'Marketing'),
+('Carlos López', 32, 4900.50, '2020-01-20', 'TI'),
+('Marcos Rodríguez', 34, 5200.60, '2017-07-15', 'Ventas'),
+('Inés Ramírez', 28, 4400.70, '2021-02-11', 'Marketing'),
+('Jaime Ruiz', 29, 4600.80, '2019-11-09', 'TI'),
+('Esther Jiménez', 35, 5100.90, '2016-06-25', 'Ventas'),
+('Fernando López', 37, 5700.10, '2018-01-13', 'Marketing'),
+('Andrea González', 33, 4900.20, '2020-08-17', 'TI'),
+('Gonzalo Pérez', 31, 4700.30, '2017-04-09', 'Ventas'),
+('Laura Sánchez', 40, 5500.40, '2015-12-22', 'Marketing'),
+('Eduardo Rodríguez', 30, 5000.50, '2019-10-02', 'TI'),
+('Raquel Ramírez', 26, 4200.60, '2021-06-14', 'Ventas'),
+('Luis Ramírez', 33, 4800.70, '2018-07-09', 'Marketing'),
+('María González', 31, 4500.80, '2020-11-11', 'TI'),
+('Tomás Rodríguez', 28, 4700.90, '2021-02-28', 'Ventas'),
+('Sara Pérez', 37, 5400.00, '2016-12-01', 'Marketing'),
+('Iván López', 30, 4900.10, '2019-02-24', 'TI');
+
+<span class="comment">----------------------------------------------------------------</span>
+<span class="comment">-- Sentencia SELECT</span>
+<span class="comment">----------------------------------------------------------------</span>
+
+<span class="comment">-- Selecciona los campos 'nombre', 'edad' e 'id' de la tabla 'empleados'</span>
+SELECT nombre, edad, id FROM empleados;
+
+<span class="comment">-- Cuenta el número total de filas en la tabla 'empleados'</span>
+SELECT COUNT(*) as total FROM empleados;
+
+<span class="comment">-- Cuenta el número total de usuarios (empleados) y lo muestra con el alias 'total_usuarios'</span>
+SELECT COUNT(*) AS total_usuarios FROM empleados;
+
+<span class="comment">----------------------------------------------------------------</span>
+<span class="comment">-- Cláusula WHERE y WHERE IN</span>
+<span class="comment">----------------------------------------------------------------</span>
+
+<span class="comment">-- Muestra todos los empleados que pertenecen al departamento de 'Ventas'</span>
+SELECT * FROM empleados WHERE departamento = 'Ventas';
+
+<span class="comment">-- Muestra todos los empleados que tienen más de 30 años</span>
+SELECT * FROM empleados WHERE edad > 30;
+
+<span class="comment">-- Muestra todos los empleados cuyo salario es mayor a 5000</span>
+SELECT * FROM empleados WHERE salario > 5000;
+
+<span class="comment">-- Muestra todos los empleados que fueron contratados después del 1 de enero de 2020</span>
+SELECT * FROM
+
+<span class="comment">-- Muestra todos los empleados que fueron contratados después del 1 de enero de 2020</span>
+SELECT * FROM empleados WHERE fecha_ingreso > '2020-01-01';
+
+<span class="comment">-- Muestra todos los empleados cuyo nombre es 'Juan Pérez', 'Ana Gómez' o 'Javier Torres'</span>
+SELECT * FROM empleados WHERE nombre IN ('Juan Pérez', 'Ana Gómez', 'Javier Torres');
+
+<span class="comment">-- Muestra todos los empleados que pertenecen a los departamentos de 'Ventas' o 'TI'</span>
+SELECT * FROM empleados WHERE departamento IN ('Ventas', 'TI');
+
+<span class="comment">-- Muestra todos los empleados que trabajan en los departamentos de 'Ventas' o 'Marketing'</span>
+SELECT * FROM empleados WHERE departamento IN ('Ventas', 'Marketing');
+
+<span class="comment">----------------------------------------------------------------</span>
+<span class="comment">-- Operador LIKE</span>
+<span class="comment">----------------------------------------------------------------</span>
+
+<span class="comment">-- Buscar empleados cuyo nombre empieza con "Juan"</span>
+SELECT * FROM empleados
+WHERE nombre LIKE 'Juan%';  <span class="comment">-- El % permite cualquier cosa después de "Juan"</span>
+
+<span class="comment">-- Buscar empleados cuyo nombre termina con "Gómez"</span>
+SELECT * FROM empleados
+WHERE nombre LIKE '%Gómez';  <span class="comment">-- El % permite cualquier cosa antes de "Gómez"</span>
+
+<span class="comment">-- Buscar empleados cuyo nombre contiene "José" en cualquier parte</span>
+SELECT * FROM empleados
+WHERE nombre LIKE '%José%';  <span class="comment">-- El % permite cualquier cosa antes o después de "José"</span>
+
+<span class="comment">-- Buscar empleados cuyo nombre tiene "a" en la segunda posición</span>
+SELECT * FROM empleados
+WHERE nombre LIKE '_a%';  <span class="comment">-- _ representa cualquier carácter en la primera posición, luego "a", seguido de cualquier cosa</span>
+
+<span class="comment">----------------------------------------------------------------</span>
+<span class="comment">-- Operador NOT LIKE</span>
+<span class="comment">----------------------------------------------------------------</span>
+
+<span class="comment">-- Buscar empleados cuyo nombre no empieza con "Juan"</span>
+SELECT * FROM empleados
+WHERE nombre NOT LIKE 'Juan%';  <span class="comment">-- El % permite cualquier cosa después de "Juan", pero excluye esos nombres</span>
+
+<span class="comment">-- Buscar empleados cuyo nombre no termina con "Gómez"</span>
+SELECT * FROM empleados
+WHERE nombre NOT LIKE '%Gómez';  <span class="comment">-- El % permite cualquier cosa antes de "Gómez", pero excluye esos nombres</span>
+
+<span class="comment">-- Buscar empleados cuyo nombre no contiene "José" en cualquier parte</span>
+SELECT * FROM empleados
+WHERE nombre NOT LIKE '%José%';  <span class="comment">-- El % permite cualquier cosa antes o después de "José", pero excluye esos nombres</span>
+
+<span class="comment">-- Buscar empleados cuyo nombre no sigue el patrón "J" seguido de un solo carácter y luego "án"</span>
+SELECT * FROM empleados
+WHERE nombre NOT LIKE 'J_án';  <span class="comment">-- _ es un comodín que representa un solo carácter en el medio, excluye esos nombres</span>
+
+<span class="comment">----------------------------------------------------------------</span>
+<span class="comment">-- Operadores relacionales</span>
+<span class="comment">----------------------------------------------------------------</span>
+
+<span class="comment">-- Buscar empleados cuya edad es diferente de 38 (uso del operador !=)</span>
+SELECT * FROM empleados WHERE edad != 38;  <span class="comment">-- != es equivalente a "<>", ambas formas comparan si la edad es diferente de 38</span>
+
+<span class="comment">-- Buscar empleados cuya edad es diferente de 38 (uso del operador <>)</span>
+SELECT * FROM empleados WHERE edad <> 38;  <span class="comment">-- <> es el operador estándar en SQL para comparar "diferente de"</span>
+
+<span class="comment">-- Buscar empleados cuya edad es exactamente 38</span>
+SELECT * FROM empleados WHERE edad = 38;  <span class="comment">-- = compara si la edad es exactamente igual a 38</span>
+
+<span class="comment">-- Buscar empleados cuya edad es mayor que 38</span>
+SELECT * FROM empleados WHERE edad > 38;  <span class="comment">-- > compara si la edad es mayor que 38</span>
+
+<span class="comment">-- Buscar empleados cuya edad es mayor o igual a 38</span>
+SELECT * FROM empleados WHERE edad >= 38;  <span class="comment">-- >= compara si la edad es mayor o igual a 38</span>
+
+<span class="comment">-- Buscar empleados cuya edad es menor que 38</span>
+SELECT * FROM empleados WHERE edad < 38;  <span class="comment">-- < compara si la edad es menor que 38</span>
+
+<span class="comment">-- Buscar empleados cuya edad es menor o igual a 38</span>
+SELECT * FROM empleados WHERE edad <= 38;  <span class="comment">-- <= compara si la edad es menor o igual a 38</span>
+
+<span class="comment">----------------------------------------------------------------</span>
+<span class="comment">-- Operadores Lógicos</span>
+<span class="comment">----------------------------------------------------------------</span>
+
+<span class="comment">-- Buscar empleados cuyo salario es mayor a 4000 y que pertenezcan al departamento 'Marketing'</span>
+SELECT * FROM empleados 
+WHERE salario > 4000 AND departamento = 'Marketing'; 
+<span class="comment">-- El operador AND se usa para que ambas condiciones sean verdaderas</span>
+
+<span class="comment">-- Buscar empleados que tienen un salario menor a 4500 o que pertenecen al departamento 'TI'</span>
+SELECT * FROM empleados 
+WHERE salario < 4500 OR departamento = 'TI'; 
+<span class="comment">-- El operador OR se usa para que al menos una de las condiciones sea verdadera</span>
+
+<span class="comment">-- Buscar empleados que no pertenezcan al departamento 'Ventas'</span>
+SELECT * FROM empleados 
+WHERE NOT departamento = 'Ventas'; 
+<span class="comment">-- El operador NOT se usa para negar una condición. En este caso, excluye a los empleados del departamento 'Ventas'</span>
+
+<span class="comment">-- Buscar empleados cuyo salario está entre 4000 y 5000 y que su edad sea mayor a 30</span>
+SELECT * FROM empleados 
+WHERE salario BETWEEN 4000 AND 5000 AND edad > 30;
+<span class="comment">-- El operador BETWEEN se usa para verificar si un valor está dentro de un rango específico, en este caso salario entre 4000 y 5000</span>
+
+<span class="comment">----------------------------------------------------------------</span>
+<span class="comment">-- Sentencia UPDATE(se usa siempre con where, si no peligro)</span>
+<span class="comment">----------------------------------------------------------------</span>
+
+<span class="comment">-- Actualizar el salario de un empleado específico que tiene el ID 5</span>
+UPDATE empleados 
+SET salario = 5500 
+WHERE id = 5; 
+<span class="comment">-- Se actualiza el salario del empleado con ID 5 a 5500. Es importante usar WHERE para especificar el registro.</span>
+
+<span class="comment">-- Actualizar el salario de todos los empleados del departamento 'Ventas' a 4500</span>
+UPDATE empleados 
+SET salario = 4500 
+WHERE departamento = 'Ventas'; 
+<span class="comment">-- Se actualiza el salario de todos los empleados en el departamento 'Ventas'. Sin WHERE, afectaría a todos los registros.</span>
+
+<span class="comment">-- Actualizar la edad de los empleados cuyo nombre es 'Juan Pérez' a 31</span>
+UPDATE empleados 
+SET edad = 31 
+WHERE nombre = 'Juan Pérez'; 
+<span class="comment">-- Se actualiza la edad de 'Juan Pérez'. Sin WHERE, modificaría a todos los empleados con el mismo nombre.</span>
+
+<span class="comment">-- Incrementar el salario en un 10% de los empleados que tienen más de 30 años</span>
+UPDATE empleados 
+SET salario = salario * 1.10 
+WHERE edad > 30; 
+<span class="comment">-- Se incrementa el salario de todos los empleados mayores de 30 años en un 10%. La cláusula WHERE es necesaria para no afectar a todos los registros.</span>
+
+<span class="comment">----------------------------------------------------------------</span>
+<span class="comment">-- Sentencia DELETE: Elimina filas según la condición `WHERE` (o todas si no hay `WHERE`).</span>
+<span class="comment">-- No reinicia el contador de AUTO_INCREMENT.</span>
+<span class="comment">-- Conserva las claves primarias y otros valores de la tabla.</span>
+<span class="comment">----------------------------------------------------------------</span>
+
+<span class="comment">-- Eliminar un empleado específico con ID 10</span>
+DELETE FROM empleados 
+WHERE id = 10; 
+<span class="comment">-- Se elimina el registro del empleado con ID 10. La cláusula WHERE especifica el registro a eliminar.</span>
+
+<span class="comment">-- Eliminar todos los empleados del departamento 'Ventas'</span>
+DELETE FROM empleados 
+WHERE departamento = 'Ventas'; 
+<span class="comment">-- Se eliminan todos los empleados que pertenecen al departamento 'Ventas'. Sin WHERE, eliminaría todos los registros de la tabla.</span>
+
+<span class="comment">-- Eliminar empleados con un salario menor a 4000</span>
+DELETE FROM empleados 
+WHERE salario < 4000; 
+<span class="comment">-- Se eliminan los empleados cuyo salario es menor a 4000. Sin WHERE, eliminaría todos los registros de la tabla.</span>
+
+<span class="comment">-- Eliminar todos los empleados que fueron ingresados antes de 2015</span>
+DELETE FROM empleados 
+WHERE fecha_ingreso < '2015-01-01'; 
+<span class="comment">-- Se eliminan los empleados que fueron contratados antes del 1 de enero de 2015. Asegúrate de usar WHERE para evitar eliminar registros no deseados.</span>
+
+<span class="comment">----------------------------------------------------------------</span>
+<span class="comment">-- Sentencia TRUNCATE: Elimina todas las filas de la tabla y reinicia el contador de AUTO_INCREMENT.</span>
+<span class="comment">-- No afecta la definición de la clave primaria ni otras restricciones.</span>
+<span class="comment">----------------------------------------------------------------</span>
+
+<span class="comment">-- Elimina todas las filas de la tabla 'empleados', reinicia el contador de AUTO_INCREMENT.</span>
+TRUNCATE TABLE empleados;
+
+<span class="comment">-- Elimina todas las filas de la tabla 'ventas', reinicia el contador de AUTO_INCREMENT.</span>
+TRUNCATE TABLE ventas;
+    
+      </code>
+    </pre>
+    </article>
+
+    <article id="funciones-basicas" aria-label="Funciones básicas en SQL">
+      <h3>Funciones Básicas en SQL</h3>
+      <details>
+        <summary>Leer explicación</summary>
+          <p>
+            Este apartado muestra cómo crear bases de datos y tablas, insertar datos y consultar información básica, sentando las bases para cualquier operación en SQL.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">-------------------------------------------------------------</span>
+<span class="comment">-- Funciones Básicas</span>
+<span class="comment">-------------------------------------------------------------</span>
+
+<span class="comment">-- Preparando la BD para nuevos temas</span>
+show databases;
+drop database demo_sql;
+create database demo_sql;
+use demo_sql;
+
+<span class="comment">-- Crear tabla 'empleados'</span>
+CREATE TABLE empleados (
+    id INT PRIMARY KEY AUTO_INCREMENT,         
+    nombre VARCHAR(50),                        
+    edad INT,                                  
+    salario DECIMAL(10, 2),                    
+    fecha_ingreso DATE,                        
+    departamento VARCHAR(30)                   
+);
+
+<span class="comment">-- Crear tabla 'usuarios'</span>
+CREATE TABLE usuarios(
+  usuario_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(30) NOT NULL,
+  apellidos VARCHAR(30) NOT NULL,
+  correo VARCHAR(50) UNIQUE,
+  edad INT DEFAULT 0
+);
+
+<span class="comment">-- Crear tabla 'productos'</span>
+CREATE TABLE productos (
+  producto_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(50) NOT NULL,
+  descripcion VARCHAR(200),
+  precio DECIMAL(7,2),
+  cantidad INT UNSIGNED
+);
+
+<span class="comment">-- Mostrar las entidades creadas</span>
+show tables;
+
+<span class="comment">-- Insertar algunos datos en la tabla 'empleados'</span>
+INSERT INTO empleados (nombre, edad, salario, fecha_ingreso, departamento)
+VALUES 
+('Juan Pérez', 30, 3500.50, '2019-05-01', 'Ventas'),
+('Ana Gómez', 28, 4200.75, '2020-03-15', 'Marketing'),
+('Luis López', 35, 4800.00, '2018-06-20', 'Ventas'),
+('Sofía Martínez', 25, 3900.20, '2021-08-25', 'TI'),
+('Carlos Fernández', 32, 4600.10, '2017-07-11', 'Marketing'),
+('Marta Ruiz', 40, 5500.30, '2015-12-10', 'Ventas'),
+('Pedro Sánchez', 22, 3300.40, '2022-01-15', 'TI'),
+('Lucía García', 29, 4800.50, '2019-09-05', 'Ventas'),
+('Javier Torres', 27, 4200.60, '2020-06-25', 'Marketing'),
+('Raúl Díaz', 33, 5000.00, '2016-02-19', 'TI'),
+('Elena Pérez', 38, 5700.70, '2018-11-10', 'Ventas'),
+('Ricardo Martínez', 31, 4500.80, '2020-04-22', 'Marketing'),
+('Isabel González', 26, 4300.90, '2021-07-30', 'TI'),
+('Fernando Rodríguez', 34, 4700.00, '2017-03-12', 'Ventas'),
+('Paula Herrera', 29, 3900.60, '2021-09-04', 'Marketing'),
+('David Jiménez', 32, 5000.20, '2019-05-10', 'TI'),
+('Ana Ramírez', 36, 5300.00, '2018-08-23', 'Ventas'),
+('María López', 31, 4600.50, '2020-02-28', 'Marketing'),
+('Óscar Ruiz', 28, 4200.80, '2021-03-12', 'TI'),
+('José Rodríguez', 39, 5500.30, '2017-06-01', 'Ventas'),
+('Cristina Fernández', 25, 3900.40, '2021-05-15', 'Marketing'),
+('Santiago Gómez', 30, 4500.70, '2019-01-14', 'TI'),
+('Rosa Martínez', 33, 5000.90, '2018-09-09', 'Ventas'),
+('Antonio Sánchez', 37, 5700.00, '2017-02-02', 'Marketing'),
+('Beatriz López', 28, 4300.50, '2020-07-18', 'TI'),
+('Héctor Ruiz', 32, 4600.60, '2016-11-28', 'Ventas'),
+('Patricia González', 29, 4800.70, '2020-04-12', 'Marketing'),
+('Alejandro Jiménez', 34, 4900.80, '2018-03-20', 'TI'),
+('Carmen Rodríguez', 26, 4000.00, '2021-10-03', 'Ventas'),
+('Juan Carlos Fernández', 31, 4700.50, '2019-06-07', 'Marketing'),
+('Luis González', 35, 5200.60, '2017-09-13', 'TI'),
+('Silvia Ramírez', 30, 4300.80, '2021-04-21', 'Ventas'),
+('Víctor Pérez', 38, 5400.00, '2016-05-05', 'Marketing'),
+('Alba Torres', 33, 4800.10, '2018-04-18', 'TI'),
+('Daniel Martínez', 27, 4600.30, '2020-09-25', 'Ventas'),
+('Eva Sánchez', 39, 5500.40, '2015-10-10', 'Marketing'),
+('Carlos López', 32, 4900.50, '2020-01-20', 'TI'),
+('Marcos Rodríguez', 34, 5200.60, '2017-07-15', 'Ventas'),
+('Inés Ramírez', 28, 4400.70, '2021-02-11', 'Marketing'),
+('Jaime Ruiz', 29, 4600.80, '2019-11-09', 'TI'),
+('Esther Jiménez', 35, 5100.90, '2016-06-25', 'Ventas'),
+('Fernando López', 37, 5700.10, '2018-01-13', 'Marketing'),
+('Andrea González', 33, 4900.20, '2020-08-17', 'TI'),
+('Gonzalo Pérez', 31, 4700.30, '2017-04-09', 'Ventas'),
+('Laura Sánchez', 40, 5500.40, '2015-12-22', 'Marketing'),
+('Eduardo Rodríguez', 30, 5000.50, '2019-10-02', 'TI'),
+('Raquel Ramírez', 26, 4200.60, '2021-06-14', 'Ventas'),
+('Luis Ramírez', 33, 4800.70, '2018-07-09', 'Marketing'),
+('María González', 31, 4500.80, '2020-11-11', 'TI'),
+('Tomás Rodríguez', 28, 4700.90, '2021-02-28', 'Ventas'),
+('Sara Pérez', 37, 5400.00, '2016-12-01', 'Marketing'),
+('Iván López', 30, 4900.10, '2019-02-24', 'TI');
+
+<span class="comment">-- Insertar 25 usuarios</span>
+INSERT INTO usuarios (nombre, apellidos, correo, edad) VALUES 
+('Juan', 'Pérez', 'juan.perez@mail.com', 30),
+('Ana', 'Gómez', 'ana.gomez@mail.com', 28),
+('Luis', 'López', 'luis.lopez@mail.com', 35),
+('Sofía', 'Martínez', 'sofia.martinez@mail.com', 25),
+('Carlos', 'Fernández', 'carlos.fernandez@mail.com', 32),
+('Marta', 'Ruiz', 'marta.ruiz@mail.com', 40),
+('Pedro', 'Sánchez', 'pedro.sanchez@mail.com', 22),
+('Lucía', 'García', 'lucia.garcia@mail.com', 29),
+('Javier', 'Torres', 'javier.torres@mail.com', 27),
+('Raúl', 'Díaz', 'raul.diaz@mail.com', 33),
+('Elena', 'Pérez', 'elena.perez@mail.com', 38),
+('Ricardo', 'Martínez', 'ricardo.martinez@mail.com', 31),
+('Isabel', 'González', 'isabel.gonzalez@mail.com', 26),
+('Fernando', 'Rodríguez', 'fernando.rodriguez@mail.com', 34),
+('Paula', 'Herrera', 'paula.herrera@mail.com', 29),
+('David', 'Jiménez', 'david.jimenez@mail.com', 32),
+('Ana', 'Ramírez', 'ana.ramirez@mail.com', 36),
+('María', 'López', 'maria.lopez@mail.com', 31),
+('Óscar', 'Ruiz', 'oscar.ruiz@mail.com', 28),
+('José', 'Rodríguez', 'jose.rodriguez@mail.com', 39),
+('Cristina', 'Fernández', 'cristina.fernandez@mail.com', 25),
+('Santiago', 'Gómez', 'santiago.gomez@mail.com', 30),
+('Rosa', 'Martínez', 'rosa.martinez@mail.com', 33),
+('Antonio', 'Sánchez', 'antonio.sanchez@mail.com', 37),
+('Beatriz', 'López', 'beatriz.lopez@mail.com', 28);
+
+  <span class="comment">-- Insertar 50 productos ficticios con nombres y descripciones realistas</span>
+('Smartphone Samsung Galaxy S23', 'Smartphone de última generación con pantalla AMOLED de 6.1 pulgadas, cámara de 50 MP y procesador Exynos 2200.', 799.99, 120),
+('Laptop Dell XPS 13', 'Laptop ultraportátil con pantalla InfinityEdge de 13.4 pulgadas, procesador Intel i7 de 11ª generación y 16 GB de RAM.', 999.99, 85),
+('Apple AirPods Pro', 'Auriculares inalámbricos con cancelación activa de ruido, batería de larga duración y sonido de alta calidad.', 249.99, 200),
+('Sony PlayStation 5', 'Consola de videojuegos de última generación con soporte para 4K y juegos exclusivos como Ratchet & Clank y Spider-Man.', 499.99, 50),
+('Amazon Echo Dot 4ta generación', 'Altavoz inteligente con Alexa, ideal para controlar dispositivos de hogar inteligente y reproducir música.', 49.99, 300),
+('Nintendo Switch', 'Consola híbrida que puedes usar como portátil o conectarla a tu televisor, incluye 2 controladores Joy-Con.', 299.99, 150),
+('Reloj Garmin Fenix 6', 'Reloj deportivo con GPS, sensor de frecuencia cardíaca y funciones avanzadas para entrenamiento en exteriores.', 599.99, 100),
+('Cámara Canon EOS 90D', 'Cámara DSLR con 32.5 megapíxeles, grabación de video en 4K y enfoque automático Dual Pixel.', 1299.99, 75),
+('Bose QuietComfort 35 II', 'Auriculares con cancelación de ruido, Bluetooth y sonido envolvente de alta fidelidad.', 299.99, 180),
+('Microsoft Surface Pro 7', 'Tableta híbrida con pantalla táctil de 12.3 pulgadas, procesador Intel Core i5 y sistema operativo Windows 10.', 749.99, 130),
+('Silla de oficina Ergohuman', 'Silla ergonómica ajustable con soporte lumbar, asiento y respaldo inclinables, ideal para largas horas de trabajo.', 399.99, 60),
+('TV LG OLED C1', 'Televisor OLED 4K con soporte para HDR, Alexa y Google Assistant integrados, ideal para cine en casa.', 1599.99, 45),
+('Fitbit Charge 5', 'Reloj inteligente con monitorización de salud, GPS integrado y batería de larga duración.', 149.99, 250),
+('Kindle Paperwhite', 'E-reader con pantalla de 6 pulgadas, retroiluminada, resistente al agua y con capacidad para miles de libros.', 129.99, 300),
+('Xiaomi Mi Band 6', 'Pulsera de actividad con monitor de frecuencia cardíaca, pantalla AMOLED y batería de larga duración.', 44.99, 500),
+('HP Envy 17', 'Laptop de 17 pulgadas con pantalla táctil 4K, procesador Intel i7 y tarjeta gráfica dedicada.', 1499.99, 60),
+('Cafetera Nespresso VertuoPlus', 'Cafetera automática con sistema de cápsulas, ideal para preparar café espresso o de tamaño más grande.', 169.99, 150),
+('GoPro HERO10 Black', 'Cámara deportiva con grabación en 5.3K, estabilización de imagen HyperSmooth 4.0 y resistencia al agua.', 399.99, 80),
+('Sillas gaming DXRacer', 'Silla gaming con soporte ergonómico, ajuste de altura y respaldo reclinable, ideal para largas sesiones de juego.', 299.99, 120),
+('Teclado mecánico Logitech G Pro X', 'Teclado gaming mecánico con interruptores intercambiables, retroiluminación RGB y diseño compacto.', 129.99, 200),
+('Ratón gaming Razer DeathAdder V2', 'Ratón gaming ergonómico con sensor óptico de 20K DPI y switches mecánicos, ideal para jugadores profesionales.', 59.99, 250),
+('Cámara web Logitech C920', 'Cámara web Full HD con enfoque automático y micrófono incorporado, ideal para videoconferencias.', 79.99, 350),
+('JBL Charge 4', 'Altavoz portátil con Bluetooth, resistente al agua y con batería de 20 horas de duración.', 149.99, 220),
+('Aspiradora Dyson V11', 'Aspiradora inalámbrica con tecnología de succión inteligente y batería de larga duración, ideal para todo tipo de pisos.', 599.99, 45),
+('Monitor Acer Predator X34', 'Monitor curvado de 34 pulgadas con resolución 1440p y tasa de refresco de 180 Hz, ideal para gaming.', 899.99, 40),
+('Reproductor Blu-ray Sony UBP-X700', 'Reproductor Blu-ray 4K con soporte para Dolby Atmos y reproducción de discos UHD.', 179.99, 120),
+('Micrófono Blue Yeti', 'Micrófono USB de condensador con patrón polar ajustable, ideal para grabaciones de estudio o streaming en vivo.', 129.99, 180),
+('Bicicleta eléctrica Ancheer', 'Bicicleta eléctrica con motor de 250W, batería de larga duración y velocidad máxima de 25 km/h.', 399.99, 70),
+('Juguete LEGO Star Wars', 'Set de construcción LEGO Star Wars, ideal para coleccionistas y fanáticos de la saga galáctica.', 79.99, 250),
+('Estufa eléctrica Rowenta', 'Estufa eléctrica con tres niveles de potencia, ideal para mantener tu hogar caliente durante el invierno.', 99.99, 300),
+('Robot de cocina Moulinex', 'Robot de cocina multifuncional con más de 30 funciones, ideal para preparar todo tipo de recetas rápidamente.', 149.99, 150),
+('Cámara de seguridad Arlo Pro 4', 'Cámara de seguridad inalámbrica con resolución 4K, visión nocturna y audio bidireccional.', 199.99, 80),
+('Samsung SSD 1TB', 'Disco duro sólido SSD de 1 TB con interfaz NVMe y alta velocidad de lectura/escritura.', 129.99, 200),
+('Torre de PC Corsair iCUE 4000X', 'Caja para PC de alto rendimiento con panel de vidrio templado y espacio para componentes avanzados.', 99.99, 150),
+('Auriculares Sony WH-1000XM4', 'Auriculares inalámbricos con cancelación de ruido, conectividad Bluetooth y sonido de alta calidad.', 349.99, 60),
+('Bateria externa Anker PowerCore 10000', 'Batería externa portátil de 10000 mAh, ideal para cargar dispositivos en cualquier lugar.', 29.99, 350),
+('Cámara digital Nikon Z50', 'Cámara mirrorless con 20.9 MP, pantalla táctil de ángulo variable y grabación en 4K.', 899.99, 90),
+('Máquina de coser Singer 4423', 'Máquina de coser eléctrica con 23 puntadas, ideal para principiantes y expertos en costura.', 169.99, 180),
+('Mochila Samsonite Tectonic', 'Mochila de gran capacidad con compartimentos organizados, ideal para laptops y documentos de trabajo.', 69.99, 220),
+('Patinete eléctrico Razor E100', 'Patinete eléctrico para niños con velocidad máxima de 16 km/h y batería recargable de larga duración.', 149.99, 180),
+('Monitor LG 27GL83A-B', 'Monitor de 27 pulgadas con resolución 1440p, tasa de refresco de 144 Hz, ideal para gaming y trabajo profesional.', 349.99, 90),
+('Cargador solar RAVPower', 'Cargador solar portátil de 20000 mAh, ideal para cargar dispositivos al aire libre.', 49.99, 250),
+('Auriculares Bose SoundSport Free', 'Auriculares deportivos inalámbricos con resistencia al agua y sonido potente.', 129.99, 150),
+('Gafas de sol Ray-Ban Aviator', 'Gafas de sol clásicas con lentes polarizados, ideales para proteger tus ojos del sol.', 149.99, 200),
+('Parlante portátil UE Boom 3', 'Parlante Bluetooth resistente al agua, ideal para llevarlo a todas partes con sonido de 360 grados.', 129.99, 180),
+('Cámara Instax Mini 11', 'Cámara instantánea de Fujifilm con modos automáticos para capturar momentos especiales al instante.', 69.99, 220),
+('Termo Stanley 1L', 'Termo de acero inoxidable con aislamiento al vacío, ideal para mantener tus bebidas calientes o frías.', 34.99, 300),
+('Zapatos Nike Air Zoom Pegasus 38', 'Zapatillas deportivas con tecnología Zoom Air, ideales para corredores y actividades físicas.', 120.00, 180),
+('Silla de ruedas Invacare', 'Silla de ruedas manual con ruedas grandes para facilitar el desplazamiento en diferentes tipos de superficies.', 350.00, 50);
+
+<span class="comment">-- Consultas de prueba para mostrar datos</span>
+SELECT * FROM empleados;
+SELECT * FROM usuarios;
+SELECT * FROM productos;
+            </code>
+          </pre>
+      </details>
+    </article>
+
+    <article id="operaciones-aritmeticas" aria-label="Operaciones aritméticas y funciones matemáticas">
+      <h3>Operaciones Aritméticas y Funciones Matemáticas</h3>
+      <details>
+        <summary>Leer explicación</summary>
+          <p>
+            Aprenderás a realizar cálculos con columnas, funciones matemáticas y operaciones básicas como suma, resta, multiplicación y división dentro de tus consultas.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">
+-------------------------------------------------------------
+-- Operaciones Aritméticas
+-------------------------------------------------------------
+</span>          
+
+<span class="comment"># Cálculos Aritméticos</span>
+SELECT 6 + 5 AS calculo;
+SELECT 6 - 5 AS calculo;
+SELECT 6 * 5 AS calculo;
+SELECT 6 / 5 AS calculo;
+
+<span class="comment"># Funciones Matemáticas</span>
+SELECT MOD(4,2);
+SELECT MOD(5,2);
+SELECT CEILING(7.1);
+SELECT FLOOR(7.9);
+SELECT ROUND(7.5);
+SELECT ROUND(7.4999);
+SELECT POWER(2, 6);
+SELECT SQRT(81);
+
+<span class="comment"># Columnas Calculadas</span>
+<span class="comment">-- Columnas cuyo valor se genera a partir de otras columnas mediante expresiones matemáticas o funciones</span>
+<span class="comment">-- Seleccionamos el nombre del producto, el precio, la cantidad y calculamos la ganancia</span>
+SELECT nombre, precio, cantidad, 
+        (precio * cantidad) AS ganancia  <span class="comment">-- Multiplicamos el precio por la cantidad para obtener la ganancia por producto</span>
+FROM productos;  <span class="comment">-- Mostramos la información de la tabla productos</span>
+
+<span class="comment">-- Seleccionamos el nombre, la fecha de ingreso y calculamos el año de ingreso</span>
+SELECT nombre, fecha_ingreso, 
+        YEAR(fecha_ingreso) AS anio_ingreso  <span class="comment">-- Usamos la función YEAR() para extraer solo el año de la fecha de ingreso</span>
+FROM empleados;
+
+<span class="comment">-- Seleccionamos el nombre, el salario mensual y calculamos el salario anual</span>
+SELECT nombre, salario, 
+        salario * 12 AS salario_anual  <span class="comment">-- Multiplicamos el salario mensual por 12 para calcular el salario anual</span>
+FROM empleados;
+
+<span class="comment">-- Seleccionamos el nombre, la edad y calculamos la antigüedad del empleado</span>
+SELECT nombre, edad, 
+        YEAR(CURDATE()) - YEAR(fecha_ingreso) AS antiguedad  <span class="comment">-- Restamos el año actual con el año de ingreso para calcular la antigüedad</span>
+FROM empleados;
+
+<span class="comment"># Funciones de Agrupamiento</span>
+SELECT MAX(precio) AS precio_maximo FROM productos;
+SELECT MIN(precio) AS precio_minimo FROM productos;
+SELECT SUM(cantidad) AS existencias FROM productos;
+SELECT AVG(precio) AS precio_promedio FROM productos;
+SELECT COUNT(*) AS productos_total FROM productos;
+        </code>
+      </pre>
+  </details>
+    </article>
+
+    <article id="group-by" aria-label="Cláusula GROUP BY">
+      <h3>Cláusula GROUP BY</h3>
+      <details>
+        <summary>Leer explicación</summary>
+          <p>
+            Se utiliza para agrupar filas según valores de columnas, permitiendo aplicar funciones de agregación como SUM, AVG, MAX o COUNT a cada grupo.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">
+-------------------------------------------------------------
+-- Cláusula GROUP BY
+-------------------------------------------------------------
+</span>
+
+<span class="comment">-- Obtenemos el nombre y el precio máximo por cada grupo de producto</span>
+SELECT nombre, precio, MAX(precio) AS precio_maximo 
+FROM productos 
+GROUP BY precio, nombre;
+
+<span class="comment">-- Obtenemos el salario promedio de los empleados por departamento</span>
+SELECT departamento, AVG(salario) AS salario_promedio
+FROM empleados
+GROUP BY departamento;  <span class="comment">-- Agrupamos los empleados por departamento para calcular el salario promedio en cada uno</span>
+
+<span class="comment">-- Contamos cuántos empleados hay en cada departamento</span>
+SELECT departamento, COUNT(*) AS numero_empleados
+FROM empleados
+GROUP BY departamento;  <span class="comment">-- Agrupamos los empleados por departamento y contamos el total de empleados en cada uno</span>
+
+<span class="comment">-- Encontramos el salario más alto en cada departamento</span>
+SELECT departamento, MAX(salario) AS salario_maximo
+FROM empleados
+GROUP BY departamento;  <span class="comment">-- Agrupamos los empleados por departamento y obtenemos el salario más alto en cada uno</span>
+
+<span class="comment">-- Obtenemos el salario promedio de los empleados según su edad</span>
+SELECT edad, AVG(salario) AS salario_promedio
+FROM empleados
+GROUP BY edad;  <span class="comment">-- Agrupamos los empleados por edad para calcular el salario promedio en cada grupo de edad</span>
+            </code>
+          </pre>
+      </details>
+    </article>
+
+    <article id="having" aria-label="Cláusula HAVING">
+  <h3>Cláusula HAVING</h3>
+  <details>
+    <summary>Leer explicación</summary>
+      <p>
+        Permite filtrar los resultados de una agrupación (GROUP BY) según condiciones sobre funciones de agregación, mostrando solo los grupos que cumplan los criterios.
+      </p>
+      <pre class="code-window">
+        <code>
+<span class="comment">
+-------------------------------------------------------------
+-- Cláusula HAVING (Filtra los grupos después de la agregación con GROUP BY)
+-------------------------------------------------------------
+</span>
+
+<span class="comment">-- Obtenemos el salario promedio de los empleados por departamento</span>
+SELECT departamento, AVG(salario) AS salario_promedio
+FROM empleados
+GROUP BY departamento                       <span class="comment">-- Agrupamos por departamento</span>
+HAVING AVG(salario) > 4700;                 <span class="comment">-- Filtramos los departamentos con salario promedio mayor a 4700</span>
+
+<span class="comment">-- Contamos el número de empleados en cada departamento con más de 5 empleados</span>
+SELECT departamento, COUNT(*) AS total_empleados
+FROM empleados
+GROUP BY departamento                       <span class="comment">-- Agrupamos por departamento</span>
+HAVING COUNT(*) > 17;                       <span class="comment">-- Filtramos solo los departamentos con más de 17 empleados</span>
+
+<span class="comment">-- Obtenemos el salario máximo de cada departamento, solo mostrando los que tengan salario mayor a 5300</span>
+SELECT departamento, MAX(salario) AS salario_maximo
+FROM empleados
+GROUP BY departamento                       <span class="comment">-- Agrupamos por departamento</span>
+HAVING MAX(salario) > 5300;                 <span class="comment">-- Filtramos los departamentos con salario máximo mayor a 5300</span>
+            </code>
+          </pre>
+      </details>
+    </article>
+
+    <article id="distinct" aria-label="Cláusula DISTINCT">
+      <h3>Cláusula DISTINCT</h3>
+      <details>
+        <summary>Leer explicación</summary>
+          <p>
+            Se usa para obtener valores únicos de una columna, eliminando duplicados y simplificando el análisis de datos repetidos.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">
+-------------------------------------------------------------
+-- Cláusula DISTINCT
+-------------------------------------------------------------
+</span>
+
+<span class="comment"># Productos</span>
+<span class="comment">-- Obtenemos los diferentes precios de productos</span>
+SELECT DISTINCT precio
+FROM productos; <span class="comment">-- Solo mostrará los precios únicos sin duplicados</span>
+
+<span class="comment">-- Obtenemos los diferentes nombres de productos</span>
+SELECT DISTINCT nombre 
+FROM productos;  <span class="comment">-- Solo mostrará los nombres de productos únicos</span>
+
+<span class="comment">-- Obtenemos los diferentes valores de cantidad de productos</span>
+SELECT DISTINCT cantidad 
+FROM productos;  <span class="comment">-- Solo mostrará las cantidades únicas de productos</span>
+
+<span class="comment"># Usuarios</span>
+<span class="comment">-- Obtenemos los diferentes correos electrónicos de los usuarios</span>
+SELECT DISTINCT correo 
+FROM usuarios;  <span class="comment">-- Solo mostrará los correos electrónicos únicos</span>
+
+<span class="comment">-- Obtenemos los diferentes nombres de usuarios</span>
+SELECT DISTINCT nombre 
+FROM usuarios;  <span class="comment">-- Solo mostrará los nombres de usuarios únicos</span>
+
+<span class="comment">-- Obtenemos las edades únicas de los usuarios</span>
+SELECT DISTINCT edad 
+FROM usuarios;  <span class="comment">-- Solo mostrará las edades únicas de los usuarios</span>
+            </code>
+          </pre>
+      </details>
+    </article>
+
+    <article id="order-by" aria-label="Cláusula ORDER BY">
+      <h3>Cláusula ORDER BY</h3>
+      <details>
+        <summary>Leer explicación</summary>
+          <p>
+            Permite ordenar los resultados de una consulta en orden ascendente o descendente según una o varias columnas, facilitando la interpretación de los datos.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">
+-------------------------------------------------------------
+-- Cláusula ORDER BY(va por ultimo)
+-------------------------------------------------------------
+</span>
+
+<span class="comment">-- Ordenar empleados por salario en orden descendente</span>
+SELECT nombre, edad, salario, departamento
+FROM empleados
+ORDER BY salario DESC; <span class="comment">-- Este ejemplo muestra los empleados ordenados de mayor a menor salario</span>
+
+<span class="comment">-- Ordenar usuarios por apellido en orden ascendente y por edad en orden descendente</span>
+SELECT nombre, apellidos, correo, edad
+FROM usuarios
+ORDER BY apellidos ASC, edad DESC; 
+<span class="comment">-- Este ejemplo ordena los usuarios alfabéticamente por apellidos. Si hay apellidos repetidos, se ordenan por edad en orden descendente</span>
+
+<span class="comment">-- Ordenar productos por precio en orden ascendente y por cantidad en orden descendente</span>
+SELECT nombre, descripcion, precio, cantidad
+FROM productos
+ORDER BY precio ASC, cantidad DESC; 
+<span class="comment">-- Este ejemplo ordena los productos por precio de menor a mayor. Si dos productos tienen el mismo precio, se ordenan por cantidad de mayor a menor</span>
+            </code>
+          </pre>
+      </details>
+    </article>
+
+    <article id="between" aria-label="Cláusula BETWEEN">
+      <h3>Cláusula BETWEEN</h3>
+      <details>
+        <summary>Leer explicación</summary>
+          <p>
+            Filtra registros dentro de un rango de valores definido, muy útil para fechas, edades, precios u otras métricas numéricas.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">
+-------------------------------------------------------------
+-- Cláusula BETWEEN se usa para filtrar registros dentro de un rango de valores.
+-------------------------------------------------------------
+</span>
+
+<span class="comment">-- Seleccionar productos cuyo precio esté entre 100 y 500</span>
+SELECT nombre, descripcion, precio, cantidad
+FROM productos
+WHERE precio BETWEEN 100 AND 500; 
+<span class="comment">-- Esto devuelve los productos cuyo precio está dentro del rango especificado</span>
+
+<span class="comment">-- Seleccionar empleados con edades entre 25 y 40 años</span>
+SELECT nombre, edad, salario, departamento
+FROM empleados
+WHERE edad BETWEEN 25 AND 40; 
+<span class="comment">-- Muestra empleados cuya edad se encuentra en el intervalo dado</span>
+
+<span class="comment">-- Seleccionar usuarios con edades entre 25 y 40 años</span>
+SELECT nombre, apellidos, correo, edad
+FROM usuarios
+WHERE edad BETWEEN 25 AND 40; 
+<span class="comment">-- Muestra los usuarios cuya edad se encuentra en el intervalo indicado</span>
+            </code>
+          </pre>
+      </details>
+    </article>
+
+    <article id="regexp" aria-label="Cláusula REGEXP">
+      <h3>Cláusula REGEXP</h3>
+      <details>
+        <summary>Leer explicación</summary>
+          <p>
+            Permite filtrar datos usando expresiones regulares, útil para encontrar patrones específicos en textos, nombres, correos o descripciones.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">
+-------------------------------------------------------------
+-- Cláusula REGEXP
+-------------------------------------------------------------
+</span>
+
+<span class="comment">-- Selección de empleados cuyo nombre comienza con la letra 'A'</span>
+<span class="comment">-- La expresión regular '^A' significa que el nombre debe empezar con la letra 'A'</span>
+SELECT * 
+FROM empleados 
+WHERE nombre REGEXP '^A';
+
+<span class="comment">-- Selección de empleados cuyo correo electrónico contiene el dominio 'gmail.com'</span>
+<span class="comment">-- La expresión regular 'gmail.com$' significa que el correo debe terminar con 'gmail.com'</span>
+SELECT * 
+FROM usuarios 
+WHERE correo REGEXP 'gmail.com$';
+
+<span class="comment">-- Selecciona todas las filas de la tabla "productos" donde la columna "descripcion" contiene al menos un dígito numérico (0-9)</span>
+SELECT * 
+FROM productos 
+WHERE descripcion REGEXP '[0-9]';
+            </code>
+          </pre>
+      </details>
+    </article>
+
+    <article id="funciones-cadenas" aria-label="Funciones de cadenas de texto">
+      <h3>Funciones de Cadenas de Texto</h3>
+      <details>
+        <summary>Leer explicación</summary>
+          <p>
+            Incluye herramientas para manipular texto, como mayúsculas, minúsculas, recortes, concatenación y reemplazos, útiles para estandarizar y analizar información textual.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">
+-------------------------------------------------------------
+-- Funciones de Cadenas de Texto
+-------------------------------------------------------------
+</span>
+
+SELECT ('Hola Mundo');
+SELECT LOWER('Hola Mundo');
+SELECT LCASE('Hola Mundo');
+SELECT UPPER('Hola Mundo');
+SELECT UCASE('Hola Mundo');
+SELECT LEFT('Hola Mundo', 6);
+SELECT RIGHT('Hola Mundo', 6);
+SELECT LENGTH('Hola Mundo');
+SELECT REPEAT('Hola Mundo', 3);
+SELECT REVERSE('Hola Mundo');
+SELECT REPLACE('Hola Mundo', 'o', 'x');
+SELECT LTRIM('    Hola Mundo    ');
+SELECT RTRIM('    Hola Mundo    ');
+SELECT TRIM('    Hola Mundo     ');
+SELECT CONCAT('Hola Mundo',' desde ', 'SQL');
+SELECT CONCAT_WS('-','Hola','Mundo','desde','SQL');
+
+<span class="comment">-- Selecciona el nombre en mayúsculas, la descripción en minúsculas y el precio de la tabla productos</span>
+SELECT UPPER(nombre), LOWER(descripcion), precio  
+FROM productos;
+            </code>
+          </pre>
+      </details>
+    </article>
+
+    <article id="sql-indices" aria-label="Creación y Uso de Índices en MySQL: Básicos, Únicos y Fulltext">
+      <h3>Creación y Uso de Índices: Básicos, Únicos y Fulltext</h3>
+      <details>
+        <summary>Leer explicación</summary>
+        <p>
+          Los <strong>índices</strong> son estructuras de datos que mejoran la velocidad de las operaciones de recuperación de datos en las tablas. Funcionan como el índice de un libro, permitiendo que el motor de la base de datos encuentre rápidamente las filas sin tener que escanear toda la tabla.
+          <br>
+          <ul>
+            <li><strong>Índices por Defecto:</strong> Se crean automáticamente al definir una columna como <strong><code>PRIMARY KEY</code></strong> o con la restricción <strong><code>UNIQUE</code></strong>.</li>
+            <li><strong>Índices Básicos:</strong> Creados manualmente con <strong><code>INDEX i_nombre (columna)</code></strong> para optimizar la búsqueda en una columna específica.</li>
+            <li><strong>Índices Compuestos:</strong> Se aplican a múltiples columnas, por ejemplo, <strong><code>INDEX i_compuesto (columna1, columna2)</code></strong>, útiles para consultas que filtran por la combinación de esos campos.</li>
+            <li><strong>Índices FULLTEXT:</strong> Diseñados para búsquedas de texto completo de alto rendimiento (<strong><code>MATCH...AGAINST</code></strong>) en grandes volúmenes de texto, superando a <strong><code>LIKE %...%</code></strong>.</li>
+          </ul>
+          <br>
+          El comando <strong><code>SHOW INDEX FROM tabla</code></strong> permite verificar los índices existentes, y <strong><code>EXPLAIN SELECT</code></strong> muestra si el optimizador está usando el índice correctamente.
+        </p>
+        <pre class="code-window">
+          <code>
+<span class="comment">
+--------------------------------------------------------------------
+-- 1) Creación de tablas con índices básicos y por defecto
+---------------------------------------------------------------------
+
+-- Preparando la BD para nuevos temas
+</span>
+SHOW DATABASES;
+DROP DATABASE IF EXISTS demo_sql;
+CREATE DATABASE demo_sql;
+USE demo_sql;
+
+<span class="comment">-- Crear la tabla 'usuarios' con índices generados por defecto</span>
+CREATE TABLE usuarios (
+usuario_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,   <span class="comment">-- Índice por defecto en 'usuario_id' al definirlo como clave primaria</span>
+nombre VARCHAR(30) NOT NULL,
+apellidos VARCHAR(30) NOT NULL,
+correo VARCHAR(50) UNIQUE,                            <span class="comment">-- Índice por defecto en 'correo' debido a la restricción UNIQUE</span>
+edad INT DEFAULT 0
+);
+
+<span class="comment">-- Mostrar los índices creados por defecto en la tabla 'usuarios'</span>
+SHOW INDEX FROM usuarios;
+
+<span class="comment">-- Insertar 25 usuarios con datos reales en español</span>
+INSERT INTO usuarios (nombre, apellidos, correo, edad) VALUES
+('Carlos', 'Gómez Pérez', 'carlos.gomez@email.com', 28),
+('María', 'Fernández López', 'maria.fernandez@email.com', 32),
+('José', 'Martínez Sánchez', 'jose.martinez@email.com', 45),
+('Ana', 'Rodríguez Díaz', 'ana.rodriguez@email.com', 27),
+('Luis', 'Hernández García', 'luis.hernandez@email.com', 34),
+('Elena', 'Torres Ramírez', 'elena.torres@email.com', 29),
+('Miguel', 'López Castro', 'miguel.lopez@email.com', 41),
+('Lucía', 'Ruiz Molina', 'lucia.ruiz@email.com', 25),
+('Pedro', 'García Ortega', 'pedro.garcia@email.com', 38),
+('Laura', 'Díaz Navarro', 'laura.diaz@email.com', 31),
+('Andrés', 'Santos Romero', 'andres.santos@email.com', 26),
+('Beatriz', 'Medina Herrera', 'beatriz.medina@email.com', 35),
+('Sergio', 'Ortega Jiménez', 'sergio.ortega@email.com', 40),
+('Carmen', 'Flores Pérez', 'carmen.flores@email.com', 33),
+('Javier', 'Morales Rojas', 'javier.morales@email.com', 42),
+('Raquel', 'Silva Cabrera', 'raquel.silva@email.com', 30),
+('Alejandro', 'Vargas León', 'alejandro.vargas@email.com', 37),
+('Patricia', 'Cruz Soto', 'patricia.cruz@email.com', 28),
+('Fernando', 'Navarro Castillo', 'fernando.navarro@email.com', 39),
+('Isabel', 'Ramos Paredes', 'isabel.ramos@email.com', 24),
+('Adrián', 'Giménez Velasco', 'adrian.gimenez@email.com', 36),
+('Eva', 'Muñoz Ferrer', 'eva.munoz@email.com', 29),
+('Rubén', 'Salas Montes', 'ruben.salas@email.com', 27),
+('Natalia', 'Serrano Peña', 'natalia.serrano@email.com', 31),
+('Esteban', 'Lara Vargas', 'esteban.lara@email.com', 44);
+
+<span class="comment">-- Buscar un usuario por clave primaria (usuario_id)</span>
+<span class="comment">-- Esta consulta utiliza el índice por defecto en 'usuario_id', optimizando la búsqueda</span>
+SELECT * FROM usuarios WHERE usuario_id = 10;
+
+<span class="comment">-- Buscar un usuario por correo electrónico</span>
+<span class="comment">-- Se usa el índice único en 'correo', lo que mejora la eficiencia de la consulta</span>
+SELECT * FROM usuarios WHERE correo = 'carlos.gomez@email.com';
+
+<span class="comment">-- Verificar cómo se está utilizando el índice en la búsqueda por usuario_id</span>
+<span class="comment">-- La salida mostrará si el índice se usa correctamente para optimizar la consulta</span>
+EXPLAIN SELECT * FROM usuarios WHERE usuario_id = 10;
+
+<span class="comment">-- Verificar el uso del índice en la búsqueda por correo</span>
+<span class="comment">-- Dado que 'correo' es único, la consulta debería aprovechar este índice</span>
+EXPLAIN SELECT * FROM usuarios WHERE correo = 'carlos.gomez@email.com';
+
+<span class="comment">-- Crear tabla 'productos' con índices</span>
+CREATE TABLE productos (
+producto_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,  <span class="comment">-- Índice por defecto en 'producto_id' al ser clave primaria</span>
+nombre VARCHAR(50) NOT NULL,
+descripcion VARCHAR(200),
+precio DECIMAL(7,2),
+cantidad INT UNSIGNED,
+INDEX i_nombre (nombre),               <span class="comment">-- Índice en 'nombre' para optimizar búsquedas</span>
+INDEX i_descripcion (descripcion),      <span class="comment">-- Índice en 'descripcion' para mejorar consultas textuales</span>
+INDEX i_precio_cantidad (precio, cantidad) <span class="comment">-- Índice compuesto en 'precio' y 'cantidad' para consultas combinadas</span>
+);
+
+<span class="comment">-- Mostrar los índices creados para la tabla 'productos'</span>
+SHOW INDEX FROM productos;
+
+<span class="comment">-- Insertar 50 productos reales en la tabla 'productos'</span>
+INSERT INTO productos (nombre, descripcion, precio, cantidad) VALUES
+('Laptop Dell Inspiron', 'Portátil Dell de 15.6" con procesador Intel i5', 750.99, 20),
+('Smartphone Samsung Galaxy S23', 'Teléfono inteligente con pantalla AMOLED 6.1"', 999.99, 15),
+('Teclado Mecánico Logitech', 'Teclado RGB mecánico con switches rojos', 129.99, 30),
+('Mouse Inalámbrico Razer', 'Mouse óptico inalámbrico para gaming', 89.99, 25),
+('Monitor LG 27” 4K', 'Monitor UHD con tecnología IPS y HDR', 329.99, 18),
+('Silla Gamer Corsair', 'Silla ergonómica con soporte lumbar', 199.99, 12),
+('Disco SSD Samsung 1TB', 'Unidad de almacenamiento SSD NVMe', 129.99, 40),
+('Tarjeta Gráfica RTX 4060', 'GPU NVIDIA con 8GB GDDR6', 599.99, 10),
+('Auriculares Sony WH-1000XM5', 'Auriculares con cancelación de ruido', 349.99, 20),
+('Tablet iPad Pro 11"', 'Tablet Apple con chip M2 y pantalla Liquid Retina', 899.99, 8),
+('Cámara Canon EOS R10', 'Cámara mirrorless con sensor APS-C', 1099.99, 5),
+('Impresora HP LaserJet', 'Impresora láser monocromática', 159.99, 22),
+('Router WiFi 6 TP-Link', 'Router de alta velocidad para gaming', 99.99, 35),
+('Disco Externo WD 4TB', 'Disco duro portátil USB 3.0', 119.99, 28),
+('Microprocesador AMD Ryzen 7', 'CPU de 8 núcleos para alto rendimiento', 329.99, 15),
+('Memoria RAM Corsair 16GB', 'Módulo de RAM DDR5 a 5200MHz', 89.99, 50),
+('Fuente de Poder EVGA 750W', 'Fuente certificada 80 Plus Gold', 119.99, 12),
+('Gabinete NZXT H510', 'Gabinete para PC con diseño minimalista', 99.99, 10),
+('Refrigeración Líquida Corsair', 'Sistema de refrigeración líquida AIO', 149.99, 8),
+('Cargador USB-C Anker', 'Cargador rápido de 65W', 49.99, 40),
+('Lámpara LED Xiaomi', 'Lámpara de escritorio con brillo regulable', 39.99, 30),
+('Reloj Inteligente Garmin', 'Reloj deportivo con GPS y monitor de ritmo cardíaco', 199.99, 20),
+('Batería Externa 20,000mAh', 'Batería portátil con carga rápida', 59.99, 25),
+('Parlante Bluetooth JBL', 'Altavoz portátil resistente al agua', 79.99, 18),
+('Aspiradora Robot Roomba', 'Robot aspirador con navegación inteligente', 349.99, 10),
+('Cámara de Seguridad Xiaomi', 'Cámara IP con detección de movimiento', 49.99, 40),
+('Smart TV Samsung 55”', 'Televisor 4K con HDR y Tizen OS', 599.99, 12),
+('Cafetera Nespresso', 'Máquina de café con sistema de cápsulas', 129.99, 22),
+('Hervidor Eléctrico Philips', 'Hervidor de agua con apagado automático', 39.99, 30),
+('Freidora de Aire Cosori', 'Freidora sin aceite con pantalla táctil', 99.99, 15),
+('Purificador de Aire Dyson', 'Purificador con filtro HEPA', 499.99, 10),
+('Planchita GHD Platinum+', 'Plancha para el cabello de cerámica', 249.99, 12),
+('Mochila Antirrobo Samsonite', 'Mochila con compartimento para laptop', 89.99, 20),
+('Set de Maletas American Tourister', 'Maletas rígidas con ruedas giratorias', 199.99, 8),
+('Cámara Deportiva GoPro Hero 11', 'Cámara de acción resistente al agua', 499.99, 10),
+('Dron DJI Mini 3 Pro', 'Dron con cámara 4K y autonomía de 34 min', 899.99, 5),
+('Lentes de Sol Ray-Ban', 'Lentes de sol polarizados', 129.99, 25),
+('Bicicleta Eléctrica Xiaomi', 'Bicicleta plegable con motor de 250W', 599.99, 7),
+('Colchón King Size Sealy', 'Colchón ortopédico de espuma viscoelástica', 799.99, 6),
+('Sofá Reclinable Ashley', 'Sofá de cuero con sistema reclinable', 999.99, 4),
+('Escritorio Gamer Aukey', 'Escritorio ergonómico con luces LED', 199.99, 12),
+('Set de Ollas T-Fal', 'Juego de ollas antiadherentes de 10 piezas', 159.99, 18),
+('Robot de Cocina Thermomix', 'Procesador de alimentos multifunción', 1499.99, 3),
+('Cámara Instantánea Polaroid', 'Cámara instantánea con impresión al momento', 119.99, 20),
+('Mesa de Ping Pong Stiga', 'Mesa profesional para tenis de mesa', 599.99, 5),
+('Kit de Pesas Bowflex', 'Pesas ajustables de 5 a 52.5 libras', 299.99, 15),
+('Cinta de Correr NordicTrack', 'Caminadora con pantalla táctil y programas de entrenamiento', 1299.99, 4),
+('Set de Herramientas Bosch', 'Maletín con herramientas eléctricas y manuales', 199.99, 10);
+
+<span class="comment">-- Uso del índice 'i_nombre' para búsqueda eficiente por nombre</span>
+SELECT * FROM productos WHERE nombre = 'Laptop Dell Inspiron';
+
+<span class="comment">-- Uso del índice 'i_descripcion' para búsqueda optimizada en la descripción</span>
+SELECT * FROM productos WHERE descripcion LIKE '%pantalla AMOLED%';
+
+<span class="comment">-- Uso del índice compuesto 'i_precio_cantidad' para filtrar por precio y cantidad de manera eficiente</span>
+SELECT * FROM productos WHERE precio BETWEEN 300 AND 800 AND cantidad > 10;
+
+<span class="comment">
+--------------------------------------------------------------------
+-- 2) Creación de tabla con índice FULLTEXT
+---------------------------------------------------------------------
+
+-- Crear tabla 'empleados'
+</span>
+CREATE TABLE empleados (
+id INT PRIMARY KEY AUTO_INCREMENT,
+nombre VARCHAR(50),
+edad INT,
+salario DECIMAL(10, 2),
+fecha_ingreso DATE,
+departamento VARCHAR(30),
+FULLTEXT INDEX fi_search (nombre, departamento) <span class="comment">-- Índice FULLTEXT para búsquedas rápidas de texto completo</span>
+);
+
+<span class="comment">-- Insertar 5 empleados en la tabla 'empleados'</span>
+INSERT INTO empleados (nombre, edad, salario, fecha_ingreso, departamento) VALUES
+('Juan Pérez', 35, 4500.00, '2018-06-15', 'Recursos Humanos'),
+('María Gómez', 29, 5200.50, '2020-09-10', 'Finanzas'),
+('Carlos Ramírez', 42, 6100.75, '2015-03-22', 'Tecnología'),
+('Laura Fernández', 31, 4700.00, '2019-07-30', 'Marketing'),
+('Pedro López', 38, 5300.20, '2017-11-05', 'Ventas');
+
+<span class="comment">-- Mostrar los índices FULLTEXT creados para la tabla 'empleados'</span>
+SHOW INDEX FROM empleados;
+
+<span class="comment">-- 1. Buscar empleados cuyo nombre o departamento contenga la palabra "Marketing" utilizando el índice FULLTEXT</span>
+SELECT * FROM empleados
+WHERE MATCH(nombre, departamento) AGAINST('Marketing' IN NATURAL LANGUAGE MODE);
+
+<span class="comment">-- 2. Buscar empleados en el departamento de "Recursos Humanos" con el índice FULLTEXT</span>
+SELECT * FROM empleados
+WHERE MATCH(nombre, departamento) AGAINST('Recursos Humanos' IN NATURAL LANGUAGE MODE);
+
+<span class="comment">-- 3. Realizar una búsqueda avanzada con operadores booleanos utilizando el índice FULLTEXT fi_search</span>
+<span class="comment">-- Buscar empleados cuyo nombre contenga "Carlos" pero excluir a los del departamento "Finanzas"</span>
+SELECT * FROM empleados
+WHERE MATCH(nombre, departamento) AGAINST('Carlos -Finanzas' IN BOOLEAN MODE);
+          </code>
+        </pre>
+      </details>
+    </article>
+
+    <article id="sql-modificacion-indices" aria-label="Modificación de Índices en Tablas Existentes usando ALTER TABLE">
+      <h3>Modificación de Índices (tablas existente)</h3>
+      <details>
+        <summary>Leer explicación</summary>
+        <p>
+          La gestión profesional de bases de datos requiere la capacidad de modificar estructuras sin recrear la tabla. El comando <strong><code>ALTER TABLE</code></strong> es la herramienta fundamental para <strong>agregar, eliminar o modificar</strong> índices en tablas que ya contienen datos. Esto permite optimizar el <strong>rendimiento</strong> de las consultas y mantener la <strong>integridad de los datos</strong> a medida que evolucionan las necesidades de la aplicación. Puede usarse para:
+          <ul>
+              <li>Establecer o quitar claves primarias (<strong><code>PRIMARY KEY</code></strong>).</li>
+              <li>Añadir o eliminar restricciones únicas (<strong><code>UNIQUE</code></strong>).</li>
+              <li>Crear o eliminar índices simples, compuestos y de texto completo (<strong><code>FULLTEXT</code></strong>).</li>
+          </ul>
+          Es crucial saber que al agregar un índice a una tabla grande, la operación puede ser <strong>intensiva en recursos y tiempo</strong>.
+        </p>
+        <pre class="code-window">
+          <code>
+<span class="comment">
+---------------------------------------------------------------------
+-- Modificación de índices (tablas existente)
+-- El comando ALTER TABLE es la herramienta estándar para gestionar índices.
+---------------------------------------------------------------------
+
+-- Preparando la BD para nuevos temas
+</span>
+SHOW DATABASES;
+DROP DATABASE IF EXISTS demo_sql;
+CREATE DATABASE demo_sql;
+USE demo_sql;
+
+<span class="comment">-- 1. Crear tabla 'usuarios' sin índices explícitos iniciales</span>
+CREATE TABLE usuarios (
+usuario_id INT UNSIGNED,
+nombre VARCHAR(30),
+apellidos VARCHAR(30),
+correo VARCHAR(50),
+edad INT DEFAULT 0,
+telefono VARCHAR(15),
+direccion VARCHAR(100),
+fecha_registro DATE DEFAULT CURRENT_DATE
+);
+
+<span class="comment">-- Muestra los índices definidos en la tabla usuarios (solo NULL)</span>
+SHOW INDEX FROM usuarios;
+
+<span class="comment">
+-- GESTIÓN DE CLAVES PRIMARIAS
+</span>
+<span class="comment">-- Agregar clave primaria. Se añade la restricción (indexación por defecto)</span>
+ALTER TABLE usuarios ADD CONSTRAINT pk_usuario_id PRIMARY KEY (usuario_id);
+<span class="comment">-- Se modifica la columna para activar el autoincremento (práctica común con PK)</span>
+ALTER TABLE usuarios MODIFY COLUMN usuario_id INT AUTO_INCREMENT;
+
+<span class="comment">
+-- GESTIÓN DE RESTRICCIONES ÚNICAS
+</span>
+<span class="comment">-- Agregar UNIQUE en 'correo'. MySQL crea un índice único con este nombre.</span>
+ALTER TABLE usuarios ADD CONSTRAINT uq_correo UNIQUE (correo);
+<span class="comment">-- Eliminar la restricción UNIQUE usando el nombre del índice creado (uq_correo)</span>
+ALTER TABLE usuarios DROP INDEX uq_correo;
+
+<span class="comment">
+-- GESTIÓN DE ÍNDICES SIMPLES
+</span>
+<span class="comment">-- Agregar un índice simple en 'apellidos' para optimizar búsquedas.</span>
+ALTER TABLE usuarios ADD INDEX i_apellidos (apellidos);
+<span class="comment">-- Eliminar el índice simple usando su nombre (i_apellidos)</span>
+ALTER TABLE usuarios DROP INDEX i_apellidos;
+
+<span class="comment">
+-- GESTIÓN DE ÍNDICES COMPUESTOS
+</span>
+<span class="comment">-- Agregar índice compuesto en 'telefono' y 'direccion' para filtros combinados.</span>
+ALTER TABLE usuarios ADD INDEX i_telefono_direccion (telefono, direccion);
+<span class="comment">-- Eliminar el índice compuesto</span>
+ALTER TABLE usuarios DROP INDEX i_telefono_direccion;
+
+<span class="comment">
+-- GESTIÓN DE ÍNDICES FULLTEXT
+</span>
+<span class="comment">-- Agregar índice FULLTEXT en 'nombre' y 'apellidos' para búsquedas textuales avanzadas.</span>
+ALTER TABLE usuarios ADD FULLTEXT INDEX fi_search (nombre, apellidos);
+<span class="comment">-- Eliminar el índice FULLTEXT</span>
+ALTER TABLE usuarios DROP INDEX fi_search;
+          </code>
+        </pre>
+      </details>
+    </article>
+
+    <article id="sql-joins-subconsultas-vistas" aria-label="Joins, Subconsultas y Vistas">
+      <h3>JOINs, UNIONs, Subconsultas y Vistas</h3>
+      <details>
+        <summary>Leer explicación</summary>
+        <p>
+          Estos son algunos de los conceptos más importantes en el manejo de consultas SQL, 
+          que permiten relacionar, organizar y simplificar el acceso a los datos.
+        </p>
+        <ul>
+          <li>
+            <strong>JOINs y UNIONs:</strong> 
+            Los <em>JOINs</em> permiten combinar datos de dos tablas en base a una relación común. 
+            El <em>UNION</em> se utiliza para unir los resultados de múltiples consultas en un solo conjunto.
+          </li>
+          <li>
+            <strong>JOINs de múltiples tablas:</strong> 
+            Se aplican cuando es necesario enlazar más de dos tablas en una sola consulta, 
+            obteniendo información relacionada de manera más compleja.
+          </li>
+          <li>
+            <strong>Subconsultas:</strong> 
+            Son consultas anidadas dentro de otra instrucción SQL que sirven para obtener valores 
+            intermedios o filtrar resultados.
+          </li>
+          <li>
+            <strong>Vistas:</strong> 
+            Son consultas almacenadas en la base de datos que funcionan como tablas virtuales, 
+            facilitando la reutilización y simplificación de consultas frecuentes.
+          </li>
+        </ul>
+        <pre class="code-window">
+          <code>
+<span class="comment">
+----------------------------------------------------------
+-- Temas: 
+-- 1. JOINs y UNIONs  
+-- 2. JOINs de múltiples tablas  
+-- 3. Subconsultas  
+-- 4. Vistas  
+----------------------------------------------------------
+
+-- Preparando la BD para nuevos temas
+</span>
+SHOW DATABASES;
+DROP DATABASE IF EXISTS demo_sql;
+CREATE DATABASE demo_sql;
+USE demo_sql;
+
+<span class="comment">-- Creación de la estructura de tablas</span>
+CREATE TABLE usuarios (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  email VARCHAR(100) UNIQUE NOT NULL,
+  fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE categorias (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  descripcion TEXT
+);
+
+CREATE TABLE productos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  precio DECIMAL(10,2) NOT NULL,
+  stock INT NOT NULL,
+  categoria_id INT,
+  FOREIGN KEY (categoria_id) REFERENCES categorias(id)
+);
+
+CREATE TABLE pedidos (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  usuario_id INT NOT NULL,
+  fecha TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  estado ENUM('Pendiente', 'Enviado', 'Entregado', 'Cancelado') DEFAULT 'Pendiente',
+  total DECIMAL(10,2) NOT NULL,
+  FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+);
+
+CREATE TABLE detalle_pedido (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  pedido_id INT NOT NULL,
+  producto_id INT NOT NULL,
+  cantidad INT NOT NULL,
+  precio_unitario DECIMAL(10,2) NOT NULL,
+  FOREIGN KEY (pedido_id) REFERENCES pedidos(id),
+  FOREIGN KEY (producto_id) REFERENCES productos(id)
+);
+
+<span class="comment">-- Inserción de datos en usuarios (47 registros)</span>
+INSERT INTO usuarios (nombre, email) VALUES
+('Ana Torres', 'ana1@example.com'),
+('Pedro Martínez', 'pedro1@example.com'),
+('Luis Fernández', 'luis1@example.com'),
+('Laura Sánchez', 'laura1@example.com'),
+('Sofía Ramírez', 'sofia1@example.com'),
+('Carlos Gómez', 'carlos2@example.com'),
+('María López', 'maria2@example.com'),
+('Jorge Pérez', 'jorge2@example.com'),
+('Carla Herrera', 'carla2@example.com'),
+('Fernanda Ruiz', 'fernanda2@example.com'),
+('Diego Vargas', 'diego2@example.com'),
+('Mónica Díaz', 'monica2@example.com'),
+('Ricardo Castillo', 'ricardo2@example.com'),
+('Verónica Cruz', 'veronica2@example.com'),
+('Sebastián Peña', 'sebastian2@example.com'),
+('Andrea Moreno', 'andrea2@example.com'),
+('Gabriel Soto', 'gabriel2@example.com'),
+('Carmen Delgado', 'carmen2@example.com'),
+('Héctor Molina', 'hector2@example.com'),
+('Lucía Romero', 'lucia2@example.com'),
+('Antonio Méndez', 'antonio2@example.com'),
+('Natalia Flores', 'natalia2@example.com'),
+('Francisco Ríos', 'francisco2@example.com'),
+('Victoria Navarro', 'victoria2@example.com'),
+('Manuel Silva', 'manuel2@example.com'),
+('Paula Gutiérrez', 'paula2@example.com'),
+('Gustavo Carrillo', 'gustavo2@example.com'),
+('Liliana Ortega', 'liliana2@example.com'),
+('Marcos Espinoza', 'marcos2@example.com'),
+('Silvia Cabrera', 'silvia2@example.com'),
+('Martín Medina', 'martin2@example.com'),
+('Isabel Castro', 'isabel2@example.com'),
+('Alberto Campos', 'alberto2@example.com'),
+('Claudia Soto', 'claudia2@example.com'),
+('Fabián Jiménez', 'fabian2@example.com'),
+('Lorena Aguilar', 'lorena2@example.com'),
+('Emilio Acosta', 'emilio2@example.com'),
+('Daniela Chávez', 'daniela2@example.com'),
+('Roberto Fuentes', 'roberto2@example.com'),
+('Patricia Reyes', 'patricia2@example.com'),
+('Oscar Alonso', 'oscar2@example.com'),
+('Valeria Vega', 'valeria2@example.com'),
+('Enrique León', 'enrique2@example.com'),
+('Mariana Paredes', 'mariana2@example.com'),
+('Eduardo Núñez', 'eduardo2@example.com'),
+('Sara Guzmán', 'sara2@example.com'),
+('Julio Blanco', 'julio2@example.com');
+
+INSERT INTO categorias (nombre, descripcion) VALUES
+('Electrónica', 'Dispositivos y accesorios electrónicos'),
+('Ropa', 'Prendas de vestir y accesorios'),
+('Hogar', 'Productos para el hogar y cocina'),
+('Deportes', 'Equipamiento y ropa deportiva'),
+('Libros', 'Libros y material educativo');
+
+INSERT INTO pedidos (usuario_id, estado, total) VALUES
+(1, 'Pendiente', 319.98),
+(2, 'Enviado', 19.99),
+(3, 'Entregado', 15.50);
+
+INSERT INTO productos (nombre, precio, stock, categoria_id) VALUES
+('Impresora Láser', 199.99, 15, 2),
+('Tablet Android', 349.00, 30, 3),
+('Cámara Digital', 299.99, 10, 3),
+('Cafetera Automática', 89.99, 25, 5),
+('Televisor Smart', 799.00, 12, 2),
+('Auriculares Bluetooth', 59.99, 50, 1),
+('Microondas', 129.99, 20, 5),
+('Lámpara LED', 19.99, 100, 5),
+('Altavoz Portátil', 39.99, 60, 1),
+('Smartwatch', 249.00, 18, 3),
+('Drone Profesional', 899.00, 5, 3),
+('Teclado Retroiluminado', 69.99, 40, 1),
+('Sofá Reclinable', 499.00, 8, 5),
+('Bicicleta Eléctrica', 1200.00, 4, 4),
+('Frigorífico', 999.00, 6, 5),
+('Horno Eléctrico', 149.99, 20, 5),
+('Parlante Torre', 199.00, 15, 2),
+('Computadora de Escritorio', 699.00, 10, 3),
+('Mesa de Escritorio', 159.99, 15, 5),
+('Auriculares Gaming', 79.99, 30, 1),
+('Mochila Deportiva', 49.99, 25, 5),
+('Zapatillas Trekking', 99.99, 20, 4),
+('Monitor Curvo', 299.00, 12, 2),
+('Cámara de Seguridad', 149.99, 25, 3),
+('Silla de Oficina', 129.99, 35, 5),
+('Pulsera Fitness', 39.99, 50, 3),
+('Cargador Inalámbrico', 29.99, 100, 1),
+('Trípode Fotografía', 49.99, 30, 1),
+('Cascos de Bicicleta', 59.99, 15, 4),
+('Ventilador de Pie', 89.99, 20, 5),
+('Set de Ollas', 99.99, 10, 5),
+('Cochecito Bebé', 249.99, 8, 5),
+('Licuadora', 59.99, 30, 5),
+('Aspiradora Robot', 499.00, 5, 5),
+('Colchón Ortopédico', 599.00, 7, 5),
+('Set de Herramientas', 89.99, 50, 5),
+('Taladro Eléctrico', 129.99, 20, 5),
+('Gafas de Sol', 19.99, 80, 4),
+('Plancha de Vapor', 39.99, 25, 5),
+('Purificador de Aire', 149.99, 10, 5),
+('Termo Inoxidable', 24.99, 100, 5),
+('Estufa Eléctrica', 199.00, 10, 5),
+('Pesa Multifunción', 349.00, 12, 4),
+('Tostadora', 29.99, 40, 5),
+('Cámara Deportiva', 299.00, 8, 3),
+('Guitarra Eléctrica', 599.00, 6, 2),
+('Set de Pintura', 39.99, 50, 5),
+('Impresora Multifunción', 249.00, 15, 2),
+('Reproductor Blu-ray', 129.99, 20, 2);
+
+INSERT INTO detalle_pedido (pedido_id, producto_id, cantidad, precio_unitario) VALUES
+(1, 11, 2, 199.99),  
+(2, 12, 1, 349.00),  
+(3, 13, 1, 299.99),
+(1, 2, 1, 349.00),   
+(1, 4, 1, 89.99),    
+(2, 6, 2, 59.99),    
+(2, 8, 3, 19.99),    
+(3, 10, 1, 249.00),  
+(3, 12, 1, 69.99),   
+(1, 14, 1, 1200.00), 
+(2, 18, 1, 699.00),  
+(3, 20, 1, 79.99),   
+(1, 22, 2, 299.00);  
+
+show tables;
+
+select * from categorias;
+select * from detalle_pedido;
+select * from pedidos;
+select * from productos;
+select * from usuarios;
+select * from categorias;
+
+<span class="comment">
+---------------------------------------------------------------------------------------
+-- 1) Joins
+---------------------------------------------------------------------------------------
+</span>
+
+<span class="comment">-- LEFT JOIN: Recupera todos los registros de "detalle_pedido" y combina los datos de "pedidos", manteniendo todos los registros de "detalle_pedido"
+-- aunque no tengan coincidencia en "pedidos".
+</span>
+SELECT * FROM detalle_pedido
+LEFT JOIN pedidos 
+ON detalle_pedido.pedido_id = pedidos.id;
+
+<span class="comment">-- INNER JOIN: Recupera solo los registros de "detalle_pedido" que tienen una coincidencia en "pedidos".
+</span>
+SELECT * FROM detalle_pedido
+INNER JOIN pedidos
+ON detalle_pedido.pedido_id = pedidos.id;
+
+<span class="comment">-- LEFT JOIN: Recupera todos los registros de "detalle_pedido" y combina los datos de "productos", manteniendo todos los registros de "detalle_pedido"
+-- aunque no tengan coincidencia en "productos".
+</span>
+SELECT * FROM detalle_pedido
+LEFT JOIN productos
+ON detalle_pedido.pedido_id = productos.id;
+
+<span class="comment">-- RIGHT JOIN: Recupera todos los registros de "productos" y combina los datos de "detalle_pedido", manteniendo todos los registros de "productos"
+-- aunque no tengan coincidencia en "detalle_pedido".
+</span>
+SELECT * FROM detalle_pedido
+RIGHT JOIN productos
+ON detalle_pedido.pedido_id = productos.id;
+
+<span class="comment">-- INNER JOIN: Recupera solo los registros de "detalle_pedido" que tienen una coincidencia en "productos".
+</span>
+SELECT * FROM detalle_pedido
+INNER JOIN productos
+ON detalle_pedido.pedido_id = productos.id;
+
+<span class="comment">
+----------------------------------------------------------
+-- Simulando un FULL OUTER JOIN con UNION
+----------------------------------------------------------
+</span>
+select *
+from detalle_pedido
+left join productos on detalle_pedido.pedido_id = productos.id
+union 
+select *
+from detalle_pedido
+right join productos on detalle_pedido.pedido_id = productos.id;
+
+select *
+from detalle_pedido
+right join pedidos on detalle_pedido.pedido_id = pedidos.id
+union 
+select *
+from detalle_pedido
+left join pedidos on detalle_pedido.pedido_id = pedidos.id;
+
+<span class="comment">
+----------------------------------------------------------
+-- 2) JOINs de múltiples tablas
+----------------------------------------------------------
+
+-- Combina cinco tablas (detalle_pedido, categorias, productos, pedidos, usuarios) para obtener una vista completa del pedido.
+</span>
+select detalle_pedido.cantidad, detalle_pedido.precio_unitario, categorias.nombre, productos.nombre, pedidos.estado, pedidos.total, usuarios.nombre
+from detalle_pedido
+inner join categorias on detalle_pedido.pedido_id = categorias.id
+inner join productos on detalle_pedido.pedido_id = productos.id
+inner join pedidos on detalle_pedido.pedido_id = pedidos.id
+inner join usuarios on detalle_pedido.pedido_id = usuarios.id;
+
+<span class="comment">
+--------------------------------------------------------------------------------------------
+-- 3) Subconsultas
+--------------------------------------------------------------------------------------------
+</span>
+
+<span class="comment">-- Selecciona el nombre y el email de los usuarios que han realizado al menos un pedido.
+</span>
+SELECT nombre, email
+FROM usuarios
+WHERE id IN (
+  <span class="comment">-- Subconsulta: obtiene los IDs de los usuarios que tienen al menos un pedido registrado en la tabla "pedidos".
+</span>
+  SELECT DISTINCT usuario_id FROM pedidos
+);
+
+<span class="comment">-- Muestra el nombre de cada categoría y el número total de productos que pertenecen a ella.
+</span>
+SELECT nombre,
+      (
+          <span class="comment">-- Subconsulta: cuenta cuántos productos están asignados a cada categoría.
+</span>
+          SELECT COUNT(*) FROM productos WHERE productos.categoria_id = categorias.id
+      ) AS cantidad_productos
+FROM categorias;
+
+<span class="comment">-- Obtiene el total de pedidos realizados por cada usuario, junto con su nombre.
+</span>
+SELECT nombre,
+      (
+          <span class="comment">-- Subconsulta: cuenta cuántos pedidos ha realizado cada usuario.
+</span>
+          SELECT COUNT(*) FROM pedidos WHERE pedidos.usuario_id = usuarios.id
+      ) AS total_pedidos
+FROM usuarios;
+
+<span class="comment">-- Muestra el producto más caro de cada categoría junto con su precio.
+</span>
+SELECT nombre, categoria_id, precio
+FROM productos
+WHERE precio = (
+  <span class="comment">-- Subconsulta: obtiene el precio máximo de cada categoría.
+</span>
+  SELECT MAX(precio) FROM productos AS p WHERE p.categoria_id = productos.categoria_id
+);
+
+<span class="comment">-- Encuentra el total gastado en cada pedido.
+</span>
+SELECT id,
+      (
+          <span class="comment">-- Subconsulta: suma los montos totales de cada pedido considerando cantidad y precio unitario.
+</span>
+          SELECT SUM(cantidad * precio_unitario)
+          FROM detalle_pedido AS dp
+          WHERE dp.pedido_id = pedidos.id
+      ) AS total_gastado
+FROM pedidos;
+
+<span class="comment">
+--------------------------------------------------------------------------------------------
+-- 4) Vistas
+--------------------------------------------------------------------------------------------
+</span>
+
+<span class="comment">-- Crear una vista que muestra los detalles de los pedidos, incluyendo la cantidad y el precio unitario de los productos comprados, 
+-- la categoría a la que pertenece el producto, el nombre del producto, el estado y total del pedido, 
+-- así como el nombre del usuario que realizó la compra.
+</span>
+CREATE VIEW vista_detalle_pedidos AS
+SELECT 
+  detalle_pedido.cantidad, 
+  detalle_pedido.precio_unitario, 
+  categorias.nombre AS categoria_nombre, 
+  productos.nombre AS producto_nombre, 
+  pedidos.estado, 
+  pedidos.total, 
+  usuarios.nombre AS usuario_nombre
+FROM detalle_pedido
+INNER JOIN productos ON detalle_pedido.producto_id = productos.id
+INNER JOIN categorias ON productos.categoria_id = categorias.id
+INNER JOIN pedidos ON detalle_pedido.pedido_id = pedidos.id
+INNER JOIN usuarios ON pedidos.usuario_id = usuarios.id;
+
+<span class="comment">-- Selecciona todos los registros de la vista 'vista_detalle_pedidos'
+</span>
+SELECT * FROM vista_detalle_pedidos;
+
+<span class="comment">-- Crea una vista que muestra el nombre de cada categoría junto con la cantidad total de productos asociados a ella.
+-- Se utiliza una subconsulta para contar la cantidad de productos por cada categoría en la tabla "productos".
+</span>
+CREATE VIEW vista_categorias_productos AS
+SELECT nombre,
+      (
+          SELECT COUNT(*) 
+          FROM productos 
+          WHERE productos.categoria_id = categorias.id
+      ) AS cantidad_productos
+FROM categorias;
+
+<span class="comment">-- Selecciona todos los registros de la vista 'vista_categorias_productos'
+</span>
+select * from vista_categorias_productos;
+
+<span class="comment">-- Elimina la vista "vista_detalle_pedidos" si ya no es necesaria o si se necesita recrearla.
+</span>
+DROP VIEW vista_detalle_pedidos;
+
+<span class="comment">-- Muestra todas las vistas existentes en la base de datos "sistema_pedidos".
+</span>
+SHOW FULL TABLES IN sistema_pedidos WHERE TABLE_TYPE LIKE 'VIEW';
+          </code>
+        </pre>
+      </details>
+    </article>
+
+    <article id="sql-motores-restricciones" aria-label="Motores de Almacenamiento y Restricciones">
+      <h3>Motores de Almacenamiento y Restricciones</h3>
+      <details>
+        <summary>Leer explicación</summary>
+          <p>
+            El <strong>Motor de Almacenamiento</strong> (cláusula <code>ENGINE=</code>) define las capacidades físicas de la tabla (ej. transacciones, soporte de claves foráneas). <strong><code>InnoDB</code></strong> es el motor estándar, ideal para datos transaccionales, mientras que <strong><code>MyISAM</code></strong> es más rápido para solo lectura. Las <strong>Restricciones de Integridad</strong> (<code>FOREIGN KEY</code>) definen cómo se manejan los datos cuando se elimina o actualiza un registro padre. Las opciones clave son <strong><code>RESTRICT</code></strong> (impide la acción, por defecto), <strong><code>CASCADE</code></strong> (propaga la acción) y <strong><code>SET NULL</code></strong> (establece la clave foránea a <code>NULL</code>).
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">
+--------------------------------------------------------------------------------------------------------------------------------------------
+-- Tipos de Motores de Almacenamiento en MySQL
+--------------------------------------------------------------------------------------------------------------------------------------------
+/*
+InnoDB: Motor de almacenamiento predeterminado en MySQL. Soporta transacciones, integridad referencial y bloqueo a nivel de fila.
+MyISAM: Motor rápido y eficiente para consultas de solo lectura. No soporta transacciones ni integridad referencial.
+MEMORY (HEAP): Almacena los datos en memoria RAM, ideal para consultas rápidas pero volátiles.
+CSV: Guarda los datos en archivos CSV, permitiendo una fácil manipulación externa.
+ARCHIVE: Optimizado para almacenamiento y compresión de grandes volúmenes de datos sin soporte para índices.
+BLACKHOLE: Actúa como un "agujero negro"; acepta datos pero no los almacena, útil para replicación.
+MERGE: Agrupa múltiples tablas MyISAM en una sola tabla lógica.
+FEDERATED: Permite acceder a tablas en servidores remotos sin replicar los datos localmente.
+NDB (Clustered): Utilizado en MySQL Cluster, ideal para sistemas distribuidos con alta disponibilidad.
+*/
+
+-- Preparando la BD para nuevos temas
+</span>
+SHOW DATABASES;
+DROP DATABASE IF EXISTS demo_sql;
+CREATE DATABASE demo_sql;
+USE demo_sql;
+
+<span class="comment">-- Devuelve una lista de los motores de almacenamiento disponibles junto con su estado (si están habilitados o no) y características.
+</span>
+SHOW ENGINES;
+
+<span class="comment">-- 1) Creación de la tabla armaduras_myisam utilizando el motor MyISAM */
+</span>
+CREATE TABLE empleados (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nombre VARCHAR(50),
+    edad INT,
+    salario DECIMAL(10, 2),
+    fecha_ingreso DATE,
+    departamento VARCHAR(30)
+    <span class="comment">-- El motor de almacenamiento es MyISAM y el conjunto de caracteres es utf8mb4
+</span>
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+<span class="comment">-- Muestra información sobre la tabla 'empleados', incluyendo el motor de almacenamiento que utiliza.
+</span>
+SHOW TABLE STATUS LIKE 'empleados';
+
+<span class="comment">-- 2) Creación de la tabla armaduras_innodb utilizando el motor InnoDB
+</span>
+CREATE TABLE usuarios (
+  usuario_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(30) NOT NULL,
+  apellidos VARCHAR(30) NOT NULL,
+  correo VARCHAR(50) UNIQUE,
+  edad INT DEFAULT 0
+  <span class="comment">-- El motor de almacenamiento es InnoDB y el conjunto de caracteres es utf8mb4
+</span>
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+<span class="comment">-- Muestra información sobre la tabla 'usuarios', incluyendo el motor de almacenamiento que utiliza.
+</span>
+SHOW TABLE STATUS LIKE 'usuarios';
+
+<span class="comment">-- 3) La tabla utilizará el motor de almacenamiento por defecto (InnoDB)
+</span>
+CREATE TABLE productos (
+  producto_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(50) NOT NULL,
+  descripcion VARCHAR(200),
+  precio DECIMAL(7,2),
+  cantidad INT UNSIGNED
+);
+
+<span class="comment">-- Muestra información sobre la tabla 'productos', incluyendo el motor de almacenamiento que utiliza.
+</span>
+SHOW TABLE STATUS LIKE 'productos';
+
+<span class="comment">-- Muestra información detallada sobre las tablas en la base de datos actual
+</span>
+SHOW TABLE STATUS WHERE Name IN ('empleados', 'usuarios', 'productos');
+
+<span class="comment">
+---------------------------------------------------------------------
+-- Restricciones de Integridad en MySQL
+---------------------------------------------------------------------
+/*
+Si una clave foránea tiene la restricción por defecto (RESTRICT), 
+no se puede eliminar el registro referenciado mientras existan 
+registros que dependan de él en otras tablas. Esto significa que 
+cualquier clave foránea que haga referencia a un registro impide su 
+eliminación si la restricción RESTRICT está activa.
+*/
+/*
+RESTRICCIONES EN DELETE Y UPDATE:
+  - RESTRICT (valor por defecto)
+  - CASCADE
+  - SET NULL
+  - SET DEFAULT (no soportado en MySQL)
+*/
+
+-- Preparando la BD para nuevos temas
+</span>
+SHOW DATABASES;
+DROP DATABASE IF EXISTS demo_sql;
+CREATE DATABASE demo_sql;
+USE demo_sql;
+
+CREATE TABLE lenguajes (
+  lenguaje_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  lenguaje VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE entornos (
+  entorno_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  entorno VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE frameworks (
+  framework_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  framework VARCHAR(30) NOT NULL,
+  lenguaje INT UNSIGNED,
+  entorno INT UNSIGNED,
+  <span class="comment">-- Clave foránea: Si se elimina el lenguaje, se establece en NULL; si se actualiza, se propaga el cambio
+</span>
+  FOREIGN KEY (lenguaje) REFERENCES lenguajes(lenguaje_id) ON DELETE SET NULL ON UPDATE CASCADE,
+  <span class="comment">-- Clave foránea con restricciones por defecto (RESTRICT en DELETE y UPDATE)
+</span>
+  FOREIGN KEY (entorno) REFERENCES entornos(entorno_id)
+);
+
+INSERT INTO lenguajes (lenguaje) VALUES
+  ("JavaScript"),
+  ("PHP"),
+  ("Python"),
+  ("Ruby"),
+  ("JAVA");
+
+INSERT INTO entornos (entorno) VALUES
+  ("Frontend"),
+  ("Backend");
+
+INSERT INTO frameworks (framework, lenguaje, entorno) VALUES
+  ("React", 1, 1),
+  ("Angular", 1, 1),
+  ("Vue", 1, 1),
+  ("Svelte", 1, 1),
+  ("Laravel", 2, 2),
+  ("Symfony", 2, 2),
+  ("Flask", 3, 2),
+  ("Django", 3, 2),
+  ("On Rails", 4, 2);
+
+<span class="comment">
+-------------------------------
+-- RESTRICT en DELETE y UPDATE
+-------------------------------
+
+-- No se puede eliminar ni actualizar debido a la restricción RESTRICT por defecto
+</span>
+DELETE FROM entornos WHERE entorno_id = 1;
+UPDATE entornos SET entorno_id = 13 WHERE entorno_id = 1;
+
+<span class="comment">
+----------------------
+-- ON DELETE SET NULL
+----------------------
+
+-- Ver registros antes y después de la eliminación
+</span>
+SELECT * FROM frameworks;
+
+<span class="comment">-- Elimina el lenguaje con ID 3 y establece NULL en las claves foráneas afectadas
+</span>
+DELETE FROM lenguajes WHERE lenguaje_id = 3;
+
+<span class="comment">
+----------------------
+-- ON UPDATE CASCADE
+----------------------
+
+-- Ver registros antes y después de la actualización
+</span>
+SELECT * FROM frameworks;
+
+<span class="comment">-- Actualiza el ID 1 a 13 en la tabla lenguajes y propaga el cambio a las claves foráneas
+</span>
+UPDATE lenguajes SET lenguaje_id = 13 WHERE lenguaje_id = 1;
+<span class="comment">Actualizar Restricciones en tablas existente (TE DEBO)</span>
+            </code>
+          </pre>
+      </details>
+    </article>
+
+    <article id="sql-transacciones" aria-label="Transacciones">
+      <h3>Transacciones</h3>
+      <details>
+        <summary>Leer explicación</summary>
+        <p>
+          Una <strong>Transacción</strong> en SQL es un conjunto de operaciones que se ejecutan como una unidad indivisible. 
+          Esto significa que todas las acciones deben completarse correctamente para que los cambios se confirmen (<code>COMMIT</code>), 
+          o bien revertirse completamente en caso de error (<code>ROLLBACK</code>). 
+          Las transacciones garantizan la <strong>integridad y consistencia</strong> de la base de datos.
+        </p>
+        <pre class="code-window">
+          <code>
+<span class="comment">
+---------------------------------------------------------------------
+-- TRANSACTION
+---------------------------------------------------------------------
+/* Una TRANSACTION en SQL permite agrupar múltiples consultas en una única operación atómica.
+  Esto significa que todas las consultas dentro de la transacción deben ejecutarse correctamente,
+  de lo contrario, se deshacen (ROLLBACK) para evitar cambios parciales en la base de datos.
+*/
+
+-- Preparando la BD para nuevos temas
+</span>
+SHOW DATABASES;
+DROP DATABASE IF EXISTS demo_sql;
+CREATE DATABASE demo_sql;
+USE demo_sql;
+
+CREATE TABLE lenguajes (
+lenguaje_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+lenguaje VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE entornos (
+entorno_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+entorno VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE frameworks (
+framework_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+framework VARCHAR(30) NOT NULL,
+lenguaje INT UNSIGNED,
+entorno INT UNSIGNED,
+FOREIGN KEY (lenguaje) REFERENCES lenguajes(lenguaje_id) ON DELETE SET NULL ON UPDATE CASCADE,
+FOREIGN KEY (entorno) REFERENCES entornos(entorno_id)
+);
+
+INSERT INTO lenguajes (lenguaje) VALUES
+("JavaScript"),
+("PHP"),
+("Python"),
+("Ruby"),
+("JAVA");
+
+INSERT INTO entornos (entorno) VALUES
+("Frontend"),
+("Backend");
+
+INSERT INTO frameworks (framework, lenguaje, entorno) VALUES
+("React", 1, 1),
+("Angular", 1, 1),
+("Vue", 1, 1),
+("Svelte", 1, 1),
+("Laravel", 2, 2),
+("Symfony", 2, 2),
+("Flask", 3, 2),
+("Django", 3, 2),
+("On Rails", 4, 2);
+
+<span class="comment">-- Consultar el estado de la tabla antes y después de aplicar los cambios
+</span>
+SELECT * FROM frameworks;
+
+<span class="comment">-- Iniciar una transacción
+</span>
+START TRANSACTION;
+
+<span class="comment">-- Actualizar el nombre del framework con ID 1
+</span>
+UPDATE frameworks SET framework = "Vue.js" WHERE framework_id = 1;
+<span class="comment">-- Insertar un nuevo registro en la tabla frameworks
+</span>
+INSERT INTO frameworks VALUES (0, "Spring", 5, 2);
+<span class="comment">-- Eliminar todos los registros de la tabla frameworks
+</span>
+DELETE FROM frameworks;
+
+<span class="comment">-- Revertir los cambios si es necesario
+</span>
+ROLLBACK;
+<span class="comment">-- Confirmar los cambios realizados
+</span>
+COMMIT;
+
+<span class="comment">-- Obtener todas las filas de la tabla frameworks
+</span>
+SELECT * FROM frameworks;
+<span class="comment">-- Obtener las primeras 2 filas de la tabla
+</span>
+SELECT * FROM frameworks LIMIT 2;
+<span class="comment">-- Omitir las primeras 2 filas y mostrar las siguientes 2 filas
+</span>
+SELECT * FROM frameworks LIMIT 2, 2;
+<span class="comment">-- Omitir las primeras 4 filas y mostrar las siguientes 2 filas
+</span>
+SELECT * FROM frameworks LIMIT 4, 2;
+<span class="comment">-- Omitir las primeras 6 filas y mostrar las siguientes 2 filas
+</span>
+SELECT * FROM frameworks LIMIT 6, 2;
+<span class="comment">-- Omitir las primeras 8 filas y mostrar las siguientes 2 filas
+</span>
+SELECT * FROM frameworks LIMIT 8, 2;
+<span class="comment">-- Omitir las primeras 10 filas y mostrar las siguientes 2 filas
+</span>
+SELECT * FROM frameworks LIMIT 10, 2;
+<span class="comment">-- Repetición: Omitir las primeras 8 filas y mostrar las siguientes 2 filas
+</span>
+SELECT * FROM frameworks LIMIT 8, 2;
+<span class="comment">encriptación</span>
+          </code>
+        </pre>
+      </details>
+    </article>
+
+    <article id="encriptacion" aria-label="Encriptación en SQL">
+      <h3>Encriptación</h3>
+      <details>
+        <summary>Leer explicación</summary>
+        <p>
+          La <strong>Encriptación</strong> es un proceso que transforma los datos en un formato ilegible para proteger su confidencialidad. 
+          En SQL, se utiliza para resguardar información sensible, como contraseñas o datos financieros, mediante funciones que cifran 
+          y descifran la información, asegurando que solo usuarios autorizados puedan acceder a los datos originales.
+        </p>
+        <pre class="code-window">
+          <code>
+<span class="comment">
+---------------------------------------------------------------------
+-- Encriptación y Desencriptado en SQL
+---------------------------------------------------------------------
+
+/* La encriptación es un proceso de transformación de datos en un formato ilegible para proteger 
+  la información contra accesos no autorizados. 
+
+  En SQL, se utilizan funciones de encriptación para almacenar datos sensibles de manera segura. 
+  Existen dos tipos principales de encriptación:
+  
+  1. **Encriptación Simétrica**: Usa la misma clave para cifrar y descifrar datos. 
+    - Ejemplo: AES_ENCRYPT(), AES_DECRYPT() en MySQL.
+  
+  2. **Encriptación Asimétrica**: Usa una clave pública para cifrar y una privada para descifrar.
+    - Más común en sistemas externos como RSA.
+
+  También existen funciones de **hashing**, que convierten datos en una representación irreversible.
+  - Ejemplo: MD5(), SHA1(), SHA2().
+
+  La encriptación ayuda a proteger contraseñas, datos personales y transacciones financieras.
+*/
+
+-- Preparando la BD para nuevos temas
+</span>
+SHOW DATABASES;
+DROP DATABASE IF EXISTS demo_sql;
+CREATE DATABASE demo_sql;
+USE demo_sql;
+
+<span class="comment">-- Funciones de encriptacion
+</span>
+SELECT MD5('m1 Sup3r P4$$w0rD');
+SELECT SHA1('m1 Sup3r P4$$w0rD');
+SELECT SHA2('m1 Sup3r P4$$w0rD', 256);
+
+SELECT AES_ENCRYPT('m1 Sup3r P4$$w0rD', 'llave_secreta');
+<span class="comment">-- Ejemplo de uso de desencriptado (nombre_campo debe ser un valor BLOB encriptado)
+</span>
+SELECT AES_DECRYPT(nombre_campo, 'llave_secreta');
+
+<span class="comment">-- Ejemplo de encriptado y desencriptado
+</span>
+CREATE TABLE pagos_recurrentes(
+cuenta VARCHAR(8) PRIMARY KEY,
+nombre VARCHAR(50) NOT NULL,
+tarjeta BLOB
+);
+
+INSERT INTO pagos_recurrentes VALUES
+('12345678', 'Jon', AES_ENCRYPT('1234567890123488', '12345678')),
+('12345677', 'Irma', AES_ENCRYPT('1234567890123477', '12345677')),
+('12345676', 'Kenai', AES_ENCRYPT('1234567890123466', '12345676')),
+('12345674', 'Kala', AES_ENCRYPT('1234567890123455', 'super_llave')),
+('12345673', 'Miguel', AES_ENCRYPT('1234567890123444', 'super_llave')),
+('12345658', 'Juan Pérez', AES_ENCRYPT('1234-5678-9876-5432', 'clave_secreta'));
+<span class="comment">-- Estas inserciones usando MD5/SHA2 son solo para fines de demostración de hashing, no de AES_ENCRYPT
+</span>
+<span class="comment">-- ('23456789', 'Ana Gómez', MD5('1234-5678-9876-5432'));
+-- ('34567890', 'Carlos Ruiz', SHA2('1234-5678-9876-5432', 256));
+</span>
+
+SELECT * FROM pagos_recurrentes;
+
+<span class="comment">
+---------------------------------------------------------------
+--  Procedimientos Almacenados: Desencriptación en SQL  
+---------------------------------------------------------------
+/* Descripción:  
+El proceso de desencriptado en SQL permite convertir datos previamente 
+encriptados de vuelta a su forma original utilizando una clave específica.  
+En este caso, se emplea la función AES_DECRYPT() para descifrar los datos 
+almacenados en la columna 'tarjeta' de la tabla 'pagos_recurrentes'.  
+
+Sintaxis utilizada:  
+SELECT CAST(AES_DECRYPT(columna, 'clave') AS CHAR) AS alias FROM tabla;  
+
+Importante:  
+Se debe proporcionar la misma clave utilizada para encriptar los datos.  
+Si la clave es incorrecta, el resultado será NULL o ilegible.  
+Es recomendable utilizar claves seguras y prácticas de protección de datos.  
+*/
+
+-- Ejemplo de Desencriptación con Diferentes Claves  
+</span>
+SELECT CAST(AES_DECRYPT(tarjeta, '12345678') AS CHAR) AS tdc, nombre  
+FROM pagos_recurrentes;  
+
+SELECT CAST(AES_DECRYPT(tarjeta, 'super_llave') AS CHAR) AS tdc, nombre  
+FROM pagos_recurrentes;  
+
+SELECT CAST(AES_DECRYPT(tarjeta, 'qwerty') AS CHAR) AS tdc, nombre  
+FROM pagos_recurrentes;
+          </code>
+        </pre>
+      </details>
+    </article>
+
+    <article id="stored-procedure-intro" aria-label="Introducción a Procedimientos Almacenados en SQL">
+        <h3>Procedimiento Almacenado (Stored Procedure)</h3>
+        <details>
+        <summary>Leer explicación</summary>
+        <p>
+            Un <strong>Procedimiento Almacenado</strong> es una secuencia de comandos SQL que se guarda en la base de datos para ser ejecutada como una sola unidad. Esto mejora la eficiencia, reduce el tráfico de red, centraliza la lógica de negocio y aumenta la seguridad. Se utilizan para automatizar tareas repetitivas y se invocan con el comando $\texttt{CALL}$.
+        </p>
+        <pre class="code-window">
+          <code>
+<span class="comment">
+-- 1) Procedimiento Almacenado (Stored Procedure) 
+---------------------------------------------------------------------
+
+/* Un Procedimiento Almacenado (Stored Procedure) es una secuencia de instrucciones SQL que se almacena en la base de datos 
+y puede ejecutarse de manera eficiente mediante un solo comando. 
+
+Estos procedimientos permiten automatizar tareas repetitivas, optimizar el rendimiento del sistema y mejorar la seguridad 
+al minimizar la exposición directa de las consultas SQL. Además, pueden aceptar parámetros de entrada y devolver resultados, 
+lo que los hace altamente reutilizables y escalables en la gestión de datos. 
+
+Sintaxis básica de un Procedimiento Almacenado en SQL
+
+DELIMITER // 
+
+CREATE PROCEDURE NombreDelProcedimiento() 
+
+BEGIN 
+  -- Instrucciones SQL a ejecutar 
+END // 
+
+DELIMITER ;
+
+Para ejecutar el procedimiento almacenado, se utiliza la siguiente sintaxis: 
+CALL NombreDelProcedimiento(); 
+*/
+
+-- Preparando la BD para nuevos temas
+</span>
+SHOW DATABASES;
+DROP DATABASE IF EXISTS demo_sql;
+CREATE DATABASE demo_sql;
+USE demo_sql;
+
+CREATE TABLE suscripciones (
+  suscripcion_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  suscripcion VARCHAR(30) NOT NULL,
+  costo DECIMAL(5,2) NOT NULL
+);
+
+INSERT INTO suscripciones VALUES
+  (0, 'Bronce', 199.99),
+  (0, 'Plata', 299.99),
+  (0, 'Oro', 399.99);
+
+CREATE TABLE clientes (
+  cliente_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(30) NOT NULL,
+  correo VARCHAR(50) UNIQUE
+);
+
+CREATE TABLE tarjetas (
+  tarjeta_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  cliente INT UNSIGNED,
+  tarjeta BLOB,
+  FOREIGN KEY (cliente)
+    REFERENCES clientes(cliente_id)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE
+);
+
+CREATE TABLE servicios(
+  servicio_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  cliente INT UNSIGNED,
+  tarjeta INT UNSIGNED,
+  suscripcion INT UNSIGNED,
+  FOREIGN KEY(cliente)
+    REFERENCES clientes(cliente_id)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE,
+  FOREIGN KEY(tarjeta)
+    REFERENCES tarjetas(tarjeta_id)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE,
+  FOREIGN KEY(suscripcion)
+    REFERENCES suscripciones(suscripcion_id)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE
+);
+
+CREATE TABLE actividad_clientes(
+  ac_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  cliente INT UNSIGNED,
+  fecha DATETIME,
+  FOREIGN KEY (cliente)
+    REFERENCES clientes(cliente_id)
+    ON DELETE RESTRICT
+    ON UPDATE CASCADE
+);
+
+SELECT * FROM suscripciones;
+SELECT * FROM clientes;
+SELECT * FROM tarjetas;
+SELECT * FROM servicios;
+SELECT * FROM actividad_clientes;
+
+<span class="comment">
+/* 📌 Instrucciones: 
+Copie y pegue este código en un nuevo script SQL y ejecútelo en su totalidad. 
+Asegúrese de ejecutar todo el bloque dentro de `DELIMITER //` para evitar errores. 
+*/
+</span>
+
+DELIMITER //
+
+CREATE PROCEDURE sp_obtener_suscripciones()
+
+  BEGIN
+
+    SELECT * FROM suscripciones;
+
+  END //
+
+DELIMITER ;
+
+<span class="comment">-- Llamar al procedimiento almacenado </span>
+CALL sp_obtener_suscripciones();
+
+<span class="comment">-- Mostrar la lista de procedimientos almacenados en la base de datos 'curso_sql' </span>
+SHOW PROCEDURE STATUS WHERE db = 'demo_sql';
+
+<span class="comment">-- Eliminar el procedimiento almacenado </span>
+DROP PROCEDURE sp_obtener_suscripciones
+
+DELIMITER //
+
+CREATE PROCEDURE sp_asignar_servicio(
+  IN i_suscripcion INT UNSIGNED,
+  IN i_nombre VARCHAR(30),
+  IN i_correo VARCHAR(50),
+  IN i_tarjeta VARCHAR(16),
+  OUT o_respuesta VARCHAR(50)
+)
+
+  BEGIN
+
+  DECLARE existe_correo INT DEFAULT 0;
+  DECLARE cliente_id INT DEFAULT 0;
+  DECLARE tarjeta_id INT DEFAULT 0;
+
+  START TRANSACTION;
+
+    SELECT COUNT(*) INTO existe_correo
+      FROM clientes
+      WHERE correo = i_correo;
+
+    IF existe_correo <> 0 THEN
+
+      SELECT 'Tu correo ya ha sido registrado' INTO o_respuesta;
+
+    ELSE
+
+      INSERT INTO clientes VALUES (0, i_nombre, i_correo);
+      SELECT LAST_INSERT_ID() INTO cliente_id;
+
+      INSERT INTO tarjetas
+        VALUES (0, cliente_id, AES_ENCRYPT(i_tarjeta, cliente_id));
+      SELECT LAST_INSERT_ID() INTO tarjeta_id;
+
+      INSERT INTO servicios VALUES (0, cliente_id, tarjeta_id, i_suscripcion);
+
+      SELECT 'Servicio asignado con éxito' INTO o_respuesta;
+
+    END IF;
+
+  COMMIT;
+
+  END //
+
+DELIMITER ;
+
+SELECT * FROM suscripciones;
+SELECT * FROM clientes;
+SELECT * FROM tarjetas;
+SELECT * FROM servicios;
+SELECT * FROM actividad_clientes;
+
+<span class="comment">
+-- Llamada al procedimiento almacenado 'sp_asignar_servicio' 
+-- Parámetros: 
+--    1️⃣  2 → ID del servicio o usuario 
+--    2️⃣  'Kenai' → Nombre del usuario 
+--    3️⃣  'kenai@gmail.com' → Correo electrónico del usuario 
+--    4️⃣  '1234567890123490' → Posible número de tarjeta o identificador 
+--    5️⃣  @res → Variable de salida que almacenará el resultado 
+
+</span>
+CALL sp_asignar_servicio(2, 'Kenai', 'kenai@gmail.com', '1234567890123490', @res);
+
+<span class="comment">-- Mostrar el valor almacenado en la variable de salida @res </span>
+SELECT @res;
+
+<span class="comment">
+----------------------------------------------------------------------------
+-- 2) Introducción a los Disparadores
+----------------------------------------------------------------------------
+
+/*
+trigger para monitorear la actividad de los clientes, 
+como registrar los cambios en sus datos o detectar cuándo se 
+registra un nuevo cliente
+
+SINTAXIS TRIGGERS
+
+DELIMITER // 
+
+CREATE TRIGGER nombre_disparador 
+[BEFORE | AFTER] [INSERT | UPDATE | DELETE]  -- Momento y tipo de evento 
+ON nombre_tabla  -- Tabla en la que se aplicará el Trigger 
+FOR EACH ROW  -- Se ejecuta para cada fila afectada 
+
+BEGIN 
+  -- Instrucciones que se ejecutarán cuando ocurra el evento 
+END // 
+
+DELIMITER ;  -- Restablecer delimitador original 
+*/
+</span>
+
+DELIMITER //
+
+CREATE TRIGGER tg_actividad_clientes
+  AFTER INSERT
+  ON clientes
+  FOR EACH ROW
+
+  BEGIN
+
+    INSERT INTO actividad_clientes VALUES (0, NEW.cliente_id, NOW());
+
+  END //
+
+DELIMITER ;
+
+<span class="comment">-- Mostrar todos los triggers (disparadores) creados en la base de datos 'demo_sql' </span>
+SHOW TRIGGERS FROM demo_sql;
+
+<span class="comment">-- Eliminar el trigger 'tg_actividad_clientes' si ya no es necesario </span>
+DROP TRIGGER tg_actividad_clientes;
+          </code>
+        </pre>
+        </details>
+    </article>
+    </section>
+  </main>
+
+<!-- ===================================================== -->
+<!-- PLACEHOLDERS DE COMPONENTES DINÁMICOS                 -->
+<!-- ===================================================== -->
+<!-- Estos contenedores reciben HTML inyectado vía JS     -->
+<!-- Permiten reutilizar componentes (footer, modales)   -->
+<!-- y mantener el HTML principal limpio y escalable      -->
+
+<div id="footer-placeholder"></div>
+<div id="contact-modal-placeholder"></div>
+
+
+<!-- ===================================================== -->
+<!-- SCRIPTS GLOBALES                                     -->
+<!-- ===================================================== -->
+<!-- Footer: se carga de forma diferida para no bloquear  -->
+<!-- el render inicial de la página                       -->
+
+<script src="../components/footer/footer.js" defer></script>
+
+<!-- Scripts generales del sitio (interacciones globales) -->
+<script src="/js/scripts.js"></script>
+
+
+<!-- ===================================================== -->
+<!-- CARGA DINÁMICA DEL CONTACT MODAL                     -->
+<!-- ===================================================== -->
+<!-- 1. Obtiene el HTML del modal desde el componente     -->
+<!-- 2. Lo inyecta en su placeholder correspondiente      -->
+<!-- 3. Carga el JS del modal de forma desacoplada        -->
+<!-- Esto permite reutilizar el modal en cualquier página -->
+
+<script>
+  fetch('../components/contact-modal/contact-modal.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('No se pudo cargar el Contact Modal');
+      }
+      return response.text();
+    })
+    .then(modalHTML => {
+      // Inyección del HTML del modal en el placeholder
+      document.getElementById('contact-modal-placeholder').innerHTML = modalHTML;
+
+      // Carga dinámica del script del modal
+      const modalScript = document.createElement('script');
+      modalScript.src = '../components/contact-modal/contact-modal.js';
+      modalScript.defer = true;
+      document.body.appendChild(modalScript);
+    })
+    .catch(error => {
+      console.error('Error cargando el Contact Modal:', error);
+    });
+</script>
+</body>
+</html>
+
+

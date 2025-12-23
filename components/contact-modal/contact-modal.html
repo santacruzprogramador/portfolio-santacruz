@@ -1,0 +1,165 @@
+<!-- Contact Modal Component -->
+<section class="contact-modal" aria-labelledby="contact-modal-title">
+
+  <!-- Botón fijo -->
+  <button 
+    class="contact-modal__trigger" 
+    aria-haspopup="dialog"
+    aria-label="Abrir formulario de contacto"
+    type="button"
+  >
+    <span aria-hidden="true"></span>
+    Contáctame
+  </button>
+
+  <!-- Overlay -->
+  <div 
+    class="contact-modal__overlay" 
+    hidden
+    aria-hidden="true"
+  ></div>
+
+  <!-- Modal -->
+  <div 
+    class="contact-modal__dialog" 
+    role="dialog" 
+    aria-modal="true"
+    aria-labelledby="contact-modal-title"
+    aria-describedby="contact-modal-description"
+    hidden
+  >
+
+    <header class="contact-modal__header">
+      <h2 
+        class="contact-modal__title" 
+        id="contact-modal-title"
+      >
+        Contáctame
+      </h2>
+      <button 
+        class="contact-modal__close" 
+        aria-label="Cerrar formulario de contacto"
+        type="button"
+      >
+        ×
+      </button>
+    </header>
+
+    <p 
+      id="contact-modal-description" 
+      class="contact-modal__description"
+      hidden
+    >
+      Complete el formulario para enviar un mensaje. Todos los campos marcados con asterisco son obligatorios.
+    </p>
+
+    <form
+      class="contact-modal__form"
+      action="https://formspree.io/f/mqarjwwd"
+      method="POST"
+      novalidate
+    >
+
+      <div class="contact-modal__field">
+        <label for="contact-nombre">
+          Nombre <abbr title="campo obligatorio" aria-label="obligatorio"></abbr>
+        </label>
+        <input 
+          type="text" 
+          id="contact-nombre"
+          name="nombre" 
+          required
+          autocomplete="name"
+          placeholder="Tu nombre completo"
+          aria-required="true"
+          maxlength="100"
+        />
+      </div>
+
+      <div class="contact-modal__field">
+        <label for="contact-email">
+          Email <abbr title="campo obligatorio" aria-label="obligatorio"></abbr>
+        </label>
+        <input 
+          type="email" 
+          id="contact-email"
+          name="email" 
+          required
+          autocomplete="email"
+          placeholder="tu@gmail.com"
+          aria-required="true"
+          maxlength="100"
+        />
+      </div>
+
+      <div class="contact-modal__field">
+        <label for="contact-asunto">
+          Asunto
+        </label>
+        <input 
+          type="text" 
+          id="contact-asunto"
+          name="asunto"
+          autocomplete="off"
+          placeholder="Asunto del mensaje"
+          maxlength="150"
+        />
+      </div>
+
+      <div class="contact-modal__field">
+        <label for="contact-mensaje">
+          Mensaje <abbr title="campo obligatorio" aria-label="obligatorio"></abbr>
+        </label>
+        <textarea 
+          id="contact-mensaje"
+          name="mensaje" 
+          rows="4" 
+          required
+          placeholder="Escriba su mensaje aquí..."
+          aria-required="true"
+          maxlength="1000"
+        ></textarea>
+      </div>
+
+      <!-- Campo honeypot anti-spam (oculto para humanos) -->
+      <input 
+        type="text" 
+        name="_gotcha" 
+        style="display:none" 
+        tabindex="-1" 
+        autocomplete="off"
+        aria-hidden="true"
+      />
+
+      <button 
+        type="submit" 
+        class="contact-modal__submit"
+        aria-label="Enviar mensaje de contacto"
+      >
+        Enviar mensaje
+      </button>
+
+      <!-- Mensajes -->
+      <p 
+        class="contact-modal__success" 
+        role="status"
+        aria-live="polite"
+        hidden
+      >
+        ✅ Mensaje enviado correctamente. Gracias por contactarme.
+      </p>
+
+      <p 
+        class="contact-modal__error" 
+        role="alert"
+        aria-live="assertive"
+        hidden
+      >
+        ❌ Ocurrió un error. Por favor, intente nuevamente.
+      </p>
+
+    </form>
+
+  </div>
+
+</section>

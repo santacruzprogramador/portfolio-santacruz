@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ========================= -->
+  <!-- METADATOS BÁSICOS -->
+  <!-- ========================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ========================= -->
+  <!-- SEO PRINCIPAL -->
+  <!-- ========================= -->
+  <title>¿Qué es la Programación? | Introducción y conceptos básicos</title>
+  <meta
+    name="description"
+    content="Descubre qué es la programación, para qué sirve y cuáles son sus conceptos básicos. Introducción clara y sencilla para principiantes."
+  >
+
+  <!-- ========================= -->
+  <!-- AUTOR -->
+  <!-- ========================= -->
+  <meta name="author" content="José Alberto Santacruz">
+  <meta name="robots" content="index, follow">
+
+  <!-- ========================= -->
+  <!-- URL CANÓNICA -->
+  <!-- ========================= -->
+  <link
+    rel="canonical"
+    href="https://santacruzprogramador.github.io/santacruzjose/pages/intro-programming.html"
+  >
+
+  <!-- ========================= -->
+  <!-- OPEN GRAPH -->
+  <!-- ========================= -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="¿Qué es la Programación?">
+  <meta
+    property="og:description"
+    content="Introducción a la programación: qué es, para qué sirve y cómo empezar desde cero."
+  >
+  <meta
+    property="og:url"
+    content="https://santacruzprogramador.github.io/santacruzjose/pages/intro-programming.html"
+  >
+  <meta
+    property="og:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+  <meta property="og:site_name" content="Portfolio José Santacruz">
+
+  <!-- ========================= -->
+  <!-- TWITTER CARD -->
+  <!-- ========================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="¿Qué es la Programación?">
+  <meta
+    name="twitter:description"
+    content="Conceptos básicos para entender qué es la programación y cómo funciona."
+  >
+  <meta
+    name="twitter:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+
+  <!-- ========================= -->
+  <!-- FAVICON -->
+  <!-- ========================= -->
+  <link
+    rel="icon"
+    href="../assets/favicon/favicon.ico"
+    type="image/x-icon"
+  >
+
+  <!-- ========================= -->
+  <!-- COLOR TEMA -->
+  <!-- ========================= -->
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- ========================= -->
+  <!-- ESTILOS -->
+  <!-- ========================= -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/intr_to_programming.css">
+  <link rel="stylesheet" href="../components/contact-modal/contact-modal.css">
+</head>
+
+<body>
+
+  <header class="page-title">
+    <h1 class="">GitHub</h1>
+  </header>
+
+
+  <a href="../#github" class="volver">← Inicio</a>
+<main class="containesr section">
+
+    <section class="content-narrow">
+      <h2>Guía Completa de GitHub - Teoría y Práctica</h2>
+      
+      <article>
+        <h3>¿Qué es Git y GitHub?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            <strong>Git</strong> es un sistema de control de versiones distribuido que permite rastrear cambios en archivos y coordinar el trabajo entre múltiples personas. <strong>GitHub</strong> es una plataforma en la nube que aloja repositorios Git y facilita la colaboración.
+          </p>
+          <p>
+            <strong>Diferencias clave:</strong> Git funciona localmente en tu computadora, mientras que GitHub es un servicio web que almacena tus repositorios en línea y agrega características sociales como pull requests, issues y wikis.
+          </p>
+        </details>
+      </article>
+
+      <article>
+        <h3>Configuración inicial de Git</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Antes de usar Git, debes configurar tu identidad. Esta información se incluirá en cada commit que hagas.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Configurar tu nombre de usuario --&gt;</span>
+git config --global user.name "Tu Nombre"
+
+<span class="comment">&lt;!-- Configurar tu correo electrónico --&gt;</span>
+git config --global user.email "tuemail@ejemplo.com"
+
+<span class="comment">&lt;!-- Verificar tu configuración --&gt;</span>
+git config --list
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article>
+        <h3>Crear un nuevo repositorio local</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Un repositorio local es donde Git almacena el historial de versiones de tu proyecto en tu computadora.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Crear una carpeta para tu proyecto --&gt;</span>
+mkdir mi-proyecto
+cd mi-proyecto
+
+<span class="comment">&lt;!-- Inicializar un repositorio Git --&gt;</span>
+git init
+
+<span class="comment">&lt;!-- Esto crea una carpeta oculta .git que contiene todo el historial --&gt;</span>
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article>
+        <h3>Añadir y hacer commit de cambios</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            El flujo básico de Git tiene tres áreas: <strong>Working Directory</strong> (archivos modificados), <strong>Staging Area</strong> (archivos preparados) y <strong>Repository</strong> (historial de commits).
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Crear un archivo --&gt;</span>
+echo "# Mi Proyecto" > README.md
+
+<span class="comment">&lt;!-- Ver estado de los archivos --&gt;</span>
+git status
+
+<span class="comment">&lt;!-- Añadir archivo al staging area --&gt;</span>
+git add README.md
+
+<span class="comment">&lt;!-- O añadir todos los archivos modificados --&gt;</span>
+git add .
+
+<span class="comment">&lt;!-- Hacer commit de los cambios --&gt;</span>
+git commit -m "Primer commit: añadir README"
+
+<span class="comment">&lt;!-- Ver historial de commits --&gt;</span>
+git log
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article>
+        <h3>Conectar repositorio local con GitHub</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Para sincronizar tu repositorio local con GitHub, primero debes crear un repositorio en GitHub.com y luego conectarlo con tu repositorio local.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Añadir repositorio remoto (origin es el nombre convencional) --&gt;</span>
+git remote add origin https://github.com/tu-usuario/tu-repositorio.git
+
+<span class="comment">&lt;!-- Verificar repositorios remotos configurados --&gt;</span>
+git remote -v
+
+<span class="comment">&lt;!-- Renombrar la rama principal a 'main' (convención actual) --&gt;</span>
+git branch -M main
+
+<span class="comment">&lt;!-- Subir tus cambios por primera vez --&gt;</span>
+git push -u origin main
+
+<span class="comment">&lt;!-- En futuros push solo necesitas --&gt;</span>
+git push
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article>
+        <h3>Clonar un repositorio existente</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Clonar crea una copia completa de un repositorio remoto en tu máquina local, incluyendo todo el historial de commits.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Clonar repositorio con HTTPS --&gt;</span>
+git clone https://github.com/usuario/repositorio.git
+
+<span class="comment">&lt;!-- Clonar con SSH (requiere configurar llaves SSH) --&gt;</span>
+git clone git@github.com:usuario/repositorio.git
+
+<span class="comment">&lt;!-- Clonar en una carpeta con nombre específico --&gt;</span>
+git clone https://github.com/usuario/repositorio.git mi-carpeta
+
+<span class="comment">&lt;!-- Entrar al directorio clonado --&gt;</span>
+cd repositorio
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article>
+        <h3>Trabajar con ramas (branches)</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Las ramas permiten desarrollar características de forma aislada sin afectar la rama principal. Son fundamentales para el trabajo colaborativo.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Ver todas las ramas --&gt;</span>
+git branch
+
+<span class="comment">&lt;!-- Crear una nueva rama --&gt;</span>
+git branch nueva-caracteristica
+
+<span class="comment">&lt;!-- Cambiar a la nueva rama --&gt;</span>
+git checkout nueva-caracteristica
+
+<span class="comment">&lt;!-- Crear y cambiar a una rama en un solo comando --&gt;</span>
+git checkout -b otra-rama
+
+<span class="comment">&lt;!-- Hacer cambios y commits en la rama --&gt;</span>
+git add .
+git commit -m "Añadir nueva característica"
+
+<span class="comment">&lt;!-- Volver a la rama main --&gt;</span>
+git checkout main
+
+<span class="comment">&lt;!-- Fusionar la rama de característica en main --&gt;</span>
+git merge nueva-caracteristica
+
+<span class="comment">&lt;!-- Eliminar rama después de fusionar --&gt;</span>
+git branch -d nueva-caracteristica
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article>
+        <h3>Sincronizar cambios con GitHub</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Es importante mantener tu repositorio local sincronizado con el remoto, especialmente cuando trabajas en equipo.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Descargar cambios del repositorio remoto sin fusionar --&gt;</span>
+git fetch origin
+
+<span class="comment">&lt;!-- Descargar y fusionar cambios automáticamente --&gt;</span>
+git pull origin main
+
+<span class="comment">&lt;!-- O simplemente (si ya configuraste upstream) --&gt;</span>
+git pull
+
+<span class="comment">&lt;!-- Subir tus cambios locales --&gt;</span>
+git push origin main
+
+<span class="comment">&lt;!-- Subir una rama específica --&gt;</span>
+git push origin nombre-rama
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article>
+        <h3>Deshacer cambios</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Git ofrece varias formas de deshacer cambios dependiendo de en qué etapa se encuentren.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Descartar cambios en un archivo no añadido --&gt;</span>
+git checkout -- archivo.txt
+
+<span class="comment">&lt;!-- Quitar archivo del staging area (mantiene cambios) --&gt;</span>
+git reset archivo.txt
+
+<span class="comment">&lt;!-- Deshacer último commit (mantiene cambios en working directory) --&gt;</span>
+git reset --soft HEAD~1
+
+<span class="comment">&lt;!-- Deshacer último commit y cambios --&gt;</span>
+git reset --hard HEAD~1
+
+<span class="comment">&lt;!-- Modificar el último commit (cambiar mensaje o añadir archivos) --&gt;</span>
+git commit --amend -m "Nuevo mensaje"
+
+<span class="comment">&lt;!-- Revertir un commit específico creando uno nuevo --&gt;</span>
+git revert commit-hash
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article>
+        <h3>Ver historial y diferencias</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Estas herramientas te permiten explorar el historial de cambios y comparar versiones de archivos.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Ver historial de commits --&gt;</span>
+git log
+
+<span class="comment">&lt;!-- Ver historial en una línea por commit --&gt;</span>
+git log --oneline
+
+<span class="comment">&lt;!-- Ver historial con gráfico de ramas --&gt;</span>
+git log --graph --oneline --all
+
+<span class="comment">&lt;!-- Ver cambios no añadidos al staging --&gt;</span>
+git diff
+
+<span class="comment">&lt;!-- Ver cambios en staging area --&gt;</span>
+git diff --staged
+
+<span class="comment">&lt;!-- Ver cambios en un archivo específico --&gt;</span>
+git diff archivo.txt
+
+<span class="comment">&lt;!-- Ver quién modificó cada línea de un archivo --&gt;</span>
+git blame archivo.txt
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article>
+        <h3>Archivo .gitignore</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            El archivo .gitignore especifica qué archivos o carpetas Git debe ignorar. Es esencial para no versionar archivos sensibles o innecesarios.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Crear archivo .gitignore --&gt;</span>
+touch .gitignore
+
+<span class="comment">&lt;!-- Ejemplo de contenido de .gitignore --&gt;</span>
+# Dependencias
+node_modules/
+vendor/
+
+# Archivos de entorno
+.env
+.env.local
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de compilación
+dist/
+build/
+*.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+
+<span class="comment">&lt;!-- Añadir .gitignore al repositorio --&gt;</span>
+git add .gitignore
+git commit -m "Añadir .gitignore"
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article>
+        <h3>Fork y Pull Request</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Para contribuir a proyectos de otros, haces un <strong>fork</strong> (copia del repositorio en tu cuenta), realizas cambios y luego envías un <strong>Pull Request</strong> para que revisen e integren tus cambios.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- 1. Hacer fork desde GitHub.com (botón Fork) --&gt;</span>
+
+<span class="comment">&lt;!-- 2. Clonar tu fork --&gt;</span>
+git clone https://github.com/tu-usuario/proyecto-forked.git
+cd proyecto-forked
+
+<span class="comment">&lt;!-- 3. Añadir repositorio original como upstream --&gt;</span>
+git remote add upstream https://github.com/usuario-original/proyecto.git
+
+<span class="comment">&lt;!-- 4. Crear rama para tu contribución --&gt;</span>
+git checkout -b mi-contribucion
+
+<span class="comment">&lt;!-- 5. Hacer cambios y commit --&gt;</span>
+git add .
+git commit -m "Descripción de cambios"
+
+<span class="comment">&lt;!-- 6. Subir rama a tu fork --&gt;</span>
+git push origin mi-contribucion
+
+<span class="comment">&lt;!-- 7. Crear Pull Request desde GitHub.com --&gt;</span>
+
+<span class="comment">&lt;!-- 8. Sincronizar con el repositorio original --&gt;</span>
+git fetch upstream
+git checkout main
+git merge upstream/main
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article>
+        <h3>Stash: Guardar cambios temporalmente</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            El stash te permite guardar cambios temporalmente sin hacer commit, útil cuando necesitas cambiar de rama rápidamente.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Guardar cambios actuales en stash --&gt;</span>
+git stash
+
+<span class="comment">&lt;!-- Guardar con mensaje descriptivo --&gt;</span>
+git stash save "Trabajo en progreso de login"
+
+<span class="comment">&lt;!-- Ver lista de stashes --&gt;</span>
+git stash list
+
+<span class="comment">&lt;!-- Aplicar el último stash y mantenerlo --&gt;</span>
+git stash apply
+
+<span class="comment">&lt;!-- Aplicar el último stash y eliminarlo --&gt;</span>
+git stash pop
+
+<span class="comment">&lt;!-- Aplicar stash específico --&gt;</span>
+git stash apply stash@{2}
+
+<span class="comment">&lt;!-- Eliminar último stash --&gt;</span>
+git stash drop
+
+<span class="comment">&lt;!-- Eliminar todos los stashes --&gt;</span>
+git stash clear
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article>
+        <h3>Tags: Etiquetar versiones</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Los tags marcan puntos específicos en el historial como importantes, típicamente para versiones de lanzamiento (v1.0, v2.0, etc.).
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Crear tag ligero --&gt;</span>
+git tag v1.0.0
+
+<span class="comment">&lt;!-- Crear tag anotado con mensaje --&gt;</span>
+git tag -a v1.0.0 -m "Primera versión estable"
+
+<span class="comment">&lt;!-- Ver todos los tags --&gt;</span>
+git tag
+
+<span class="comment">&lt;!-- Ver información de un tag --&gt;</span>
+git show v1.0.0
+
+<span class="comment">&lt;!-- Subir tag específico --&gt;</span>
+git push origin v1.0.0
+
+<span class="comment">&lt;!-- Subir todos los tags --&gt;</span>
+git push origin --tags
+
+<span class="comment">&lt;!-- Eliminar tag local --&gt;</span>
+git tag -d v1.0.0
+
+<span class="comment">&lt;!-- Eliminar tag remoto --&gt;</span>
+git push origin --delete v1.0.0
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article>
+        <h3>Resolver conflictos de merge</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Los conflictos ocurren cuando dos ramas modifican las mismas líneas de código. Git te pide que decidas qué cambios mantener.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Intentar hacer merge --&gt;</span>
+git merge otra-rama
+
+<span class="comment">&lt;!-- Si hay conflictos, verás archivos marcados --&gt;</span>
+git status
+
+<span class="comment">&lt;!-- Abrir archivo con conflicto, verás marcadores: --&gt;</span>
+&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+Tu código actual
+=======
+Código de la otra rama
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; otra-rama
+
+<span class="comment">&lt;!-- Editar manualmente el archivo para resolver --&gt;</span>
+<span class="comment">&lt;!-- Eliminar los marcadores y dejar el código correcto --&gt;</span>
+
+<span class="comment">&lt;!-- Marcar conflicto como resuelto --&gt;</span>
+git add archivo-resuelto.txt
+
+<span class="comment">&lt;!-- Completar el merge --&gt;</span>
+git commit -m "Resolver conflictos de merge"
+
+<span class="comment">&lt;!-- Abortar merge si es necesario --&gt;</span>
+git merge --abort
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article>
+        <h3>GitHub Actions - CI/CD básico</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            GitHub Actions permite automatizar pruebas y despliegues. Los workflows se definen en archivos YAML en la carpeta .github/workflows/
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Crear estructura de carpetas --&gt;</span>
+mkdir -p .github/workflows
+
+<span class="comment">&lt;!-- Crear archivo de workflow --&gt;</span>
+touch .github/workflows/test.yml
+
+<span class="comment">&lt;!-- Ejemplo de contenido test.yml: --&gt;</span>
+name: Tests
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - run: npm install
+      - run: npm test
+
+<span class="comment">&lt;!-- Añadir y subir --&gt;</span>
+git add .github/
+git commit -m "Añadir GitHub Actions"
+git push
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article>
+        <h3>Comandos útiles adicionales</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Comandos avanzados que mejoran tu productividad con Git y GitHub.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Buscar en commits --&gt;</span>
+git log --grep="palabra clave"
+
+<span class="comment">&lt;!-- Encontrar qué commit introdujo un bug (búsqueda binaria) --&gt;</span>
+git bisect start
+git bisect bad
+git bisect good commit-hash
+
+<span class="comment">&lt;!-- Limpiar archivos no rastreados --&gt;</span>
+git clean -n  # Ver qué se eliminará
+git clean -f  # Eliminar archivos
+
+<span class="comment">&lt;!-- Cambiar la URL del repositorio remoto --&gt;</span>
+git remote set-url origin nueva-url
+
+<span class="comment">&lt;!-- Ver información de un commit específico --&gt;</span>
+git show commit-hash
+
+<span class="comment">&lt;!-- Cherry-pick: aplicar commit específico de otra rama --&gt;</span>
+git cherry-pick commit-hash
+
+<span class="comment">&lt;!-- Rebase interactivo para limpiar historial --&gt;</span>
+git rebase -i HEAD~3
+
+<span class="comment">&lt;!-- Ver tamaño del repositorio --&gt;</span>
+git count-objects -vH
+            </code>
+          </pre>
+        </details>
+      </article>
+
+    </section>
+  </main>
+
+<!-- ===================================================== -->
+<!-- PLACEHOLDERS DE COMPONENTES DINÁMICOS                 -->
+<!-- ===================================================== -->
+<!-- Estos contenedores reciben HTML inyectado vía JS     -->
+<!-- Permiten reutilizar componentes (footer, modales)   -->
+<!-- y mantener el HTML principal limpio y escalable      -->
+
+<div id="footer-placeholder"></div>
+<div id="contact-modal-placeholder"></div>
+
+
+<!-- ===================================================== -->
+<!-- SCRIPTS GLOBALES                                     -->
+<!-- ===================================================== -->
+<!-- Footer: se carga de forma diferida para no bloquear  -->
+<!-- el render inicial de la página                       -->
+
+<script src="../components/footer/footer.js" defer></script>
+
+<!-- Scripts generales del sitio (interacciones globales) -->
+<script src="/js/scripts.js"></script>
+
+
+<!-- ===================================================== -->
+<!-- CARGA DINÁMICA DEL CONTACT MODAL                     -->
+<!-- ===================================================== -->
+<!-- 1. Obtiene el HTML del modal desde el componente     -->
+<!-- 2. Lo inyecta en su placeholder correspondiente      -->
+<!-- 3. Carga el JS del modal de forma desacoplada        -->
+<!-- Esto permite reutilizar el modal en cualquier página -->
+
+<script>
+  fetch('../components/contact-modal/contact-modal.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('No se pudo cargar el Contact Modal');
+      }
+      return response.text();
+    })
+    .then(modalHTML => {
+      // Inyección del HTML del modal en el placeholder
+      document.getElementById('contact-modal-placeholder').innerHTML = modalHTML;
+
+      // Carga dinámica del script del modal
+      const modalScript = document.createElement('script');
+      modalScript.src = '../components/contact-modal/contact-modal.js';
+      modalScript.defer = true;
+      document.body.appendChild(modalScript);
+    })
+    .catch(error => {
+      console.error('Error cargando el Contact Modal:', error);
+    });
+</script>
+</body>
+</html>
+
+
+
+

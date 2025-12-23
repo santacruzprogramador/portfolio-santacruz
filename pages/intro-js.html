@@ -1,0 +1,2637 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ========================= -->
+  <!-- METADATOS BÁSICOS -->
+  <!-- ========================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ========================= -->
+  <!-- SEO PRINCIPAL -->
+  <!-- ========================= -->
+  <title>JavaScript desde Cero | Fundamentos y primeros pasos</title>
+  <meta
+    name="description"
+    content="Aprende JavaScript desde cero. Introducción a variables, funciones, estructuras básicas y lógica de programación para la web."
+  >
+
+  <!-- ========================= -->
+  <!-- AUTOR -->
+  <!-- ========================= -->
+  <meta name="author" content="José Alberto Santacruz">
+  <meta name="robots" content="index, follow">
+
+  <!-- ========================= -->
+  <!-- URL CANÓNICA -->
+  <!-- ========================= -->
+  <link
+    rel="canonical"
+    href="https://santacruzprogramador.github.io/santacruzjose/pages/intro-js.html"
+  >
+
+  <!-- ========================= -->
+  <!-- OPEN GRAPH -->
+  <!-- ========================= -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="JavaScript desde Cero">
+  <meta
+    property="og:description"
+    content="Fundamentos de JavaScript para comenzar a programar en la web desde cero."
+  >
+  <meta
+    property="og:url"
+    content="https://santacruzprogramador.github.io/santacruzjose/pages/intro-js.html"
+  >
+  <meta
+    property="og:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+  <meta property="og:site_name" content="Portfolio José Santacruz">
+
+  <!-- ========================= -->
+  <!-- TWITTER CARD -->
+  <!-- ========================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JavaScript desde Cero">
+  <meta
+    name="twitter:description"
+    content="Conceptos esenciales de JavaScript explicados de forma clara y práctica."
+  >
+  <meta
+    name="twitter:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+
+  <!-- ========================= -->
+  <!-- FAVICON -->
+  <!-- ========================= -->
+  <link
+    rel="icon"
+    href="../assets/favicon/favicon.ico"
+    type="image/x-icon"
+  >
+
+  <!-- ========================= -->
+  <!-- COLOR TEMA -->
+  <!-- ========================= -->
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- ========================= -->
+  <!-- ESTILOS -->
+  <!-- ========================= -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/intr_to_programming.css">
+  <link rel="stylesheet" href="../components/contact-modal/contact-modal.css">
+</head>
+
+<body>
+
+  <header class="page-title">
+    <h1 class="">JavaScripts desde 0</h1>
+  </header>
+
+  <a href="../#js" class="volver">← Inicio</a>
+  <main class="container section">
+
+    <section id="js" class="content-narrow">
+
+      <h2>Introducción JavaScript</h2>
+
+      <article id="javascript" aria-label="Definición de JavaScript">
+        <h3>¿Qué es JavaScript?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            JavaScript es un <strong>lenguaje de programación interpretado</strong> y <strong>orientado a objetos</strong> que se ejecuta en el <strong>navegador</strong> (también en servidores con Node.js). 
+            Sirve para hacer sitios web <strong>interactivos</strong>: formularios, animaciones, eventos, etc.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Ejemplo: Mostrar un mensaje en consola --&gt;</span>
+console.log("Hola, JavaScript!");
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="isomorfismo" aria-label="Isomorfismo en JavaScript">
+        <h3>Isomorfismo</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Hoy <em>JavaScript</em> es el único lenguaje capaz de ejecutarse en las 3 capas de una aplicación:
+          </p>
+          <ul>
+            <li><em>Frontend</em> (con <em>JavaScript</em>).</li>
+            <li><em>Backend</em> (con <em>Node.js</em>).</li>
+            <li>Persistencia de Datos (con <em>MongoDB</em>, <em>Couch DB</em>, <em>Firebase</em>, etc.).</li>
+          </ul>
+          <p>Con JavaScript puedes:</p>
+          <ul>
+            <li>Diseño y Desarrollo Web.</li>
+            <li>Hacer Videojuegos.</li>
+            <li>Experiencias 3D, Realidad Aumentada y Realidad Virtual.</li>
+            <li>Controlar Hardware (drones, robots, electrodomésticos, wearables, etc.).</li>
+            <li>Aplicaciones Híbridas y Móviles.</li>
+            <li>Aprendizaje Automático.</li>
+            <li>Y mucho más.</li>
+          </ul>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Ejemplo de ejecución en Node.js --&gt;</span>
+console.log("JavaScript también corre en el servidor");
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="caracteristicas" aria-label="Características de JavaScript">
+        <h3>Características</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <ul>
+            <li>Lenguaje de Alto Nivel.</li>
+            <li>Interpretado.</li>
+            <li>Dinámico.</li>
+            <li>Débilmente Tipado.</li>
+            <li>Multi paradigma.</li>
+            <li>Sensible a MAYÚSCULAS y minúsculas.</li>
+            <li>No necesitas los puntos y comas al final de cada línea.</li>
+          </ul>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Ejemplo: Código sin punto y coma --&gt;</span>
+let nombre = "JavaScript"
+console.log(nombre)
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="variables-tipos-datos" aria-label="Variables y Tipos de Datos en JavaScript">
+        <h3>Variables y Tipos de Datos</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            En JavaScript las <strong>variables</strong> sirven para guardar información.  
+            Se pueden declarar con <strong>let</strong> (puede cambiar), <strong>const</strong> (no cambia) o <strong>var</strong> (antiguo y desaconsejado).  
+            Los <strong>tipos de datos</strong> se dividen en <em>primitivos</em> y <em>compuestos</em>.
+          </p>
+
+          <pre class="code-window">
+            <code>
+<span class="comment">// Declaración de variables</span>
+let nombre = "Juan";
+const edad = 30;
+var ciudad = "Lima"; 
+
+<span class="comment">// Tipos de datos primitivos</span>
+let saludo = "Hola";       <span class="comment">// String</span>
+let edad2 = 25;            <span class="comment">// Number</span>
+let esEstudiante = true;   <span class="comment">// Boolean</span>
+let variableNoDefinida;    <span class="comment">// Undefined</span>
+let valorNulo = null;      <span class="comment">// Null</span>
+
+<span class="comment">// Tipos de datos compuestos</span>
+let persona = { nombre: "Ana" };   <span class="comment">// Object</span>
+let numeros = [1, 2, 3];           <span class="comment">// Array</span>
+
+<span class="comment">// Mostrar por consola</span>
+console.log("String:", saludo);
+console.log("Number:", edad2);
+console.log("Boolean:", esEstudiante);
+console.log("Undefined:", variableNoDefinida);
+console.log("Null:", valorNulo);
+console.log("Object:", persona);
+console.log("Array:", numeros);
+            </code>
+          </pre>
+        </details>
+      </article>
+            
+      <article id="operadores" aria-label="Operadores en JavaScript">
+        <h3>Operadores</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Los <strong>operadores</strong> permiten realizar cálculos, comparaciones y asignaciones.  
+            JavaScript incluye operadores <strong>aritméticos</strong>, <strong>de asignación</strong>, <strong>comparación</strong> y <strong>lógicos</strong>.
+          </p>
+
+          <pre class="code-window">
+            <code>
+<span class="comment">// Operadores aritméticos</span>
+let suma = 10 + 5;
+let resta = 10 - 5;
+let multiplicacion = 10 * 2;
+let division = 10 / 2;
+let modulo = 10 % 3;
+
+<span class="comment">// Operadores de asignación</span>
+let x = 10;
+x += 5; <span class="comment">// x = x + 5</span>
+let y = 20;
+y -= 3; <span class="comment">// y = y - 3</span>
+
+<span class="comment">// Operadores de comparación</span>
+let a = 5;
+let b = '5';
+let resultado1 = (a == b);  <span class="comment">// true → compara solo valor</span>
+let resultado2 = (a === b); <span class="comment">// false → compara valor y tipo</span>
+
+<span class="comment">// Operadores lógicos</span>
+let and_1 = true && false;  <span class="comment">// AND</span>
+let or_1 = true || false;   <span class="comment">// OR</span>
+let not_1 = !true;          <span class="comment">// NOT</span>
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="condicionales" aria-label="Condicionales en JavaScript">
+        <h3>Condicionales</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Las <strong>condicionales</strong> permiten ejecutar código según si una condición es <strong>verdadera o falsa</strong>.  
+            Se usan <strong>if</strong>, <strong>else if</strong> y <strong>else</strong> para controlar el flujo del programa.
+          </p>
+
+          <pre class="code-window">
+            <code>
+<span class="comment">// Ejemplo básico de if</span>
+let edad = 18;
+if (edad >= 18) {
+  console.log("Eres mayor de edad");
+} else {
+  console.log("Eres menor de edad");
+}
+
+<span class="comment">// Comparación de números</span>
+let numero = 0;
+if (numero > 0) console.log("Positivo");
+else if (numero < 0) console.log("Negativo");
+else console.log("Cero");
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="bucles" aria-label="Bucles en JavaScript">
+        <h3>Bucles</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Los <strong>bucles</strong> permiten <strong>repetir acciones</strong> múltiples veces.  
+            Se usan <strong>for</strong>, <strong>while</strong> y <strong>do...while</strong> para iterar hasta que se cumpla una condición.
+          </p>
+
+          <pre class="code-window">
+            <code>
+<span class="comment">// Bucle FOR</span>
+for (let i = 0; i < 5; i++) {
+  console.log("Iteración:", i);
+}
+
+<span class="comment">// Bucle WHILE</span>
+let contador = 0;
+while (contador < 3) {
+  console.log("Contador:", contador);
+  contador++;
+}
+
+<span class="comment">// Bucle DO...WHILE</span>
+let numero = 0;
+do {
+  console.log("Número:", numero);
+  numero++;
+} while (numero < 2);
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="funciones" aria-label="Funciones en JavaScript">
+        <h3>Funciones</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Una <strong>función</strong> es un bloque de código que realiza una tarea específica.  
+            Puede recibir <strong>parámetros</strong>, devolver <strong>valores</strong> y reutilizarse en distintas partes del programa.
+          </p>
+
+          <pre class="code-window">
+            <code>
+<span class="comment">// Definición básica</span>
+function saludar() {
+  console.log("Hola, bienvenido");
+}
+
+<span class="comment">// Función con parámetros</span>
+function sumar(a, b) {
+  return a + b;
+}
+
+<span class="comment">// Función flecha</span>
+const doble = n => n * 2;
+
+<span class="comment">// Ejecución</span>
+saludar();
+console.log("Suma:", sumar(5, 3));
+console.log("Doble:", doble(9));
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="arrays-objetos" aria-label="Arrays y Objetos en JavaScript">
+        <h3>Arrays y Objetos</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Los <strong>arrays</strong> almacenan listas de valores, mientras que los <strong>objetos</strong> guardan pares clave-valor.  
+            Ambos son <em>tipos compuestos</em> porque almacenan referencias a datos.
+          </p>
+
+          <pre class="code-window">
+            <code>
+<span class="comment">// Array (lista de elementos)</span>
+let frutas = ["manzana", "banana"];
+console.log(frutas[0]); <span class="comment">// manzana</span>
+
+<span class="comment">// Objeto (estructura con propiedades)</span>
+let persona = {
+  nombre: "Pedro",
+  edad: 40
+};
+console.log(persona.nombre); <span class="comment">// Pedro</span>
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="consola-depuracion" aria-label="Consola y Depuración en JavaScript">
+        <h3>Consola y Depuración</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            La <strong>consola</strong> permite <em>ver mensajes</em> y <em>detectar errores</em> durante la ejecución del código.  
+            Es una herramienta esencial para la <strong>depuración</strong>.
+          </p>
+
+          <pre class="code-window">
+            <code>
+console.log("Hola mundo");   <span class="comment">// Muestra mensaje informativo</span>
+console.error("Error");      <span class="comment">// Muestra mensaje de error</span>
+console.warn("Advertencia"); <span class="comment">// Muestra advertencia</span>
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="buenas-practicas" aria-label="Buenas prácticas en JavaScript">
+        <h3>Buenas Prácticas</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Seguir <strong>buenas prácticas</strong> mejora la <em>claridad</em> y <em>mantenibilidad</em> del código.  
+            Estas reglas ayudan a evitar errores y hacer el código más legible.
+          </p>
+
+          <pre class="code-window">
+            <code>
+<span class="comment">// ✅ Usa let y const, evita var</span>
+let edad = 25;
+const PI = 3.1416;
+
+<span class="comment">// ✅ Usa === en lugar de ==</span>
+console.log(5 === "5"); <span class="comment">// false, compara tipo y valor</span>
+
+<span class="comment">// ✅ Comenta tu código</span>
+<span class="comment">// Explica el propósito de funciones o variables</span>
+
+<span class="comment">// ✅ Nombra correctamente tus variables y funciones</span>
+let nombreUsuario = "Ana";
+function calcularPromedio() { /* ... */ }
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="concatenacion" aria-label="Concatenación de cadenas en JavaScript">
+        <h3>Concatenación</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            La <strong>concatenación</strong> une <em>textos (strings)</em>.  
+            Puede hacerse con <strong>+</strong>, <strong>+=</strong> o las modernas <strong>template literals</strong> usando <code>${}</code>.
+          </p>
+
+          <pre class="code-window">
+            <code>
+<span class="comment">// 1️⃣ Usando el operador +</span>
+let nombre = "José";
+let saludo1 = "Hola " + nombre + ", ¿cómo estás?";
+console.log(saludo1);
+
+<span class="comment">// 2️⃣ Usando += para añadir texto</span>
+let saludo2 = "Hola ";
+saludo2 += nombre;
+saludo2 += ", ¿qué tal?";
+console.log(saludo2);
+
+<span class="comment">// 3️⃣ Template literals (recomendado)</span>
+let saludo3 = `Hola ${nombre}, ¿cómo estás?`;
+console.log(saludo3);
+
+<span class="comment">// 4️⃣ Insertar expresiones dentro de una cadena</span>
+let a = 5, b = 10;
+console.log(`La suma de ${a} + ${b} es ${a + b}`);
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="convenciones-nombres" aria-label="Convenciones de nombres en JavaScript">
+        <h3>Convenciones de Nombres</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Las <strong>convenciones de nombres</strong> permiten mantener un estilo <em>uniforme y profesional</em> en el código.  
+            Diferentes estilos se usan según el tipo de dato o estructura.
+          </p>
+
+          <pre class="code-window">
+            <code>
+<span class="comment">// camelCase → para variables y funciones</span>
+let miVariableEjemplo = 10;
+function miFuncionEjemplo() {}
+
+<span class="comment">// PascalCase → para clases</span>
+class MiClaseEjemplo {
+  constructor() {}
+}
+
+<span class="comment">// UPPER_SNAKE_CASE → para constantes</span>
+const MAX_INTENTOS = 5;
+
+<span class="comment">// snake_case → menos común en JS</span>
+let usuario_activo = true;
+
+<span class="comment">// #privateField → campos privados en clases (ES2022+)</span>
+class ClaseConPrivado {
+  #campoPrivado = 10;
+  mostrar() {
+    console.log(this.#campoPrivado);
+  }
+}
+            </code>
+          </pre>
+        </details>
+      </article>
+
+    </section>
+
+    <section id="dom" class="content-narrow">
+
+      <h2>DOM desde Cero: Fundamentos y Práctica</h2>
+
+      <article id="explicacion-dom-js" aria-label="Explicación del DOM en JavaScript">
+        <h3>¿Qué es el Document Object Model (DOM)?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            El <strong>DOM (Document Object Model)</strong> en JavaScript es una interfaz de programación que representa la estructura de un documento HTML como un árbol de objetos. Este modelo permite a los desarrolladores <strong>acceder, modificar y manipular</strong> los elementos de una página web de forma dinámica usando JavaScript.
+          </p>
+          <h4>¿Cómo funciona el DOM?</h4>
+          <p>
+            Cada etiqueta HTML se convierte en un <strong>nodo</strong> dentro del árbol DOM.<br>
+            El nodo raíz es <code>&lt;html&gt;</code>, que contiene hijos como <code>&lt;head&gt;</code> y <code>&lt;body&gt;</code>, y estos a su vez tienen sus propios hijos.<br>
+            JavaScript puede <strong>recorrer este árbol</strong>, seleccionar elementos, cambiar atributos, modificar estilos, insertar o eliminar contenido, y reaccionar a eventos del usuario.
+          </p>
+          <h4>¿Qué se puede hacer con el DOM en JS?</h4>
+          <p>
+            Algunas operaciones comunes con el DOM incluyen:
+            <ul>
+              <li><strong>Seleccionar elementos</strong>: <code>document.getElementById()</code>, <code>querySelector()</code></li>
+              <li><strong>Modificar contenido</strong>: <code>element.textContent</code>, <code>element.innerHTML</code></li>
+              <li><strong>Cambiar estilos</strong>: <code>element.style.color = "red"</code></li>
+              <li><strong>Agregar o eliminar elementos</strong>: <code>document.createElement()</code>, <code>element.remove()</code></li>
+              <li><strong>Escuchar eventos</strong>: <code>element.addEventListener("click", handler)</code></li>
+            </ul>
+          </p>
+        </details>
+      
+      </article>
+
+      <article id="ejemplo-dom-js" aria-label="Ejemplo práctico del uso del DOM en JavaScript">
+        <h3>Ejemplo Práctico: Uso del DOM en JavaScript </h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            A continuación se muestra un <strong>ejemplo completo</strong> de un documento <strong>HTML</strong> que utiliza <strong>JavaScript</strong> para interactuar con el <strong>DOM</strong>. Este ejemplo incluye:
+          </p>
+          <ul>
+            <li><strong>Manipulación de elementos</strong> mediante selectores y propiedades del DOM</li>
+            <li><strong>Manejo de eventos</strong> con diferentes tipos de escuchas</li>
+            <li><strong>Estilos dinámicos</strong> aplicados desde JavaScript</li>
+          </ul>
+          <p>
+            <em>Para probarlo tú mismo, copia el código en un archivo con extensión <strong>.html</strong> y ábrelo en tu navegador.</em>
+          </p>
+          <pre class="code-window">
+            <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;WEB APIs&lt;/title&gt;
+  &lt;style&gt;
+    :root {
+      --yellow-color: #F7DF1E;
+      --dark-color: #222;
+    }
+
+    .cards {
+      border: thin solid var(--dark-color);
+      padding: 1rem;
+    }
+
+    .card {
+      display: inline-block;
+      background-color: var(--dark-color);
+      color: var(--yellow-color);
+    }
+
+    .card figcaption {
+      padding: 1rem;
+    }
+
+    .rotate-45 {
+      transform: rotate(45deg);
+    }
+
+    .rotate-135 {
+      transform: rotate(135deg);
+    }
+
+    .opacity-80 {
+      opacity: .8;
+    }
+
+    .sepia {
+      filter: sepia(1);
+    }
+
+    .eventos-flujo div {
+      padding: 4rem;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+    .uno {
+      background-color: yellow;
+    }
+
+    .dos {
+      background-color: gold;
+    }
+
+    .tres {
+      background-color: lightyellow;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h1&gt;WEB APIs&lt;/h1&gt;
+  &lt;h2&gt;DOM: Document Object Model&lt;/h2&gt;
+  &lt;h2&gt;BOM: Browser Object Model&lt;/h2&gt;
+  &lt;h2&gt;CSSOM: CSS Object Model&lt;/h2&gt;
+  &lt;h2&gt;WEB APIs&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Eventos&lt;/li&gt;
+    &lt;li&gt;Forms&lt;/li&gt;
+    &lt;li&gt;AJAX - Fetch&lt;/li&gt;
+    &lt;li&gt;History&lt;/li&gt;
+    &lt;li&gt;Web Storage&lt;/li&gt;
+    &lt;li&gt;Geolocation&lt;/li&gt;
+    &lt;li&gt;Drag &amp; Drop&lt;/li&gt;
+    &lt;li&gt;Indexed DB&lt;/li&gt;
+    &lt;li&gt;Canvas&lt;/li&gt;
+    &lt;li&gt;MatchMedia&lt;/li&gt;
+    &lt;li&gt;etc..&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;br&gt;
+  &lt;hr&gt;
+  &lt;br&gt;
+  &lt;h3&gt;Manejo del DOM&lt;/h3&gt;
+  &lt;p id="que-es"&gt;
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, laboriosam cum quod, perferendis eveniet pariatur
+    facere doloribus adipisci consequatur totam est dolorum vero nisi voluptate porro explicabo quo necessitatibus
+    blanditiis.
+  &lt;/p&gt;
+  &lt;nav id="menu"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Sección 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Sección 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Sección 3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Sección 4&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Sección 5&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+  &lt;input type="text" name="nombre" placeholder="Nombre"&gt;
+  &lt;a class="link-dom" data-id="1" data-description="Document Object Model" href="dom.html"
+    style="background-color: #F7DF1E; color: #222;"&gt;DOM&lt;/a&gt;
+  &lt;section class="cards"&gt;
+    &lt;figure class="card"&gt;
+      &lt;img src="https://placeimg.com/200/200/tech" alt="Tech"&gt;
+      &lt;figcaption&gt;Tech&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class="card"&gt;
+      &lt;img src="https://placeimg.com/200/200/animals" alt="Animals"&gt;
+      &lt;figcaption&gt;Animals&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class="card"&gt;
+      &lt;img src="https://placeimg.com/200/200/arch" alt="Architecture"&gt;
+      &lt;figcaption&gt;Architecture&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class="card"&gt;
+      &lt;img src="https://placeimg.com/200/200/people" alt="People"&gt;
+      &lt;figcaption&gt;People&lt;/figcaption&gt;
+    &lt;/figure&gt;
+    &lt;figure class="card"&gt;
+      &lt;img src="https://placeimg.com/200/200/nature" alt="Nature"&gt;
+      &lt;figcaption&gt;Nature&lt;/figcaption&gt;
+    &lt;/figure&gt;
+  &lt;/section&gt;
+  &lt;template id="template-card"&gt;
+    &lt;figure class="card"&gt;
+      &lt;img&gt;
+      &lt;figcaption&gt;&lt;/figcaption&gt;
+    &lt;/figure&gt;
+  &lt;/template&gt;
+  &lt;h3&gt;Eventos en JavaScript&lt;/h3&gt;
+  &lt;h4&gt;Manejadores de Eventos&lt;/h4&gt;
+  &lt;button onclick="holaMundo()"&gt;Evento con atributo HTML&lt;/button&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;button id="evento-semantico"&gt;Evento con manejador semántico&lt;/button&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;button id="evento-multiple"&gt;Evento con manejador múltiple&lt;/button&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;button id="evento-remover"&gt;Removiendo eventos con manejadores múltiples&lt;/button&gt;
+  &lt;h4&gt;Flujo de Eventos&lt;/h4&gt;
+  &lt;section class="eventos-flujo"&gt;
+    &lt;div class="uno"&gt;
+      1
+      &lt;div class="dos"&gt;
+        2
+        &lt;div class="tres"&gt;
+          3
+          &lt;br&gt;
+          &lt;a href="https://jonmircha.com/" target="_blank" rel="noopener"&gt;jonmircha.com&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+  &lt;h3 style="width: 2000px;"&gt;Manejo del BOM&lt;/h3&gt;
+  &lt;button id="abrir-ventana"&gt;Abrir Ventana&lt;/button&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;button id="cerrar-ventana"&gt;Cerrar Ventana&lt;/button&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;button id="imprimir-ventana"&gt;Imprimir Ventana&lt;/button&gt;
+  &lt;br&gt;&lt;br&gt;
+  &lt;!-- &lt;script src="js/dom.js"&gt;&lt;/script&gt; --&gt;
+  &lt;script src="eliminar.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+            </code>
+          </pre>
+
+        </details>
+      </article>
+      
+      <article id="elementos-del-documento" aria-label="Exploración de elementos del documento HTML con JavaScript">
+        <h3>Elementos del Documento</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Este código debe copiarse en un archivo con extensión <strong>.js</strong> para que funcione correctamente junto con tu documento HTML. Así podrás ejecutar los ejemplos directamente en el navegador.  
+            <br><br>
+            <em>Repite este proceso con los demás fragmentos de código JavaScript que vayas explorando.</em>
+          </p>
+
+          <pre class="code-window">
+            <code>
+<span class="comment">// ==============================</span>
+<span class="comment">// EXPLORACIÓN DEL DOM EN JAVASCRIPT</span>
+<span class="comment">// ==============================</span>
+
+<span class="comment">/* 
+"Elementos del Documento" es un conjunto de propiedades y métodos del objeto document que permiten explorar, acceder y manipular el contenido del HTML (DOM) desde la consola de JavaScript.
+Esto es útil para ver qué partes del documento están cargadas, cómo están estructuradas, y para hacer pruebas o depurar errores.
+*/</span>
+
+<span class="comment">// Mostrar el documento completo</span>
+console.log("document:", document);
+console.log("window.document:", window.document);
+
+<span class="comment">// Mostrar elementos del documento</span>
+console.log("document.head:", document.head);                 <span class="comment">// &lt;head&gt;...&lt;/head&gt;</span>
+console.log("document.body:", document.body);                 <span class="comment">// &lt;body&gt;...&lt;/body&gt;</span>
+console.log("document.documentElement:", document.documentElement); <span class="comment">// &lt;html&gt;...&lt;/html&gt;</span>
+console.log("document.doctype:", document.doctype);           <span class="comment">// &lt;!DOCTYPE html&gt;</span>
+console.log("document.charset:", document.charset);           <span class="comment">// UTF-8</span>
+console.log("document.title:", document.title);               <span class="comment">// Título de la pestaña</span>
+
+<span class="comment">// Elementos específicos</span>
+console.log("document.links:", document.links);               <span class="comment">// Todos los &lt;a&gt;</span>
+console.log("document.images:", document.images);             <span class="comment">// Todas las &lt;img&gt;</span>
+console.log("document.forms:", document.forms);               <span class="comment">// Todos los &lt;form&gt;</span>
+console.log("document.styleSheets:", document.styleSheets);   <span class="comment">// Hojas de estilo</span>
+console.log("document.scripts:", document.scripts);           <span class="comment">// Scripts cargados</span>
+
+<span class="comment">// Mostrar texto seleccionado después de 2 segundos</span>
+setTimeout(() => {
+  console.log("Texto seleccionado:", document.getSelection().toString());
+}, 2000);
+
+<span class="comment">// Escribir contenido directamente en el documento</span>
+document.write("&lt;h2&gt;Hola Mundo desde el DOM&lt;/h2&gt;");
+            </code>
+          </pre>
+        </details>
+      </article>
+      
+      <article id="nodos-elementos-selectores" aria-label="Explicación sobre nodos, elementos y selectores en el DOM">
+        <h3>Nodos, Elementos y Selectores</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            <strong>Nodos, Elementos y Selectores</strong> son conceptos clave para entender y manipular la estructura de una página web (<strong>DOM</strong>) usando JavaScript.
+          </p>
+          <ul>
+            <li><strong>Nodo:</strong> cualquier unidad del DOM, puede ser una etiqueta, texto o comentario.</li>
+            <li><strong>Tipos de nodos en el DOM:</strong>
+              <ol>
+                <li><strong>Nodo de documento:</strong> representa todo el documento HTML → <code>document</code></li>
+                <li><strong>Nodos de elementos:</strong> cada <strong>etiqueta HTML</strong> es un nodo de tipo elemento → <code>&lt;div&gt;</code>, <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;a&gt;</code>, etc.</li>
+                <li><strong>Nodos de texto:</strong> el contenido dentro de una etiqueta (incluso espacios y saltos de línea) → <code>"Hola Mundo"</code> en <code>&lt;p&gt;Hola Mundo&lt;/p&gt;</code></li>
+                <li><strong>Nodos de atributo</strong> <em>(menos usados directamente)</em>: como <code>class</code>, <code>id</code>, <code>src</code>, etc. → <code>&lt;img src="imagen.jpg"&gt;</code> → <code>src</code> es un nodo de atributo</li>
+                <li><strong>Nodos de comentarios:</strong> comentarios en el HTML → <code>&lt;!-- Esto es un comentario --&gt;</code></li>
+                <li><strong>Nodos de espacios vacíos:</strong> espacios o saltos de línea que también se interpretan como nodos</li>
+              </ol>
+            </li>
+            <li><strong>Elemento:</strong> nodo que representa una etiqueta HTML visible, como <code>&lt;div&gt;</code> o <code>&lt;p&gt;</code>.</li>
+            <li><strong>Selector:</strong> método para buscar elementos en el DOM usando sintaxis CSS, como <code>h1</code>, <code>.clase</code> o <code>#id</code>.</li>
+          </ul>
+          <pre class="code-window">
+            <code>
+<span class="comment">/*
+Todo lo que vimos sobre nodos, elementos
+y selectores se usa principalmente para
+inspeccionar, modificar y controlar el 
+contenido de una página web en el navegador, 
+a través de
+*/</span>
+
+<span class="comment">// Es viejo pero más rápido</span>
+console.log(document.getElementsByTagName("li"));
+console.log(document.getElementsByClassName("card"));
+console.log(document.getElementsByName("nombre"));
+console.log(document.getElementById("menu"));
+
+<span class="comment">/// Nuevos reciben múltiples, es más lento</span>
+console.log(document.querySelector("#menu"));
+console.log(document.querySelector("a"));
+console.log(document.querySelectorAll("a"));
+console.log(document.querySelectorAll("a").length);
+document.querySelectorAll("a").forEach((el) => console.log(el));
+console.log(document.querySelector(".card"));
+console.log(document.querySelectorAll(".card"));
+console.log(document.querySelectorAll(".card")[2]);
+console.log(document.querySelector("#menu li"));
+console.log(document.querySelectorAll("#menu li"));
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="atributos-data" aria-label="Atributos y Data-Attributes">
+        <h3>Atributos y <em>Data-Attributes</em></h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Los <strong>atributos</strong> son propiedades que se añaden a las etiquetas HTML para proporcionar información adicional.  
+            Los <strong>data-attributes</strong> (atributos personalizados que comienzan con <code>data-</code>) permiten guardar información extra dentro de un elemento HTML.  
+            Con JavaScript se accede a ellos mediante <code>.getAttribute()</code>, <code>.setAttribute()</code> o <code>.dataset</code>.
+          </p>
+
+          <pre class="code-window">
+            <code>
+<span class="comment">// 📌 Atributos:</span>
+<span class="comment">// Son propiedades que se añaden a las etiquetas HTML para darles información adicional.</span>
+<span class="comment">// Ejemplo en HTML:</span> &lt;a href="https://google.com" target="_blank"&gt;&lt;/a&gt;
+
+<span class="comment">// Con JavaScript podemos acceder, modificar, agregar o eliminar atributos.</span>
+console.log("Los atributos permiten controlar el comportamiento de los elementos HTML.");
+console.log("Ejemplo: href, src, alt, id, class, title, etc.");
+
+<span class="comment">// 📌 Data-Attributes:</span>
+<span class="comment">// Son atributos personalizados que empiezan con "data-" y sirven para almacenar datos adicionales.</span>
+<span class="comment">// Ejemplo en HTML:</span> &lt;div data-user-id="12345" data-role="admin"&gt;&lt;/div&gt;
+
+<span class="comment">// En JavaScript se acceden a través de la propiedad .dataset</span>
+console.log("Los data-attributes permiten guardar información extra en los elementos HTML.");
+console.log("Se acceden con element.dataset, por ejemplo: element.dataset.userId");
+
+<span class="comment">// Mostrar el atributo "lang" del elemento raíz &lt;html&gt;</span>
+console.log(document.documentElement.lang);
+console.log(document.documentElement.getAttribute("lang"));
+
+<span class="comment">// Obtener y mostrar el href del primer elemento con clase "link-dom"</span>
+console.log(document.querySelector(".link-dom").href);
+console.log(document.querySelector(".link-dom").getAttribute("href"));
+
+<span class="comment">// Cambiar el atributo lang del &lt;html&gt;</span>
+document.documentElement.lang = "en";
+console.log(document.documentElement.lang);
+
+document.documentElement.setAttribute("lang", "es-MX");
+console.log(document.documentElement.lang);
+
+<span class="comment">// Seleccionar el enlace con clase "link-dom"</span>
+const $linkDOM = document.querySelector(".link-dom");
+
+<span class="comment">// Modificar atributos del enlace</span>
+$linkDOM.setAttribute("target", "_blank");
+$linkDOM.setAttribute("rel", "noopener");
+$linkDOM.setAttribute("href", "https://youtube.com/jonmircha");
+
+<span class="comment">// Verificar existencia y eliminar atributos</span>
+console.log($linkDOM.hasAttribute("rel")); 
+$linkDOM.removeAttribute("rel");
+console.log($linkDOM.hasAttribute("rel"));
+
+<span class="comment">// 📌 DATA-ATTRIBUTES</span>
+<span class="comment">// Obtener atributo data-description</span>
+console.log($linkDOM.getAttribute("data-description"));
+
+<span class="comment">// Mostrar todas las data-attributes en dataset</span>
+console.log($linkDOM.dataset);
+
+<span class="comment">// Acceder y modificar data-description desde dataset</span>
+console.log($linkDOM.dataset.description);
+$linkDOM.setAttribute("data-description", "Modelo de Objeto del Documento");
+console.log($linkDOM.dataset.description);
+
+$linkDOM.dataset.description = "Suscríbete a mi canal y comparte";
+console.log($linkDOM.dataset.description);
+
+<span class="comment">// Comprobar y eliminar data-id</span>
+console.log($linkDOM.hasAttribute("data-id"));
+$linkDOM.removeAttribute("data-id");
+console.log($linkDOM.hasAttribute("data-id"));
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="estilos-variables" aria-label="Estilos y Variables CSS">
+        <h3>Estilos y <em>Variables CSS</em></h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Los <strong>estilos en línea</strong> se aplican directamente dentro del atributo <code>style</code> del elemento HTML.  
+            Los <strong>estilos computados</strong> son el resultado final tras combinar estilos en línea, hojas CSS y herencias.  
+            Las <strong>variables CSS</strong> (también llamadas <em>custom properties</em>) permiten definir valores reutilizables y dinámicos.
+          </p>
+
+          <pre class="code-window">
+            <code>
+<span class="comment">// 📌 ESTILOS EN LÍNEA Y COMPUTADOS</span>
+
+<span class="comment">// Seleccionamos un enlace del DOM con la clase "link-dom"</span>
+const $linkDOM = document.querySelector(".link-dom");
+
+<span class="comment">// style => Accede a los estilos en línea aplicados directamente al elemento</span>
+console.log($linkDOM.style);
+console.log($linkDOM.getAttribute("style"));
+
+<span class="comment">// Acceder a propiedades específicas (en línea)</span>
+console.log($linkDOM.style.backgroundColor);
+console.log($linkDOM.style.color);
+
+<span class="comment">// getComputedStyle => Permite ver TODOS los estilos finales aplicados</span>
+console.log(window.getComputedStyle($linkDOM));
+console.log(getComputedStyle($linkDOM).getPropertyValue("color"));
+
+<span class="comment">// ✅ Establecer estilos directamente desde JavaScript</span>
+$linkDOM.style.setProperty("text-decoration", "none");
+$linkDOM.style.setProperty("display", "block");
+$linkDOM.style.width = "50%";
+$linkDOM.style.textAlign = "center";
+$linkDOM.style.marginLeft = "auto";
+$linkDOM.style.marginRight = "auto";
+$linkDOM.style.padding = "1rem";
+$linkDOM.style.borderRadius = ".5rem";
+
+<span class="comment">// Ver nuevamente los estilos en línea</span>
+console.log($linkDOM.style);
+console.log($linkDOM.getAttribute("style"));
+console.log(getComputedStyle($linkDOM));
+
+<span class="comment">// 📌 VARIABLES CSS (CUSTOM PROPERTIES)</span>
+
+<span class="comment">// Seleccionamos el elemento &lt;html&gt; y &lt;body&gt;</span>
+const $html = document.documentElement,
+      $body = document.body;
+
+<span class="comment">// Obtener el valor de variables CSS definidas en :root</span>
+let varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color"),
+    varYellowColor = getComputedStyle($html).getPropertyValue("--yellow-color");
+
+console.log(varDarkColor, varYellowColor);
+
+<span class="comment">// Aplicamos esos valores al fondo y color del texto</span>
+$body.style.backgroundColor = varDarkColor;
+$body.style.color = varYellowColor;
+
+<span class="comment">// Cambiar el valor de la variable --dark-color desde JS</span>
+$html.style.setProperty("--dark-color", "#000");
+
+<span class="comment">// Obtener el nuevo valor actualizado</span>
+varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color");
+
+<span class="comment">// Aplicar el nuevo valor al fondo</span>
+$body.style.setProperty("background-color", varDarkColor);
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="clases-css" aria-label="Clases CSS">
+        <h3>Clases <em>CSS</em></h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            La propiedad <strong>classList</strong> es un objeto del DOM que facilita la gestión de clases CSS en los elementos HTML.  
+            Permite agregar, eliminar, verificar o reemplazar clases sin manipular directamente el atributo <code>class</code>.
+          </p>
+
+          <pre class="code-window">
+            <code>
+<span class="comment">/* =======================================</span>
+<span class="comment"> classList es un objeto especial del DOM</span>
+<span class="comment"> ======================================= */</span>
+
+<span class="comment">// ✅ .add("clase")</span>
+elemento.classList.add("rojo", "grande");
+
+<span class="comment">// ✅ .remove("clase")</span>
+elemento.classList.remove("rojo", "grande");
+
+<span class="comment">// ✅ .toggle("clase")</span>
+elemento.classList.toggle("activo");
+
+<span class="comment">// ✅ .contains("clase")</span>
+console.log(elemento.classList.contains("activo"));
+
+<span class="comment">// ✅ .replace("vieja", "nueva")</span>
+elemento.classList.replace("claro", "oscuro");
+
+<span class="comment">// ✅ .classList y .className</span>
+console.log(elemento.classList);
+console.log(elemento.className);
+      </code>
+    </pre>
+
+    <pre class="code-window">
+      <code>
+<span class="comment">// 📌 Seleccionamos un elemento con la clase "card"</span>
+const $card = document.querySelector(".card");
+
+<span class="comment">// Mostramos el elemento y sus clases</span>
+console.log($card);
+console.log($card.className);
+console.log($card.classList);
+
+<span class="comment">// contains() => Verifica si tiene una clase específica</span>
+console.log($card.classList.contains("rotate-45"));
+
+<span class="comment">// add() => Agrega una clase</span>
+$card.classList.add("rotate-45");
+console.log($card.classList.contains("rotate-45"));
+
+<span class="comment">// remove() => Quita una clase</span>
+$card.classList.remove("rotate-45");
+console.log($card.classList.contains("rotate-45"));
+
+<span class="comment">// toggle() => Agrega o quita según el estado actual</span>
+$card.classList.toggle("rotate-45");
+console.log($card.classList.contains("rotate-45"));
+$card.classList.toggle("rotate-45");
+console.log($card.classList.contains("rotate-45"));
+$card.classList.toggle("rotate-45");
+
+<span class="comment">// replace() => Sustituye una clase por otra</span>
+$card.classList.replace("rotate-45", "rotate-135");
+
+<span class="comment">// add() y remove() con varios valores</span>
+$card.classList.add("opacity-80", "sepia");
+$card.classList.remove("opacity-80", "sepia");
+
+<span class="comment">// toggle() solo acepta una clase</span>
+$card.classList.toggle("opacity-80", "sepia"); 
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="texto-html" aria-label="Texto y HTML">
+        <h3>Texto y <em>HTML</em></h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Diferentes formas de insertar <strong>texto</strong> o <strong>HTML</strong> en un elemento del DOM usando JavaScript:  
+            <code>innerText</code>, <code>textContent</code>, <code>innerHTML</code> y <code>outerHTML</code>.
+          </p>
+
+          <pre class="code-window">
+            <code>
+<span class="comment">/*
+Cómo insertar contenido (texto o HTML) dentro de un elemento del DOM usando JavaScript.
+*/</span>
+
+<span class="comment">// 📌 Seleccionamos un elemento por su id</span>
+const $whatIsDOM = document.getElementById("que-es");
+
+<span class="comment">// Creamos contenido HTML en una plantilla multilínea</span>
+let text = `
+  &lt;p&gt;
+    El Modelo de Objetos del Documento (&lt;b&gt;&lt;i&gt;DOM - Document Object Model&lt;/i&gt;&lt;/b&gt;) es un API para documentos HTML y XML.
+  &lt;/p&gt;
+  &lt;p&gt;
+    Éste proveé una representación estructural del documento, permitiendo modificar su contenido y presentación visual mediante código JS.
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;mark&gt;El DOM no es parte de la especificación de JavaScript, es una API para los navegadores.&lt;/mark&gt;
+  &lt;/p&gt;
+`;
+
+<span class="comment">// 📛 innerText => Inserta solo texto plano (no interpreta HTML)</span>
+// $whatIsDOM.innerText = text;
+
+<span class="comment">// ✅ textContent => Inserta texto plano, sin formato HTML</span>
+$whatIsDOM.textContent = text;
+
+<span class="comment">// ✅ innerHTML => Inserta contenido interpretando etiquetas HTML</span>
+$whatIsDOM.innerHTML = text;
+
+<span class="comment">// ⚠️ outerHTML => Reemplaza el elemento completo (incluido él mismo)</span>
+$whatIsDOM.outerHTML = text;
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="dom-traversing" aria-label="DOM Traversing - Recorriendo el DOM">
+        <h3><em>DOM Traversing</em> - Recorriendo el <em>DOM</em></h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            El <strong>DOM Traversing</strong> consiste en navegar por los nodos del DOM para acceder a hijos, padres o hermanos de un elemento, y manipularlos si es necesario.
+          </p>
+
+          <pre class="code-window">
+            <code>
+<span class="comment">// 📌 DOM Traversing - Recorriendo el DOM</span>
+const $cards = document.querySelector(".cards");
+
+console.log($cards); 
+console.log($cards.children); 
+console.log($cards.children[2]); 
+
+<span class="comment">// parentElement => elemento padre directo</span>
+console.log($cards.parentElement);
+
+<span class="comment">// firstElementChild / lastElementChild => primer o último hijo</span>
+console.log($cards.firstElementChild);
+console.log($cards.lastElementChild);
+
+<span class="comment">// previousElementSibling / nextElementSibling => hermanos</span>
+console.log($cards.previousElementSibling);
+console.log($cards.nextElementSibling);
+
+<span class="comment">// closest() => busca el ancestro más cercano que cumpla el selector</span>
+console.log($cards.closest("div"));
+console.log($cards.closest("body"));
+
+<span class="comment">// Combinar children + closest para buscar desde un hijo</span>
+console.log($cards.children[3].closest("section"));
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="crear-elementos" aria-label="Creando Elementos y Fragmentos">
+        <h3>Creando Elementos y <em>Fragmentos</em></h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Crear elementos HTML desde JavaScript permite construir estructuras dinámicas sin escribir HTML directamente.  
+            Se utilizan métodos como <code>createElement</code>, <code>appendChild</code>, <code>innerHTML</code> y <code>DocumentFragment</code>.
+          </p>
+
+          <pre class="code-window">
+            <code>
+&lt;div class="cards"&gt;&lt;/div&gt;
+&lt;script src="tu_archivo.js"&gt;&lt;/script&gt;
+      </code>
+    </pre>
+
+    <pre class="code-window">
+      <code>
+<span class="comment">// ------------------------------</span>
+<span class="comment">// CREACIÓN DE ELEMENTOS Y FRAGMENTOS</span>
+<span class="comment">// ------------------------------</span>
+
+const 
+  $figure = document.createElement("figure"), 
+  $img = document.createElement("img"), 
+  $figcaption = document.createElement("figcaption"), 
+  $figcaptionText = document.createTextNode("Animals"), 
+  $cards = document.querySelector(".cards"), 
+  $figure2 = document.createElement("figure");
+
+<span class="comment">// Atributos de la imagen</span>
+$img.setAttribute("src", "https://placeimg.com/200/200/animals");
+$img.setAttribute("alt", "Animals");
+
+<span class="comment">// Añadimos clase CSS</span>
+$figure.classList.add("card");
+
+<span class="comment">// Estructura del figure</span>
+$figcaption.appendChild($figcaptionText);
+$figure.appendChild($img);
+$figure.appendChild($figcaption);
+$cards.appendChild($figure);
+
+<span class="comment">// Segunda figura con innerHTML</span>
+$figure2.innerHTML = `
+&lt;img src="https://placeimg.com/200/200/people" alt="People"&gt;
+&lt;figcaption&gt;People&lt;/figcaption&gt;
+`;
+$figure2.classList.add("card");
+$cards.appendChild($figure2);
+
+<span class="comment">// ------------------------------</span>
+<span class="comment">// LISTA DE ESTACIONES DEL AÑO</span>
+<span class="comment">// ------------------------------</span>
+const estaciones = ["Primavera", "Verano", "Otoño", "Invierno"],
+  $ul = document.createElement("ul");
+
+document.write("&lt;h3&gt;Estaciones del Año&lt;/h3&gt;");
+document.body.appendChild($ul);
+
+estaciones.forEach((el) =&gt; {
+  const $li = document.createElement("li");
+  $li.textContent = el;
+  $ul.appendChild($li);
+});
+
+<span class="comment">// ------------------------------</span>
+<span class="comment">// LISTA DE CONTINENTES CON innerHTML</span>
+<span class="comment">// ------------------------------</span>
+const continentes = ["África", "América", "Asia", "Europa", "Oceanía"],
+  $ul2 = document.createElement("ul");
+
+document.write("&lt;h3&gt;Continentes del Mundo&lt;/h3&gt;");
+document.body.appendChild($ul2);
+
+$ul2.innerHTML = "";
+continentes.forEach((el) =&gt; ($ul2.innerHTML += `&lt;li&gt;${el}&lt;/li&gt;`));
+
+<span class="comment">// ------------------------------</span>
+<span class="comment">// MESES DEL AÑO USANDO DOCUMENT FRAGMENT</span>
+<span class="comment">// ------------------------------</span>
+const meses = [
+    "Enero", "Febrero", "Marzo", "Abril",
+    "Mayo", "Junio", "Julio", "Agosto",
+    "Septiembre", "Octubre", "Noviembre", "Diciembre",
+  ],
+  $ul3 = document.createElement("ul"),
+  $fragment = document.createDocumentFragment();
+
+meses.forEach((el) =&gt; {
+  const $li = document.createElement("li");
+  $li.textContent = el;
+  $fragment.appendChild($li);
+});
+
+document.write("&lt;h3&gt;Meses del Año&lt;/h3&gt;");
+$ul3.appendChild($fragment);
+document.body.appendChild($ul3);
+
+<span class="comment">/*
+📌 Conceptos importantes:
+- createElement: crea elementos HTML.
+- createTextNode: crea nodos de texto.
+- appendChild: agrega un hijo.
+- innerHTML: inserta HTML como texto.
+- classList.add: añade clases.
+- DocumentFragment: mejora el rendimiento.
+- document.write: inserta contenido directo (no recomendado en producción).
+*/</span>
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="templates-html" aria-label="Templates HTML">
+        <h3>Templates HTML</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Este código utiliza la etiqueta <code>&lt;template&gt;</code> para crear tarjetas HTML dinámicamente con JavaScript, a partir de un arreglo de datos. Permite generar varias tarjetas sin duplicar HTML y mejora el rendimiento usando <code>DocumentFragment</code>.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">/* Template HTML */</span>
+&lt;template id="template-card"&gt;
+  &lt;figure class="card"&gt;
+    &lt;img /&gt;
+    &lt;figcaption&gt;&lt;/figcaption&gt;
+  &lt;/figure&gt;
+&lt;/template&gt;
+
+<span class="comment">/* Selección del DOM */</span>
+const $cards = document.querySelector(".cards");
+const $template = document.getElementById("template-card").content;
+const $fragment = document.createDocumentFragment();
+
+<span class="comment">/* Datos para las tarjetas */</span>
+const cardsContent = [
+  { title: "Tecnología", img: "https://placeimg.com/200/200/tech" },
+  { title: "Animales", img: "https://placeimg.com/200/200/animals" },
+  { title: "Arquitectura", img: "https://placeimg.com/200/200/arch" },
+  { title: "Gente", img: "https://placeimg.com/200/200/people" },
+  { title: "Naturaleza", img: "https://placeimg.com/200/200/nature" },
+];
+
+<span class="comment">/* Recorremos cada elemento y clonamos el template */</span>
+cardsContent.forEach(el =&gt; {
+  $template.querySelector("img").setAttribute("src", el.img);
+  $template.querySelector("img").setAttribute("alt", el.title);
+  $template.querySelector("figcaption").textContent = el.title;
+
+  let $clone = document.importNode($template, true);
+  $fragment.appendChild($clone);
+});
+
+<span class="comment">/* Insertamos el fragmento completo al DOM */</span>
+$cards.appendChild($fragment);
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="crear-fragmentos" aria-label="Explicación sobre crear elementos y fragmentos">
+        <h3>Creando Elementos y Fragmentos</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Se crearon elementos HTML desde JavaScript para construir tarjetas y listas sin escribir HTML directamente. Se usaron dos métodos: <code>createElement</code> para construir cada parte manualmente, y <code>innerHTML</code> para insertar contenido como texto. 
+            <strong>Punto importante:</strong> <em>Se utilizó <code>DocumentFragment</code> para insertar múltiples elementos de forma eficiente, evitando repintados innecesarios en el navegador.</em>
+          </p>
+
+          <pre class="code-window">
+            <code>
+
+<span class="comment">
+📄 Copiá y pegá este bloque directamente en tu archivo HTML para probarlo en el navegador.
+</span>
+ 
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="cards"&gt;&lt;/div&gt;
+  &lt;script src="tu_archivo.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+          <pre class="code-window">
+            <code>
+<span class="comment">// 📄 Copiá y pegá este bloque directamente en tu archivo JS para probarlo en el navegador.</span>            
+<span class="comment">// ------------------------------</span>
+<span class="comment">// CREACIÓN DE ELEMENTOS Y FRAGMENTOS</span>
+<span class="comment">// ------------------------------</span>
+
+<span class="comment">//creando elementos HTML desde cero, sin escribir HTML directamente.</span>
+
+<span class="comment">// Creamos varios elementos HTML usando JavaScript</span>
+const 
+  <span class="comment">// Creamos un elemento &lt;figure&gt;</span>
+  $figure = document.createElement("figure"), 
+  <span class="comment">// Creamos una etiqueta &lt;img&gt;</span>
+  $img = document.createElement("img"), 
+  <span class="comment">// Creamos &lt;figcaption&gt; (pie de foto)</span>
+  $figcaption = document.createElement("figcaption"), 
+  <span class="comment">// Creamos un nodo de texto con el contenido "Animals"</span>
+  $figcaptionText = document.createTextNode("Animals"), 
+  <span class="comment">// Seleccionamos un elemento del DOM con clase .cards</span>
+  $cards = document.querySelector(".cards"), 
+  <span class="comment">// Creamos otro &lt;figure&gt; para otro ejemplo</span>
+  $figure2 = document.createElement("figure");
+  
+<span class="comment">// Establecemos atributos de la imagen</span>
+$img.setAttribute("src", "https://placeimg.com/200/200/animals"); <span class="comment">// Imagen aleatoria de animales</span>
+$img.setAttribute("alt", "Animals"); <span class="comment">// Texto alternativo si la imagen no carga</span>
+
+<span class="comment">// Añadimos clase CSS al &lt;figure&gt;</span>
+$figure.classList.add("card"); <span class="comment">// Agregamos la clase "card" para estilos</span>
+
+<span class="comment">// Estructuramos la tarjeta: &lt;figure&gt;&lt;img&gt;&lt;figcaption&gt;Animals&lt;/figcaption&gt;&lt;/figure&gt;</span>
+$figcaption.appendChild($figcaptionText); <span class="comment">// Metemos el texto dentro del &lt;figcaption&gt;</span>
+$figure.appendChild($img); <span class="comment">// Metemos la imagen dentro del figure</span>
+$figure.appendChild($figcaption); <span class="comment">// Metemos el figcaption en el figure</span>
+$cards.appendChild($figure); <span class="comment">// Finalmente insertamos el &lt;figure&gt; armado dentro del contenedor .cards</span>
+
+<span class="comment">// Segunda figura, pero usando innerHTML en lugar de createElement</span>
+$figure2.innerHTML = `
+&lt;img src="https://placeimg.com/200/200/people" alt="People"&gt;
+&lt;figcaption&gt;People&lt;/figcaption&gt;
+`;
+$figure2.classList.add("card"); <span class="comment">// Le agregamos clase para estilos</span>
+$cards.appendChild($figure2); <span class="comment">// Agregamos este segundo &lt;figure&gt; a .cards</span>
+
+<span class="comment">// ------------------------------</span>
+<span class="comment">// LISTA DE ESTACIONES DEL AÑO</span>
+<span class="comment">// ------------------------------</span>
+const estaciones = ["Primavera", "Verano", "Otoño", "Invierno"],
+  $ul = document.createElement("ul"); <span class="comment">// Creamos una lista &lt;ul&gt;</span>
+
+document.write("&lt;h3&gt;Estaciones del Año&lt;/h3&gt;"); <span class="comment">// Escribimos un título (esto bloquea el render del HTML)</span>
+document.body.appendChild($ul); <span class="comment">// Agregamos la lista al &lt;body&gt;</span>
+
+estaciones.forEach((el) => {
+  const $li = document.createElement("li"); <span class="comment">// Creamos un &lt;li&gt; por cada estación</span>
+  $li.textContent = el; <span class="comment">// Le asignamos el texto</span>
+  $ul.appendChild($li); <span class="comment">// Lo agregamos a la lista &lt;ul&gt;</span>
+});
+
+<span class="comment">// ------------------------------</span>
+<span class="comment">// LISTA DE CONTINENTES CON innerHTML</span>
+<span class="comment">// ------------------------------</span>
+const continentes = ["África", "América", "Asia", "Europa", "Oceanía"],
+  $ul2 = document.createElement("ul"); <span class="comment">// Otra lista</span>
+
+document.write("&lt;h3&gt;Continentes del Mundo&lt;/h3&gt;");
+document.body.appendChild($ul2); <span class="comment">// Agregamos la segunda lista al body</span>
+
+$ul2.innerHTML = ""; <span class="comment">// Limpiamos por si acaso</span>
+<span class="comment">// Agregamos todos los continentes directamente usando innerHTML (menos eficiente que createElement)</span>
+continentes.forEach((el) => ($ul2.innerHTML += `&lt;li&gt;${el}&lt;/li&gt;`));
+
+<span class="comment">// ------------------------------</span>
+<span class="comment">// MESES DEL AÑO USANDO DOCUMENT FRAGMENT (más eficiente)</span>
+<span class="comment">// ------------------------------</span>
+const meses = [
+    "Enero", "Febrero", "Marzo", "Abril",
+    "Mayo", "Junio", "Julio", "Agosto",
+    "Septiembre", "Octubre", "Noviembre", "Diciembre",
+  ],
+  $ul3 = document.createElement("ul"), <span class="comment">// Otra lista</span>
+  $fragment = document.createDocumentFragment(); <span class="comment">// Creamos un fragmento para optimizar el render</span>
+
+meses.forEach((el) => {
+  const $li = document.createElement("li");
+  $li.textContent = el;
+  $fragment.appendChild($li); <span class="comment">// Añadimos los &lt;li&gt; al fragmento</span>
+});
+
+document.write("&lt;h3&gt;Meses del Año&lt;/h3&gt;");
+$ul3.appendChild($fragment); <span class="comment">// Al final, agregamos todo el fragmento de una sola vez al &lt;ul&gt;</span>
+document.body.appendChild($ul3); <span class="comment">// Insertamos la lista al documento</span>
+
+<span class="comment">/*
+📌 Conceptos importantes usados:
+- createElement: crea elementos HTML con JS.
+- createTextNode: crea nodos de texto (no HTML).
+- appendChild: agrega un hijo al DOM.
+- innerHTML: inserta HTML como texto (menos seguro y menos eficiente).
+- classList.add: añade clases CSS.
+- documentFragment: contenedor en memoria para mejorar el rendimiento al agregar múltiples nodos.
+- document.write: inserta contenido directamente al HTML (no se recomienda en producción).
+*/</span>
+            </code>
+          </pre>
+
+        </details>
+      </article>
+
+      <article id="modificar-old-style" aria-label="Explicación sobre modificación de elementos con métodos clásicos">
+        <h3>Modificando Elementos (<em>Old Style</em>)</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            En este enfoque clásico, se modifican elementos del DOM utilizando métodos como <code>setAttribute</code>, <code>textContent</code> y <code>innerHTML</code>. Estos métodos permiten cambiar atributos, insertar texto o reemplazar contenido HTML directamente.
+          </p>
+          <ul>
+            <li>Se accede a los elementos con <code>document.querySelector</code> o similares.</li>
+            <li>Se actualizan propiedades como <code>src</code>, <code>alt</code> o el contenido textual.</li>
+            <li><strong>Punto importante:</strong> <em>Este estilo es funcional pero menos estructurado que las técnicas modernas como <code>createElement</code> o el uso de <code>template</code>, lo que puede dificultar el mantenimiento del código en proyectos grandes.</em></li>
+          </ul>
+          <pre class="code-window">
+            <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Manipulación del DOM&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      width: 200px;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;section class="cards"&gt;
+
+  &lt;/section&gt;
+
+  &lt;template id="template-card"&gt;
+    &lt;figure class="card"&gt;
+      &lt;img src="" alt=""&gt;
+      &lt;figcaption&gt;&lt;/figcaption&gt;
+    &lt;/figure&gt;
+  &lt;/template&gt;
+
+  &lt;script src="tu_archivo.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+          <pre class="code-window">
+            <code>
+<span class="comment">/*</span>
+<span class="comment">¿Qué podés hacer con esto?</span>
+<span class="comment">replaceChild() → reemplaza una tarjeta por otra.</span>
+<span class="comment">removeChild() → elimina una tarjeta específica.</span>
+<span class="comment">insertBefore() → inserta una tarjeta antes de otra.</span>
+<span class="comment">cloneNode(true) → clona un nodo completo con todo su contenido</span>
+<span class="comment">*/</span>
+
+<span class="comment">// ===============================</span>
+<span class="comment">// 📌 Manipulación de nodos del DOM</span>
+<span class="comment">// ===============================</span>
+
+<span class="comment">// Seleccionamos el contenedor que tiene las tarjetas</span>
+const $cards = document.querySelector(".cards");
+
+<span class="comment">// Creamos un nuevo elemento &lt;figure&gt; para una nueva tarjeta</span>
+const $newCard = document.createElement("figure");
+
+<span class="comment">// Creamos una copia (clon) de todo el contenedor .cards con su contenido (true = clon profundo)</span>
+const $cloneCards = $cards.cloneNode(true);
+
+<span class="comment">// Agregamos contenido HTML dentro del nuevo &lt;figure&gt;</span>
+$newCard.innerHTML = `
+  &lt;img src="https://placeimg.com/200/200/any" alt="Any"&gt;
+  &lt;figcaption&gt;Any&lt;/figcaption&gt;
+`;
+
+<span class="comment">// Le añadimos la clase "card" al nuevo &lt;figure&gt; para que tenga estilo como las demás</span>
+$newCard.classList.add("card");
+
+<span class="comment">// ===============================</span>
+<span class="comment">// 📌 Métodos para insertar/modificar nodos</span>
+<span class="comment">// ===============================</span>
+
+<span class="comment">// 🔁 OPCIÓN 1: Reemplaza una tarjeta existente (la tercera, índice 2) por la nueva</span>
+<span class="comment">// $cards.replaceChild($newCard, $cards.children[2]);</span>
+
+<span class="comment">// 🔁 OPCIÓN 2: Elimina la última tarjeta del contenedor</span>
+<span class="comment">// $cards.removeChild($cards.lastElementChild);</span>
+
+<span class="comment">// ✅ OPCIÓN 3: Inserta la nueva tarjeta antes de la primera tarjeta existente</span>
+$cards.insertBefore($newCard, $cards.firstElementChild);
+
+<span class="comment">// Finalmente, agregamos al &lt;body&gt; una copia entera del contenedor .cards (con todas sus tarjetas)</span>
+document.body.appendChild($cloneCards);
+            </code>
+          </pre>
+          <pre class="code-window">
+            <code>
+<span class="comment">// ============================</span>
+<span class="comment">// MODIFICANDO ELEMENTOS (Old Style)</span>
+<span class="comment">// ============================</span>
+
+<span class="comment">// Seleccionamos el contenedor de las tarjetas</span>
+const $cards = document.querySelector(".cards"),
+
+<span class="comment">// Creamos una nueva tarjeta &lt;figure&gt; desde cero</span>
+  $newCard = document.createElement("figure"),
+
+<span class="comment">// Clonamos todo el contenedor .cards con sus elementos hijos (tarjetas existentes)</span>
+  $cloneCards = $cards.cloneNode(true);
+
+<span class="comment">// Definimos el contenido HTML de la nueva tarjeta</span>
+$newCard.innerHTML = `
+  &lt;img src="https://picsum.photos/200/200?random=999" alt="Any"&gt;
+  &lt;figcaption&gt;Any&lt;/figcaption&gt;
+`;
+
+<span class="comment">// Le agregamos la clase CSS "card" para que tenga estilo como las demás</span>
+$newCard.classList.add("card");
+
+<span class="comment">// 🎯 Diferentes formas de modificar el DOM:</span>
+
+<span class="comment">// Reemplazar el tercer hijo de .cards con la nueva tarjeta</span>
+<span class="comment">// $cards.replaceChild($newCard, $cards.children[2]);</span>
+
+<span class="comment">// Eliminar el último hijo (última tarjeta) de .cards</span>
+<span class="comment">// $cards.removeChild($cards.lastElementChild);</span>
+
+<span class="comment">// Insertar la nueva tarjeta al principio de .cards</span>
+$cards.insertBefore($newCard, $cards.firstElementChild);
+
+<span class="comment">// Agregar el clon de todas las tarjetas (incluye las originales) al final del &lt;body&gt;</span>
+document.body.appendChild($cloneCards);
+            </code>
+          </pre>
+
+        </details>
+      </article>
+      
+      <article id="modificar-cool-style" aria-label="Explicación sobre modificación moderna de elementos">
+        <h3>Modificando Elementos (<em>Cool Style</em>)</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Este enfoque moderno utiliza métodos como <code>createElement</code>, <code>classList.add</code> e <code>innerHTML</code> para construir y modificar elementos HTML de forma dinámica. Se crean tarjetas desde cero y se insertan en el DOM con precisión.
+            <strong>Punto importante:</strong> <em>El uso de <code>cloneNode(true)</code> permite duplicar estructuras completas del DOM, lo que facilita reutilizar componentes sin reconstruirlos manualmente.</em>
+          </p>
+          <pre class="code-window">
+            <code>
+            <span class="comment"></span>
+      &lt;!DOCTYPE html&gt;
+      &lt;html lang="es"&gt;
+      &lt;head&gt;
+      &lt;meta charset="UTF-8"&gt;
+      &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+      &lt;title&gt;Modificando Elementos (Cool Style)&lt;/title&gt;
+      &lt;style&gt;
+        body {
+          font-family: sans-serif;
+          padding: 20px;
+        }
+
+        .cards {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          margin-bottom: 40px;
+        }
+
+        .card {
+          width: 200px;
+          border: 1px solid #ccc;
+          border-radius: 10px;
+          padding: 10px;
+          text-align: center;
+        }
+
+        .card img {
+          width: 100%;
+          border-radius: 8px;
+        }
+      &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+
+      &lt;section class="cards"&gt;
+        &lt;figure class="card"&gt;
+          &lt;img src="https://picsum.photos/200/200?random=1" alt="Tech"&gt;
+          &lt;figcaption&gt;Tecnología&lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;figure class="card"&gt;
+          &lt;img src="https://picsum.photos/200/200?random=2" alt="People"&gt;
+          &lt;figcaption&gt;Gente&lt;/figcaption&gt;
+        &lt;/figure&gt;
+        &lt;figure class="card"&gt;
+          &lt;img src="https://picsum.photos/200/200?random=3" alt="Nature"&gt;
+          &lt;figcaption&gt;Naturaleza&lt;/figcaption&gt;
+        &lt;/figure&gt;
+      &lt;/section&gt;
+
+      &lt;script src="script.js"&gt;&lt;/script&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;
+
+            </code>
+          </pre>
+
+          <pre class="code-window">
+            <code>
+<span class="comment">/* 
+.insertAdjacent...
+.insertAdjacentElement(position, el) // Inserta un nodo/elemento
+.insertAdjacentHTML(position, html) // Inserta código HTML como string
+.insertAdjacentText(position, text) // Inserta texto plano
+
+Posiciones posibles:
+beforebegin → antes del elemento (como hermano anterior)
+afterbegin → al principio del elemento (como primer hijo)
+beforeend → al final del elemento (como último hijo)
+afterend → después del elemento (como hermano siguiente)
+*/</span>
+
+<span class="comment">// =======================================</span>
+<span class="comment">// 📌 Crear una nueva tarjeta con insertAdjacent...</span>
+<span class="comment">// =======================================</span>
+
+<span class="comment">// Seleccionamos el contenedor donde se insertarán las tarjetas</span>
+const $cards = document.querySelector(".cards");
+
+<span class="comment">// Creamos un nuevo &lt;figure&gt; que será la tarjeta</span>
+const $newCard = document.createElement("figure");
+
+<span class="comment">// Definimos el contenido HTML como texto para insertarlo luego</span>
+let $contenCard = `
+  &lt;img src="https://placeimg.com/200/200/any" alt="Any"&gt;
+  &lt;figcaption&gt;&lt;/figcaption&gt;
+`;
+
+<span class="comment">// Le agregamos la clase CSS "card" al nuevo &lt;figure&gt;</span>
+$newCard.classList.add("card");
+
+<span class="comment">// Insertamos el HTML (imagen y figcaption) al principio del &lt;figure&gt;</span>
+$newCard.insertAdjacentHTML("afterbegin", $contenCard);
+
+<span class="comment">// Insertamos el &lt;figure&gt; completo como último hijo dentro del contenedor .cards</span>
+$cards.insertAdjacentElement("beforeend", $newCard);
+
+<span class="comment">// Insertamos el texto "Any" dentro del &lt;figcaption&gt; al principio</span>
+$newCard.querySelector("figcaption").insertAdjacentText("afterbegin", "Any");
+
+<span class="comment">/* 
+// ==============================
+// 📌 Otras formas modernas de insertar nodos:
+// (descomentá solo una a la vez si probás)
+// ==============================
+
+// Inserta $newCard al principio del contenedor
+// $cards.prepend($newCard);
+
+// Inserta $newCard al final del contenedor
+// $cards.append($newCard);
+
+// Inserta $newCard como hermano anterior de .cards
+// $cards.before($newCard);
+
+// Inserta $newCard como hermano posterior de .cards
+// $cards.after($newCard);
+*/</span>
+      </code>
+    </pre>
+    <pre class="code-window">
+      <code>
+<span class="comment">/* 
+.insertAdjacent... permite insertar elementos, HTML o texto en posiciones específicas del DOM
+
+Formas:
+  .insertAdjacentElement(posición, elemento)
+  .insertAdjacentHTML(posición, html como string)
+  .insertAdjacentText(posición, texto como string)
+
+Posiciones disponibles:
+  - beforebegin → antes del elemento (como hermano anterior)
+  - afterbegin  → dentro del elemento, como primer hijo
+  - beforeend   → dentro del elemento, como último hijo
+  - afterend    → después del elemento (como hermano siguiente)
+*/</span>
+
+<span class="comment">// Seleccionamos el contenedor de tarjetas</span>
+const $cards = document.querySelector(".cards");
+
+<span class="comment">// Creamos una nueva tarjeta &lt;figure&gt;</span>
+const $newCard = document.createElement("figure");
+
+<span class="comment">// Plantilla en formato string con imagen y figcaption vacío</span>
+let $contenCard = `
+  &lt;img src="https://picsum.photos/200/200?random=999" alt="Any"&gt;
+  &lt;figcaption&gt;&lt;/figcaption&gt;
+`;
+
+<span class="comment">// Le agregamos clase "card" para estilos</span>
+$newCard.classList.add("card");
+
+<span class="comment">// Insertamos el HTML (imagen + figcaption) dentro del &lt;figure&gt; como primer hijo</span>
+$newCard.insertAdjacentHTML("afterbegin", $contenCard);
+
+<span class="comment">// Insertamos la nueva tarjeta como último hijo dentro de .cards</span>
+$cards.insertAdjacentElement("beforeend", $newCard);
+
+<span class="comment">// Insertamos el texto "Any" dentro del &lt;figcaption&gt;, al principio</span>
+$newCard.querySelector("figcaption").insertAdjacentText("afterbegin", "Any");
+
+<span class="comment">// 🎯 Estas son otras formas modernas de insertar elementos (descomentá para probar):</span>
+<span class="comment">// $cards.prepend($newCard);   // Inserta al inicio del contenedor</span>
+<span class="comment">// $cards.append($newCard);    // Inserta al final del contenedor (igual que insertAdjacentElement 'beforeend')</span>
+<span class="comment">// $cards.before($newCard);    // Inserta antes del contenedor como hermano</span>
+<span class="comment">// $cards.after($newCard);     // Inserta después del contenedor como hermano</span>
+            </code>
+          </pre>
+
+        </details>
+      </article>
+
+      <article id="eventos" aria-label="Declaración y Manejo de Eventos">
+        <h3>Eventos</h3>
+        <details>
+          <summary>Leer explicación</summary>
+            <p>
+            Los eventos en JavaScript permiten controlar las acciones del usuario, como clics o teclas, y definir qué debe hacer el documento cuando ocurren.
+            </p>
+          <pre class="code-window">
+            <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Práctica de Eventos en JavaScript&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;Práctica de Eventos en JavaScript&lt;/h2&gt;
+
+  &lt;button id="evento-semantico"&gt;Evento Semántico&lt;/button&gt;
+  &lt;button id="evento-multiple"&gt;Evento Múltiple&lt;/button&gt;
+  &lt;button id="evento-remover"&gt;Remover Evento&lt;/button&gt;
+
+  &lt;span class="comment"&gt;&lt;!-- Enlace al archivo JavaScript externo --&gt;&lt;/span&gt;
+  &lt;script src="eventos.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+          <pre class="code-window">
+            <code>
+<span class="comment">// ===========================================</span>
+<span class="comment">// 📌 Declaración de funciones para los eventos</span>
+<span class="comment">// ===========================================</span>
+
+<span class="comment">/* 
+Los eventos son los mecanismos que tenemos en JavaScript para controlar las acciones del usuario 
+y definir el comportamiento del documento en cierto momento o cuando se cumplan ciertas condiciones
+*/</span>
+
+<span class="comment">// Función básica que muestra un alert y el objeto del evento</span>
+function holaMundo() {
+  alert("Hola Mundo");
+  console.log(event); <span class="comment">// muestra el evento en consola</span>
+}
+
+<span class="comment">// Función con parámetro opcional (valor por defecto "Desconocid@")</span>
+function saludar(nombre = "Desconocid@") {
+  alert(`Hola ${nombre}`);
+  console.log(event); <span class="comment">// también imprime el evento en consola</span>
+}
+
+<span class="comment">// ===========================================</span>
+<span class="comment">// 📌 Selección de botones o elementos del DOM</span>
+<span class="comment">// ===========================================</span>
+
+const $eventoSemantico = document.getElementById("evento-semantico"),
+  $eventoMultiple = document.getElementById("evento-multiple"),
+  $eventoRemover = document.getElementById("evento-remover");
+
+<span class="comment">// ===========================================</span>
+<span class="comment">// 📌 Manejador de eventos semántico</span>
+<span class="comment">// Solo se puede asignar un único manejador por tipo de evento</span>
+<span class="comment">// ===========================================</span>
+
+$eventoSemantico.onclick = holaMundo; <span class="comment">// Asignamos la función holaMundo como manejador</span>
+
+<span class="comment">// Sobrescribimos el manejador anterior con una nueva función anónima</span>
+$eventoSemantico.onclick = function (e) {
+  alert("Hola Mundo Manejador de Eventos Semántico");
+  console.log(e);      <span class="comment">// imprime el evento que llega como argumento</span>
+  console.log(event);  <span class="comment">// imprime el evento global (no recomendado)</span>
+};
+
+<span class="comment">// ===========================================</span>
+<span class="comment">// 📌 Manejador de eventos múltiple con addEventListener</span>
+<span class="comment">// Permite asignar varios eventos al mismo tipo</span>
+<span class="comment">// ===========================================</span>
+
+$eventoMultiple.addEventListener("click", holaMundo); <span class="comment">// Se ejecuta holaMundo al hacer click</span>
+
+$eventoMultiple.addEventListener("click", (e) => {
+  alert("Hola Mundo Manejador de Eventos Múltiple");
+  console.log(e);           <span class="comment">// objeto del evento</span>
+  console.log(e.type);      <span class="comment">// tipo de evento: "click"</span>
+  console.log(e.target);    <span class="comment">// elemento que originó el evento</span>
+  console.log(event);       <span class="comment">// evento global (menos recomendable)</span>
+});
+
+$eventoMultiple.addEventListener("click", () => {
+  saludar();       <span class="comment">// sin nombre → "Desconocid@"</span>
+  saludar("Jon");  <span class="comment">// con nombre → "Jon"</span>
+});
+
+<span class="comment">// ===========================================</span>
+<span class="comment">// 📌 Remover eventos con removeEventListener</span>
+<span class="comment">// ===========================================</span>
+
+<span class="comment">// Creamos una función que se usará para doble click</span>
+const removerDobleClick = (e) => {
+  alert(`Removiendo el evento de tipo ${e.type}`);
+  console.log(e); <span class="comment">// imprime detalles del evento</span>
+
+  <span class="comment">// Removemos el evento dblclick para que no vuelva a ejecutarse</span>
+  $eventoRemover.removeEventListener("dblclick", removerDobleClick);
+
+  <span class="comment">// Desactivamos el botón para que no se pueda volver a hacer doble clic</span>
+  $eventoRemover.disabled = true;
+};
+
+<span class="comment">// Asociamos la función anterior al evento doble clic (dblclick)</span>
+$eventoRemover.addEventListener("dblclick", removerDobleClick);
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="flujo" aria-label="Flujo de Eventos (Burbuja y Captura)">
+        <h3>Flujo de Eventos (Burbuja y Captura)</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Determina el orden en que un evento viaja por el DOM: Captura (de arriba hacia abajo) o Burbuja (de abajo hacia arriba).
+          </p>
+          <pre class="code-window">
+            <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Práctica de Eventos&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;Práctica de Eventos en JavaScript&lt;/h2&gt;
+
+  &lt;button id="evento-semantico"&gt;Evento Semántico&lt;/button&gt;
+  &lt;button id="evento-multiple"&gt;Evento Múltiple&lt;/button&gt;
+  &lt;button id="evento-remover"&gt;Remover Evento&lt;/button&gt;
+
+  &lt;!-- Enlace al archivo JavaScript externo --&gt;
+  &lt;script src="eventos.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+          <pre class="code-window">
+            <code>
+<span class="comment">// ===========================================</span>
+<span class="comment">// FUNCIONES PARA MANEJAR EVENTOS</span>
+<span class="comment">// ===========================================</span>
+
+<span class="comment">/* 
+Qué aprendés con este código?
+Tema                Qué se muestra
+onclick             Manejador semántico, solo uno por evento
+addEventListener    Permite varios eventos del mismo tipo
+removeEventListener Cómo quitar eventos después de ejecutarse
+event, e.type, e.target Propiedades útiles del objeto evento
+Parámetros por defecto En saludar(nombre = "Desconocid@")
+*/</span>
+
+<span class="comment">// Función que muestra un alert y el objeto 'event' global</span>
+function holaMundo() {
+  alert("Hola Mundo");
+  console.log(event); <span class="comment">// Muestra el evento global (no recomendado en modernos)</span>
+}
+
+<span class="comment">// Función que saluda con un nombre dado, o "Desconocid@" si no se pasa</span>
+function saludar(nombre = "Desconocid@") {
+  alert(`Hola ${nombre}`);
+  console.log(event); <span class="comment">// También muestra el evento global</span>
+}
+
+<span class="comment">// ===========================================</span>
+<span class="comment">// SELECCIÓN DE ELEMENTOS DEL DOM</span>
+<span class="comment">// ===========================================</span>
+
+<span class="comment">// Selecciona el botón con id="evento-semantico"</span>
+const $eventoSemantico = document.getElementById("evento-semantico"),
+
+<span class="comment">// Selecciona el botón con id="evento-multiple"</span>
+  $eventoMultiple = document.getElementById("evento-multiple"),
+
+<span class="comment">// Selecciona el botón con id="evento-remover"</span>
+  $eventoRemover = document.getElementById("evento-remover");
+
+<span class="comment">// ===========================================</span>
+<span class="comment">// MANEJADOR DE EVENTO SEMÁNTICO</span>
+<span class="comment">// Solo puede haber uno por evento del mismo tipo (sobrescribe al anterior)</span>
+<span class="comment">// ===========================================</span>
+
+$eventoSemantico.onclick = holaMundo; <span class="comment">// Se asigna la función holaMundo</span>
+
+<span class="comment">// Se sobrescribe el manejador anterior con una función anónima</span>
+$eventoSemantico.onclick = function (e) {
+  alert("Hola Mundo Manejador de Eventos Semántico");
+  console.log(e);      <span class="comment">// Evento pasado como parámetro</span>
+  console.log(event);  <span class="comment">// Evento global</span>
+};
+
+<span class="comment">// ===========================================</span>
+<span class="comment">// MANEJADORES DE EVENTOS MÚLTIPLES</span>
+<span class="comment">// Con addEventListener podemos asignar varios al mismo tipo</span>
+<span class="comment">// ===========================================</span>
+
+$eventoMultiple.addEventListener("click", holaMundo); <span class="comment">// Se ejecuta holaMundo al hacer clic</span>
+
+<span class="comment">// Segundo evento para el mismo click: con función flecha</span>
+$eventoMultiple.addEventListener("click", (e) => {
+  alert("Hola Mundo Manejador de Eventos Múltiple");
+  console.log(e);           <span class="comment">// Muestra el objeto del evento</span>
+  console.log(e.type);      <span class="comment">// Muestra el tipo de evento (click)</span>
+  console.log(e.target);    <span class="comment">// Muestra el botón que generó el evento</span>
+  console.log(event);       <span class="comment">// Evento global (menos recomendable)</span>
+});
+
+<span class="comment">// Tercer evento para el mismo click: llama a la función saludar</span>
+$eventoMultiple.addEventListener("click", () => {
+  saludar();         <span class="comment">// Llama sin argumentos → "Desconocid@"</span>
+  saludar("Jon");    <span class="comment">// Llama con argumento → "Jon"</span>
+});
+
+<span class="comment">// ===========================================</span>
+<span class="comment">// REMOVER EVENTO DESPUÉS DE EJECUTARSE UNA VEZ</span>
+<span class="comment">// ===========================================</span>
+
+<span class="comment">// Función manejadora para evento dblclick</span>
+const removerDobleClick = (e) => {
+  alert(`Removiendo el evento de tipo ${e.type}`); <span class="comment">// Muestra el tipo (dblclick)</span>
+  console.log(e); <span class="comment">// Muestra detalles del evento</span>
+
+  <span class="comment">// Elimina este mismo evento para que no se dispare de nuevo</span>
+  $eventoRemover.removeEventListener("dblclick", removerDobleClick);
+
+  <span class="comment">// Desactiva el botón para evitar más interacciones</span>
+  $eventoRemover.disabled = true;
+};
+
+<span class="comment">// Se asigna la función al evento doble clic</span>
+$eventoRemover.addEventListener("dblclick", removerDobleClick);
+              </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="detener" aria-label="stopPropagation & preventDefault">
+        <h3>stopPropagation & preventDefault</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            <strong>stopPropagation()</strong> detiene la propagación del evento. <strong>preventDefault()</strong> evita la acción por defecto (como seguir un enlace).
+          </p>
+          <pre class="code-window">
+            <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Práctica de Flujo de Eventos&lt;/title&gt;
+  &lt;style&gt;
+    .eventos-flujo {
+      padding: 20px;
+      border: 2px solid #333;
+    }
+    .eventos-flujo div {
+      padding: 20px;
+      margin: 10px;
+      background-color: #f0f0f0;
+      border: 1px solid #999;
+      cursor: pointer;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;Práctica de Burbuja y Captura&lt;/h2&gt;
+
+  &lt;div class="eventos-flujo"&gt;
+    &lt;div class="div1"&gt;Div 1&lt;/div&gt;
+    &lt;div class="div2"&gt;Div 2&lt;/div&gt;
+    &lt;div class="div3"&gt;Div 3&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Enlace al archivo JavaScript externo --&gt;
+  &lt;script src="flujo-eventos.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+          <pre class="code-window">
+            <code>
+<span class="comment">/*</span>
+<span class="comment">El método addEventListener() tiene un tercer párametro que puede ser de tipo boolean, si no se especifica, el valor por defecto es false.</span>
+<span class="comment"></span>
+<span class="comment">Si el parámetro es false se ejecuta la fase de burbuja (ir del elemento más interno al más externo).</span>
+<span class="comment"></span>
+<span class="comment">Si el parámetro es true se ejecuta la fase de captura (ir del elemento más externo al más interno).</span>
+<span class="comment">*/</span>
+
+<span class="comment">// Seleccionamos todos los &lt;div&gt; dentro del contenedor con clase .eventos-flujo</span>
+const $divsEventos = document.querySelectorAll(".eventos-flujo div");
+
+<span class="comment">// Función que maneja el evento click y muestra información en consola</span>
+function flujoEventos(e) {
+  <span class="comment">// 'this' es el div que tiene el event listener</span>
+  <span class="comment">// 'e.target' es el elemento donde realmente ocurrió el click</span>
+  console.log(
+    `Hola te saluda ${this.className}, el click lo originó ${e.target.className}`
+  );
+}
+
+<span class="comment">// Mostramos en consola la lista de divs seleccionados</span>
+console.log($divsEventos);
+
+<span class="comment">// Iteramos sobre cada div para agregarle un event listener</span>
+$divsEventos.forEach((div) => {
+  <span class="comment">// ============================</span>
+  <span class="comment">// Opciones para el event listener:</span>
+  <span class="comment">// ============================</span>
+  
+  <span class="comment">// Fase de burbuja (default), el evento se propaga de hijo a padre</span>
+  <span class="comment">// div.addEventListener("click", flujoEventos);</span>
+  <span class="comment">// div.addEventListener("click", flujoEventos, false);</span>
+
+  <span class="comment">// Fase de captura, el evento se propaga de padre a hijo antes del target</span>
+  <span class="comment">// div.addEventListener("click", flujoEventos, true);</span>
+
+  <span class="comment">// Event listener con opciones:</span>
+  <span class="comment">// capture: false -&gt; escucha en fase de burbuja</span>
+  <span class="comment">// once: true -&gt; se ejecuta solo una vez y luego se remueve automáticamente</span>
+  div.addEventListener("click", flujoEventos, {
+    capture: false,
+    once: true,
+  });
+});
+            </code>
+          </pre>
+
+        </details>
+      </article>
+
+      <article id="delegacion" aria-label="Delegación de Eventos">
+        <h3>Delegación de Eventos</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Técnica que permite manejar múltiples elementos hijos con un solo listener en el elemento padre.
+          </p>
+          <pre class="code-window">
+            <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Práctica Delegación de Eventos&lt;/title&gt;
+  &lt;style&gt;
+    .eventos-flujo {
+      padding: 20px;
+      border: 2px solid #333;
+    }
+    .eventos-flujo div {
+      padding: 15px;
+      margin: 10px;
+      background-color: #e0e0f0;
+      border: 1px solid #999;
+      cursor: pointer;
+    }
+    .eventos-flujo a {
+      display: block;
+      margin-top: 5px;
+      color: blue;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;Práctica Delegación de Eventos&lt;/h2&gt;
+
+  &lt;div class="eventos-flujo"&gt;
+    &lt;div class="div1"&gt;Div 1&lt;a href="https://example.com"&gt;Link 1&lt;/a&gt;&lt;/div&gt;
+    &lt;div class="div2"&gt;Div 2&lt;a href="https://example.com"&gt;Link 2&lt;/a&gt;&lt;/div&gt;
+    &lt;div class="div3"&gt;Div 3&lt;a href="https://example.com"&gt;Link 3&lt;/a&gt;&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;!-- Enlace al archivo JavaScript externo --&gt;
+  &lt;script src="delegacion-eventos.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+          <pre class="code-window">
+            <code>
+<span class="comment">/*</span>
+<span class="comment">Definición: Delegación de Eventos</span>
+<span class="comment">La delegación de eventos es una técnica en JavaScript que consiste en asignar un solo manejador de eventos a un elemento padre común en lugar de asignar manejadores a múltiples elementos hijos individuales.</span>
+<span class="comment"></span>
+<span class="comment">Cómo funciona:</span>
+<span class="comment">El evento se propaga (burbujea) desde el elemento hijo donde ocurrió el evento hasta sus elementos padres.</span>
+<span class="comment">El manejador asignado al elemento padre detecta qué hijo originó el evento usando propiedades como event.target.</span>
+<span class="comment">Esto permite manejar eventos de muchos elementos hijos con un solo listener, mejorando eficiencia y facilitando el manejo dinámico.</span>
+<span class="comment"></span>
+<span class="comment">Ventajas:</span>
+<span class="comment">Menos listeners: se reduce la cantidad de manejadores en el DOM, mejorando rendimiento.</span>
+<span class="comment">Funciona con elementos dinámicos: si se agregan hijos nuevos al DOM, el listener del padre los maneja sin necesidad de asignar nuevos eventos.</span>
+<span class="comment">Código más simple y mantenible</span>
+<span class="comment">Resumen rápido:</span>
+<span class="comment">document.addEventListener("click", ...) usa delegación de eventos: escucha en todo el documento y filtra por selector.</span>
+<span class="comment">e.target.matches(selector) verifica si el elemento clickeado cumple con el selector dado.</span>
+<span class="comment">e.preventDefault() cancela la acción predeterminada (como abrir un link).</span>
+<span class="comment">e.stopPropagation() (comentado) detendría la propagación del evento hacia padres.</span>
+<span class="comment">La función flujoEventos muestra en consola qué elemento originó el click.</span>
+<span class="comment">*/</span>
+
+<span class="comment">// Función que maneja el evento y muestra información en consola</span>
+function flujoEventos(e) {
+  <span class="comment">// 'this' aquí será el contexto de la función, pero puede no ser el div esperado si no se llama correctamente</span>
+  console.log(
+    `Hola te saluda ${this} el click lo originó ${e.target.className}`
+  );
+  <span class="comment">// e.stopPropagation(); // Detiene la propagación del evento (comentado)</span>
+}
+
+<span class="comment">// Se añade un event listener al documento para el evento "click"</span>
+document.addEventListener("click", (e) => {
+  <span class="comment">// Si el elemento clickeado es un div dentro de .eventos-flujo</span>
+  if (e.target.matches(".eventos-flujo div")) {
+    flujoEventos(e); <span class="comment">// Llama a la función para manejar el evento</span>
+  }
+
+  <span class="comment">// Si el elemento clickeado es un enlace (&lt;a&gt;) dentro de .eventos-flujo</span>
+  if (e.target.matches(".eventos-flujo a")) {
+    alert("Hola soy tu amigo y docente digital... Jonathan MirCha"); <span class="comment">// Muestra alerta</span>
+    e.preventDefault(); <span class="comment">// Evita que el enlace siga su comportamiento normal (ej. navegar)</span>
+    <span class="comment">// e.stopPropagation(); // Detiene propagación del evento (comentado)</span>
+  }
+});
+            </code>
+          </pre>
+
+        </details>
+      </article>
+
+      <article id="bom" aria-label="Explicación del Browser Object Model">
+        <h3>¿Qué es el BOM?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            El <strong>BOM (Browser Object Model)</strong> es un conjunto de objetos que permiten interactuar con el navegador <strong>sin depender directamente del contenido HTML</strong>. A diferencia del <strong>DOM</strong>, que se centra en la estructura y contenido del documento, el BOM nos da control sobre aspectos del navegador mismo.
+          </p>
+          <p>
+            Algunos de los aspectos que podemos manejar con el BOM incluyen:
+          </p>
+          <ul>
+            <li><strong>Tamaño de ventana:</strong> controlar o consultar el ancho y alto del navegador.</li>
+            <li><strong>Posición de la ventana:</strong> determinar dónde está ubicada la ventana en la pantalla.</li>
+            <li><strong>Scroll:</strong> manejar el desplazamiento vertical u horizontal de la página.</li>
+            <li><strong>Eventos del navegador:</strong> como <em>load</em> (cuando la página carga), <em>resize</em> (cuando cambia el tamaño de la ventana) o <em>scroll</em> (cuando se desplaza el contenido).</li>
+            <li><strong>Acceso a objetos globales:</strong> como <strong>window</strong>, <strong>navigator</strong>, <strong>location</strong>, <strong>history</strong> y otros que permiten obtener información o controlar el comportamiento del navegador.</li>
+          </ul>
+          <p>
+            <strong>Resumen:</strong> El BOM es clave cuando necesitamos interactuar con el navegador mismo, más allá del documento HTML. Nos permite mejorar la experiencia del usuario, reaccionar a cambios de tamaño, controlar ventanas emergentes, y acceder a información del entorno donde se ejecuta nuestra aplicación.
+          </p>
+          <pre class="code-window">
+            <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;title&gt;Práctica BOM - JavaScript&lt;/title&gt;
+&lt;style&gt;
+  body {
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    height: 3000px; /* Hace la página larga para probar el scroll */
+    background: linear-gradient(to bottom, #f0f0f0, #cce5ff);
+  }
+
+  h1 {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  p {
+    margin-top: 80px;
+    font-size: 1.2rem;
+  }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Práctica del BOM&lt;/h1&gt;
+&lt;p&gt;Desplaza hacia abajo, redimensiona la ventana o recarga para ver eventos en la consola.&lt;/p&gt;
+
+&lt;!-- Contenedor de explicación BOM --&gt;
+&lt;article id="bom" aria-label="Explicación del Browser Object Model"&gt;
+  &lt;h3&gt;¿Qué es el BOM?&lt;/h3&gt;
+  &lt;details&gt;
+    &lt;summary&gt;Leer explicación&lt;/summary&gt;
+    &lt;p&gt;
+      El &lt;strong&gt;BOM (Browser Object Model)&lt;/strong&gt; permite interactuar con el navegador &lt;strong&gt;sin depender del HTML directamente&lt;/strong&gt;. Se diferencia del DOM, que está ligado al documento.
+    &lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;Tamaño de ventana:&lt;/strong&gt; controlar o consultar el ancho y alto del navegador.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Posición de la ventana:&lt;/strong&gt; saber dónde está ubicada la ventana en la pantalla.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Scroll:&lt;/strong&gt; manejar el desplazamiento de la página.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Eventos del navegador:&lt;/strong&gt; como &lt;em&gt;load&lt;/em&gt;, &lt;em&gt;resize&lt;/em&gt; o &lt;em&gt;scroll&lt;/em&gt;.&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Objetos globales:&lt;/strong&gt; &lt;strong&gt;window&lt;/strong&gt;, &lt;strong&gt;navigator&lt;/strong&gt;, &lt;strong&gt;location&lt;/strong&gt; y &lt;strong&gt;history&lt;/strong&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;p&gt;&lt;strong&gt;Resumen:&lt;/strong&gt; El BOM permite controlar el navegador, reaccionar a cambios de tamaño, scroll o ventanas emergentes y acceder a información del entorno.&lt;/p&gt;
+  &lt;/details&gt;
+&lt;/article&gt;
+
+&lt;!-- Enlace a archivo JavaScript externo si se desea --&gt;
+&lt;script src="bom.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+          <pre class="code-window">
+            <code>
+<span class="comment">// =======================</span>
+<span class="comment">// 🎯 EVENTO: RESIZE</span>
+<span class="comment">// =======================</span>
+<span class="comment">// Se ejecuta cada vez que el usuario redimensiona la ventana del navegador</span>
+window.addEventListener("resize", (e) => {
+  console.clear(); <span class="comment">// Limpia la consola para que se vea solo el nuevo resultado al redimensionar</span>
+
+  console.log("********** Evento Resize **********");
+
+  console.log(window.innerWidth);  <span class="comment">// Muestra el ancho interior de la ventana (sin bordes ni barra de herramientas)</span>
+  console.log(window.innerHeight); <span class="comment">// Muestra el alto interior de la ventana</span>
+
+  console.log(window.outerWidth);  <span class="comment">// Muestra el ancho total de la ventana (incluye bordes y barra del navegador)</span>
+  console.log(window.outerHeight); <span class="comment">// Muestra el alto total de la ventana</span>
+
+  console.log(e); <span class="comment">// Muestra el objeto del evento completo (info del resize)</span>
+});
+
+<span class="comment">// =======================</span>
+<span class="comment">// 🎯 EVENTO: SCROLL</span>
+<span class="comment">// =======================</span>
+<span class="comment">// Se ejecuta cada vez que el usuario hace scroll en la página</span>
+window.addEventListener("scroll", (e) => {
+  console.clear(); <span class="comment">// Limpia la consola al hacer scroll para ver el nuevo resultado</span>
+
+  console.log("********** Evento Scroll **********");
+
+  console.log(window.scrollX); <span class="comment">// Muestra cuánto se ha desplazado horizontalmente la ventana</span>
+  console.log(window.scrollY); <span class="comment">// Muestra cuánto se ha desplazado verticalmente</span>
+
+  console.log(e); <span class="comment">// Muestra el objeto del evento de scroll</span>
+});
+
+<span class="comment">// =======================</span>
+<span class="comment">// 🎯 EVENTO: LOAD</span>
+<span class="comment">// =======================</span>
+<span class="comment">// Se ejecuta cuando la página y todos sus recursos (imágenes, scripts, estilos, etc.) han terminado de cargar</span>
+window.addEventListener("load", (e) => {
+  console.log("********** Evento Load **********");
+
+  console.log(window.screenX); <span class="comment">// Posición horizontal de la ventana en la pantalla</span>
+  console.log(window.screenY); <span class="comment">// Posición vertical de la ventana en la pantalla</span>
+
+  console.log(e); <span class="comment">// Muestra el objeto del evento load</span>
+});
+
+<span class="comment">// ================================</span>
+<span class="comment">// 🎯 EVENTO: DOMContentLoaded</span>
+<span class="comment">// ================================</span>
+<span class="comment">// Se ejecuta cuando el navegador termina de cargar y parsear el HTML,</span>
+<span class="comment">// pero SIN esperar a imágenes ni hojas de estilo externas</span>
+document.addEventListener("DOMContentLoaded", (e) => {
+  console.log("********** Evento DOMContentLoaded **********");
+
+  console.log(window.screenX); <span class="comment">// Igual que antes, posición horizontal de la ventana</span>
+  console.log(window.screenY); <span class="comment">// Posición vertical</span>
+
+  console.log(e); <span class="comment">// Muestra el objeto del evento DOMContentLoaded</span>
+});
+            </code>
+          </pre>
+
+        </details>
+      </article>
+
+      <article id="objetos-url-historial-navegador" aria-label="Explicación sobre los objetos URL, History y Navigator en JavaScript">
+        <h3>Objetos *URL*, Historial y Navegador</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            <strong>Punto importante:</strong> El objeto <code>URL</code> representa una dirección web y permite manipular sus partes como protocolo, host, pathname, etc. <br>
+            <strong>Punto importante:</strong> El historial (<code>History</code>) permite moverse hacia adelante o atrás en las páginas visitadas dentro de la sesión del navegador. <br>
+            <strong>Punto importante:</strong> El objeto <code>Navigator</code> proporciona información sobre el navegador del usuario, como el agente, plataforma y capacidades.
+          </p>
+          <pre class="code-window">
+            <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Práctica HTML&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;header&gt;
+        &lt;h1&gt;Bienvenido a la práctica HTML&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Acerca de&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Sección de Ejemplo&lt;/h2&gt;
+            &lt;p&gt;Este es un párrafo para practicar texto en HTML.&lt;/p&gt;
+            &lt;ul&gt;
+                &lt;li&gt;Elemento 1&lt;/li&gt;
+                &lt;li&gt;Elemento 2&lt;/li&gt;
+                &lt;li&gt;Elemento 3&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/section&gt;
+
+        &lt;section&gt;
+            &lt;h2&gt;Formulario de Contacto&lt;/h2&gt;
+            &lt;form action="#" method="post"&gt;
+                &lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+                &lt;input type="text" id="nombre" name="nombre"&gt;&lt;br&gt;
+
+                &lt;label for="email"&gt;Email:&lt;/label&gt;
+                &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;
+
+                &lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;
+                &lt;textarea id="mensaje" name="mensaje"&gt;&lt;/textarea&gt;&lt;br&gt;
+
+                &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+            &lt;/form&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+        &lt;p&gt;&copy; 2025 Práctica HTML. Todos los derechos reservados.&lt;/p&gt;
+    &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+          <pre class="code-window">
+            <code>
+<span class="comment">// ==========================================</span>
+<span class="comment">// 🌐 OBJETO URL (location)</span>
+<span class="comment">// ==========================================</span>
+
+<span class="comment">/*
+El objeto `location` representa la barra de direcciones del navegador.
+Permite:
+- Obtener información de la URL actual.
+- Redirigir a otra página.
+- Recargar la página.
+- Acceder a fragmentos (#), parámetros (?clave=valor), protocolo (http/https), hostname, pathname, etc.
+
+Ejemplo de uso: location.href, location.reload(), location.search
+*/</span>
+
+
+<span class="comment">// ==========================================</span>
+<span class="comment">// 📜 OBJETO HISTORIAL (history)</span>
+<span class="comment">// ==========================================</span>
+
+<span class="comment">/*
+El objeto `history` controla el historial de navegación de la pestaña actual.
+Permite:
+- Navegar hacia adelante y hacia atrás.
+- Saber cuántas páginas hay en el historial.
+- Volver a una página anterior o avanzar a una siguiente.
+
+Ejemplo de uso: history.back(), history.forward(), history.go()
+*/</span>
+
+
+<span class="comment">// ==========================================</span>
+<span class="comment">// 🧭 OBJETO NAVEGADOR (navigator)</span>
+<span class="comment">// ==========================================</span>
+
+<span class="comment">/*
+El objeto `navigator` contiene información del navegador del usuario.
+Permite:
+- Saber si está en línea.
+- Obtener información del sistema operativo y navegador.
+- Acceder a la ubicación del usuario (geolocalización).
+- Usar dispositivos multimedia (micrófono, cámara).
+- Consultar conexiones, almacenamiento, puertos USB, etc.
+
+Ejemplo de uso: navigator.userAgent, navigator.geolocation, navigator.onLine
+*/</span>
+            </code>
+          </pre>
+          <pre class="code-window">
+            <code>
+<span class="comment">// Muestra un título indicando que empieza a mostrar el objeto location (URL)</span>
+console.log("********** Objeto URL (location) **********");
+
+<span class="comment">// Muestra todo el objeto location, que contiene información sobre la URL actual</span>
+console.log(location);
+
+<span class="comment">// Muestra el origen de la página (protocolo + host)</span>
+console.log(location.origin);
+
+<span class="comment">// Muestra el protocolo usado (http: o https:)</span>
+console.log(location.protocol);
+
+<span class="comment">// Muestra el host completo (dominio + puerto si lo hay)</span>
+console.log(location.host);
+
+<span class="comment">// Muestra solo el nombre del host (sin puerto)</span>
+console.log(location.hostname);
+
+<span class="comment">// Muestra el número de puerto si está definido</span>
+console.log(location.port);
+
+<span class="comment">// Muestra la URL completa</span>
+console.log(location.href);
+
+<span class="comment">// Muestra el "hash" de la URL, si lo hay (ej: #seccion1)</span>
+console.log(location.hash);
+
+<span class="comment">// Muestra los parámetros de búsqueda en la URL (ej: ?id=123)</span>
+console.log(location.search);
+
+<span class="comment">// Muestra la ruta del archivo dentro del servidor</span>
+console.log(location.pathname);
+
+<span class="comment">// Recarga la página actual (comenta para evitar bucles de recarga)</span>
+// location.reload();
+
+<span class="comment">// Muestra un título indicando que empieza a mostrar el objeto history (historial del navegador)</span>
+console.log("********** Objeto Historial (history) **********");
+
+<span class="comment">// Muestra todo el objeto history</span>
+console.log(history);
+
+<span class="comment">// Muestra la cantidad de entradas en el historial de la pestaña</span>
+console.log(history.length);
+
+<span class="comment">// Avanza una página en el historial (comenta para evitar navegación automática)</span>
+// history.forward(1);
+
+<span class="comment">// Se mueve 3 pasos atrás en el historial (comenta para evitar comportamiento inesperado)</span>
+// history.go(-3);
+
+<span class="comment">// Retrocede 2 páginas en el historial (comenta para evitar navegación automática)</span>
+// history.back(2);
+
+<span class="comment">// Muestra un título indicando que empieza a mostrar el objeto navigator (información del navegador)</span>
+console.log("********** Objeto Navegador (navigator) **********");
+
+<span class="comment">// Muestra todo el objeto navigator con información del navegador y dispositivo</span>
+console.log(navigator);
+
+<span class="comment">// Muestra el estado de la conexión del dispositivo (si lo permite el navegador)</span>
+console.log(navigator.connection);
+
+<span class="comment">// Muestra el objeto de geolocalización (permite acceder a ubicación)</span>
+console.log(navigator.geolocation);
+
+<span class="comment">// Muestra acceso a dispositivos multimedia (micrófono, cámara, etc.)</span>
+console.log(navigator.mediaDevices);
+
+<span class="comment">// Muestra los tipos MIME soportados por el navegador</span>
+console.log(navigator.mimeTypes);
+
+<span class="comment">// Muestra si el navegador está conectado a internet</span>
+console.log(navigator.onLine);
+
+<span class="comment">// Muestra información sobre el service worker si está registrado</span>
+console.log(navigator.serviceWorker);
+
+<span class="comment">// Muestra acceso al almacenamiento (caché, persistencia)</span>
+console.log(navigator.storage);
+
+<span class="comment">// Muestra acceso a dispositivos USB conectados (si es compatible)</span>
+console.log(navigator.usb);
+
+<span class="comment">// Muestra el user agent (información del navegador, versión, sistema operativo, etc.)</span>
+console.log(navigator.userAgent);
+            </code>
+          </pre>
+
+
+        </details>
+      </article>
+    </section>
+  </main>
+
+<!-- ===================================================== -->
+<!-- PLACEHOLDERS DE COMPONENTES DINÁMICOS                 -->
+<!-- ===================================================== -->
+<!-- Estos contenedores reciben HTML inyectado vía JS     -->
+<!-- Permiten reutilizar componentes (footer, modales)   -->
+<!-- y mantener el HTML principal limpio y escalable      -->
+
+<div id="footer-placeholder"></div>
+<div id="contact-modal-placeholder"></div>
+
+
+<!-- ===================================================== -->
+<!-- SCRIPTS GLOBALES                                     -->
+<!-- ===================================================== -->
+<!-- Footer: se carga de forma diferida para no bloquear  -->
+<!-- el render inicial de la página                       -->
+
+<script src="../components/footer/footer.js" defer></script>
+
+<!-- Scripts generales del sitio (interacciones globales) -->
+<script src="/js/scripts.js"></script>
+
+
+<!-- ===================================================== -->
+<!-- CARGA DINÁMICA DEL CONTACT MODAL                     -->
+<!-- ===================================================== -->
+<!-- 1. Obtiene el HTML del modal desde el componente     -->
+<!-- 2. Lo inyecta en su placeholder correspondiente      -->
+<!-- 3. Carga el JS del modal de forma desacoplada        -->
+<!-- Esto permite reutilizar el modal en cualquier página -->
+
+<script>
+  fetch('../components/contact-modal/contact-modal.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('No se pudo cargar el Contact Modal');
+      }
+      return response.text();
+    })
+    .then(modalHTML => {
+      // Inyección del HTML del modal en el placeholder
+      document.getElementById('contact-modal-placeholder').innerHTML = modalHTML;
+
+      // Carga dinámica del script del modal
+      const modalScript = document.createElement('script');
+      modalScript.src = '../components/contact-modal/contact-modal.js';
+      modalScript.defer = true;
+      document.body.appendChild(modalScript);
+    })
+    .catch(error => {
+      console.error('Error cargando el Contact Modal:', error);
+    });
+</script>
+</body>
+</html>

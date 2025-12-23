@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ========================= -->
+  <!-- METADATOS BÁSICOS -->
+  <!-- ========================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ========================= -->
+  <!-- SEO PRINCIPAL -->
+  <!-- ========================= -->
+  <title>Python desde 0 | Introducción a la programación con Python</title>
+  <meta
+    name="description"
+    content="Aprende Python desde cero: variables, tipos de datos, estructuras de control, funciones y bases de la programación."
+  >
+
+  <!-- ========================= -->
+  <!-- AUTOR -->
+  <!-- ========================= -->
+  <meta name="author" content="José Alberto Santacruz">
+  <meta name="robots" content="index, follow">
+
+  <!-- ========================= -->
+  <!-- URL CANÓNICA -->
+  <!-- ========================= -->
+  <link
+    rel="canonical"
+    href="https://santacruzprogramador.github.io/santacruzjose/pages/intro-python.html"
+  >
+
+  <!-- ========================= -->
+  <!-- OPEN GRAPH -->
+  <!-- ========================= -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Python desde 0">
+  <meta
+    property="og:description"
+    content="Guía introductoria para aprender Python desde cero con ejemplos claros y prácticos."
+  >
+  <meta
+    property="og:url"
+    content="https://santacruzprogramador.github.io/santacruzjose/pages/intro-python.html"
+  >
+  <meta
+    property="og:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+  <meta property="og:site_name" content="Portfolio José Santacruz">
+
+  <!-- ========================= -->
+  <!-- TWITTER CARD -->
+  <!-- ========================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Python desde 0">
+  <meta
+    name="twitter:description"
+    content="Aprende Python desde cero y da tus primeros pasos en la programación."
+  >
+  <meta
+    name="twitter:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+
+  <!-- ========================= -->
+  <!-- FAVICON -->
+  <!-- ========================= -->
+  <link
+    rel="icon"
+    href="../assets/favicon/favicon.ico"
+    type="image/x-icon"
+  >
+
+  <!-- ========================= -->
+  <!-- COLOR TEMA -->
+  <!-- ========================= -->
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- ========================= -->
+  <!-- ESTILOS -->
+  <!-- ========================= -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/intr_to_programming.css">
+  <link rel="stylesheet" href="../components/contact-modal/contact-modal.css">
+</head>
+
+<body>
+  <header class="page-title">
+    <h1 class="text-center">Python desde 0</h1>
+  </header>
+  <a href="../#python" class="volver">← Inicio</a>   
+  <main class="container section"> 
+    <section id="nivel-basico-python" class="content-narrow">   
+      <h2>Guía Teórica de Python</h2>
+      <article id="python-intro" aria-label="Introducción a Python">
+        <h3>¿Qué es Python?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Python es un lenguaje de programación de alto nivel, interpretado y de propósito general. Fue creado por Guido van Rossum y lanzado por primera vez en 1991. Se destaca por su sintaxis sencilla y clara, ideal para principiantes, pero también muy poderoso y ampliamente usado por profesionales.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment"># Características principales de Python</span>
+<span class="comment"># Fácil de leer y escribir</span>
+<span class="comment"># Multiparadigma: soporta OOP, estructurada y funcional</span>
+<span class="comment"># Multiplataforma: Windows, macOS, Linux</span>
+<span class="comment"># Gran comunidad y librerías: web, ciencia de datos, IA, automatización, videojuegos</span>
+            </code>
+          </pre>
+        </details>
+      </article>
+      <article id="característica-de-Python" aria-labelledby="característica-de-Python">
+        <h3>Característica de Python</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Python es un lenguaje de programación interpretado, lo que significa que no necesita ser compilado antes de ejecutarse. Esto facilita la escritura y prueba de código, ya que los desarrolladores pueden ver los resultados de sus cambios de inmediato.
+          </p>
+          <ul>
+            <li>
+              <strong>Legibilidad:</strong> Python utiliza una sintaxis clara y concisa que facilita la lectura y comprensión del código. La indentación es obligatoria, lo que ayuda a mantener una estructura organizada.
+            </li>
+            <li>
+              <strong>Multiplataforma:</strong> Python es compatible con múltiples sistemas operativos, como Windows, macOS y Linux, lo que permite a los desarrolladores escribir código que funcione en diferentes entornos sin modificaciones significativas.
+            </li>
+            <li>
+              <strong>Bibliotecas y frameworks:</strong> Python cuenta con una amplia gama de bibliotecas y frameworks que facilitan el desarrollo de aplicaciones en diversas áreas, como ciencia de datos, desarrollo web, automatización, inteligencia artificial y más.
+            </li>
+            <li>
+              <strong>Comunidad activa:</strong> Python tiene una comunidad de desarrolladores muy activa que contribuye con recursos, tutoriales y soporte. Esto hace que sea fácil encontrar ayuda y aprender nuevas habilidades.
+            </li>
+            <li>
+              <strong>Versatilidad:</strong> Python se utiliza en una variedad de aplicaciones, desde scripts simples hasta aplicaciones web complejas y análisis de datos. Su versatilidad lo convierte en una opción popular para muchos tipos de proyectos.
+            </li>
+          </ul>
+        </details>
+      </article>
+      <article id="tipado-dinamico-vs-estatico" aria-labelledby="tipado-dinamico-vs-estatico">
+        <h3>¿Cuál es la diferencia entre tipado dinámico y estático?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <ul>
+            <li><strong>Tipado Dinámico</strong> (flexible): El tipo de una variable se decide en tiempo de ejecución. No necesitas declarar el tipo de la variable cuando la defines, y puede cambiar de tipo a lo largo del programa. Ejemplo: Python.</li>
+            <li><strong>Tipado Estático</strong> (rígido ayuda evitar errores): El tipo de una variable se decide en tiempo de compilación. Debes especificar el tipo de la variable antes de usarla, y no puede cambiar durante la ejecución. Ejemplo: Java</li>
+          </ul>
+
+            <pre class="code-window">
+              <code>
+<span class="comment">Python</span>
+<span class="comment"># Inicialmente, 'variable' es un número entero</span>
+<span class="var-name">variable</span> = 10
+print(f"El valor de '<span class='var-name'>variable</span>' es {<span class='var-name'>variable</span>} y su tipo es {type(<span class='var-name'>variable</span>)}")
+
+<span class="comment"># Ahora, cambiamos 'variable' a un número flotante</span>
+<span class="var-name">variable</span> = 10.5
+print(f"El valor de '<span class='var-name'>variable</span>' es {<span class='var-name'>variable</span>} y su tipo es {type(<span class='var-name'>variable</span>)}")
+
+<span class="comment"># Luego, cambiamos 'variable' a una cadena de texto</span>
+<span class="var-name">variable</span> = "Hola, soy una cadena de texto"
+print(f"El valor de '<span class='var-name'>variable</span>' es '{<span class='var-name'>variable</span>}' y su tipo es {type(<span class='var-name'>variable</span>)}")
+
+<span class="comment"># Finalmente, cambiamos 'variable' a una lista</span>
+<span class="var-name">variable</span> = [1, 2, 3, 4, 5]
+print(f"El valor de '<span class='var-name'>variable</span>' es {<span class='var-name'>variable</span>} y su tipo es {type(<span class='var-name'>variable</span>)}")
+              </code>
+            </pre>
+            <pre class="code-window">
+              <code>
+<span class="comment">java</span>
+public class Main {
+  public static void main(String[] args) {
+      <span class="comment">// Declaración de una variable de tipo entero (int)</span>
+  
+      <span class="var-name">int numero</span> = 10;
+      System.out.println("El valor de 'numero' es " + numero);
+
+      <span class="comment">// Intento de cambiar el tipo de 'numero' a un valor de tipo float</span>
+      <span class="comment">// Esto causará un error de compilación</span>
+      <span class="comment">// numero = 10.5f;  // Descomentar esto causará un error de compilación</span>
+      <span class="comment">// Para cambiar el tipo, debes declarar una nueva variable de tipo float </span>
+      <span class="var-name">float numeroDecimal</span> = 10.5f;
+      System.out.println("El valor de 'numeroDecimal' es " + numeroDecimal);
+  }
+}
+              </code>
+            </pre>
+        </details>
+      </article>
+      <article id="paradigmas-programacion" aria-labelledby="paradigmas-programacion">
+        <h3>¿Qué son los paradigmas de programación?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Los paradigmas de programación son enfoques o estilos de programación que definen cómo se estructura y organiza el código. Algunos de los paradigmas más comunes incluyen:
+          </p>
+          <ul>
+            <li><strong>Programación Imperativa:</strong> Se centra en describir cómo se debe realizar una tarea mediante instrucciones secuenciales. Ejemplos: C, Python.</li>
+            <li><strong>Programación Orientada a Objetos (POO):</strong> Organiza el código en "objetos" que contienen datos y métodos. Ejemplos: Java, C++, Python.</li>
+            <li><strong>Programación Funcional:</strong> Se basa en funciones matemáticas y evita el estado mutable. Ejemplos: Haskell, Lisp, Python.</li>
+            <li><strong>Programación Declarativa:</strong> Describe qué se quiere lograr sin especificar cómo hacerlo. Ejemplos: SQL, HTML.</li>
+          </ul>
+        </details>
+      </article>
+      <article id="paradigma-python" aria-labelledby="paradigma-python">
+        <h3>¿Qué paradigma se usa en Python?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Python es un lenguaje de programación multiparadigma, lo que significa que soporta varios paradigmas de programación. Los principales paradigmas que se pueden utilizar en Python son:
+          </p>
+          <ul>
+            <li><strong>Programación Imperativa:</strong> Python permite escribir código de manera secuencial, utilizando variables, bucles y condicionales para controlar el flujo del programa.</li>
+            <li><strong>Programación Orientada a Objetos (POO):</strong> Python tiene un fuerte soporte para la POO, permitiendo la creación de clases y objetos, encapsulación, herencia y polimorfismo.</li>
+            <li><strong>Programación Funcional:</strong> Python incluye características de programación funcional, como funciones de primera clase, funciones lambda, y herramientas como map(), filter() y reduce().</li>
+            <li><strong>Programación Declarativa:</strong> Aunque no es su enfoque principal, Python puede utilizarse para programación declarativa en ciertos contextos, como en frameworks web o bibliotecas específicas.</li>  
+          </ul>
+        </details>
+      </article>
+      <article id="diferencia-interpretado-compilado" aria-labelledby="diferencia-interpretado-compilado">
+        <h3>¿Cuál es la diferencia entre interpretado y compilado?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            La diferencia principal entre lenguajes interpretados y compilados radica en cómo se ejecuta el código:
+
+          </p>
+          <ul>
+            <li><strong>Lenguajes Compilados:</strong> El código fuente se traduce completamente a código máquina mediante un compilador antes de la ejecución. Esto genera un archivo ejecutable que puede ser ejecutado directamente por el sistema operativo. Ejemplos: C, C++.</li>
+            <li><strong>Lenguajes Interpretados:</strong> El código fuente se ejecuta línea por línea mediante un intérprete en tiempo de ejecución. No se genera un archivo ejecutable independiente, y el código puede ser modificado y probado rápidamente. Ejemplos: Python, JavaScript.</li>
+        </details>
+      </article>
+      <article id="tipo-interpretado-python" aria-labelledby="tipo-interpretado-python">
+        <h3>¿Python es interpretado y dinámico?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Python es un lenguaje de programación interpretado, lo que significa que su código fuente se ejecuta directamente por un intérprete en tiempo de ejecución, sin necesidad de ser compilado previamente a código máquina. El intérprete de Python lee y ejecuta el código línea por línea, lo que facilita la escritura, prueba y depuración del código. Esta característica hace que Python sea muy flexible y adecuado para una amplia variedad de aplicaciones, desde scripts simples hasta aplicaciones web complejas y análisis de datos.
+          </p>
+        </details>
+      </article>
+    </section>
+
+    <section id="nivel-intermedio-python" class="content-narrow"> 
+      <h2>Guía Práctica de Python</h2>
+      
+      <article id="variables-tipos" aria-label="Variables y Tipos de Datos en Python">
+        <h3>Variables y Tipos de Datos</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            En Python, las variables se crean al asignarles un valor. Python soporta varios tipos de datos como enteros, cadenas, booleanos, listas, tuplas, diccionarios y conjuntos.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment"># Variables y Tipos de Datos en Python</span>
+
+<span class="comment"># Entero</span>
+edad = 25
+
+<span class="comment"># Cadena de texto</span>
+nombre = "José"
+
+<span class="comment"># Decimal o punto flotante</span>
+altura = 1.75
+
+<span class="comment"># Booleano</span>
+es_estudiante = True
+
+<span class="comment"># Lista</span>
+frutas = ["manzana", "banana", "pera"]
+
+<span class="comment"># Tupla – inmutable</span>
+coordenadas = (10.5, 20.3)
+
+<span class="comment"># Diccionario – clave: valor</span>
+persona = {"nombre": "José", "edad": 25, "estudiante": True}
+
+<span class="comment"># Conjunto – colección sin duplicados</span>
+numeros_unicos = {1, 2, 3, 2, 1}
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="operadores" aria-label="Operadores en Python">
+        <h3>Operadores</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Los operadores son símbolos o palabras clave que realizan operaciones específicas en uno o más operandos (valores o variables).
+          </p>
+
+          <p>Los operadores son:</p>
+          <ul>
+            <li><strong>Aritméticos:</strong></li>
+            <ul>
+              <li>+ : Suma → añade dos valores</li>
+              <li>- : Resta → resta un valor de otro</li>
+              <li>* : Multiplicación → multiplica dos valores</li>
+              <li>/ : División → divide un valor entre otro, devuelve decimal</li>
+              <li>// : División entera → divide y devuelve solo la parte entera</li>
+              <li>% : Módulo → devuelve el resto de una división</li>
+              <li>** : Potencia → eleva un valor a la potencia de otro</li>
+            </ul>
+
+            <li><strong>Comparación:</strong></li>
+            <ul>
+              <li>== : Igual que → True si los valores son iguales</li>
+              <li>!= : Distinto que → True si los valores son diferentes</li>
+              <li>> : Mayor que → True si el primero es mayor</li>
+              <li>< : Menor que → True si el primero es menor</li>
+              <li>>= : Mayor o igual → True si el primero es mayor o igual</li>
+              <li><= : Menor o igual → True si el primero es menor o igual</li>
+            </ul>
+
+            <li><strong>Asignación:</strong></li>
+            <ul>
+              <li>= : Asigna un valor a una variable</li>
+              <li>+= : Suma y asigna → x += 3 equivale a x = x + 3</li>
+              <li>-= : Resta y asigna → x -= 2 equivale a x = x - 2</li>
+              <li>*= : Multiplica y asigna → x *= 2 equivale a x = x * 2</li>
+              <li>/= : Divide y asigna → x /= 4 equivale a x = x / 4</li>
+              <li>//= : División entera y asigna → x //= 3</li>
+              <li>%= : Módulo y asigna → x %= 3</li>
+              <li>**= : Potencia y asigna → x **= 3</li>
+            </ul>
+
+            <li><strong>Booleanos:</strong></li>
+            <ul>
+              <li>True : Valor verdadero</li>
+              <li>False : Valor falso</li>
+            </ul>
+
+            <li><strong>Lógicos:</strong></li>
+            <ul>
+              <li>and : Verdadero si ambas condiciones son verdaderas</li>
+              <li>or : Verdadero si al menos una condición es verdadera</li>
+              <li>not : Niega la condición</li>
+            </ul>
+          </ul>
+
+
+          <pre class="code-window">
+            <code>
+<span class="comment">
+# ==============================
+# Operadores Aritméticos
+# ==============================
+</span>
+<span class="comment"># Suma: añadir 5 manzanas a 3 manzanas = 8 manzanas</span>
+manzanas = 5 + 3
+print("Manzanas:", manzanas)
+
+<span class="comment"># Resta: tienes 10 chocolates y comes 4 → quedan 6 chocolates</span>
+chocolates = 10 - 4
+print("Chocolates:", chocolates)
+
+<span class="comment"># Multiplicación: 4 cajas con 6 galletas cada una → total de galletas</span>
+galletas = 4 * 6
+print("Galletas:", galletas)
+
+<span class="comment"># División: repartir 20 caramelos entre 3 niños → 6.666... caramelos por niño</span>
+caramelos = 20 / 3
+print("Caramelos por niño:", caramelos)
+
+<span class="comment"># División entera: repartir 20 caramelos entre 3 niños → 6 caramelos completos</span>
+caramelos_enteros = 20 // 3
+print("Caramelos enteros por niño:", caramelos_enteros)
+
+<span class="comment"># Módulo: repartir 20 caramelos entre 3 niños → sobran 2 caramelos</span>
+sobrante = 20 % 3
+print("Caramelos sobrantes:", sobrante)
+
+<span class="comment"># Potencia: un árbol que produce 2 veces más frutos cada año durante 3 años → 2 ** 3 = 8 veces más frutos</span>
+frutos = 2 ** 3
+print("Frutos totales:", frutos)
+
+<span class="comment">
+# ==============================
+# Operadores de Comparación
+# ==============================
+</span>
+<span class="comment"># Igual: comprobar si 5 manzanas es igual a 5 manzanas</span>
+print("5 == 5:", 5 == 5)
+
+<span class="comment"># Distinto: comprobar si 5 manzanas es distinto de 3 manzanas</span>
+print("5 != 3:", 5 != 3)
+
+<span class="comment"># Mayor que: comprobar si 10 chocolates > 4 chocolates</span>
+print("10 > 4:", 10 > 4)
+
+<span class="comment"># Menor que: comprobar si 2 < 5</span>
+print("2 < 5:", 2 < 5)
+
+<span class="comment"># Mayor o igual: comprobar si 7 >= 7</span>
+print("7 >= 7:", 7 >= 7)
+
+<span class="comment"># Menor o igual: comprobar si 3 <= 5</span>
+print("3 <= 5:", 3 <= 5)
+
+<span class="comment">
+# ==============================
+# Operadores Lógicos
+# ==============================
+</span>
+<span class="comment"># AND: verdadero si ambos son True</span>
+print("True and False:", True and False)
+
+<span class="comment"># OR: verdadero si al menos uno es True</span>
+print("True or False:", True or False)
+
+<span class="comment"># NOT: niega la condición</span>
+print("not True:", not True)
+
+<span class="comment">
+# ==============================
+# Operadores de Asignación
+# ==============================
+</span>
+
+<span class="comment"># Suma y asignación: sumar 5 a x = 10 → x = 15</span>
+x = 10
+x += 5
+print("x += 5:", x)
+
+<span class="comment"># Resta y asignación: restar 3 a x = 15 → x = 12</span>
+x -= 3
+print("x -= 3:", x)
+
+<span class="comment"># Multiplicación y asignación: x = 12 * 2 → x = 24</span>
+x *= 2
+print("x *= 2:", x)
+
+<span class="comment"># División y asignación: x = 24 / 4 → x = 6.0</span>
+x /= 4
+print("x /= 4:", x)
+
+<span class="comment"># División entera y asignación: x = 7 // 2 → x = 3</span>
+x = 7
+x //= 2
+print("x //= 2:", x)
+
+<span class="comment"># Módulo y asignación: x = 7 % 2 → x = 1</span>
+x %= 2
+print("x %= 2:", x)
+
+<span class="comment"># Potencia y asignación: x = 2 ** 3 → x = 8</span>
+x = 2
+x **= 3
+print("x **= 3:", x)
+
+<span class="comment">
+# ==============================
+# Operadores Booleanos
+# ==============================
+</span>
+True  # Valor verdadero
+False # Valor falso
+
+<span class="comment">
+# ==============================
+# Operadores Lógicos
+# ==============================
+</span>
+
+<span class="comment">
+#AND
+</span>
+
+Resultado = True & True #Devolver True
+Resultado2 = False & True #Devolver Falso
+Resultado3 = True & False #Devolver Falso
+Resultado4 = False & False #Devolver Falso
+
+<span class="comment">
+#OR
+</span>
+
+Resultado5 = True | True #Devolver True
+Resultado6 = False | True #Devolver True
+Resultado7 = True | False #Devolver True
+Resultado8 = False | False #Devolver Falso
+
+<span class="comment">
+#NOT
+</span>
+
+Resultado9 = not True #Devolver Falso
+Resultado10 = not False #Devolver True
+
+print(Resultado9)
+
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="condicionales" aria-label="Condicionales en Python">
+        <h3>Condicionales</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Las condicionales permiten que el programa tome decisiones. Se usa la palabra clave <code>if</code>, seguida opcionalmente de <code>elif</code> y <code>else</code>.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment"># Ejemplo básico de condicional</span>
+edad = 18
+if edad >= 18:
+    mensaje = "Eres mayor de edad"
+elif edad == 17:
+    mensaje = "Casi eres mayor de edad"
+else:
+    mensaje = "Eres menor de edad"
+
+<span class="comment"># Comparación de números</span>
+numero = 5
+if numero > 0:
+    resultado = "Número positivo"
+elif numero < 0:
+    resultado = "Número negativo"
+else:
+    resultado = "Es cero"
+
+<span class="comment"># Condicionales con operadores lógicos</span>
+usuario = "admin"
+clave = "1234"
+if usuario == "admin" and clave == "1234":
+    acceso = "Acceso concedido"
+else:
+    acceso = "Acceso denegado"
+
+<span class="comment"># Condicionales anidadas</span>
+nota = 85
+if nota >= 60:
+    if nota >= 90:
+        evaluacion = "Excelente"
+    else:
+        evaluacion = "Aprobado"
+else:
+    evaluacion = "Reprobado"
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="bucles" aria-label="Bucles en Python">
+        <h3>Bucles</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Los bucles permiten ejecutar una serie de instrucciones varias veces. En Python tenemos <code>for</code> y <code>while</code>, y control de flujo con <code>break</code> y <code>continue</code>.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment"># Bucle FOR sobre una lista</span>
+frutas = ["manzana", "banana", "pera"]
+for fruta in frutas:
+    resultado1 = fruta
+
+<span class="comment"># Bucle FOR con range()</span>
+for i in range(3):
+    resultado2 = i
+
+<span class="comment"># Bucle WHILE</span>
+contador = 0
+while contador < 3:
+    resultado3 = contador
+    contador += 1
+
+<span class="comment"># break → interrumpe el bucle</span>
+for num in range(10):
+    if num == 5:
+        break
+    resultado4 = num
+
+<span class="comment"># continue → salta a la siguiente iteración</span>
+for num in range(5):
+    if num == 2:
+        continue
+    resultado5 = num
+
+<span class="comment"># else con bucles → se ejecuta si no hubo break</span>
+for n in range(3):
+    resultado6 = n
+else:
+    finalizado = "Bucle finalizado sin interrupciones"
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="funciones" aria-label="Funciones en Python">
+        <h3>Funciones</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Una función es un bloque de código reutilizable. Se define con <code>def</code> y puede recibir parámetros, retornar valores y contener funciones anidadas.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment"># Función básica sin parámetros</span>
+def saludar():
+    mensaje = "Hola, bienvenido"
+
+<span class="comment"># Función con un parámetro</span>
+def saludar_nombre(nombre):
+    saludo = f"Hola, {nombre}"
+
+<span class="comment"># Función con varios parámetros</span>
+def sumar(a, b):
+    resultado = a + b
+
+<span class="comment"># Función con valor de retorno</span>
+def multiplicar(x, y):
+    return x * y
+
+<span class="comment"># Función con valor por defecto</span>
+def saludar_idioma(nombre, idioma="es"):
+    if idioma == "es":
+        saludo = f"Hola, {nombre}"
+    elif idioma == "en":
+        saludo = f"Hello, {nombre}"
+    else:
+        saludo = f"Saludos, {nombre}"
+
+<span class="comment"># Función que retorna múltiples valores</span>
+def operaciones(a, b):
+    suma = a + b
+    resta = a - b
+    return suma, resta
+
+<span class="comment"># Función lambda (anónima, de una línea)</span>
+cuadrado = lambda n: n * n
+doble = lambda n: n * 2
+
+<span class="comment"># Función dentro de otra función (anidada)</span>
+def operacion_compleja(x):
+    def elevar_al_cuadrado(n):
+        return n * n
+    resultado = elevar_al_cuadrado(x)
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="arrays-objetos" aria-label="Arrays y Objetos en Python">
+        <h3>Arrays y Objetos</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            En Python, los "arrays" se representan con listas (list) y los objetos con diccionarios (dict). Permiten almacenar y manipular colecciones de datos.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment"># LISTAS</span>
+frutas = ["manzana", "banana", "pera"]
+primera = frutas[0]
+ultima = frutas[-1]
+frutas[1] = "naranja"
+frutas.append("uva")
+frutas.remove("naranja")
+ultimo = frutas.pop()
+for fruta in frutas:
+    elemento = fruta
+existe = "manzana" in frutas
+
+<span class="comment"># DICCIONARIOS</span>
+persona = {"nombre": "José", "edad": 25, "es_estudiante": True}
+nombre = persona["nombre"]
+edad = persona.get("edad")
+persona["edad"] = 26
+persona["ciudad"] = "Buenos Aires"
+del persona["es_estudiante"]
+for clave in persona:
+    valor = persona[clave]
+claves = persona.keys()
+valores = persona.values()
+items = persona.items()
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="buenas-practicas" aria-label="Buenas prácticas en Python">
+        <h3>Buenas prácticas</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Las buenas prácticas en Python ayudan a mantener el código limpio, legible y fácil de mantener. 
+            Se recomienda seguir la guía oficial PEP 8, usar nombres descriptivos, funciones cortas y validar los datos.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment"># NOMBRES CLAROS Y SIGNIFICATIVOS</span>
+x = 25  <span class="comment"># ❌ Malo</span>
+edad_usuario = 25  <span class="comment"># ✅ Bueno</span>
+
+<span class="comment"># snake_case PARA VARIABLES Y FUNCIONES</span>
+def calcular_total():
+    pass
+
+<span class="comment"># FUNCIONES QUE HAGAN UNA SOLA COSA</span>
+def obtener_nombre_completo(nombre, apellido):
+    return f"{nombre} {apellido}"
+
+<span class="comment"># COMENTARIOS CLAROS Y ÚTILES</span>
+def calcular_area(base, altura):
+    <span class="comment"># Calcula el área de un rectángulo</span>
+    return base * altura
+
+<span class="comment"># AGRUPAR CÓDIGO EN FUNCIONES PARA REUTILIZAR</span>
+def saludar_usuario(nombre):
+    print(f"Hola, {nombre}")
+
+<span class="comment"># USAR DOCSTRINGS EN FUNCIONES IMPORTANTES</span>
+def suma(a, b):
+    """Devuelve la suma de dos números."""
+    return a + b
+
+<span class="comment"># EVITAR CÓDIGO DUPLICADO</span>
+def mostrar_mensaje(mensaje):
+    print(f"🔔 {mensaje}")
+
+<span class="comment"># VALIDAR ENTRADAS DEL USUARIO</span>
+def dividir(a, b):
+    if b == 0:
+        return "❌ No se puede dividir por cero"
+    return a / b
+
+<span class="comment"># SEPARAR CÓDIGO PRINCIPAL</span>
+def main():
+    nombre = "José"
+    saludar_usuario(nombre)
+
+if __name__ == "__main__":
+    main()
+
+<span class="comment"># SEGUIR LA GUÍA OFICIAL PEP 8 → https://peps.python.org/pep-0008/</span>
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="concatenacion" aria-label="Concatenación de cadenas en Python">
+        <h3>Concatenación</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            La concatenación en Python combina cadenas de texto. Se puede hacer con <code>+</code>, 
+            <code>f-strings</code> o el método <code>format()</code>. 
+            Los f-strings son la forma moderna y recomendada.
+          </p>
+          <pre class="code-window">
+            <code>
+nombre = "José"
+edad = 30
+
+<span class="comment"># Operador +</span>
+saludo1 = "Hola " + nombre + ", ¿cómo estás?"
+
+<span class="comment"># Operador +=</span>
+saludo2 = "Hola "
+saludo2 += nombre
+saludo2 += ", ¿qué tal?"
+
+<span class="comment"># f-strings (recomendado)</span>
+saludo3 = f"Hola {nombre}, ¿cómo estás?"
+
+<span class="comment"># f-strings con múltiples variables</span>
+mensaje = f"Hola {nombre}, tienes {edad} años."
+
+<span class="comment"># Método format()</span>
+saludo4 = "Hola {}, ¿cómo estás?".format(nombre)
+
+<span class="comment"># f-strings multilínea</span>
+multi_linea = f"""Esta es la línea 1
+Esta es la línea 2
+Hola {nombre}"""
+
+<span class="comment"># Expresiones dentro de f-strings</span>
+a = 5
+b = 10
+resultado = f"La suma de {a} + {b} es {a + b}."
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="convenciones-nombres" aria-label="Convenciones de nombres en Python">
+        <h3>Convenciones de nombres</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Python sigue convenciones de nombres para mantener la coherencia en el código. 
+            Algunas de las más comunes son <b>snake_case</b> para variables, <b>PascalCase</b> para clases y 
+            <b>UPPER_SNAKE_CASE</b> para constantes.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment"># snake_case → variables, funciones</span>
+nombre_variable = 10
+def mi_funcion_ejemplo():
+    pass
+
+<span class="comment"># PascalCase → clases</span>
+class MiClaseEjemplo:
+    def metodo(self):
+        pass
+
+<span class="comment"># UPPER_SNAKE_CASE → constantes</span>
+PI = 3.1416
+MAX_INTENTOS = 5
+
+<span class="comment"># lowercase → módulos o archivos</span>
+<span class="comment"># Ejemplo: miarchivo.py</span>
+
+<span class="comment"># mixedCase (no recomendado)</span>
+miVariable = 20
+
+<span class="comment"># _variable → indica variable privada</span>
+class Ejemplo:
+    def __init__(self):
+        self._variable_privada = 10
+
+<span class="comment"># __variable → evita colisiones (name mangling)</span>
+class OtroEjemplo:
+    def __init__(self):
+        self.__variable_mangling = 5
+
+<span class="comment"># Métodos mágicos (dunder)</span>
+class Magia:
+    def __init__(self):
+        pass
+    def __str__(self):
+        return "Ejemplo de método mágico"
+
+<span class="comment"># Ejemplo de uso</span>
+class Persona:
+    def __init__(self, nombre):
+        self.nombre = nombre
+
+p = Persona("Juan")
+print(str(p))
+            </code>
+          </pre>
+        </details>
+      </article>
+
+    </section>
+
+  </main>
+
+<!-- ===================================================== -->
+<!-- PLACEHOLDERS DE COMPONENTES DINÁMICOS                 -->
+<!-- ===================================================== -->
+<!-- Estos contenedores reciben HTML inyectado vía JS     -->
+<!-- Permiten reutilizar componentes (footer, modales)   -->
+<!-- y mantener el HTML principal limpio y escalable      -->
+
+<div id="footer-placeholder"></div>
+<div id="contact-modal-placeholder"></div>
+
+
+<!-- ===================================================== -->
+<!-- SCRIPTS GLOBALES                                     -->
+<!-- ===================================================== -->
+<!-- Footer: se carga de forma diferida para no bloquear  -->
+<!-- el render inicial de la página                       -->
+
+<script src="../components/footer/footer.js" defer></script>
+
+<!-- Scripts generales del sitio (interacciones globales) -->
+<script src="/js/scripts.js"></script>
+
+
+<!-- ===================================================== -->
+<!-- CARGA DINÁMICA DEL CONTACT MODAL                     -->
+<!-- ===================================================== -->
+<!-- 1. Obtiene el HTML del modal desde el componente     -->
+<!-- 2. Lo inyecta en su placeholder correspondiente      -->
+<!-- 3. Carga el JS del modal de forma desacoplada        -->
+<!-- Esto permite reutilizar el modal en cualquier página -->
+
+<script>
+  fetch('../components/contact-modal/contact-modal.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('No se pudo cargar el Contact Modal');
+      }
+      return response.text();
+    })
+    .then(modalHTML => {
+      // Inyección del HTML del modal en el placeholder
+      document.getElementById('contact-modal-placeholder').innerHTML = modalHTML;
+
+      // Carga dinámica del script del modal
+      const modalScript = document.createElement('script');
+      modalScript.src = '../components/contact-modal/contact-modal.js';
+      modalScript.defer = true;
+      document.body.appendChild(modalScript);
+    })
+    .catch(error => {
+      console.error('Error cargando el Contact Modal:', error);
+    });
+</script>
+</body>
+</html>

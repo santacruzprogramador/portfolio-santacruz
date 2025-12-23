@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ========================= -->
+  <!-- METADATOS BÁSICOS -->
+  <!-- ========================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ========================= -->
+  <!-- SEO PRINCIPAL -->
+  <!-- ========================= -->
+  <title>Introducción al Diseño de Bases de Datos | Conceptos y fundamentos</title>
+  <meta
+    name="description"
+    content="Introducción al diseño de bases de datos: conceptos fundamentales, entidades, relaciones y buenas prácticas para estructurar información correctamente."
+  >
+
+  <!-- ========================= -->
+  <!-- AUTOR -->
+  <!-- ========================= -->
+  <meta name="author" content="José Alberto Santacruz">
+  <meta name="robots" content="index, follow">
+
+  <!-- ========================= -->
+  <!-- URL CANÓNICA -->
+  <!-- ========================= -->
+  <link
+    rel="canonical"
+    href="https://santacruzprogramador.github.io/santacruzjose/pages/introduccion-bases-de-datos.html"
+  >
+
+  <!-- ========================= -->
+  <!-- OPEN GRAPH -->
+  <!-- ========================= -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Introducción al Diseño de Bases de Datos">
+  <meta
+    property="og:description"
+    content="Aprende los fundamentos del diseño de bases de datos: entidades, relaciones y estructura lógica para proyectos reales."
+  >
+  <meta
+    property="og:url"
+    content="https://santacruzprogramador.github.io/santacruzjose/pages/introduccion-bases-de-datos.html"
+  >
+  <meta
+    property="og:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+  <meta property="og:site_name" content="Portfolio José Santacruz">
+
+  <!-- ========================= -->
+  <!-- TWITTER CARD -->
+  <!-- ========================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Introducción al Diseño de Bases de Datos">
+  <meta
+    name="twitter:description"
+    content="Conceptos esenciales para diseñar bases de datos correctas y escalables."
+  >
+  <meta
+    name="twitter:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+
+  <!-- ========================= -->
+  <!-- FAVICON -->
+  <!-- ========================= -->
+  <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+
+  <!-- ========================= -->
+  <!-- COLOR TEMA -->
+  <!-- ========================= -->
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- ========================= -->
+  <!-- ESTILOS -->
+  <!-- ========================= -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/intr_to_programming.css">
+  <link rel="stylesheet" href="../components/contact-modal/contact-modal.css">
+</head>
+
+<body>
+
+  <header class="page-title">
+    <h1 class="">Introducción Diseño de Bases de Datos</h1>
+  </header>
+
+  <a href="../#diseno-base-datos" class="volver">← Inicio</a>
+  <main class="container section">
+
+    <section class="content-narrow">
+      <h2>Curso de Diseño de Bases de Datos</h2>
+
+      <article id="diseno-de-bases-datos" aria-label="¿Qué es el diseño de bases de datos?">
+        <h3>¿Qué es el diseño de bases de datos?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            El <strong>diseño de una base de datos</strong> es el proceso de organizar, estructurar y modelar los datos de un sistema de información para que puedan almacenarse, consultarse, actualizarse y eliminarse de forma eficiente, evitando redundancia y asegurando consistencia. 
+          </p>
+
+          <ul>
+            <li>
+              Se centra en identificar:
+              <ul>
+                <li><strong>Entidades</strong>: objetos o conceptos del sistema.</li>
+                <li><strong>Atributos</strong>: sus características.</li>
+                <li><strong>Relaciones</strong>: cómo se conectan entre sí.</li>
+              </ul>
+            </li>
+            <li>
+              Implica aplicar principios como la <strong>normalización</strong>, para optimizar la estructura y hacerla escalable.
+            </li>
+            <li>
+              El objetivo principal es <strong>representar la información del mundo real</strong> de forma clara, lógica y útil dentro de un sistema gestor de bases de datos.
+            </li>
+
+          </ul>
+        </details>
+      </article>
+
+      <article id="importancia-diseno" aria-label="¿Por qué es importante el diseño de bases de datos?">
+        <h3>¿Por qué es importante el diseño de bases de datos?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Un buen diseño de base de datos evita problemas como <strong>duplicidad de información</strong>, 
+            <strong>errores de integridad</strong> y <strong>dificultades en las consultas</strong>. 
+            Además, facilita la escalabilidad y el mantenimiento del sistema.
+          </p>
+          <ol>
+            <li>Reduce redundancias de datos.</li>
+            <li>Asegura integridad y consistencia.</li>
+            <li>Mejora el rendimiento de las consultas.</li>
+            <li>Facilita actualizaciones y mantenimiento.</li>
+          </ol>
+        </details>
+      </article>
+
+      <article id="modelo-relacional" aria-label="¿Qué es el modelo relacional?">
+        <h3>¿Qué es el modelo relacional (SQL)?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p><strong>SQL (Structured Query Language)</strong></p>
+
+          <p><strong>Definición:</strong><br>
+          SQL es un lenguaje estándar para gestionar y manipular bases de datos <strong>relacionales</strong>. 
+          Permite organizar los datos en <strong>tablas</strong> con filas y columnas y seguir un esquema bien definido que establece cómo deben organizarse. 
+          Con SQL se pueden realizar operaciones como consultas, inserciones, actualizaciones y eliminaciones de datos.</p>
+
+          <p><strong>Características principales:</strong></p>
+          <ol>
+            <li><strong>Modelo relacional:</strong> Trabaja con tablas, filas y columnas.</li>
+            <li><strong>Esquema fijo:</strong> La estructura de los datos debe estar predefinida.</li>
+            <li><strong>Operaciones estándar:</strong> Permite <strong>crear</strong>, <strong>leer</strong>, <strong>actualizar</strong> y <strong>eliminar</strong> datos.</li>
+            <li><strong>Lenguaje universal:</strong> SQL es usado en la mayoría de los sistemas de gestión de bases de datos relacionales (RDBMS).</li>
+            <li><strong>Consultas complejas:</strong> Permite unir tablas, filtrar, agrupar y ordenar información.</li>
+          </ol>
+        </details>
+      </article>
+
+      <article id="modelo-no-relacional" aria-label="¿Qué es el modelo no relacional?">
+        <h3>¿Qué es el modelo no relacional(NoSQL)?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p><strong>NoSQL (Not Only SQL)</strong></p>
+
+          <p><strong>Definición:</strong><br>
+          NoSQL es un término para las bases de datos <strong>no relacionales</strong> que no siguen la estructura de tablas con filas y columnas del modelo relacional. 
+          Permite almacenar datos <strong>no estructurados o semi-estructurados</strong> y ofrece mayor flexibilidad y escalabilidad en comparación con SQL.</p>
+
+          <p><strong>Características principales:</strong></p>
+          <ol>
+            <li><strong>Flexibilidad de esquema:</strong> No requiere una estructura fija; los registros pueden tener diferentes campos.</li>
+            <li><strong>Alto rendimiento:</strong> Optimizado para grandes volúmenes de datos y operaciones rápidas de lectura y escritura.</li>
+            <li><strong>Escalabilidad horizontal:</strong> Se puede aumentar la capacidad agregando más servidores.</li>
+            <li><strong>Variedad de modelos:</strong>
+              <ol>
+                <li><strong>Documental:</strong> Datos en documentos JSON o BSON (ej. MongoDB).</li>
+                <li><strong>Clave-valor:</strong> Pares clave-valor (ej. Redis).</li>
+                <li><strong>Columnar:</strong> Optimizado para grandes datasets y consultas analíticas (ej. Cassandra).</li>
+                <li><strong>Grafos:</strong> Para relaciones complejas entre entidades (ej. Neo4j).</li>
+              </ol>
+            </li>
+            <li><strong>Adaptabilidad:</strong> Ideal para datos en constante cambio o provenientes de múltiples fuentes.</li>
+          </ol>
+
+        </details>
+      </article>
+
+      <article id="sql-y-nosql" aria-label="SQL y NoSQL: Diferencias Principales">
+        <h3>SQL y NoSQL: Diferencias Principales</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <table border="1" cellpadding="8" cellspacing="0">
+            <thead>
+              <tr>
+                <th>Aspecto</th>
+                <th>SQL</th>
+                <th>NoSQL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Modelo de datos</td>
+                <td>Relacional (tablas con filas y columnas)</td>
+                <td>No relacional (documentos, grafos, etc.)</td>
+              </tr>
+              <tr>
+                <td>Esquema</td>
+                <td>Predefinido y rígido</td>
+                <td>Flexible y dinámico</td>
+              </tr>
+              <tr>
+                <td>Escalabilidad</td>
+                <td>Vertical</td>
+                <td>Horizontal</td>
+              </tr>
+              <tr>
+                <td>Uso ideal</td>
+                <td>Transacciones complejas, datos estructurados</td>
+                <td>Big Data, datos en tiempo real, IoT</td>
+              </tr>
+              <tr>
+                <td>Ejemplo de datos</td>
+                <td>Facturas, sistemas bancarios</td>
+                <td>Redes sociales, apps en tiempo real</td>
+              </tr>
+            </tbody>
+          </table>
+        </details>
+      </article>
+
+      <article id="cuando-usar-sql" aria-label="Cuándo usar SQL (Bases de datos relacionales)">
+        <h3>Cuándo usar SQL (Bases de datos relacionales)</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <ol>
+            <li>
+              <strong>Estructura de datos bien definida:</strong>
+              <ul>
+                <li>Los datos tienen una <strong>estructura fija</strong> (tablas con columnas y tipos de datos definidos).</li>
+                <li>Se requiere un <strong>esquema rígido</strong> que no cambie con frecuencia.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Relaciones complejas entre datos:</strong>
+              <ul>
+                <li>Hay muchas relaciones entre tablas, como en sistemas de gestión empresarial o CRM.</li>
+                <li>Se necesita realizar consultas que integren múltiples tablas (<strong>joins</strong>).</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Integridad y consistencia de datos:</strong>
+              <ul>
+                <li>Es fundamental garantizar la <strong>consistencia y precisión</strong> de los datos (por ejemplo, en transacciones bancarias).</li>
+                <li>Necesitas soporte para <strong>transacciones ACID</strong> (Atomicidad, Consistencia, Aislamiento, Durabilidad).</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Consultas avanzadas:</strong>
+              <ul>
+                <li>Requieres <strong>consultas SQL complejas</strong> con agrupaciones, filtros o cálculos avanzados.</li>
+                <li>La base de datos se usa para analítica detallada o reportes.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Escalabilidad vertical:</strong>
+              <ul>
+                <li>Prefieres escalar en potencia (mejorar el hardware del servidor) en lugar de distribuir los datos horizontalmente.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Ejemplos de casos de uso:</strong>
+              <ul>
+                <li>Sistemas financieros y bancarios.</li>
+                <li>Sistemas de gestión de inventario.</li>
+                <li>Sistemas de comercio electrónico con relaciones complejas entre productos, clientes y pedidos.</li>
+              </ul>
+            </li>
+          </ol>
+        </details>
+      </article>
+
+      <article id="cuando-usar-nosql" aria-label="Cuándo usar NoSQL">
+        <h3>¿Cuándo usar NoSQL (Bases de datos no relacionales)?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <ol>
+            <li>
+              <strong>Flexibilidad en la estructura de datos:</strong>
+              <ul>
+                <li>Los datos no tienen una estructura fija o cambian con frecuencia (por ejemplo, documentos JSON, claves-valor).</li>
+                <li>La aplicación evoluciona rápido y necesita un modelo de datos adaptable.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Grandes volúmenes de datos:</strong>
+              <ul>
+                <li>Manejas datos masivos que no caben fácilmente en un solo servidor (<strong>Big Data</strong>).</li>
+                <li>Necesitas escalar horizontalmente (añadir más servidores para repartir la carga).</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Alta velocidad de escritura y lectura:</strong>
+              <ul>
+                <li>Requieres almacenar y recuperar datos rápidamente (<strong>baja latencia</strong>).</li>
+                <li>Es común en aplicaciones en tiempo real, como redes sociales o sistemas de recomendaciones.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Independencia de relaciones:</strong>
+              <ul>
+                <li>Los datos tienen pocas o ninguna relación entre sí.</li>
+                <li>Cada dato puede ser tratado de manera independiente.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Escalabilidad horizontal:</strong>
+              <ul>
+                <li>Prefieres distribuir los datos entre múltiples servidores o nodos.</li>
+                <li>Necesitas manejar picos de tráfico sin comprometer el rendimiento.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Ejemplos de modelos NoSQL:</strong>
+              <ul>
+                <li><strong>Documentos (MongoDB):</strong> Ideal para datos semiestructurados como JSON.</li>
+                <li><strong>Clave-valor (Redis, DynamoDB):</strong> Para datos simples como sesiones de usuario.</li>
+                <li><strong>Grafos (Neo4j):</strong> Para analizar relaciones complejas (redes sociales).</li>
+                <li><strong>Columnas (Cassandra):</strong> Para consultas rápidas en grandes volúmenes de datos.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Ejemplos de casos de uso:</strong>
+              <ul>
+                <li>Aplicaciones móviles o web de alta carga (Facebook, Twitter).</li>
+                <li>Sistemas de análisis en tiempo real.</li>
+                <li>Almacenamiento de logs y datos de IoT.</li>
+                <li>Catálogos de productos en constante cambio.</li>
+              </ul>
+            </li>
+          </ol>
+        </details>
+      </article>
+
+      <article id="gestores-de-bases-de-datos" aria-label="¿Qué son los gestores de bases de datos?">
+        <h3>¿Qué son los gestores de bases de datos?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+          Un <strong>gestor de bases de datos</strong> o <strong>DBMS (Database Management System)</strong> es un software que permite <strong>crear, organizar, consultar y mantener</strong> bases de datos de manera eficiente. 
+          Su función principal es garantizar la <strong>integridad, seguridad y consistencia</strong> de los datos, además de facilitar su acceso y manipulación.
+          </p>
+
+          <h4>Gestores de bases de datos para SQL</h4>
+          <p>
+          Los gestores SQL están diseñados para bases de datos <strong>relacionales</strong>, donde los datos se organizan en tablas con un esquema definido. Permiten realizar <strong>consultas complejas</strong> y mantener la <strong>consistencia de los datos</strong> mediante transacciones ACID.
+          </p>
+          <ul>
+            <li><strong>MySQL:</strong> Muy usado en aplicaciones web, fácil de implementar.</li>
+            <li><strong>PostgreSQL:</strong> Avanzado, soporta transacciones complejas y análisis de datos.</li>
+            <li><strong>Oracle Database:</strong> Usado en entornos corporativos y sistemas críticos.</li>
+            <li><strong>Microsoft SQL Server:</strong> Integración con entornos Windows y aplicaciones empresariales.</li>
+          </ul>
+
+          <h4>Gestores de bases de datos para NoSQL</h4>
+          <p>
+          Los gestores NoSQL están diseñados para bases de datos <strong>no relacionales</strong>, con esquemas <strong>flexibles</strong> y escalabilidad horizontal. Son ideales para <strong>grandes volúmenes de datos</strong>, aplicaciones en tiempo real y datos semiestructurados.
+          </p>
+          <ul>
+            <li><strong>MongoDB:</strong> Basado en documentos JSON, ideal para datos semiestructurados y aplicaciones web rápidas.</li>
+            <li><strong>Redis:</strong> Almacenamiento clave-valor en memoria, muy rápido para datos temporales.</li>
+            <li><strong>Cassandra:</strong> Columnar, optimizado para grandes volúmenes de datos distribuidos.</li>
+            <li><strong>Neo4j:</strong> Orientado a grafos, ideal para analizar relaciones complejas como redes sociales.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article id="entidad" aria-label="Entidad en bases de datos">
+        <h3>¿Qué es una entidad?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Una <strong>entidad</strong> representa un <strong>objeto del mundo real</strong> sobre el cual se almacena información en una base de datos. 
+            En SQL, una entidad se modela como una <strong>tabla</strong>, y sus características se representan mediante <strong>atributos</strong> (columnas).
+          </p>
+          <p><strong>Tipos de entidades</strong></p>
+          <ul>
+            <li>
+              <strong>De datos (ED):</strong> Representan los objetos principales del sistema o el negocio sobre los que se almacena información. 
+              Son las tablas que contienen datos transaccionales o de detalle que suelen cambiar con frecuencia.
+            </li>
+          </ul>
+        
+          <table border="1" cellpadding="5" cellspacing="0">
+            <thead>
+              <tr>
+                <th>id_venta</th>
+                <th>id_cliente</th>
+                <th>fecha</th>
+                <th>total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>101</td>
+                <td>2025-02-20</td>
+                <td>150.00</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>102</td>
+                <td>2025-02-21</td>
+                <td>200.00</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>101</td>
+                <td>2025-02-22</td>
+                <td>50.00</td>
+              </tr>
+            </tbody>
+          </table>  
+            <ul>
+              <li>
+                <strong>De Catálogos (EC):</strong> Son entidades que almacenan información estática o que cambia raramente, utilizada para describir o categorizar otras entidades en la base de datos. Funcionan como "listas de referencia".
+              </li>
+            </ul>
+            <p><strong>Ejemplo: Lista de opciones predefinidas</strong></p>
+            <table border="1" cellpadding="5" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>id_membresia</th>
+                  <th>tipo</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Básica</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Premium</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>VIP</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul>
+              <li>
+
+                <strong>de pivotes (EP)</strong> Son entidades que se utilizan para establecer relaciones de <strong>muchos a muchos (M:N)</strong> entre otras entidades principales. 
+                Actúan como <em>intermediarias</em> en el modelo relacional.
+              </li>
+            </ul>
+            <p>🔗 <strong>Relaciona datos de muchas a muchas</strong></p>
+            <p><strong>Ejemplo:</strong> Clientes y cursos en una plataforma de educación.</p>
+            <ul>
+              <li><strong>Clientes (<code>clientes</code>)</strong></li>
+              <li><strong>Cursos (<code>cursos</code>)</strong></li>
+              <li><strong>Matriz pivote (<code>cliente_curso</code>)</strong>: Registra qué cliente está inscrito en qué curso.</li>
+            </ul>
+            <h4>Tabla <code>clientes</code></h4>
+            <table border="1" cellpadding="5" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>id_cliente</th>
+                  <th>nombre</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Juan Pérez</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Ana Gómez</td>
+                </tr>
+              </tbody>
+            </table>
+            <h4>Tabla <code>cursos</code></h4>
+            <table border="1" cellpadding="5" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>id_curso</th>
+                  <th>nombre_curso</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>101</td>
+                  <td>SQL Básico</td>
+                </tr>
+                <tr>
+                  <td>102</td>
+                  <td>Python Avanzado</td>
+                </tr>
+              </tbody>
+            </table>
+            <h4>Tabla pivote <code>cliente_curso</code></h4>
+            <table border="1" cellpadding="5" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>id_cliente</th>
+                  <th>id_curso</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>101</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>102</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>101</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              📌 <strong>Interpretación:</strong> Juan Pérez está inscrito en <em>SQL Básico</em> y <em>Python Avanzado</em>, 
+              mientras que Ana Gómez solo en <em>SQL Básico</em>.
+            </p>
+        </details>
+      </article>
+
+      <article id="atributos" aria-label="Atributos en bases de datos">
+      <h3>¿Qué son los atributos?</h3>
+      <details>
+        <summary>Leer explicación</summary>
+        <p>
+          Un <strong>atributo</strong> es cualquier característica o propiedad de una entidad.
+        </p>
+        <p><strong>Ejemplo 1: Entidad "Cliente"</strong></p>
+        <ul>
+          <li>Nombre</li>
+          <li>Apellido</li>
+          <li>Teléfono</li>
+          <li>Correo electrónico</li>
+          <li>Dirección</li>
+          <li>Ciudad</li>
+          <li>Código Postal</li>
+          <li>País</li>
+        </ul>
+        <p><strong>Ejemplo 2: Entidad "Producto"</strong></p>
+        <ul>
+          <li>Nombre</li>
+          <li>Descripción</li>
+          <li>Precio</li>
+          <li>Cantidad disponible</li>
+          <li>Categoría</li>
+          <li>Marca</li>
+          <li>Peso</li>
+          <li>Dimensiones</li>
+        </ul>
+        <p>Cada entidad puede tener diferentes atributos según la información que necesite almacenar en la base de datos.</p>
+      </details>
+      </article>
+
+      <article id="tipos-datos" aria-label="Tipos de datos en bases de datos">
+        <h3>¿Cuáles son los tipos de datos?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <ul>
+            <li>Números enteros y flotantes.</li>
+            <li>Cadenas y caracteres de texto.</li>
+            <li>Fechas y horas.</li>
+            <li>Booleans.</li>
+            <li>Blobs y archivos.</li>
+            <li>Datos geográficos.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article id="crud" aria-label="Concepto CRUD en bases de datos">
+        <h3>¿Qué significa CRUD?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p><strong>CRUD</strong> significa <strong>Crear (Create), Leer (Read), Actualizar (Update) y Eliminar (Delete)</strong>. Representa las cuatro operaciones básicas realizadas en una base de datos o sistema de almacenamiento:</p>
+          <ol>
+            <li><strong>Crear (Create):</strong> Agregar nuevos datos, como insertar un registro nuevo.</li>
+            <li><strong>Leer (Read):</strong> Recuperar o consultar datos existentes.</li>
+            <li><strong>Actualizar (Update):</strong> Modificar datos existentes.</li>
+            <li><strong>Eliminar (Delete):</strong> Borrar datos.</li>
+          </ol>
+        </details>
+      </article>
+
+      <article id="logica-negocio" aria-label="Lógica del negocio en bases de datos">
+        <h3>¿Qué es la lógica del negocio?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Es el conjunto de <strong>reglas y validaciones de datos</strong> importantes para el negocio.
+            La <strong>lógica de negocio</strong> es el conjunto de reglas, procesos y validaciones que definen y regulan cómo opera un negocio.
+            Es la capa que traduce las políticas y objetivos empresariales en procedimientos concretos, determinando cómo se deben manipular, transformar y validar los datos para cumplir con los requerimientos y flujos de trabajo propios de la organización.
+          </p>
+        </details>
+      </article>
+
+      <article id="relaciones" aria-label="Relaciones en bases de datos">
+        <h3>¿Qué son las relaciones?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Un modelo <strong>relacional</strong> se define cuando las tablas están vinculadas entre sí mediante <strong>claves primarias (PK)</strong> y <strong>claves foráneas (FK)</strong>, permitiendo establecer relaciones como <strong>uno a muchos (1:M), muchos a muchos (M:M) o uno a uno (1:1)</strong>.
+          </p>
+          <p>📌 <strong>Tipos de Relaciones en SQL</strong></p>
+          <ul>
+            <li><strong>1 a 1 (Uno a Uno) 🔗:</strong> Una fila de una tabla está relacionada con <em>una sola fila</em> en otra tabla.</li>
+            <li><strong>1 a M (Uno a Muchos) 🔗➡️:</strong> Una fila de una tabla puede estar relacionada con <em>varias filas</em> en otra tabla.</li>
+            <li><strong>M a M (Muchos a Muchos) 🔗🔗:</strong> Múltiples filas de una tabla pueden estar relacionadas con <em>múltiples filas</em> de otra. Se gestiona con una tabla intermedia.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article id="cardinalidad" aria-label="Cardinalidad en bases de datos">
+        <h3>¿Qué es la cardinalidad?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            La <strong>cardinalidad</strong> describe la relación entre los registros de dos tablas, indicando cuántos registros de una tabla pueden estar asociados con registros de otra.
+          </p>
+          <p><strong>Tipos comunes:</strong></p>
+          <ul>
+            <li><strong>1:1 (Uno a Uno):</strong> Ejemplo: Un usuario tiene un único número de pasaporte.</li>
+            <li><strong>1:N (Uno a Muchos):</strong> Ejemplo: Un autor puede escribir varios libros.</li>
+            <li><strong>N:M (Muchos a Muchos):</strong> Ejemplo: Una película tiene varios actores y un actor puede participar en varias películas.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article id="llaves" aria-label="Llaves en bases de datos">
+        <h3>¿Qué son las llaves?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            En el diseño de bases de datos, las <strong>claves</strong> son atributos que permiten garantizar la integridad y unicidad de los datos: 
+          </p>
+
+          <ul>
+            <li><strong>Clave Primaria (PK):</strong> Identifica de manera única cada registro en una tabla. No puede contener valores nulos ni repetidos.</li>
+            <li><strong>Clave Foránea (FK):</strong> Atributo que referencia la clave primaria de otra tabla, estableciendo relaciones e integridad referencial.</li>
+            <li><strong>Clave Única (Unique Key):</strong> Garantiza que los valores sean únicos en la columna, pero permite valores nulos. Ejemplo: el correo electrónico en una tabla de usuarios.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article id="diferencias" aria-label="Diferencias entre relaciones y cardinalidad">
+        <h3>¿Cuáles son las diferencias entre relaciones y cardinalidad?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <ul>
+            <li>
+              <strong>Relaciones:</strong> Son el <em>enlace</em> entre dos tablas usando 
+              <strong>PK</strong> y <strong>FK</strong>.  
+              Ejemplo: La tabla <em>Clientes</em> tiene <code>id_cliente</code> como PK, 
+              y la tabla <em>Ventas</em> guarda ese mismo <code>id_cliente</code> como FK.
+            </li>
+            <li>
+              <strong>Cardinalidad:</strong> Explica <em>cuántos registros</em> de una tabla 
+              pueden relacionarse con otra.  
+              Ejemplo: Un cliente puede tener muchas ventas (1:N), pero cada venta solo pertenece a un cliente.
+            </li>
+          </ul>
+
+          <h4>Metáfora para entenderlo fácil</h4>
+          <p>
+            Piensa en <strong>Clientes</strong> como los <em>padres</em> y en <strong>Ventas</strong> como los <em>hijos</em>.
+          </p>
+          <p>
+            La <strong>relación</strong> es el vínculo padre-hijo: el apellido que conecta a los hijos con su padre.  
+          </p>
+          <p>
+            La <strong>cardinalidad</strong> indica la cantidad: un padre puede tener muchos hijos (1:N), 
+            pero cada hijo solo tiene un padre (N:1).
+          </p>
+        </details>
+      </article>
+
+      <article id="entidad-relacion" aria-label="¿Qué es un diagrama entidad-relación (DER)?">
+        <h3>¿Qué es un diagrama entidad-relación (DER)?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            El <strong>diagrama entidad-relación</strong> (DER) es una herramienta visual para representar 
+            entidades, atributos y relaciones de una base de datos. Sirve como mapa antes de crear las tablas.
+          </p>
+        <img src="../assets/entidad-relacion.jpeg" alt="entidad-relacion">
+
+        <h4>Diagrama Entidad-Relación de Biblioteca</h4>
+        <p>
+          Este modelo describe un sistema de biblioteca donde se gestionan autores, libros, ejemplares y usuarios.
+          Se identifican las entidades, sus atributos, claves primarias y las relaciones entre ellas.
+        </p>
+
+        <ul>
+          <li><strong>Entidad: Autor</strong>
+            <ul>
+              <li><strong>Clave Primaria (PK):</strong> Código</li>
+              <li><strong>Atributo:</strong> Nombre</li>
+            </ul>
+          </li>
+
+          <li><strong>Entidad: Libro</strong>
+            <ul>
+              <li><strong>Clave Primaria (PK):</strong> Código</li>
+              <li><strong>Atributo:</strong> Título</li>
+              <li><strong>Atributo:</strong> ISBN</li>
+              <li><strong>Atributo:</strong> Editorial</li>
+              <li><strong>Atributo:</strong> Páginas</li>
+            </ul>
+          </li>
+
+          <li><strong>Entidad: Usuario</strong>
+            <ul>
+              <li><strong>Clave Primaria (PK):</strong> Código</li>
+              <li><strong>Atributo:</strong> Nombre</li>
+              <li><strong>Atributo:</strong> Teléfono</li>
+              <li><strong>Atributo:</strong> Dirección</li>
+            </ul>
+          </li>
+
+          <li><strong>Entidad: Ejemplar</strong>
+            <ul>
+              <li><strong>Clave Primaria (PK):</strong> Código</li>
+              <li><strong>Atributo:</strong> Localización</li>
+            </ul>
+          </li>
+        </ul>
+
+        <h3>Relaciones</h3>
+        <ul>
+          <li><strong>Escribe</strong>:
+            <ul>
+              <li>Un <strong>Autor</strong> puede escribir muchos <strong>Libros</strong> (1:N).</li>
+              <li>Un <strong>Libro</strong> puede ser escrito por muchos <strong>Autores</strong> (N:M).</li>
+            </ul>
+          </li>
+
+          <li><strong>Tiene</strong>:
+            <ul>
+              <li>Un <strong>Libro</strong> puede tener muchos <strong>Ejemplares</strong> (1:N).</li>
+              <li>Un <strong>Ejemplar</strong> pertenece a un único <strong>Libro</strong> (N:1).</li>
+            </ul>
+          </li>
+
+          <li><strong>Saca</strong>:
+            <ul>
+              <li>Un <strong>Usuario</strong> puede sacar muchos <strong>Ejemplares</strong> (1:N).</li>
+              <li>Un <strong>Ejemplar</strong> puede ser sacado por muchos <strong>Usuarios</strong> en distintos préstamos (N:M).</li>
+              <li><strong>Atributos de la relación:</strong> FechaDevolución, FechaPréstamo</li>
+            </ul>
+          </li>
+        </ul>
+        </details>
+      </article>
+
+      <article id="modelo-relacion" aria-label="¿Qué es un diagrama relacionar de la base de datos?">
+        <h3>¿Qué es un diagrama relacionar de la base de datos?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>Un diagrama relacional es una <strong>representación gráfica</strong> de una <strong>base de datos</strong> que muestra las <strong>entidades</strong>, sus <strong>atributos</strong> y las <strong>relaciones</strong> entre ellas, incluyendo <strong>claves primarias</strong> y <strong>foráneas</strong>, con el objetivo de visualizar cómo se <strong>almacenan</strong> y <strong>conectan</strong> los datos.</p>
+          <img src="..//assets/entidad-relacional-1.png" alt="diagrama">
+<ul>
+  <li><strong>Usuarios</strong>: Entidad que almacena la información de los usuarios.
+    <ul>
+      <li><strong>Clave Primaria (PK):</strong> idUsuarios</li>
+      <li><strong>Atributo:</strong> nombreUsuario</li>
+      <li><strong>Atributo:</strong> contraseña</li>
+      <li><strong>Clave Única (Unique):</strong> correo</li>
+    </ul>
+  </li>
+
+  <li><strong>Consulta</strong>: Entidad que registra las consultas de los usuarios sobre videojuegos.
+    <ul>
+      <li><strong>Atributo:</strong> comentarios</li>
+      <li><strong>Atributo:</strong> votos</li>
+      <li><strong>Atributo:</strong> fecha</li>
+      <li><strong>Clave Foránea (FK):</strong> idUsuario → Usuarios</li>
+      <li><strong>Clave Foránea (FK):</strong> idVideojuego → Videojuego</li>
+    </ul>
+  </li>
+
+  <li><strong>Videojuego</strong>: Entidad principal que guarda la información de los juegos.
+    <ul>
+      <li><strong>Clave Primaria (PK):</strong> idVideojuego</li>
+      <li><strong>Atributo:</strong> consola</li>
+      <li><strong>Atributo:</strong> nombre</li>
+      <li><strong>Atributo:</strong> género</li>
+      <li><strong>Atributo:</strong> clasificación</li>
+      <li><strong>Atributo:</strong> descripción</li>
+      <li><strong>Clave Foránea (FK):</strong> idDistribuidor → Distribuidor</li>
+      <li><strong>Clave Foránea (FK):</strong> idDesarrollador → Desarrollador</li>
+    </ul>
+  </li>
+
+  <li><strong>Distribuidor</strong>: Entidad que representa la empresa que distribuye el videojuego.
+    <ul>
+      <li><strong>Clave Primaria (PK):</strong> idDistribuidor</li>
+      <li><strong>Atributo:</strong> nombreDistribuidor</li>
+    </ul>
+  </li>
+
+  <li><strong>Desarrollador</strong>: Entidad que representa la empresa desarrolladora de los videojuegos.
+    <ul>
+      <li><strong>Clave Primaria (PK):</strong> idDesarrollador</li>
+      <li><strong>Atributo:</strong> nombreDesarrollador</li>
+    </ul>
+  </li>
+
+  <li><strong>Relaciones</strong>:
+    <ul>
+      <li>Un <strong>Usuario</strong> puede hacer muchas <strong>Consultas</strong>.</li>
+      <li>Un <strong>Videojuego</strong> puede estar en muchas <strong>Consultas</strong>.</li>
+      <li>Un <strong>Distribuidor</strong> puede distribuir muchos <strong>Videojuegos</strong>.</li>
+      <li>Un <strong>Desarrollador</strong> puede crear muchos <strong>Videojuegos</strong>.</li>
+    </ul>
+  </li>
+</ul>
+
+        </details>
+      </article>
+
+      <article id="normalizacion" aria-label="¿Qué es la normalización en bases de datos?">
+        <h3>¿Qué es la normalización en bases de datos?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>La <strong>normalización</strong> se aplica tanto en el <strong>rediseño de bases de datos existentes</strong> como en el <strong>modelado desde cero</strong>. Es un proceso estructurado que <strong>optimiza la organización de los datos</strong>, <strong>minimiza la redundancia</strong> y mejora la <strong>integridad</strong>. Su objetivo principal es descomponer una base de datos grande en tablas más pequeñas y bien definidas, asegurando relaciones lógicas y eficientes entre los datos.</p>
+
+          <h4>1. Primera Forma Normal (1NF)</h4>
+          <p><strong>Requisitos:</strong></p>
+          <ul>
+            <li>Eliminar grupos repetitivos de columnas.</li>
+            <li>Cada columna debe contener valores atómicos (indivisibles).</li>
+          </ul>
+
+          <p><strong>Problema:</strong> Tabla <strong>Clientes</strong> con teléfonos múltiples en una misma celda:</p>
+          <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse;">
+            <caption><strong>Clientes (Sin Normalizar)</strong></caption>
+            <tr><th>ID</th><th>Nombre</th><th>Teléfono</th></tr>
+            <tr><td>1</td><td>Ana</td><td>12345</td></tr>
+            <tr><td>2</td><td>Luis</td><td>67890</td></tr>
+            <tr><td>3</td><td>Marta</td><td>23456, 34567</td></tr>
+          </table>
+
+          <p><strong>Solución:</strong> Dividir los teléfonos en registros individuales.</p>
+          <table border="1" cellspacing="0" cellpadding="5" >
+            <caption><strong>Clientes (Normalizada 1NF)</strong></caption>
+            <tr><th>ID</th><th>Nombre</th><th>Teléfono</th></tr>
+            <tr><td>1</td><td>Ana</td><td>12345</td></tr>
+            <tr><td>2</td><td>Luis</td><td>67890</td></tr>
+            <tr><td>3</td><td>Marta</td><td>23456</td></tr>
+            <tr><td>3</td><td>Marta</td><td>34567</td></tr>
+          </table>
+
+          <p><strong>Beneficios:</strong></p>
+          <ul>
+            <li>Elimina valores repetidos en la misma celda.</li>
+            <li>Facilita búsquedas y consultas.</li>
+            <li>Permite establecer relaciones con otras tablas.</li>
+            <li>Evita problemas de integridad.</li>
+          </ul>
+
+          <h4>2. Segunda Forma Normal (2NF)</h4>
+          <p><strong>Requisitos:</strong></p>
+          <ul>
+            <li>Cumplir con 1NF.</li>
+            <li>Eliminar dependencias parciales: cada columna no clave depende de toda la clave primaria.</li>
+            <li>Eliminar redundancia y asegurar que cada dato depende únicamente de la clave primaria.</li>
+          </ul>
+
+          <p><strong>Problema:</strong> Tabla <strong>Pedidos</strong> donde "Precio" depende solo del "Producto", no de la clave compuesta:</p>
+          <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse;">
+            <caption><strong>Pedidos (Sin Normalizar)</strong></caption>
+            <tr><th>ID Pedido</th><th>ID Cliente</th><th>Producto</th><th>Precio</th></tr>
+            <tr><td>1</td><td>1</td><td>Laptop</td><td>1000</td></tr>
+            <tr><td>2</td><td>2</td><td>Monitor</td><td>200</td></tr>
+            <tr><td>3</td><td>1</td><td>Impresora</td><td>150</td></tr>
+          </table>
+
+          <p><strong>Solución:</strong> Crear tabla <strong>Productos</strong> y mantener <strong>Pedidos</strong> sin dependencias parciales:</p>
+          <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse;">
+            <caption><strong>Productos</strong></caption>
+            <tr><th>Producto</th><th>Precio</th></tr>
+            <tr><td>Laptop</td><td>1000</td></tr>
+            <tr><td>Monitor</td><td>200</td></tr>
+            <tr><td>Impresora</td><td>150</td></tr>
+          </table>
+
+          <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse;">
+            <caption><strong>Pedidos (Normalizada 2NF)</strong></caption>
+            <tr><th>ID Pedido</th><th>ID Cliente</th><th>Producto</th></tr>
+            <tr><td>1</td><td>1</td><td>Laptop</td></tr>
+            <tr><td>2</td><td>2</td><td>Monitor</td></tr>
+            <tr><td>3</td><td>1</td><td>Impresora</td></tr>
+          </table>
+
+          <p><strong>Beneficios:</strong></p>
+          <ul>
+            <li>Elimina dependencias parciales.</li>
+            <li>Reduce redundancia.</li>
+            <li>Facilita actualizaciones.</li>
+            <li>Optimiza almacenamiento.</li>
+          </ul>
+
+          <h4>3. Tercera Forma Normal (3NF)</h4>
+          <p><strong>Requisitos:</strong></p>
+          <ul>
+            <li>Cumplir con 2NF.</li>
+            <li>Eliminar dependencias transitivas: atributos no clave dependen solo de la clave primaria.</li>
+          </ul>
+
+          <p><strong>Problema:</strong> Tabla <strong>Empleados</strong> donde "Departamento" depende de "ID Departamento" y no de "ID Empleado".</p>
+          <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse;">
+            <caption><strong>Empleados (Sin Normalizar)</strong></caption>
+            <tr><th>ID Empleado</th><th>Nombre</th><th>ID Departamento</th><th>Departamento</th></tr>
+            <tr><td>1</td><td>Juan</td><td>10</td><td>Ventas</td></tr>
+            <tr><td>2</td><td>Ana</td><td>20</td><td>Finanzas</td></tr>
+            <tr><td>3</td><td>Luis</td><td>10</td><td>Ventas</td></tr>
+          </table>
+
+          <p><strong>Solución:</strong> Crear tabla <strong>Departamentos</strong> y mantener <strong>Empleados</strong> sin redundancia.</p>
+          <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse;">
+            <caption><strong>Departamentos</strong></caption>
+            <tr><th>ID Departamento</th><th>Departamento</th></tr>
+            <tr><td>10</td><td>Ventas</td></tr>
+            <tr><td>20</td><td>Finanzas</td></tr>
+          </table>
+
+          <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse;">
+            <caption><strong>Empleados (Normalizada 3NF)</strong></caption>
+            <tr><th>ID Empleado</th><th>Nombre</th><th>ID Departamento</th></tr>
+            <tr><td>1</td><td>Juan</td><td>10</td></tr>
+            <tr><td>2</td><td>Ana</td><td>20</td></tr>
+            <tr><td>3</td><td>Luis</td><td>10</td></tr>
+          </table>
+
+          <p><strong>Beneficios:</strong></p>
+          <ul>
+            <li>Evita redundancia.</li>
+            <li>Mejora integridad de datos.</li>
+            <li>Optimiza consultas y uniones (JOIN).</li>
+          </ul>
+
+          <h4>4. Cuarta Forma Normal (4NF)</h4>
+          <p>Eliminar dependencias multivaluadas.</p>
+          <p><strong>Problema:</strong> Tabla <strong>Profesores_Asignaturas_Proyectos</strong> con Asignatura y Proyecto independientes para el mismo profesor.</p>
+          <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse;">
+            <caption><strong>Profesores_Asignaturas_Proyectos (Sin Normalizar)</strong></caption>
+            <tr><th>ID Profesor</th><th>Asignatura</th><th>Proyecto</th></tr>
+            <tr><td>1</td><td>Matemáticas</td><td>A</td></tr>
+            <tr><td>1</td><td>Matemáticas</td><td>B</td></tr>
+            <tr><td>1</td><td>Física</td><td>A</td></tr>
+            <tr><td>2</td><td>Química</td><td>C</td></tr>
+          </table>
+
+          <p><strong>Solución:</strong> Separar en dos tablas:</p>
+          <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse;">
+            <caption><strong>Profesores_Asignaturas</strong></caption>
+            <tr><th>ID Profesor</th><th>Asignatura</th></tr>
+            <tr><td>1</td><td>Matemáticas</td></tr>
+            <tr><td>1</td><td>Física</td></tr>
+            <tr><td>2</td><td>Química</td></tr>
+          </table>
+
+          <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse;">
+            <caption><strong>Profesores_Proyectos</strong></caption>
+            <tr><th>ID Profesor</th><th>Proyecto</th></tr>
+            <tr><td>1</td><td>A</td></tr>
+            <tr><td>1</td><td>B</td></tr>
+            <tr><td>2</td><td>C</td></tr>
+          </table>
+
+          <h4>5. Quinta Forma Normal (5NF)</h4>
+          <p><strong>Problema:</strong> Relación compleja entre Vendedores, Productos y Clientes.</p>
+          <p><strong>Solución:</strong> Descomponer en tres tablas sin pérdida de información:</p>
+
+          <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse;">
+            <caption><strong>Vendedores_Productos</strong></caption>
+            <tr><th>ID Vendedor</th><th>Producto</th></tr>
+            <tr><td>1</td><td>TV</td></tr>
+            <tr><td>1</td><td>Radio</td></tr>
+            <tr><td>2</td><td>Radio</td></tr>
+          </table>
+
+          <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse;">
+            <caption><strong>Productos_Clientes</strong></caption>
+            <tr><th>Producto</th><th>Cliente</th></tr>
+            <tr><td>TV</td><td>A</td></tr>
+            <tr><td>TV</td><td>B</td></tr>
+            <tr><td>Radio</td><td>A</td></tr>
+            <tr><td>Radio</td><td>C</td></tr>
+          </table>
+
+          <table border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse;">
+            <caption><strong>Vendedores_Clientes</strong></caption>
+            <tr><th>ID Vendedor</th><th>Cliente</th></tr>
+            <tr><td>1</td><td>A</td></tr>
+            <tr><td>1</td><td>B</td></tr>
+            <tr><td>2</td><td>C</td></tr>
+          </table>
+
+          <p><strong>Beneficios generales:</strong></p>
+          <ul>
+            <li>Elimina redundancia innecesaria.</li>
+            <li>Mejora integridad de los datos.</li>
+            <li>Optimiza consultas y actualizaciones.</li>
+            <li>Evita anomalías de inserción y eliminación.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article id="rediseño-de-bases-de-datos" aria-label="Rediseño de bases de datos existentes: ejemplo práctic">
+        <h3>Rediseño de bases de datos existentes: ejemplo práctico</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            El <strong>rediseño de bases de datos existentes</strong> implica analizar la estructura actual y aplicar mejoras para optimizar el almacenamiento y la integridad de los datos. <strong>En este caso, el rediseño consistirá en aplicar <em>normalización</em></strong> para eliminar redundancias y mejorar la consistencia.
+          </p>
+          <img src="..//assets/normalizacion.png" alt="">
+          <p><strong>¿Qué representa el gráfico?</strong></p>
+          <p>El gráfico principal muestra una tabla combinada con información de ventas, clientes, productos, direcciones y países. Aunque es útil para visualizar todo en una sola vista, <strong>no está normalizado</strong>, lo que genera redundancia y posibles inconsistencias.</p>
+
+          <p><strong>¿Cómo se normalizó la base de datos?</strong></p>
+          <p>Se aplicaron los principios de normalización en tres pasos principales:</p>
+
+          <ul>
+            <li>
+              <strong>Paso 1: Primera Forma Normal (1NF)</strong>
+              <p>Se identificaron entidades distintas y se separaron en tablas individuales:</p>
+              <ul>
+                <li><strong>Cliente</strong>: nombre, apellido, correo, teléfono.</li>
+                <li><strong>Producto</strong>: nombre, precio.</li>
+                <li><strong>Dirección</strong>: calle, número, ciudad, país.</li>
+                <li><strong>País</strong>: nombre, dominio.</li>
+                <li><strong>Venta</strong>: fecha, cliente, dirección, producto, cantidad.</li>
+              </ul>
+              <p>Esto eliminó los grupos repetidos y garantizó que cada campo contuviera valores atómicos.</p>
+            </li>
+
+            <li>
+              <strong>Paso 2: Segunda Forma Normal (2NF)</strong>
+              <p>Se eliminaron dependencias parciales. Por ejemplo:</p>
+              <ul>
+                <li>El nombre del cliente no depende de la venta, sino del ID del cliente.</li>
+                <li>La dirección y el producto también se referencian por ID.</li>
+              </ul>
+              <p>La tabla <strong>Venta</strong> quedó con claves foráneas que apuntan a otras tablas.</p>
+            </li>
+
+            <li>
+              <strong>Paso 3: Tercera Forma Normal (3NF)</strong>
+              <p>Se eliminaron dependencias transitivas. Por ejemplo:</p>
+              <ul>
+                <li>El país no se repite en cada dirección, sino que se referencia desde la tabla <strong>País</strong>.</li>
+              </ul>
+              <p>Esto evita redundancia y facilita actualizaciones consistentes.</p>
+            </li>
+          </ul>
+
+          <p><strong>Resultado:</strong> Una base de datos estructurada, eficiente y sin redundancias, donde cada tabla representa una entidad única y se relaciona mediante claves primarias y foráneas.</p>
+
+
+        </details>
+      </article>
+
+      <article id="analisis-ventas" aria-label="Análisis de los pasos en un sistema de ventas">
+        <h3>Modelado de datos desde 0 - Versión borrador Inicial</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <h4>Tarea</h4>
+
+          <p>
+            Diseña desde cero el modelo de datos para un sistema de ventas siguiendo los pasos explicados en la guía. La tarea consiste en:
+          </p>
+  
+          <ol>
+            <li>Identificar las <strong>entidades</strong> del sistema.</li>
+            <li>Identificar los <strong>atributos</strong> de las entidades.</li>
+            <li>Identificar las <strong>llaves primarias (PK)</strong> y <strong>foráneas (FK)</strong>.</li>
+            <li>Asignar una <strong>nomenclatura adecuada</strong> a las entidades y sus atributos.</li>
+            <li>Identificar las <strong>entidades pivote (EP)</strong> del sistema.</li>
+            <li>Identificar los <strong>catálogos (EC)</strong> del sistema.</li>
+            <li>Identificar los <strong>tipos de relaciones</strong> del sistema.</li>
+            <li>Crear el <strong>Modelo Entidad-Relación</strong> del sistema.</li>
+            <li>Crear el <strong>Modelo Relacional</strong> de la base de datos del sistema.</li>
+            <li>Identificar los <strong>tipos de dato</strong> de los atributos de las entidades del sistema.</li>
+            <li>Identificar los <strong>atributos únicos (UQ)</strong> en el sistema.</li>
+            <li>Identificar las <strong>reglas de negocio</strong> (operaciones <em>CRUD</em>) del sistema.</li>
+          </ol>
+
+          <h4>Glosario</h4>
+          <ul>
+            <li><strong>PK</strong>: <em>Primary Key</em></li>
+            <li><strong>FK</strong>: <em>Foreign Key</em></li>
+            <li><strong>UQ</strong>: <em>Unique Attribute</em></li>
+            <li><strong>ED</strong>: Entidad de Datos</li>
+            <li><strong>EP</strong>: Entidad Pivote</li>
+            <li><strong>EC</strong>: Entidad Catálogo</li>
+          </ul>
+
+          <p><strong>Análisis de los Pasos y su Aplicación en un Sistema de Ventas (Borrador Inicial)</strong></p>
+          <p><strong>Nota:</strong> Esta guía detalla el proceso paso a paso para facilitar la comprensión.<br>
+          A medida que adquieras más experiencia, podrás omitir este nivel de detalle y trabajar directamente con la <strong>versión final del documento</strong>.</p>
+
+          <p><strong>1. Identificar las entidades del sistema</strong></p>
+          <ul>
+            <li><strong>Clientes</strong> (quién compra)</li>
+            <li><strong>categorías_productos</strong> (clasificación o grupo al que pertenece cada producto)</li>
+            <li><strong>Productos</strong> (qué se vende)</li>
+            <li><strong>formas_pago</strong> (métodos de pago disponibles)</li>
+            <li><strong>Ventas</strong> (registro de compras)</li>
+            <li><strong>Detalles de Venta</strong> (relación entre Ventas y Productos)</li>
+          </ul>
+
+          <p><strong>2. Identificar los atributos de las entidades</strong></p>
+          <ul>
+            <li><strong>Clientes:</strong> <code>nombre</code></li>
+            <li><strong>Productos:</strong> <code>nombre</code>, <code>precio</code>, <code>stock</code></li>
+            <li><strong>Ventas:</strong> <code>fecha</code></li>
+            <li><strong>Detalles_de_Venta:</strong> <code>cantidad</code>, <code>precio_unitario</code></li>
+          </ul>
+
+          <p><strong>3. Identificar las llaves primarias y foráneas</strong></p>
+          <ul>
+            <li><strong>Claves primarias (PK):</strong>
+              <ul>
+                <li>Clientes: <code>id_cliente</code></li>
+                <li>Categorías_productos: <code>id_categoria</code></li>
+                <li>Productos: <code>id_producto</code></li>
+                <li>Formas_pago: <code>id_forma_pago</code></li>
+                <li>Ventas: <code>id_venta</code></li>
+                <li>Detalles_de_Venta: <code>id_detalle</code></li>
+              </ul>
+            </li>
+            <li><strong>Claves foráneas (FK):</strong>
+              <ul>
+                <li>Clientes: <em>No tiene</em></li>
+                <li>Categorías_productos: <em>No tiene</em></li>
+                <li>Productos: <code>id_categoria</code></li>
+                <li>Formas_pago: <em>No tiene</em></li>
+                <li>Ventas: <code>id_cliente</code>, <code>id_forma_pago</code></li>
+                <li>Detalles_de_Venta: <code>id_venta</code>, <code>id_producto</code></li>
+              </ul>
+            </li>
+          </ul>
+
+          <p><strong>4. Asignar una nomenclatura adecuada a las entidades y sus atributos</strong></p>
+          <ul>
+            <li><strong>Nombres descriptivos y específicos:</strong>
+              <ul>
+                <li>Incorrecto: <code>id</code></li>
+                <li>Correcto: <code>id_cliente</code>, <code>id_producto</code>, <code>id_venta</code></li>
+              </ul>
+            </li>
+            <li><strong>Uso de <code>snake_case</code> para nombres compuestos:</strong>
+              <ul>
+                <li>Incorrecto: <code>IdCliente</code>, <code>idCliente</code>, <code>id-cliente</code></li>
+                <li>Correcto: <code>id_cliente</code>, <code>fecha_venta</code>, <code>precio_total</code></li>
+              </ul>
+            </li>
+            <li><strong>Prefijo <code>id_</code> para claves primarias:</strong>
+              <ul>
+                <li>Siempre usar <code>id_</code> seguido del nombre de la entidad</li>
+              </ul>
+            </li>
+            <li><strong>Nombres en plural para entidades:</strong>
+              <ul>
+                <li>Incorrecto: <code>cliente</code>, <code>producto</code>, <code>venta</code></li>
+                <li>Correcto: <code>clientes</code>, <code>productos</code>, <code>ventas</code></li>
+              </ul>
+            </li>
+            <li><strong>Consistencia en las claves foráneas:</strong>
+              <ul>
+                <li>En la tabla <code>venta</code>, la FK debe llamarse <code>id_cliente</code>, no <code>cliente_id</code></li>
+                <li>En la tabla <code>producto</code>, la FK debe llamarse <code>id_categoria</code>, no <code>categoriaID</code></li>
+              </ul>
+            </li>
+            <li><strong>Evitar palabras reservadas y caracteres especiales:</strong>
+              <ul>
+                <li>Incorrecto: <code>order</code>, <code>user-name</code></li>
+                <li>Correcto: <code>orden</code>, <code>nombre_usuario</code></li>
+              </ul>
+            </li>
+          </ul>
+
+          <p><strong>5. Identificar las entidades pivote del sistema</strong></p>
+          <ul>
+            <li>Son tablas intermedias que unen otras entidades</li>
+            <li>Detalles de Venta es la pivote, ya que relaciona Ventas con Productos</li>
+          </ul>
+
+          <p><strong>6. Identificar los catálogos del sistema</strong></p>
+          <ul>
+            <li>Categorías de productos (Celulares, Accesorios, Tablets)</li>
+            <li>Formas de pago (Efectivo, Tarjeta de crédito, Transferencia bancaria)</li>
+          </ul>
+
+          <p><strong>7. Identificar los tipos de relaciones del sistema</strong></p>
+          <ul>
+            <li>Un Cliente puede realizar muchas Ventas → (1:M) → <code>clientes.id_cliente</code> → <code>ventas.id_cliente</code></li>
+            <li>Una Categoría de Producto puede tener muchos Productos → (1:M) → <code>categorías_productos.id_categoria</code> → <code>productos.id_categoria</code></li>
+            <li>Un Producto pertenece a una sola Categoría de Producto → (M:1) → <code>productos.id_categoria</code> → <code>categorías_productos.id_categoria</code></li>
+            <li>Una Venta puede tener muchos Detalles de Venta → (1:M) → <code>ventas.id_venta</code> → <code>detalles_venta.id_venta</code></li>
+            <li>Un Detalle de Venta está asociado a un solo Producto → (M:1) → <code>detalles_venta.id_producto</code> → <code>productos.id_producto</code></li>
+            <li>Un Producto puede aparecer en muchos Detalles de Venta → (1:M) → <code>productos.id_producto</code> → <code>detalles_venta.id_producto</code></li>
+            <li>Un Cliente utiliza una sola Forma de Pago por Venta → (M:1) → <code>ventas.id_forma_pago</code> → <code>formas_pago.id_forma_pago</code></li>
+            <li>Una Forma de Pago puede ser utilizada en muchas Ventas → (1:M) → <code>formas_pago.id_forma_pago</code> → <code>ventas.id_forma_pago</code></li>
+            <li>Para manejar la relación N:M entre Ventas y Productos, se usa Detalles de Venta</li>
+          </ul>
+
+          <p><strong>8. Crear el Modelo Entidad-Relación del sistema</strong></p>
+          <p>El Modelo Entidad-Relación (MER) permite visualizar las relaciones entre las entidades del sistema mediante diagramas. Puedes usar herramientas como:</p>
+          <ul>
+            <li><a href="https://www.mysql.com/products/workbench/" target="_blank">MySQL Workbench</a></li>
+            <li><a href="https://www.lucidchart.com/" target="_blank">Lucidchart</a></li>
+            <li><a href="https://www.diagrams.net/" target="_blank">Draw.io</a></li>
+          </ul>
+
+          <p><strong>9. Crear el Modelo Relacional de la base de datos del sistema</strong></p>
+          <p>Este es el diseño definitivo en SQL, listo para implementarse. Investigar y aprender sobre modelado Entidad-Relación es recomendable para estructuras más eficientes.</p>
+
+          <p><strong>10. Identificar los tipos de dato de los atributos de las entidades</strong></p>
+          <ul>
+            <li>Cadenas de texto: <code>VARCHAR(100)</code></li>
+            <li>Números enteros: <code>INT</code></li>
+            <li>Números decimales: <code>DECIMAL(10,2)</code></li>
+            <li>Fechas: <code>DATE</code></li>
+          </ul>
+
+          <p><strong>11. Identificar los atributos únicos en el sistema</strong></p>
+          <ul>
+            <li>Clientes: <code>email</code>, <code>telefono</code></li>
+            <li>categorías_productos: <code>nombre_categoria</code></li>
+            <li>formas_pago: <code>descripcion</code></li>
+          </ul>
+
+          <p><strong>12. Identificar las reglas de negocio (Operaciones CRUD)</strong></p>
+          <ul>
+            <li><strong>Clientes:</strong>
+              <ul>
+                <li>Create: Agregar nuevos clientes</li>
+                <li>Read: Consultar clientes registrados</li>
+                <li>Update: Modificar datos de contacto</li>
+                <li>Delete: Eliminar clientes según restricciones</li>
+              </ul>
+            </li>
+            <li><strong>Productos:</strong>
+              <ul>
+                <li>Create: Añadir productos al catálogo</li>
+                <li>Read: Ver lista de productos disponibles</li>
+                <li>Update: Modificar precios y stock</li>
+                <li>Delete: Eliminar productos descontinuados</li>
+              </ul>
+            </li>
+            <li><strong>Ventas:</strong>
+              <ul>
+                <li>Create: Registrar una venta</li>
+                <li>Read: Consultar historial de ventas</li>
+                <li>Update: Corregir errores</li>
+                <li>Delete: Cancelar ventas bajo ciertas condiciones</li>
+              </ul>
+            </li>
+          </ul>
+
+          <p><strong>Ejemplo de Caso Real:</strong> Juan compra:</p>
+          <ul>
+            <li>1 celular ($500)</li>
+            <li>2 fundas ($10 cada una)</li>
+          </ul>
+          <p>Registro en el sistema:</p>
+          <ul>
+            <li>Venta #1 asociada a Juan</li>
+            <li>Detalles de Venta:
+              <ul>
+                <li>Producto: Celular, Cantidad: 1, Precio: $500</li>
+                <li>Producto: Funda, Cantidad: 2, Precio: $10 cada una</li>
+              </ul>
+            </li>
+          </ul>
+          <p>Con esta estructura, la tienda puede consultar historial de compras, ver qué productos tienen más demanda y controlar stock y reposiciones.</p>
+
+        </details>
+      </article>
+
+      <article id="sistema-ventas" aria-label="Documento final del sistema de ventas">
+        <h3>Modelado de datos desde 0 – Versión final del documento</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            El <strong>diseño de esta base de datos</strong> se desarrolló <strong>desde cero</strong> con el objetivo de estructurar un <strong>sistema de ventas eficiente y coherente</strong>. 
+            Inicialmente se identificaron <strong>problemas clave en la gestión de información</strong>, tales como la <strong>duplicación de datos</strong>, <strong>inconsistencias en el registro de clientes, productos y ventas</strong>, y la <strong>dificultad para relacionar correctamente las transacciones</strong> con los elementos involucrados. 
+            Para resolver estas problemáticas, se aplicó un <strong>proceso de modelado estructurado</strong> que incluyó la <strong>identificación de entidades</strong>, la <strong>definición de atributos clave</strong>, la <strong>asignación de claves primarias y foráneas</strong> y la <strong>determinación de las relaciones entre las tablas</strong>.
+          </p>
+
+          <h4>Pasos a seguir</h4>
+          <ol>
+            <li>Identificar las <strong>entidades</strong> del sistema.</li>
+            <li>Identificar los <strong>atributos</strong> de las entidades.</li>
+            <li>Identificar las <strong>llaves primarias (PK)</strong> y <strong>foráneas (FK)</strong>.</li>
+            <li>Asignar una <strong>nomenclatura adecuada</strong> a las entidades y sus atributos.</li>
+            <li>Identificar las <strong>entidades pivote (EP)</strong> del sistema.</li>
+            <li>Identificar los <strong>catálogos (EC)</strong> del sistema.</li>
+            <li>Identificar los <strong>tipos de relaciones</strong> del sistema.</li>
+            <li>Crear el <strong>Modelo Entidad-Relación</strong> del sistema.</li>
+            <li>Crear el <strong>Modelo Relacional</strong> de la base de datos del sistema.</li>
+            <li>Identificar los <strong>tipos de dato</strong> de los atributos de las entidades del sistema.</li>
+            <li>Identificar los <strong>atributos únicos (UQ)</strong> en el sistema.</li>
+            <li>Identificar las <strong>reglas de negocio</strong> (operaciones <em>CRUD</em>) del sistema.</li>
+          </ol>
+
+          <h4>Glosario</h4>
+          <ul>
+            <li><strong>PK</strong>: <em>Primary Key</em></li>
+            <li><strong>FK</strong>: <em>Foreign Key</em></li>
+            <li><strong>UQ</strong>: <em>Unique Attribute</em></li>
+            <li><strong>ED</strong>: Entidad de Datos</li>
+            <li><strong>EP</strong>: Entidad Pivote</li>
+            <li><strong>EC</strong>: Entidad Catálogo</li>
+          </ul>
+
+          <p><strong>Listado de Entidades</strong></p>
+
+          <ul>
+            <li><strong>clientes (ED)</strong>
+              <ul>
+                <li>id_cliente <strong>(PK)</strong></li>
+                <li>nombre</li>
+                <li>email <strong>(UQ)</strong></li>
+                <li>telefono <strong>(UQ)</strong></li>
+              </ul>
+            </li>
+            <li><strong>categorías_productos (EC)</strong>
+              <ul>
+                <li>id_categoria <strong>(PK)</strong></li>
+                <li>nombre_categoria <strong>(UQ)</strong></li>
+              </ul>
+            </li>
+            <li><strong>productos (ED | EC)</strong>
+              <ul>
+                <li>id_producto <strong>(PK)</strong></li>
+                <li>nombre</li>
+                <li>precio</li>
+                <li>stock</li>
+                <li>id_categoria <strong>(FK)</strong></li>
+              </ul>
+            </li>
+            <li><strong>formas_pago (EC)</strong>
+              <ul>
+                <li>id_forma_pago <strong>(PK)</strong></li>
+                <li>descripcion <strong>(UQ)</strong></li>
+              </ul>
+            </li>
+            <li><strong>ventas (ED)</strong>
+              <ul>
+                <li>id_venta <strong>(PK)</strong></li>
+                <li>id_cliente <strong>(FK)</strong></li>
+                <li>id_forma_pago <strong>(FK)</strong></li>
+                <li>fecha</li>
+              </ul>
+            </li>
+            <li><strong>detalles_venta (EP)</strong>
+              <ul>
+                <li>id_detalle <strong>(PK)</strong></li>
+                <li>id_venta <strong>(FK)</strong></li>
+                <li>id_producto <strong>(FK)</strong></li>
+                <li>cantidad</li>
+                <li>precio_unitario</li>
+              </ul>
+            </li>
+          </ul>
+
+          <p><strong>Relaciones</strong></p>
+          <ul>
+            <li>Un <strong>cliente</strong> genera <strong>ventas</strong> (1 - N).</li>
+            <li>Una <strong>venta</strong> tiene <strong>detalles de venta</strong> (1 - N).</li>
+            <li>Un <strong>detalle de venta</strong> pertenece a un <strong>producto</strong> (N - 1).</li>
+          </ul>
+
+          <p><strong>Diagramas</strong></p>
+          <p><strong>Modelo Relacional de la BD</strong></p>
+          <p><img src="SistemaVentas_ModeloRelacionalBD.png" alt="Modelo Relacional del Sistema de Ventas"></p>
+
+          <p><strong>Reglas de Negocio</strong></p>
+
+          <ul>
+            <li><strong>clientes</strong>
+              <ul>
+                <li>Crear un cliente</li>
+                <li>Leer todos los clientes</li>
+                <li>Leer un cliente en particular</li>
+                <li>Actualizar un cliente</li>
+                <li>Eliminar un cliente</li>
+              </ul>
+            </li>
+            <li><strong>productos</strong>
+              <ul>
+                <li>Crear un producto</li>
+                <li>Leer todos los productos</li>
+                <li>Leer un producto en particular</li>
+                <li>Actualizar un producto</li>
+                <li>Eliminar un producto</li>
+                <li>Reducir el stock al realizar una venta</li>
+              </ul>
+            </li>
+            <li><strong>ventas</strong>
+              <ul>
+                <li>Crear una venta</li>
+                <li>Leer todas las ventas</li>
+                <li>Leer una venta en particular</li>
+                <li>Leer todas las ventas de un cliente</li>
+                <li>Actualizar una venta</li>
+                <li>Eliminar una venta</li>
+              </ul>
+            </li>
+            <li><strong>detalles_venta</strong>
+              <ul>
+                <li>Crear un detalle de venta</li>
+                <li>Leer todos los detalles de venta</li>
+                <li>Leer los detalles de una venta específica</li>
+                <li>Leer los detalles de un producto específico</li>
+                <li>Actualizar un detalle de venta</li>
+                <li>Eliminar un detalle de venta</li>
+              </ul>
+            </li>
+          </ul>
+
+          <p><strong>Resumen:</strong> Este diseño cubre la estructura esencial del sistema de ventas, con entidades, relaciones y reglas de negocio listas para implementación.</p>
+
+        </details>
+      </article>
+    </section>
+  </main>
+
+<!-- ===================================================== -->
+<!-- PLACEHOLDERS DE COMPONENTES DINÁMICOS                 -->
+<!-- ===================================================== -->
+<!-- Estos contenedores reciben HTML inyectado vía JS     -->
+<!-- Permiten reutilizar componentes (footer, modales)   -->
+<!-- y mantener el HTML principal limpio y escalable      -->
+
+<div id="footer-placeholder"></div>
+<div id="contact-modal-placeholder"></div>
+
+
+<!-- ===================================================== -->
+<!-- SCRIPTS GLOBALES                                     -->
+<!-- ===================================================== -->
+<!-- Footer: se carga de forma diferida para no bloquear  -->
+<!-- el render inicial de la página                       -->
+
+<script src="../components/footer/footer.js" defer></script>
+
+<!-- Scripts generales del sitio (interacciones globales) -->
+<script src="/js/scripts.js"></script>
+
+
+<!-- ===================================================== -->
+<!-- CARGA DINÁMICA DEL CONTACT MODAL                     -->
+<!-- ===================================================== -->
+<!-- 1. Obtiene el HTML del modal desde el componente     -->
+<!-- 2. Lo inyecta en su placeholder correspondiente      -->
+<!-- 3. Carga el JS del modal de forma desacoplada        -->
+<!-- Esto permite reutilizar el modal en cualquier página -->
+
+<script>
+  fetch('../components/contact-modal/contact-modal.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('No se pudo cargar el Contact Modal');
+      }
+      return response.text();
+    })
+    .then(modalHTML => {
+      // Inyección del HTML del modal en el placeholder
+      document.getElementById('contact-modal-placeholder').innerHTML = modalHTML;
+
+      // Carga dinámica del script del modal
+      const modalScript = document.createElement('script');
+      modalScript.src = '../components/contact-modal/contact-modal.js';
+      modalScript.defer = true;
+      document.body.appendChild(modalScript);
+    })
+    .catch(error => {
+      console.error('Error cargando el Contact Modal:', error);
+    });
+</script>
+</body>
+</html>
+
+

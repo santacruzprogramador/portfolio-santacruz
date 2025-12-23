@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ========================= -->
+  <!-- METADATOS BÁSICOS -->
+  <!-- ========================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ========================= -->
+  <!-- SEO PRINCIPAL -->
+  <!-- ========================= -->
+  <title>Introducción a NoSQL | Bases de datos no relacionales</title>
+  <meta
+    name="description"
+    content="Introducción a las bases de datos NoSQL. Conoce qué son, sus tipos principales y cuándo utilizarlas en aplicaciones modernas."
+  >
+
+  <!-- ========================= -->
+  <!-- AUTOR -->
+  <!-- ========================= -->
+  <meta name="author" content="José Alberto Santacruz">
+  <meta name="robots" content="index, follow">
+
+  <!-- ========================= -->
+  <!-- URL CANÓNICA -->
+  <!-- ========================= -->
+  <link
+    rel="canonical"
+    href="https://santacruzprogramador.github.io/santacruzjose/pages/intro-nosql.html"
+  >
+
+  <!-- ========================= -->
+  <!-- OPEN GRAPH -->
+  <!-- ========================= -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Introducción a NoSQL">
+  <meta
+    property="og:description"
+    content="Aprende qué son las bases de datos NoSQL, sus características y casos de uso."
+  >
+  <meta
+    property="og:url"
+    content="https://santacruzprogramador.github.io/santacruzjose/pages/intro-nosql.html"
+  >
+  <meta
+    property="og:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+  <meta property="og:site_name" content="Portfolio José Santacruz">
+
+  <!-- ========================= -->
+  <!-- TWITTER CARD -->
+  <!-- ========================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Introducción a NoSQL">
+  <meta
+    name="twitter:description"
+    content="Conceptos básicos sobre bases de datos NoSQL y su uso en sistemas modernos."
+  >
+  <meta
+    name="twitter:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+
+  <!-- ========================= -->
+  <!-- FAVICON -->
+  <!-- ========================= -->
+  <link
+    rel="icon"
+    href="../assets/favicon/favicon.ico"
+    type="image/x-icon"
+  >
+
+  <!-- ========================= -->
+  <!-- COLOR TEMA -->
+  <!-- ========================= -->
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- ========================= -->
+  <!-- ESTILOS -->
+  <!-- ========================= -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/intr_to_programming.css">
+  <link rel="stylesheet" href="../components/contact-modal/contact-modal.css">
+</head>
+
+<body>
+
+  <header class="page-title">
+    <h1 class="">NoSQL</h1>
+  </header>
+
+  <a href="../#nosql" class="volver">← Inicio</a> 
+  <main class="container section">
+    <section class="content-narrow">
+      <h2>Introducción a NoSQL</h2>
+
+      <article id="introduccion-nosql" aria-label="Introducción a NoSQL">
+        <h3>¿Qué es NoSQL?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            <strong>NoSQL</strong> es un tipo de base de datos que no utiliza el modelo tradicional relacional basado en tablas. 
+            En lugar de eso, almacena los datos de forma más flexible, como en documentos, pares clave-valor, columnas anchas o grafos. 
+            Es ideal para manejar grandes volúmenes de datos no estructurados o semi-estructurados, ofreciendo 
+            <strong>escalabilidad horizontal</strong> y <strong>alto rendimiento</strong>.
+          </p>
+
+          <p><strong>Principales características:</strong></p>
+          <ul>
+            <li><strong>Flexibilidad en los esquemas:</strong> No requiere una estructura fija, lo que permite almacenar datos heterogéneos.</li>
+            <li><strong>Escalabilidad horizontal:</strong> Puede distribuirse fácilmente en varios servidores.</li>
+            <li><strong>Alto rendimiento:</strong> Optimizado para lecturas y escrituras rápidas.</li>
+            <li><strong>Compatibilidad con Big Data:</strong> Maneja grandes cantidades de datos y tráfico en tiempo real.</li>
+          </ul>
+
+          <p><strong>Tipos de bases de datos NoSQL:</strong></p>
+          <ul>
+            <li><strong>Base de datos de documentos (e.g., MongoDB):</strong> Almacena datos en documentos JSON o similares.</li>
+            <li><strong>Base de datos clave-valor (e.g., Redis):</strong> Guarda datos como pares clave-valor.</li>
+            <li><strong>Base de datos de grafos (e.g., Neo4j):</strong> Representa datos como nodos y relaciones.</li>
+            <li><strong>Base de datos de columnas anchas (e.g., Cassandra):</strong> Organiza los datos por columnas en lugar de filas.</li>
+          </ul>
+
+          <p>
+            Este tipo de base de datos es muy popular en aplicaciones modernas como <strong>redes sociales</strong>, 
+            <strong>IoT</strong>, <strong>análisis en tiempo real</strong> y <strong>sistemas distribuidos</strong>.
+          </p>
+
+          <pre class="code-window">
+            <code>
+  <span class="comment">&lt;!-- Ejemplo de documento JSON en una base de datos NoSQL (MongoDB) --&gt;</span>
+  {
+  "usuario": "Juan",
+  "edad": 30,
+  "intereses": ["programación", "música", "viajes"]
+  }
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="ventajas-usos-nosql" aria-label="Ventajas y usos de NoSQL">
+        <h3>Ventajas y usos de NoSQL</h3>
+        <details>
+          <summary>Leer explicación</summary>
+
+          <p><strong>Ventajas de NoSQL:</strong></p>
+          <ul>
+            <li><strong>Flexibilidad de esquema:</strong> No requiere una estructura fija de datos, lo que permite manejar datos heterogéneos o en constante cambio.</li>
+            <li><strong>Escalabilidad horizontal:</strong> Se puede expandir fácilmente añadiendo más servidores en lugar de actualizar hardware existente.</li>
+            <li><strong>Alto rendimiento:</strong> Optimizado para lecturas y escrituras rápidas, ideal para aplicaciones de alto tráfico.</li>
+            <li><strong>Adecuado para Big Data:</strong> Maneja grandes volúmenes de datos y tráfico en tiempo real.</li>
+            <li><strong>Distribución de datos:</strong> Los datos se distribuyen entre múltiples servidores, garantizando alta disponibilidad.</li>
+            <li><strong>Variedad de modelos de datos:</strong> Incluye bases de datos clave-valor, documentos, grafos y columnas anchas, adaptándose a diferentes necesidades.</li>
+          </ul>
+
+          <p><strong>Usos comunes de NoSQL:</strong></p>
+          <ol>
+            <li><strong>Aplicaciones web y móviles:</strong> Ejemplo: redes sociales como Facebook o Instagram.</li>
+            <li><strong>Big Data y análisis en tiempo real:</strong> Ejemplo: recomendaciones en plataformas de streaming o comercio electrónico.</li>
+            <li><strong>IoT (Internet of Things):</strong> Ejemplo: almacenamiento de datos generados por dispositivos inteligentes.</li>
+            <li><strong>Sistemas de mensajería:</strong> Ejemplo: chats en tiempo real como WhatsApp o Slack.</li>
+            <li><strong>Sistemas de recomendación:</strong> Ejemplo: recomendaciones de productos en Amazon o Netflix.</li>
+            <li><strong>Análisis de grafos:</strong> Ejemplo: mapas de relaciones como los de LinkedIn o bases de datos de conocimiento.</li>
+            <li><strong>Gestión de contenido:</strong> Ejemplo: sitios web dinámicos con almacenamiento de contenido no estructurado (CMS).</li>
+          </ol>
+
+          <pre class="code-window">
+            <code>
+  <span class="comment">&lt;!-- Ejemplo de documento NoSQL en formato JSON --&gt;</span>
+  {
+  "usuario": "María",
+  "edad": 27,
+  "amigos": ["Luis", "Ana", "Carlos"],
+  "publicaciones": [
+    {"fecha": "2025-10-05", "contenido": "Nuevo proyecto de IoT"},
+    {"fecha": "2025-09-28", "contenido": "Explorando bases de datos NoSQL"}
+  ]
+  }
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="historia-nosql" aria-label="Historia de NoSQL">
+        <h3>Historia de NoSQL</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            La historia de <strong>NoSQL</strong> comenzó como una respuesta a las limitaciones de las bases de datos relacionales tradicionales frente a las necesidades de las aplicaciones modernas.
+          </p>
+
+          <ul>
+            <li><strong>Década de 1990:</strong>
+              <p>Se originaron sistemas orientados a objetos y de clave-valor para casos específicos. Un ejemplo temprano fue <strong>Lotus Notes</strong>.</p>
+            </li>
+
+            <li><strong>2000–2004:</strong>
+              <p>Con el auge de la <strong>web 2.0</strong>, surgieron grandes volúmenes de datos y nuevas necesidades de escalabilidad y rendimiento. Empresas tecnológicas desarrollaron sus propias soluciones:</p>
+              <ul>
+                <li><strong>Google</strong> desarrolló <strong>Bigtable</strong> (2004).</li>
+                <li><strong>Amazon</strong> lanzó <strong>Dynamo</strong> (2007).</li>
+              </ul>
+            </li>
+
+            <li><strong>2009:</strong>
+              <p>El término <strong>NoSQL</strong> fue acuñado por <strong>Johan Oskarsson</strong> durante una reunión en la que se presentaron sistemas no relacionales enfocados en la escalabilidad.</p>
+            </li>
+
+            <li><strong>2010 en adelante:</strong>
+              <p>Comenzaron a popularizarse bases de datos como <strong>MongoDB</strong>, <strong>Cassandra</strong> y <strong>Redis</strong>, impulsadas por la necesidad de manejar <strong>Big Data</strong>, datos no estructurados y aplicaciones distribuidas.</p>
+            </li>
+          </ul>
+
+          <pre class="code-window">
+            <code>
+  <span class="comment">&lt;!-- Línea temporal simplificada de NoSQL --&gt;</span>
+  1990s → Primeros sistemas clave-valor (Lotus Notes)
+  2004  → Google Bigtable
+  2007  → Amazon Dynamo
+  2009  → Surge el término "NoSQL"
+  2010+ → Popularización: MongoDB, Cassandra, Redis
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="gestor-nosql" aria-label="Sistema Gestor de Bases de Datos NoSQL">
+        <h3>Sistema Gestor de Bases de Datos NoSQL</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Un <strong>sistema gestor de bases de datos NoSQL</strong> es una plataforma de 
+            <em>administración de datos no relacionales</em> que permite almacenar, organizar y 
+            consultar información con estructuras flexibles.  
+            A diferencia de los sistemas relacionales (SQL), los gestores NoSQL están optimizados 
+            para manejar <strong>grandes volúmenes de datos distribuidos</strong>, ofrecer 
+            <strong>alta escalabilidad horizontal</strong> y soportar múltiples modelos de datos, 
+            como <em>documentos</em>, <em>pares clave-valor</em>, <em>columnas</em> o <em>grafos</em>.
+          </p>
+
+          <p>
+            Estos sistemas son ampliamente utilizados en aplicaciones que requieren 
+            <strong>baja latencia</strong>, <strong>alta disponibilidad</strong> y 
+            <strong>adaptabilidad del esquema</strong>, como redes sociales, motores de búsqueda 
+            o plataformas de comercio electrónico.
+          </p>
+
+          <h4>Principales gestores NoSQL</h4>
+          <ul>
+            <li><strong>MongoDB</strong> – Orientado a documentos (JSON/BSON). Muy usado en aplicaciones web y móviles.</li>
+            <li><strong>Cassandra</strong> – Basado en columnas distribuidas. Alta tolerancia a fallos y escalabilidad.</li>
+            <li><strong>Redis</strong> – Almacenamiento en memoria tipo clave-valor. Ideal para caché y sesiones.</li>
+            <li><strong>CouchDB</strong> – Orientado a documentos, con replicación sencilla y API RESTful.</li>
+            <li><strong>Neo4j</strong> – Especializado en grafos, útil para redes sociales y análisis de relaciones.</li>
+            <li><strong>Amazon DynamoDB</strong> – Servicio en la nube de AWS, clave-valor y documentos, totalmente gestionado.</li>
+            <li><strong>HBase</strong> – Basado en columnas, construido sobre Hadoop, orientado a grandes volúmenes de datos.</li>
+          </ul>
+
+          <h4>Características clave de los gestores NoSQL</h4>
+          <ul>
+            <li><strong>Escalabilidad horizontal</strong>: añadir nodos en lugar de depender de un único servidor.</li>
+            <li><strong>Alta disponibilidad</strong>: replicación y tolerancia a fallos distribuidos.</li>
+            <li><strong>Flexibilidad de esquema</strong>: no requieren estructuras fijas de tablas.</li>
+            <li><strong>Optimización para Big Data</strong>: diseñados para manejar datos masivos y no estructurados.</li>
+            <li><strong>Modelos de datos variados</strong>: documentos, grafos, clave-valor, columnas.</li>
+          </ul>
+        </details>
+      </article>
+
+      <article id="key-value-nosql" aria-label="Bases de Datos NoSQL tipo Key-Value">
+        <h3>Key-Value: velocidad y simplicidad en acción</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          
+          <p>
+            Una <strong>base de datos NoSQL tipo Key-Value</strong> es un modelo de almacenamiento 
+            <strong>simple, rápido y eficiente</strong>, donde cada registro se guarda como un par 
+            <em>clave-valor</em>.  
+            Este enfoque es ideal para aplicaciones que requieren <strong>altas velocidades de lectura y escritura</strong>, 
+            <strong>baja latencia</strong> y una <strong>estructura flexible</strong> sin necesidad de esquemas rígidos.
+          </p>
+
+          <h4>Ejemplos de gestores Key-Value</h4>
+          <ul>
+            <li><strong>Redis</strong> – Almacenamiento en memoria, ideal para caché, colas y sesiones.</li>
+            <li><strong>Amazon DynamoDB</strong> – Servicio gestionado en la nube, soporta clave-valor y documentos.</li>
+            <li><strong>Riak KV</strong> – Distribuido, con alta tolerancia a fallos.</li>
+            <li><strong>Memcached</strong> – Caché en memoria, muy usado para acelerar aplicaciones web.</li>
+            <li><strong>Berkeley DB</strong> – Librería embebida para almacenamiento clave-valor.</li>
+          </ul>
+
+          <h4>Casos de uso comunes</h4>
+          <ul>
+            <li><strong>Caché de datos:</strong> sesiones de usuario, tokens de autenticación.</li>
+            <li><strong>Configuración de aplicaciones:</strong> parámetros y preferencias.</li>
+            <li><strong>Almacenamiento simple de objetos:</strong> perfiles, catálogos, listas de precios.</li>
+            <li><strong>Colas y mensajería:</strong> claves como identificadores de tareas o mensajes.</li>
+            <li><strong>Gaming y tiempo real:</strong> rankings, puntuaciones y estados de jugadores.</li>
+          </ul>
+
+          <h4>Características clave</h4>
+          <ul>
+            <li><strong>Escalabilidad horizontal:</strong> fácil distribución en múltiples nodos.</li>
+            <li><strong>Baja latencia:</strong> respuestas rápidas incluso con grandes volúmenes de datos.</li>
+            <li><strong>Flexibilidad:</strong> el valor puede ser texto, JSON, binario u objetos complejos.</li>
+            <li><strong>Simplicidad:</strong> modelo directo, sin necesidad de esquemas relacionales.</li>
+          </ul>
+
+          <figure>
+            <figcaption>Ejemplo de estructura Key-Value en formato JSON:</figcaption>
+            <pre class="code-window">
+              <code>
+  {
+    "user_123": {
+      "nombre": "Lucía",
+      "saldo": 1500,
+      "premium": true,
+      "historial": ["compra_001", "compra_002"]
+    },
+    "user_124": {
+      "nombre": "Andrés",
+      "saldo": 800,
+      "premium": false
+    }
+  }
+              </code>
+            </pre>
+          </figure>
+        </details>
+      </article>
+
+      <article id="document-nosql" aria-label="Bases de Datos NoSQL tipo Document">
+        <h3>Document: flexibilidad de esquema y agilidad</h3>
+        <details>
+          <summary>Leer explicación</summary>
+
+          <p>
+            Una <strong>base de datos NoSQL tipo Document</strong> almacena registros como <em>documentos</em> (usualmente JSON/BSON),
+            permitiendo <strong>esquemas flexibles</strong> y evolución rápida del modelo sin migraciones complejas.
+            Es ideal para aplicaciones con estructuras heterogéneas y necesidad de <strong>iteración ágil</strong>.
+          </p>
+
+          <h4>Ejemplos de gestores Document</h4>
+          <ul>
+            <li><strong>MongoDB:</strong> orientado a documentos (BSON), índices ricos y agregaciones.</li>
+            <li><strong>Couchbase:</strong> documentos JSON con memoria y disco, vistas e índices.</li>
+            <li><strong>Firestore (Google Cloud):</strong> documentos y colecciones con sincronización en tiempo real.</li>
+            <li><strong>Amazon DocumentDB:</strong> compatible con API de MongoDB, servicio gestionado.</li>
+          </ul>
+
+          <h4>Casos de uso comunes</h4>
+          <ul>
+            <li><strong>APIs web y móviles:</strong> payloads JSON naturales y versionado de campos.</li>
+            <li><strong>Catálogos y perfiles:</strong> atributos variables por producto o usuario.</li>
+            <li><strong>Contenido y CMS:</strong> entradas con estructuras dinámicas.</li>
+            <li><strong>Event logging:</strong> documentos con metadata flexible.</li>
+          </ul>
+
+          <h4>Características clave</h4>
+          <ul>
+            <li><strong>Esquema flexible:</strong> documentos con campos opcionales y anidados.</li>
+            <li><strong>Indexación avanzada:</strong> índices compuestos, de texto y geoespaciales.</li>
+            <li><strong>Agregaciones:</strong> pipelines para consultas analíticas sobre documentos.</li>
+            <li><strong>Escalabilidad horizontal:</strong> partición por clave de documento.</li>
+          </ul>
+
+          <figure>
+            <figcaption>Ejemplo de documento JSON para un producto:</figcaption>
+            <pre class="code-window">
+              <code>
+  {
+    "id": "prod_9842",
+    "nombre": "Zapatillas Trail",
+    "precio": 45999,
+    "stock": 120,
+    "atributos": {
+      "color": "negro",
+      "tallas": ["40", "41", "42"],
+      "impermeable": true
+    },
+    "tags": ["outdoor", "trail", "running"]
+  }
+              </code>
+            </pre>
+          </figure>
+        </details>
+      </article>
+
+      <article id="column-family-nosql" aria-label="Bases de Datos NoSQL tipo Column-Family">
+        <h3>Column-Family: rendimiento distribuido y control de acceso</h3>
+        <details>
+          <summary>Leer explicación</summary>
+
+          <p>
+            Una <strong>base de datos NoSQL tipo Column-Family</strong> organiza datos en <em>familias de columnas</em>,
+            optimizadas para lecturas y escrituras distribuidas sobre grandes volúmenes.
+            Los datos se particionan por <strong>clave de partición</strong> y se ordenan por <strong>columnas de clustering</strong>.
+          </p>
+
+          <h4>Ejemplos de gestores Column-Family</h4>
+          <ul>
+            <li><strong>Apache Cassandra:</strong> alta disponibilidad y escalabilidad en clusters multi-datacenter.</li>
+            <li><strong>Apache HBase:</strong> sobre Hadoop/HDFS, adecuado para grandes datasets y lectura secuencial.</li>
+            <li><strong>ScyllaDB:</strong> compatible con CQL, orientado a baja latencia y alto throughput.</li>
+          </ul>
+
+          <h4>Casos de uso comunes</h4>
+          <ul>
+            <li><strong>Time-series:</strong> métricas, logs y eventos con orden temporal.</li>
+            <li><strong>IoT y telemetría:</strong> ingesta sostenida y consultas por rangos.</li>
+            <li><strong>Analítica operativa:</strong> accesos por clave y scans eficientes.</li>
+            <li><strong>Aplicaciones globales:</strong> replicación geográfica y tolerancia a fallos.</li>
+          </ul>
+
+          <h4>Características clave</h4>
+          <ul>
+            <li><strong>Modelo wide-row:</strong> filas con muchas columnas y acceso por rangos.</li>
+            <li><strong>Consistencia tunable:</strong> niveles configurables de lectura/escritura.</li>
+            <li><strong>Particionamiento y clustering:</strong> diseño de claves para distribución y orden.</li>
+            <li><strong>Compaction y SSTables:</strong> almacenamiento en disco optimizado para throughput.</li>
+          </ul>
+
+          <figure>
+            <figcaption>Ejemplo de esquema y escritura en CQL (Cassandra):</figcaption>
+            <pre class="code-window">
+              <code>
+  <span class="comment">
+  -- Crear tabla de métricas por dispositivo y timestamp
+  </span>
+  CREATE TABLE metrics_by_device (
+    device_id text,
+    ts bigint,
+    metric_name text,
+    value double,
+    PRIMARY KEY ((device_id), ts, metric_name)
+  ) WITH CLUSTERING ORDER BY (ts DESC);
+
+  <span class="comment">
+  -- Insertar una métrica
+  </span>
+  INSERT INTO metrics_by_device (device_id, ts, metric_name, value)
+  VALUES ('sensor-42', 1730832000000, 'temperature', 23.8);
+              </code>
+            </pre>
+          </figure>
+        </details>
+      </article>
+
+      <article id="graph-nosql" aria-label="Bases de Datos NoSQL tipo Graph">
+        <h3>Graph: relaciones primero, consultas expresivas</h3>
+        <details>
+          <summary>Leer explicación</summary>
+
+          <p>
+            Una <strong>base de datos NoSQL tipo Graph</strong> modela información como <em>nodos</em>, <em>relaciones</em> y <em>propiedades</em>.
+            Prioriza la <strong>navegación de relaciones</strong> y consultas de conectividad sobre entidades densamente vinculadas.
+          </p>
+
+          <h4>Ejemplos de gestores Graph</h4>
+          <ul>
+            <li><strong>Neo4j:</strong> grafo de propiedades con lenguaje Cypher.</li>
+            <li><strong>Amazon Neptune:</strong> soporta RDF/SPARQL y TinkerPop/Gremlin.</li>
+            <li><strong>JanusGraph:</strong> grafo distribuido sobre backends como Cassandra y HBase.</li>
+          </ul>
+
+          <h4>Casos de uso comunes</h4>
+          <ul>
+            <li><strong>Redes sociales:</strong> recomendaciones basadas en relaciones y caminos.</li>
+            <li><strong>Fraude y riesgo:</strong> detección de patrones y subgrafos sospechosos.</li>
+            <li><strong>Supply chain:</strong> trazabilidad entre entidades conectadas.</li>
+            <li><strong>Knowledge graphs:</strong> ontologías y consultas semánticas.</li>
+          </ul>
+
+          <h4>Características clave</h4>
+          <ul>
+            <li><strong>Modelo de propiedades:</strong> nodos y aristas con atributos ricos.</li>
+            <li><strong>Consultas de grafos:</strong> lenguajes como Cypher, Gremlin o SPARQL.</li>
+            <li><strong>Traversal eficiente:</strong> exploración de relaciones profundas y caminos.</li>
+            <li><strong>Flexibilidad:</strong> fácil evolución de relaciones sin esquemas rígidos.</li>
+          </ul>
+
+          <figure>
+            <figcaption>Ejemplo de consulta Cypher (Neo4j):</figcaption>
+            <pre class="code-window">
+              <code>
+  <span class="comment">
+  -- Crear nodos y relación 
+  </span>
+  CREATE (:Persona {nombre: 'Ana'})-[:SIGUE]->(:Persona {nombre: 'Carlos'});
+
+  <span class="comment"> 
+  --Recomendar personas seguidas por quienes sigo (sugerencias de 2 saltos) 
+  </span>
+  MATCH (me:Persona {nombre: 'Ana'})-[:SIGUE]->(:Persona)-[:SIGUE]->(sugerido:Persona)
+  RETURN DISTINCT sugerido.nombre;
+            </code>
+            </pre>
+          </figure>
+        </details>
+      </article>
+
+      <article id="nosql-empresas" aria-label="Ejemplos de uso de múltiples bases de datos NoSQL en empresas">
+        <h3>Ejemplos de Empresas y Uso de Múltiples Bases de Datos NoSQL</h3>
+        <details>
+          <summary>Leer explicación</summary>
+            <p>
+              A continuación se muestran ejemplos de grandes empresas que utilizan diferentes tipos de bases de datos <strong>NoSQL</strong> para cubrir diversas necesidades técnicas, como escalabilidad, velocidad y modelado de datos. Cada tipo de base (Document, Key-Value, Column-Family o Graph) cumple un rol específico en su infraestructura.
+            </p>
+            <ul>
+              <li><strong>Netflix:</strong>
+                <ul>
+                  <li><strong>Document:</strong> MongoDB para gestión de catálogos de películas.</li>
+                  <li><strong>Column-Family:</strong> Cassandra para manejo de datos escalables y replicación global.</li>
+                  <li><strong>Key-Value:</strong> Redis para caché y manejo de sesiones.</li>
+                </ul>
+              </li>
+              <li><strong>Facebook:</strong>
+                <ul>
+                  <li><strong>Graph:</strong> TAO (base propia) para modelar relaciones sociales.</li>
+                  <li><strong>Column-Family:</strong> Apache Cassandra para datos distribuidos y escalabilidad.</li>
+                  <li><strong>Key-Value:</strong> Memcached para acelerar el acceso a datos.</li>
+                </ul>
+              </li>
+              <li><strong>Uber:</strong>
+                <ul>
+                  <li><strong>Key-Value:</strong> Redis para caché de datos en tiempo real.</li>
+                  <li><strong>Document:</strong> MongoDB para almacenar datos de usuarios y viajes.</li>
+                  <li><strong>Column-Family:</strong> Cassandra para análisis a gran escala de datos de viajes.</li>
+                </ul>
+              </li>
+              <li><strong>Google:</strong>
+                <ul>
+                  <li><strong>Column-Family:</strong> Bigtable para datos analíticos y estructurados.</li>
+                  <li><strong>Graph:</strong> Grafos para servicios como Knowledge Graph y búsquedas contextuales.</li>
+                  <li><strong>Key-Value:</strong> DynamoDB para sistemas específicos en la nube.</li>
+                </ul>
+              </li>
+            </ul>
+            <h4>Razón para Usar Múltiples Bases de Datos</h4>
+            <p>
+              Cada tipo de base de datos <strong>NoSQL</strong> resuelve <strong>problemas específicos</strong> relacionados con el rendimiento, la escalabilidad, la velocidad de acceso o la complejidad de las relaciones entre datos.  
+              Por eso, muchas empresas optan por <strong>combinar varios tipos</strong> de bases de datos para lograr un sistema más eficiente, rápido y adaptable a distintas necesidades.
+            </p>
+            <pre class="code-window">
+              <code>
+  <span class="comment"># Ejemplo conceptual: combinación de bases NoSQL</span>
+  {
+    "Netflix": {
+      "Document": "MongoDB",
+      "Column-Family": "Cassandra",
+      "Key-Value": "Redis"
+    }
+  }
+              </code>
+            </pre>
+        </details>
+      </article>
+
+      <article id="redis-key-value" aria-label="Introducción a Redis - Base de Datos NoSQL tipo Key-Value">
+        <h3>Introducción a Redis - Key-Value (Clave-Valor)</h3>
+        <details>
+          <summary>Leer explicación</summary>
+            <p>
+              <strong>Redis</strong> no es un tipo de base de datos, sino un <strong>gestor de base de datos NoSQL</strong> que utiliza el modelo <strong>Key-Value (Clave-Valor)</strong> para almacenar la información.  
+              En este modelo, los datos se guardan en pares de <strong>clave</strong> y <strong>valor</strong>, donde la clave identifica de forma única el valor asociado.  
+              Redis se destaca por su <strong>alta velocidad</strong>, <strong>bajo tiempo de respuesta</strong> y su capacidad para manejar datos en <strong>tiempo real</strong>.
+            </p>
+
+            <h4>Instalación y primeros pasos</h4>
+            <ul>
+              <li><strong>Video guía:</strong> <a href="https://www.youtube.com/watch?v=rgb9oZ_AfhI" target="_blank">Instalar Redis</a></li>
+              <li>Comandos básicos:
+                <pre class="code-window">
+                  <code>
+  redis-server   # Iniciar el servidor
+  redis-cli      # Entrar en el servidor
+                  </code>
+                </pre>
+              </li>
+            </ul>
+
+            <h4>🔗 Enlaces oficiales de Redis</h4>
+            <ul>
+              <li><a href="https://redis.com/" target="_blank">redis.com</a></li>
+              <li><a href="https://redis.io/" target="_blank">redis.io</a></li>
+              <li><a href="https://app.redislabs.com/" target="_blank">app.redislabs.com</a></li>
+              <li><a href="https://try.redis.io/" target="_blank">try.redis.io</a></li>
+              <li><a href="https://upstash.com/" target="_blank">upstash.com</a></li>
+            </ul>
+
+            <h4>Modelo de Datos y Operaciones CRUD en Redis</h4>
+            <p>
+              Redis permite trabajar directamente desde la terminal o desde un servicio en la nube. A continuación, se muestran ejemplos de creación, lectura, actualización y eliminación de datos usando comandos tipo <strong>Key-Value</strong>:
+            </p>
+
+            <pre class="code-window">
+              <code>
+  <span class="comment"># Crear registros de usuarios</span>
+  HSET user:1 name "John Doe" age 30 location "New York"
+  HSET user:2 name "Jane Smith" age 25 location "London"
+
+  <span class="comment"># Agregar publicaciones de usuarios</span>
+  LPUSH user:1:posts 1001
+  LPUSH user:1:posts 1002
+  LPUSH user:2:posts 2001
+
+  <span class="comment"># Crear publicaciones</span>
+  HSET post:1001 content "¡Hola a todos!" created_at "2023-05-10 10:00:00" likes 10
+  HSET post:1002 content "Feliz cumpleaños a mí" created_at "2023-05-09 15:30:00" likes 20
+  HSET post:2001 content "¡Gran día en la playa!" created_at "2023-05-08 12:45:00" likes 15
+
+  <span class="comment"># Leer datos</span>
+  HGETALL user:1
+  HGET user:1 name
+
+  <span class="comment"># Actualizar y eliminar datos</span>
+  HSET user:2 age 26
+  DEL user:3
+  HSET post:1002 likes 30
+  DEL post:1003
+              </code>
+            </pre>
+
+            <h4>Diferencia clave</h4>
+            <p>
+              <strong>Key-Value</strong> es el <em>modelo de base de datos</em>,  
+              mientras que <strong>Redis</strong> es el <em>gestor</em> que implementa ese modelo.  
+              En otras palabras: Redis es la herramienta que hace posible trabajar con bases de datos del tipo Key-Value.
+            </p>
+        </details>
+      </article>
+
+      <article id="apache-cassandra" aria-label="Introducción a Apache Cassandra - Base de Datos NoSQL Column-Family">
+        <h3>Introducción a Apache Cassandra - Column-Family</h3>
+        <details>
+          <summary>Leer explicación</summary>
+            <p>
+              <strong>Apache Cassandra</strong> es un <strong>gestor de base de datos NoSQL</strong> que utiliza el modelo <strong>Column-Family</strong>.  
+              Este modelo permite manejar grandes volúmenes de datos distribuidos y escalables, ofreciendo alta disponibilidad sin un único punto de fallo.  
+              Cassandra es ideal para aplicaciones que requieren <strong>lecturas y escrituras rápidas</strong> en entornos de datos masivos y distribuidos.
+            </p>
+
+            <h4>Enlace oficial</h4>
+            <p>
+              <a href="https://cassandra.apache.org/_/index.html" target="_blank">https://cassandra.apache.org/_/index.html</a>
+            </p>
+
+            <h4>Creando un servicio en la nube de Apache Cassandra</h4>
+            <p>
+              Cassandra puede desplegarse localmente o mediante servicios en la nube que ofrecen alta disponibilidad y replicación automática.
+            </p>
+
+            <h4>Modelo de datos y operaciones CRUD</h4>
+            <p>
+              Cassandra organiza los datos en <strong>keyspaces</strong> y <strong>tablas</strong>. A continuación, se muestra un ejemplo de creación de tablas y operaciones básicas:
+            </p>
+
+            <pre class="code-window">
+              <code>
+  HELP;
+  DESC KEYSPACES;
+  USE KEYSPACE_NAME;
+  DESC TABLES;
+
+  CREATE TABLE users (
+    user_id UUID PRIMARY KEY,
+    username TEXT,
+    email TEXT,
+    password TEXT,
+    full_name TEXT
+  );
+
+  CREATE TABLE user_posts (
+    user_id UUID,
+    post_id UUID,
+    post_content TEXT,
+    created_at TIMESTAMP,
+    PRIMARY KEY (user_id, post_id)
+  );
+
+  CREATE TABLE user_followers (
+    user_id UUID,
+    follower_id UUID,
+    follower_username TEXT,
+    PRIMARY KEY (user_id, follower_id)
+  );
+
+  INSERT INTO users (user_id, username, email, password, full_name)
+  VALUES (uuid(), 'john_doe', 'john@example.com', 'mypassword', 'John Doe');
+
+  INSERT INTO user_posts (user_id, post_id, post_content, created_at)
+  VALUES (<user_id_1>, uuid(), '¡Hola a todos!', toTimestamp(now()));
+
+  SELECT * FROM users;
+  SELECT * FROM users WHERE user_id = <user_id_1>;
+  UPDATE users SET email = 'newemail@example.com' WHERE user_id = <user_id_1>;
+  DELETE FROM users WHERE user_id = <user_id>;
+              </code>
+            </pre>
+
+            <p>
+              Este ejemplo muestra cómo <strong>crear tablas</strong>, <strong>insertar datos</strong>, <strong>consultarlos</strong>, <strong>actualizarlos</strong> y <strong>eliminarlos</strong> en Apache Cassandra.
+            </p>
+        </details>
+      </article>
+      
+      <article id="apache-cassandra" aria-label="Introducción a Apache Cassandra - Base de Datos NoSQL Column-Family">
+        <h3>Introducción a Apache Cassandra - Column-Family</h3>
+        <details>
+          <summary>Leer explicación</summary>
+            <p>
+              <strong>Apache Cassandra</strong> es un <strong>gestor de base de datos NoSQL</strong> que utiliza el modelo <strong>Column-Family</strong>.  
+              Este modelo permite manejar grandes volúmenes de datos distribuidos y escalables, ofreciendo alta disponibilidad sin un único punto de fallo.  
+              Cassandra es ideal para aplicaciones que requieren <strong>lecturas y escrituras rápidas</strong> en entornos de datos masivos y distribuidos.
+            </p>
+
+            <h4>Enlace oficial</h4>
+            <p>
+              <a href="https://cassandra.apache.org/_/index.html" target="_blank">https://cassandra.apache.org/_/index.html</a>
+            </p>
+
+            <h4>Creando un servicio en la nube de Apache Cassandra</h4>
+            <p>
+              Cassandra puede desplegarse localmente o mediante servicios en la nube que ofrecen alta disponibilidad y replicación automática.
+            </p>
+
+            <h4>Modelo de datos y operaciones CRUD</h4>
+            <p>
+              Cassandra organiza los datos en <strong>keyspaces</strong> y <strong>tablas</strong>. A continuación, se muestra un ejemplo de creación de tablas y operaciones básicas:
+            </p>
+
+            <pre class="code-window">
+              <code>
+  HELP;
+  DESC KEYSPACES;
+  USE KEYSPACE_NAME;
+  DESC TABLES;
+
+  CREATE TABLE users (
+    user_id UUID PRIMARY KEY,
+    username TEXT,
+    email TEXT,
+    password TEXT,
+    full_name TEXT
+  );
+
+  CREATE TABLE user_posts (
+    user_id UUID,
+    post_id UUID,
+    post_content TEXT,
+    created_at TIMESTAMP,
+    PRIMARY KEY (user_id, post_id)
+  );
+
+  CREATE TABLE user_followers (
+    user_id UUID,
+    follower_id UUID,
+    follower_username TEXT,
+    PRIMARY KEY (user_id, follower_id)
+  );
+
+  INSERT INTO users (user_id, username, email, password, full_name)
+  VALUES (uuid(), 'john_doe', 'john@example.com', 'mypassword', 'John Doe');
+
+  INSERT INTO user_posts (user_id, post_id, post_content, created_at)
+  VALUES (<user_id_1>, uuid(), '¡Hola a todos!', toTimestamp(now()));
+
+  SELECT * FROM users;
+  SELECT * FROM users WHERE user_id = <user_id_1>;
+  UPDATE users SET email = 'newemail@example.com' WHERE user_id = <user_id_1>;
+  DELETE FROM users WHERE user_id = <user_id>;
+              </code>
+            </pre>
+
+            <p>
+              Este ejemplo muestra cómo <strong>crear tablas</strong>,<strong>insertar datos</strong>, <strong>consultarlos</strong>, <strong>actualizarlos</strong> y <strong>eliminarlos</strong> en Apache Cassandra.
+            </p>
+        </details>
+      </article>
+
+      <article id="neo4j-nosql" aria-label="Base de Datos NoSQL tipo Graph - Neo4j">
+        <h3>Neo4j en la nube: primeros pasos con bases de datos de grafos</h3>
+        <details>
+          <summary>Leer explicación</summary>
+
+          <p>
+            <strong>Neo4j</strong> es un sistema gestor de bases de datos NoSQL orientado a grafos. 
+            Modela la información como <em>nodos</em>, <em>relaciones</em> y <em>propiedades</em>, 
+            lo que permite consultas expresivas sobre datos altamente conectados.
+          </p>
+
+          <h4>Acceso al servicio en la nube</h4>
+          <ul>
+            <li><strong>Consola:</strong> 
+              <a href="https://console-preview.neo4j.io/projects/be44e4d0-4d82-4c3b-8c0a-06b905975b4f/instances" target="_blank">
+                Neo4j Cloud Console
+              </a>
+            </li>
+            <li><strong>Usuario:</strong> neo4j</li>
+            <li><strong>Password:</strong> GIozVk7tF0ON3CetE_PA06pxXT0ccL32qgAFrAYGPwY</li>
+            <li><strong>Archivo de configuración:</strong> 
+              <a href="https://prod-files-secure.s3.us-west-2.amazonaws.com/96dbf904-bd00-45fb-9ac6-54b1753689a0/551e471d-ce72-4b4e-b3b4-966ad1e45728/Neo4j-6e044a3e-Created-2025-01-13.txt" target="_blank">
+                Neo4j-6e044a3e-Created-2025-01-13.txt
+              </a>
+            </li>
+          </ul>
+
+          <h4>Primeros pasos en Neo4j</h4>
+          <pre class="code-window">
+            <code>
+      CREATE (:User {name: 'Jon', age: 39})
+      CREATE (:Movie {title: 'Inception', genre: 'Thriller'})
+      MATCH (u:User {name: 'Jon'}), (m:Movie {title: 'Inception'})
+      CREATE (u)-[:HAS_SEEN]->(m)
+
+      CREATE (:User {name: 'Alice', age: 30})
+      CREATE (:User {name: 'Bob', age: 28})
+      CREATE (:Movie {title: 'The Shawshank Redemption', genre: 'Drama'})
+      CREATE (:Movie {title: 'Pulp Fiction', genre: 'Crime'})
+
+      MATCH (u:User {name: 'Jon'}), (m:Movie {title: 'The Shawshank Redemption'})
+      CREATE (u)-[:HAS_SEEN]->(m)
+      MATCH (u:User {name: 'Jon'}), (m:Movie {title: 'Pulp Fiction'})
+      CREATE (u)-[:HAS_SEEN]->(m)
+      MATCH (u:User {name: 'Alice'}), (m:Movie {title: 'The Shawshank Redemption'})
+      CREATE (u)-[:HAS_SEEN]->(m)
+      MATCH (u:User {name: 'Bob'}), (m:Movie {title: 'Pulp Fiction'})
+      CREATE (u)-[:HAS_SEEN]->(m)
+            </code>
+          </pre>
+
+          <h4>Modelo de datos y operaciones CRUD</h4>
+          <pre class="code-window">
+            <code>
+      -- CREATE
+      CREATE (:User {name: 'kEnAi', age: 10})
+
+      -- READ
+      MATCH (u:User {name: 'kEnAi'})
+      RETURN u
+
+      -- UPDATE
+      MATCH (u:User {name: 'kEnAi'})
+      SET u.age = 11
+
+      -- DELETE
+      MATCH (u:User {name: 'kEnAi'})
+      DETACH DELETE u
+
+      -- CREATE Movie
+      CREATE (:Movie {title: 'Inception', genre: 'Thriller'})
+
+      -- READ Movie
+      MATCH (m:Movie {title: 'Inception'})
+      RETURN m
+
+      -- UPDATE Movie
+      MATCH (m:Movie {title: 'Inception'})
+      SET m.genre = 'Sci-Fi'
+
+      -- DELETE Movie
+      MATCH (m:Movie {title: 'Inception'})
+      DETACH DELETE m
+            </code>
+          </pre>
+
+          <h4>Características clave de Neo4j</h4>
+          <ul>
+            <li><strong>Modelo de grafos de propiedades:</strong> nodos y relaciones con atributos.</li>
+            <li><strong>Lenguaje Cypher:</strong> sintaxis declarativa para consultas de grafos.</li>
+            <li><strong>Consultas de conectividad:</strong> patrones complejos de relaciones.</li>
+            <li><strong>Escalabilidad:</strong> soporte para clusters y replicación.</li>
+            <li><strong>Casos de uso:</strong> redes sociales, detección de fraude, recomendaciones, knowledge graphs.</li>
+          </ul>
+
+        </details>
+      </article>
+
+      <article id="historia-nosql" aria-label="Historia de NoSQL">
+        <h3>Historia de NoSQL</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            La historia de <strong>NoSQL</strong> comenzó como una respuesta a las limitaciones de las bases de datos relacionales tradicionales frente a las necesidades de las aplicaciones modernas.
+          </p>
+
+          <ul>
+            <li><strong>Década de 1990:</strong>
+              <p>Se originaron sistemas orientados a objetos y de clave-valor para casos específicos. Un ejemplo temprano fue <strong>Lotus Notes</strong>.</p>
+            </li>
+
+            <li><strong>2000–2004:</strong>
+              <p>Con el auge de la <strong>web 2.0</strong>, surgieron grandes volúmenes de datos y nuevas necesidades de escalabilidad y rendimiento. Empresas tecnológicas desarrollaron sus propias soluciones:</p>
+              <ul>
+                <li><strong>Google</strong> desarrolló <strong>Bigtable</strong> (2004).</li>
+                <li><strong>Amazon</strong> lanzó <strong>Dynamo</strong> (2007).</li>
+              </ul>
+            </li>
+
+            <li><strong>2009:</strong>
+              <p>El término <strong>NoSQL</strong> fue acuñado por <strong>Johan Oskarsson</strong> durante una reunión en la que se presentaron sistemas no relacionales enfocados en la escalabilidad.</p>
+            </li>
+
+            <li><strong>2010 en adelante:</strong>
+              <p>Comenzaron a popularizarse bases de datos como <strong>MongoDB</strong>, <strong>Cassandra</strong> y <strong>Redis</strong>, impulsadas por la necesidad de manejar <strong>Big Data</strong>, datos no estructurados y aplicaciones distribuidas.</p>
+            </li>
+          </ul>
+
+          <pre class="code-window">
+            <code>
+  <span class="comment">&lt;!-- Línea temporal simplificada de NoSQL --&gt;</span>
+  1990s → Primeros sistemas clave-valor (Lotus Notes)
+  2004  → Google Bigtable
+  2007  → Amazon Dynamo
+  2009  → Surge el término "NoSQL"
+  2010+ → Popularización: MongoDB, Cassandra, Redis
+            </code>
+          </pre>
+        </details>
+      </article>
+  
+    </section>
+  </main>
+
+<!-- ===================================================== -->
+<!-- PLACEHOLDERS DE COMPONENTES DINÁMICOS                 -->
+<!-- ===================================================== -->
+<!-- Estos contenedores reciben HTML inyectado vía JS     -->
+<!-- Permiten reutilizar componentes (footer, modales)   -->
+<!-- y mantener el HTML principal limpio y escalable      -->
+
+<div id="footer-placeholder"></div>
+<div id="contact-modal-placeholder"></div>
+
+
+<!-- ===================================================== -->
+<!-- SCRIPTS GLOBALES                                     -->
+<!-- ===================================================== -->
+<!-- Footer: se carga de forma diferida para no bloquear  -->
+<!-- el render inicial de la página                       -->
+
+<script src="../components/footer/footer.js" defer></script>
+
+<!-- Scripts generales del sitio (interacciones globales) -->
+<script src="/js/scripts.js"></script>
+
+
+<!-- ===================================================== -->
+<!-- CARGA DINÁMICA DEL CONTACT MODAL                     -->
+<!-- ===================================================== -->
+<!-- 1. Obtiene el HTML del modal desde el componente     -->
+<!-- 2. Lo inyecta en su placeholder correspondiente      -->
+<!-- 3. Carga el JS del modal de forma desacoplada        -->
+<!-- Esto permite reutilizar el modal en cualquier página -->
+
+<script>
+  fetch('../components/contact-modal/contact-modal.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('No se pudo cargar el Contact Modal');
+      }
+      return response.text();
+    })
+    .then(modalHTML => {
+      // Inyección del HTML del modal en el placeholder
+      document.getElementById('contact-modal-placeholder').innerHTML = modalHTML;
+
+      // Carga dinámica del script del modal
+      const modalScript = document.createElement('script');
+      modalScript.src = '../components/contact-modal/contact-modal.js';
+      modalScript.defer = true;
+      document.body.appendChild(modalScript);
+    })
+    .catch(error => {
+      console.error('Error cargando el Contact Modal:', error);
+    });
+</script>
+</body>
+</html>
+
+
+

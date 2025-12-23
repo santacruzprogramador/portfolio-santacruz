@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ========================= -->
+  <!-- METADATOS BÁSICOS -->
+  <!-- ========================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ========================= -->
+  <!-- SEO PRINCIPAL -->
+  <!-- ========================= -->
+  <title>Fundamentos de la Programación | Conceptos básicos para empezar</title>
+  <meta
+    name="description"
+    content="Aprende los fundamentos de la programación: algoritmos, variables, tipos de datos, estructuras de control y lógica básica."
+  >
+
+  <!-- ========================= -->
+  <!-- AUTOR -->
+  <!-- ========================= -->
+  <meta name="author" content="José Alberto Santacruz">
+  <meta name="robots" content="index, follow">
+
+  <!-- ========================= -->
+  <!-- URL CANÓNICA -->
+  <!-- ========================= -->
+  <link
+    rel="canonical"
+    href="https://santacruzprogramador.github.io/santacruzjose/pages/fundamentos-programacion.html"
+  >
+
+  <!-- ========================= -->
+  <!-- OPEN GRAPH -->
+  <!-- ========================= -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Fundamentos de la Programación">
+  <meta
+    property="og:description"
+    content="Conceptos esenciales de la programación explicados de forma clara y progresiva."
+  >
+  <meta
+    property="og:url"
+    content="https://santacruzprogramador.github.io/santacruzjose/pages/fundamentos-programacion.html"
+  >
+  <meta
+    property="og:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+  <meta property="og:site_name" content="Portfolio José Santacruz">
+
+  <!-- ========================= -->
+  <!-- TWITTER CARD -->
+  <!-- ========================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fundamentos de la Programación">
+  <meta
+    name="twitter:description"
+    content="Base esencial para comenzar en el mundo de la programación."
+  >
+  <meta
+    name="twitter:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+
+  <!-- ========================= -->
+  <!-- FAVICON -->
+  <!-- ========================= -->
+  <link
+    rel="icon"
+    href="../assets/favicon/favicon.ico"
+    type="image/x-icon"
+  >
+
+  <!-- ========================= -->
+  <!-- COLOR TEMA -->
+  <!-- ========================= -->
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- ========================= -->
+  <!-- ESTILOS -->
+  <!-- ========================= -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/intr_to_programming.css">
+  <link rel="stylesheet" href="../components/contact-modal/contact-modal.css">
+</head>
+
+<body>
+  <header class="page-title">
+    <h1 class="text-center">Fundamentos de la programación</h1>
+  </header>
+  <a href="../#progra" class="volver">← Inicio</a>    
+  <main class="container section"> 
+    <section class="content-narrow">   
+      <h2>Conceptos esenciales para comenzar a programar</h2>
+      <article id="por-donde-empezar" aria-labelledby="por-donde-empezar">
+        <h3>¿Por dónde empezar?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Antes de escribir código o construir grandes sistemas, es fundamental comprender cómo se resuelven problemas paso a paso.
+          </p>
+          <p>
+            Por eso, el camino ideal empieza en lo más básico y va subiendo de nivel:
+          </p>
+
+          <h4>Nivel Operativo: Implementación y Lógica</h4>
+          <p>
+            Es el terreno de la codificación directa. Se escriben algoritmos, se resuelven problemas específicos y se construyen las funcionalidades.
+            Ideal para desarrolladores junior o en formación, que aprenden a aplicar lógica y buenas prácticas.
+          </p>
+          <ul>
+            <li>Algoritmos de búsqueda, ordenamiento, filtrado</li>
+            <li>Validaciones, manejo de errores, optimización</li>
+            <li>Pruebas unitarias y debugging</li>
+            <li>Integración con APIs, bases de datos, UI</li>
+          </ul>
+
+          <h4>Nivel Táctico: Diseño de Componentes</h4>
+          <p>
+            Acá se traduce la arquitectura en módulos concretos. Se define cómo se implementarán las funcionalidades y cómo se organizará el código.
+            Lo abordan desarrolladores con experiencia, responsables de convertir la visión en una estructura sólida.
+          </p>
+          <ul>
+            <li>Diseño orientado a objetos o funcional</li>
+            <li>Estructura de clases, interfaces, servicios</li>
+            <li>Patrones de diseño: Factory, Singleton, Repository, etc.</li>
+            <li>Organización del código: capas, paquetes, módulos</li>
+          </ul>
+
+          <h4>Nivel Estratégico: Arquitectura de Software</h4>
+          <p>
+            Este nivel define la estructura global del sistema, sus componentes principales y cómo interactúan. Es donde se toman decisiones de alto impacto técnico.
+            Lo trabajan arquitectos de software, tech leads y roles senior con visión integral.
+          </p>
+          <ul>
+            <li>Tipo de aplicación: web, mobile, desktop, híbrida</li>
+            <li>Elección de tecnologías: lenguajes, frameworks, bases de datos</li>
+            <li>Infraestructura: cloud, on-premise, serverless</li>
+            <li>Diagramas de arquitectura: C4, flujos de datos, capas</li>
+          </ul>
+          </details>
+      </article>
+      <article id="que-es-la-programacion" aria-labelledby="que-es-la-programacion">
+        <h3>¿Qué es la programación?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            La programación es <strong>el acto de crear programas o aplicaciones a través del desarrollo de un código fuente en lenguaje de programación.</strong>
+            Es un conjunto de principios que permiten dar instrucciones a una computadora a través de un lenguaje de programación.
+          </p>
+        </details>
+      </article>
+      <article id="que-es-un-algoritmo" aria-labelledby="que-es-un-algoritmo">
+        <h3>¿Qué es un algoritmo?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            En programación, un algoritmo es la base lógica que indica <strong>qué hacer y en qué orden hacerlo</strong> para resolver un problema o lograr un resultado específico. 
+            Es como un conjunto de instrucciones paso a paso que una computadora sigue para ejecutar una tarea.
+          </p>
+          <p>
+            Por ejemplo, un algoritmo puede ser:
+          </p>
+          <ul>
+            <li>Una receta de cocina: seguir los pasos en orden para preparar un plato.</li>
+            <li>Una operación matemática: sumar una serie de números para obtener un resultado.</li>
+            <li>Las instrucciones para iniciar sesión en una app: verificar usuario, contraseña y dar acceso.</li>
+          </ul>
+          <p>
+            <strong>Características principales de un algoritmo:</strong>
+          </p>
+          <ul>
+            <li><strong>Secuencia de pasos claros:</strong> cada instrucción debe ser precisa y sin ambigüedad.</li>
+            <li><strong>Entrada:</strong> datos iniciales necesarios para comenzar el proceso.</li>
+            <li><strong>Procesamiento:</strong> transformación de los datos de entrada para obtener un resultado.</li>
+            <li><strong>Salida:</strong> resultado esperado al finalizar los pasos.</li>
+            <li><strong>Finitud:</strong> debe completarse después de un número limitado de pasos.</li>
+            <li><strong>Eficiencia:</strong> optimizado para usar el menor tiempo y recursos posibles.</li>
+          </ul>
+
+        </details>
+      </article>
+      <article id="que-es-el fundamento-de-la-programacion" aria-labelledby="que-es-el fundamento-de-la-programacion">
+        <h3>¿Qué es el fundamento de la programación?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Los fundamentos de la programación son los conceptos básicos y esenciales que forman la base para aprender a programar.
+          </p>
+          <p>
+            Incluyen temas como:
+          </p>
+          <ul>
+            <li>Tipos de datos y variables</li>
+            <li>Estructuras de control (condicionales y bucles)</li>
+            <li>Funciones y procedimientos</li>
+            <li>Estructuras de datos (listas, arrays, diccionarios)</li>
+            <li>Algoritmos básicos (búsqueda, ordenamiento)</li>            
+        </details>
+      </article>
+      <article id="Cuales-son-las operaciones-basicas-de-la-programacion" aria-labelledby="Cuales-son-las operaciones-basicas-de-la-programacion">
+        <h3>¿Cuáles son las operaciones básicas de la programación?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Las operaciones básicas de la programación son las acciones fundamentales que se pueden realizar en un programa.
+          </p>
+          <p>
+            Incluyen:
+          </p>
+          <ul>
+            <li>Asignación: guardar un valor en una variable</li>
+            <li>Entrada/Salida: leer datos del usuario o mostrar resultados</li>
+            <li>Operaciones aritméticas: suma, resta, multiplicación, división</li>
+            <li>Operaciones lógicas: AND, OR, NOT</li>
+            <li>Control de flujo: condicionales (if, else) y bucles (for, while)</li>
+          </ul>            
+        </details>
+      </article>
+      <article id="que-es-una-variable" aria-labelledby="que-es-una-variable">
+        <h3>¿Qué es una variable?, Qué es una variable bandera?, ¿Qué es una constante?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <ul>
+            <li>Variable: es un espacio en memoria para guardar diferentes tipos de datos.</li>
+            <li>Variable bandera:  Es un espacio en memoria que se utiliza para guardar datos booleanos.</li>
+            <li>Constante: Una constante es una un espacio en  memoria donde el tipo de dato es permanente.</li>
+          </ul>            
+        </details>
+      </article>
+      <article id="que-es-tipo-de datos" aria-labelledby="que-es-tipo-de datos">
+        <h3>¿Qué son los tipos de datos?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Un tipo de dato es una clasificación que define el tipo de valor que una variable puede almacenar y las operaciones que se pueden realizar con ese valor.
+          </p>
+          <p>
+            Algunos tipos de datos comunes son:
+          </p>
+          <ul>
+            <li>Enteros (int): números sin decimales, como 1, -5, 42</li>
+            <li>Flotantes (float): números con decimales, como 3.14, -0.001</li>
+            <li>Cadenas de texto (string): secuencias de caracteres, como "Hola", "123"</li>
+            <li>Booleanos (bool): valores de verdad, como True o False</li>
+            <li>Listas/Arreglos (list/array): colecciones ordenadas de elementos</li>
+            <li>Diccionarios/Mapas (dict/map): colecciones de pares clave-valor</li>
+          </ul>            
+        </details>
+      </article>
+      <article id="que-son-los-operadores-y-cuales-son" aria-labelledby="que-son-los-operadores-y-cuales-son" >
+        <h3>¿Qué son los operadores y cuales son?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Los operadores son símbolos o palabras clave que realizan operaciones específicas en uno o más operandos (valores o variables).
+          </p>
+          <p>
+            Algunos tipos comunes de operadores son:
+          </p>
+          <ul>
+            <li>Aritméticos: + (suma), - (resta), * (multiplicación), / (división), % (módulo)</li>
+            <li>Relacionales: == (igual), != (diferente), > (mayor que), < (menor que), >= (mayor o igual), <= (menor o igual)</li>
+            <li>Lógicos: AND (y), OR (o), NOT (no)</li>
+            <li>Asignación: = (asignar valor), +=, -=, *=, /=</li>
+            <li>Bit a bit: & (AND bit a bit), | (OR bit a bit), ^ (XOR bit a bit), ~ (NOT bit a bit)</li>
+          </ul>            
+        </details>
+      </article>
+      <article id="que-es-el-control-de-flujo-en-programacion" aria-labelledby="que-es-el-control-de-flujo-en-programacion">
+        <h3>¿Qué es el control de flujo en programación?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            El control de flujo en programación se refiere a las estructuras y mecanismos que permiten dirigir la secuencia de ejecución de un programa.
+          </p>
+          <p>
+            Las principales estructuras de control de flujo son:
+          </p>
+          <ul>
+            <li>Condicionales: permiten ejecutar diferentes bloques de código según ciertas condiciones (if, else, switch)</li>
+            <li>Bucles: permiten repetir un bloque de código varias veces mientras se cumpla una condición (for, while, do-while)</li>
+            <li>Saltos: permiten cambiar la secuencia normal de ejecución (break, continue, return)</li>
+          </ul>            
+        </details>
+      </article>
+      <article id="que-son-las-condicionales-y-cuales-son" aria-labelledby="que-son-las-condicionales-y-cuales-son">
+        <h3>¿Qué son las condicionales y cuales son?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Las condicionales son estructuras de control que permiten ejecutar diferentes bloques de código según si una condición es verdadera o falsa.
+          </p>
+          <p>
+            Las condicionales más comunes son:
+          </p>
+          <ul>
+            <li>if (simple): Si una condición es verdadera ejecuta un bloque de código.</li>
+            <li>if-else (compuesta): Si una condición es verdadera ejecuta un bloque de código y s es falsa otro bloque de código.</li>
+            <li>f-elif-elses (Múltiple). Ejecuta mas de 2 bloque de código dependiendo si la condición es verdadera o falsa.</li>
+          </ul>            
+        </details>
+      </article>
+      <article id="dif-contador-acumulador" aria-labelledby="dif-contador-acumulador">
+        <h3>¿Cuál es la diferencia entre contador y acumulador?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            las diferencia entre contador y acumulador son que el contador incrementa su valor en una cantidad constante, y el acumulador incrementa su valor en una cantidad variable.  
+            Ejemplo practico:  en una caja de supermercado existen
+          </p>
+          <ul>
+            <li>Contador: cuenta las cantidad de artículos uno por uno.</li>
+            <li>Acumulador: suma los precios de cada articulo.</li>
+          </ul>            
+        </details>
+      </article>
+      <article id="que-es-funcion" aria-labelledby="que-es-funcion">
+        <h3>¿Qué es una función?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <ul>
+            <li>Una <strong>función</strong> es un bloque de código reutilizable que realiza una tarea específica.</li>
+            <li>Permite organizar el código en partes más pequeñas y fáciles de entender.</li>
+            <li>Se puede invocar varias veces sin necesidad de reescribir el mismo código.</li>
+            <li>Puede recibir datos de entrada (parámetros) y devolver un resultado (valor de retorno).</li>
+          </ul>            
+        </details>
+      </article>
+      <article id="que-tipo-de-funciones-existen" aria-labelledby="que-tipo-de-funciones-existen">
+        <h3>¿Qué tipo de funciones existen?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Existen varios tipos de funciones en programación, entre las más comunes se encuentran:
+          </p>
+          <ul>
+            <li>Funciones predefinidas: Son funciones que ya están definidas en el lenguaje de programación y se pueden utilizar directamente, como <code>print()</code> en Python.</li>
+            <li>Funciones definidas por el usuario: Son funciones que los programadores crean para realizar tareas específicas dentro de su código.</li>
+            <li>Funciones recursivas: Son funciones que se llaman a sí mismas
+          </ul>         
+        </details>
+      </article>
+      <article id="que-son-funciones-lambda" aria-labelledby="que-son-funciones-lambda">
+        <h3>¿Qué son las funciones lambda?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <ul>
+            <li>Son funciones anónimas, es decir, no tienen un nombre definido.</li>
+            <li>Se utilizan para operaciones cortas y simples.</li>
+            <li>Se definen con la palabra clave <code>lambda</code> en Python.</li>
+            <li>Generalmente se usan como argumentos en otras funciones (ejemplo: <code>map</code>, <code>filter</code>).</li>
+          </ul>      
+        </details>
+      </article>
+      <article id="que-son-modulos-paquetes" aria-labelledby="que-son-modulos-paquetes">
+        <h3>¿Qué son los módulos? ¿Qué son los paquetes?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <ul>
+            <li><strong>Módulo</strong>:
+              <ul>
+                <li>Es un archivo de Python que contiene funciones, clases o variables.</li>
+                <li>Permite organizar y reutilizar código.</li>
+                <li>Ejemplo: <code>math</code>, <code>random</code>.</li>
+              </ul>
+            </li>
+            <li><strong>Paquete</strong>:
+              <ul>
+                <li>Es una colección de módulos organizados en una carpeta.</li>
+                <li>Incluye un archivo <code>__init__.py</code> que lo identifica como paquete.</li>
+                <li>Ejemplo: <code>numpy</code>, <code>pandas</code>.</li>
+              </ul>
+            </li>
+          </ul>  
+        </details>
+      </article>
+      <article id="que-son-archivos" aria-labelledby="que-son-archivos">
+        <h3>¿Qué son los archivos?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <ul>
+            <li>Un <strong>archivo</strong> es una unidad de almacenamiento que guarda información en la computadora.</li>
+            <li>Pueden ser de texto, binarios, imágenes, audio, etc.</li>
+            <li>En programación, se utilizan para leer y escribir datos.</li>
+            <li>Operaciones comunes: abrir, leer, escribir, cerrar.</li>
+          </ul>     
+        </details>
+      </article>
+    </section>
+  </main>     
+
+<!-- ===================================================== -->
+<!-- PLACEHOLDERS DE COMPONENTES DINÁMICOS                 -->
+<!-- ===================================================== -->
+<!-- Estos contenedores reciben HTML inyectado vía JS     -->
+<!-- Permiten reutilizar componentes (footer, modales)   -->
+<!-- y mantener el HTML principal limpio y escalable      -->
+
+<div id="footer-placeholder"></div>
+<div id="contact-modal-placeholder"></div>
+
+
+<!-- ===================================================== -->
+<!-- SCRIPTS GLOBALES                                     -->
+<!-- ===================================================== -->
+<!-- Footer: se carga de forma diferida para no bloquear  -->
+<!-- el render inicial de la página                       -->
+
+<script src="../components/footer/footer.js" defer></script>
+
+<!-- Scripts generales del sitio (interacciones globales) -->
+<script src="/js/scripts.js"></script>
+
+
+<!-- ===================================================== -->
+<!-- CARGA DINÁMICA DEL CONTACT MODAL                     -->
+<!-- ===================================================== -->
+<!-- 1. Obtiene el HTML del modal desde el componente     -->
+<!-- 2. Lo inyecta en su placeholder correspondiente      -->
+<!-- 3. Carga el JS del modal de forma desacoplada        -->
+<!-- Esto permite reutilizar el modal en cualquier página -->
+
+<script>
+  fetch('../components/contact-modal/contact-modal.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('No se pudo cargar el Contact Modal');
+      }
+      return response.text();
+    })
+    .then(modalHTML => {
+      // Inyección del HTML del modal en el placeholder
+      document.getElementById('contact-modal-placeholder').innerHTML = modalHTML;
+
+      // Carga dinámica del script del modal
+      const modalScript = document.createElement('script');
+      modalScript.src = '../components/contact-modal/contact-modal.js';
+      modalScript.defer = true;
+      document.body.appendChild(modalScript);
+    })
+    .catch(error => {
+      console.error('Error cargando el Contact Modal:', error);
+    });
+</script>
+</body>
+</html>

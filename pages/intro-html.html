@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ========================= -->
+  <!-- METADATOS BÁSICOS -->
+  <!-- ========================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ========================= -->
+  <!-- SEO PRINCIPAL -->
+  <!-- ========================= -->
+  <title>Guía Básica de HTML | Estructura y etiquetas fundamentales</title>
+  <meta
+    name="description"
+    content="Guía básica de HTML para principiantes. Aprende la estructura de una página web, etiquetas esenciales y buenas prácticas."
+  >
+
+  <!-- ========================= -->
+  <!-- AUTOR -->
+  <!-- ========================= -->
+  <meta name="author" content="José Alberto Santacruz">
+  <meta name="robots" content="index, follow">
+
+  <!-- ========================= -->
+  <!-- URL CANÓNICA -->
+  <!-- ========================= -->
+  <link
+    rel="canonical"
+    href="https://santacruzprogramador.github.io/santacruzjose/pages/intro-html.html"
+  >
+
+  <!-- ========================= -->
+  <!-- OPEN GRAPH -->
+  <!-- ========================= -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Guía Básica de HTML">
+  <meta
+    property="og:description"
+    content="Aprende HTML desde cero: estructura básica, etiquetas principales y fundamentos del desarrollo web."
+  >
+  <meta
+    property="og:url"
+    content="https://santacruzprogramador.github.io/santacruzjose/pages/intro-html.html"
+  >
+  <meta
+    property="og:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+  <meta property="og:site_name" content="Portfolio José Santacruz">
+
+  <!-- ========================= -->
+  <!-- TWITTER CARD -->
+  <!-- ========================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Guía Básica de HTML">
+  <meta
+    name="twitter:description"
+    content="Conceptos esenciales de HTML para crear páginas web desde cero."
+  >
+  <meta
+    name="twitter:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+
+  <!-- ========================= -->
+  <!-- FAVICON -->
+  <!-- ========================= -->
+  <link
+    rel="icon"
+    href="../assets/favicon/favicon.ico"
+    type="image/x-icon"
+  >
+
+  <!-- ========================= -->
+  <!-- COLOR TEMA -->
+  <!-- ========================= -->
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- ========================= -->
+  <!-- ESTILOS -->
+  <!-- ========================= -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/intr_to_programming.css">
+  <link rel="stylesheet" href="../components/contact-modal/contact-modal.css">
+</head>
+
+<body>
+
+  <header class="page-title">
+    <h1 class="">Guía Básica de HTML</h1>
+  </header>
+
+  <a href="../#html" class="volver">← Inicio</a>
+  <main class="container section">
+    
+    <section id="nivel-basico" class="content-narrow">
+      <h2>Nivel Básico:</h2>
+
+      <article id="estructura-basica" aria-label="Estructura básica de HTML">
+        <h3>1. Estructura Básica de un Documento HTML</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Todo documento HTML debe tener una estructura básica que incluye la declaración DOCTYPE, las etiquetas html, head y body. Esta es la base de cualquier página web.
+          </p>
+          
+          <!-- Ejemplo práctico: Página web personal básica -->
+          <h4>Ejemplo Práctico: Mi Página Personal</h4>
+          <pre class="code-window">
+            <code>
+      <span class="comment">&lt;!-- La declaración DOCTYPE le dice al navegador que use HTML5 --&gt;</span>
+      &lt;!DOCTYPE html&gt;
+
+      <span class="comment">&lt;!-- La etiqueta html es el contenedor principal de todo el documento --&gt;</span>
+      <span class="comment">&lt;!-- El atributo lang="es" indica que el idioma del contenido es español --&gt;</span>
+      &lt;html lang="es"&gt;
+
+      <span class="comment">&lt;!-- El head contiene metadatos e información que no se muestra en la página --&gt;</span>
+      &lt;head&gt;
+        <span class="comment">&lt;!-- Charset UTF-8 permite mostrar caracteres especiales como ñ, á, é --&gt;</span>
+        &lt;meta charset="UTF-8"&gt;
+        
+        <span class="comment">&lt;!-- Viewport hace que la página sea responsive en dispositivos móviles --&gt;</span>
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        
+        <span class="comment">&lt;!-- El título aparece en la pestaña del navegador --&gt;</span>
+        &lt;title&gt;Mi Página Personal - Juan Pérez&lt;/title&gt;
+        
+        <span class="comment">&lt;!-- Descripción para motores de búsqueda --&gt;</span>
+        &lt;meta name="description" content="Bienvenido a mi página personal"&gt;
+      &lt;/head&gt;
+
+      <span class="comment">&lt;!-- El body contiene todo el contenido visible de la página --&gt;</span>
+      &lt;body&gt;
+        <span class="comment">&lt;!-- Encabezado principal de la página (solo debe haber uno por página) --&gt;</span>
+        &lt;h1&gt;¡Hola! Soy Juan Pérez&lt;/h1&gt;
+        
+        <span class="comment">&lt;!-- Párrafo con texto de presentación --&gt;</span>
+        &lt;p&gt;Bienvenido a mi sitio web personal.&lt;/p&gt;
+        
+        <span class="comment">&lt;!-- Subtítulo de nivel 2 --&gt;</span>
+        &lt;h2&gt;Sobre mí&lt;/h2&gt;
+        
+        <span class="comment">&lt;!-- Lista no ordenada de intereses --&gt;</span>
+        &lt;ul&gt;
+          <span class="comment">&lt;!-- Cada li es un elemento de la lista --&gt;</span>
+          &lt;li&gt;Me gusta programar&lt;/li&gt;
+          &lt;li&gt;Disfruto aprender nuevas tecnologías&lt;/li&gt;
+          &lt;li&gt;Soy de Argentina&lt;/li&gt;
+        &lt;/ul&gt;
+        
+        <span class="comment">&lt;!-- Enlace a otra página --&gt;</span>
+        &lt;p&gt;
+          &lt;a href="contacto.html"&gt;Contáctame&lt;/a&gt;
+        &lt;/p&gt;
+      &lt;/body&gt;
+
+      <span class="comment">&lt;!-- Cierre de la etiqueta html --&gt;</span>
+      &lt;/html&gt;
+            </code>
+          </pre>
+          
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border: 2px solid #ccc; padding: 15px; background: white; margin: 10px 0;">
+            <h1 style="margin-top: 0;">¡Hola! Soy Juan Pérez</h1>
+            <p>Bienvenido a mi sitio web personal.</p>
+            <h2>Sobre mí</h2>
+            <ul>
+              <li>Me gusta programar</li>
+              <li>Disfruto aprender nuevas tecnologías</li>
+              <li>Soy de Argentina</li>
+            </ul>
+            <p>
+              <a href="#" style="color: blue; text-decoration: underline;">Contáctame</a>
+            </p>
+          </div>
+        </details>
+      </article>
+
+      <article id="encabezados" aria-label="Encabezados en HTML">
+        <h3>2. Encabezados (h1 - h6)</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Los encabezados van de <strong>&lt;h1&gt;</strong> (más importante) a <strong>&lt;h6&gt;</strong> (menos importante). Solo debe haber un <strong>&lt;h1&gt;</strong> por página y representan la <em>jerarquía</em> del contenido.
+          </p>
+          
+          <h4>Ejemplo Práctico: Estructura de un Blog</h4>
+          <pre class="code-window">
+            <code>
+      <span class="comment">&lt;!-- h1 es el título principal de la página (solo uno por página) --&gt;</span>
+      &lt;h1&gt;Mi Blog de Programación&lt;/h1&gt;
+
+      <span class="comment">&lt;!-- h2 para títulos de artículos o secciones principales --&gt;</span>
+      &lt;h2&gt;Artículo: Aprendiendo HTML desde Cero&lt;/h2&gt;
+
+      <span class="comment">&lt;!-- h3 para subsecciones dentro del artículo --&gt;</span>
+      &lt;h3&gt;¿Qué es HTML?&lt;/h3&gt;
+      &lt;p&gt;HTML es el lenguaje de marcado...&lt;/p&gt;
+
+      &lt;h3&gt;Estructura Básica&lt;/h3&gt;
+      &lt;p&gt;Todo documento HTML necesita...&lt;/p&gt;
+
+      <span class="comment">&lt;!-- h4 para temas específicos dentro de las subsecciones --&gt;</span>
+      &lt;h4&gt;Etiquetas Esenciales&lt;/h4&gt;
+      &lt;p&gt;Las etiquetas más usadas son...&lt;/p&gt;
+
+      <span class="comment">&lt;!-- h5 para detalles menores --&gt;</span>
+      &lt;h5&gt;Nota Importante&lt;/h5&gt;
+      &lt;p&gt;Recuerda siempre cerrar las etiquetas...&lt;/p&gt;
+
+      <span class="comment">&lt;!-- h6 es el nivel más bajo (raramente usado) --&gt;</span>
+      &lt;h6&gt;Dato Adicional&lt;/h6&gt;
+      &lt;p&gt;Los navegadores modernos...&lt;/p&gt;
+            </code>
+          </pre>
+          
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border: 2px solid #ccc; padding: 15px; background: white; margin: 10px 0;">
+            <h1 style="margin-top: 0; font-size: 2em;">Mi Blog de Programación</h1>
+            <h2 style="font-size: 1.5em;">Artículo: Aprendiendo HTML desde Cero</h2>
+            <h3 style="font-size: 1.17em;">¿Qué es HTML?</h3>
+            <p>HTML es el lenguaje de marcado...</p>
+            <h3 style="font-size: 1.17em;">Estructura Básica</h3>
+            <p>Todo documento HTML necesita...</p>
+            <h4 style="font-size: 1em;">Etiquetas Esenciales</h4>
+            <p>Las etiquetas más usadas son...</p>
+            <h5 style="font-size: 0.83em;">Nota Importante</h5>
+            <p>Recuerda siempre cerrar las etiquetas...</p>
+            <h6 style="font-size: 0.67em;">Dato Adicional</h6>
+            <p>Los navegadores modernos...</p>
+          </div>
+        </details>
+      </article>
+
+      <article id="parrafos" aria-label="Párrafos y saltos de línea">
+        <h3>3. Párrafos y Saltos de Línea</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            La etiqueta <strong>&lt;p&gt;</strong> crea párrafos con espaciado automático. <strong>&lt;br&gt;</strong> crea un salto de línea simple sin espacio adicional. La etiqueta <strong>&lt;hr&gt;</strong> crea una <em>línea horizontal</em> para separar contenido.
+          </p>
+          
+          <h4>Ejemplo Práctico: Dirección Postal</h4>
+          <pre class="code-window">
+            <code>
+      <span class="comment">&lt;!-- Párrafo simple con texto --&gt;</span>
+      &lt;p&gt;Bienvenido a nuestra tienda online de tecnología.&lt;/p&gt;
+
+      <span class="comment">&lt;!-- Párrafo con saltos de línea usando br --&gt;</span>
+      <span class="comment">&lt;!-- br es útil para direcciones, poemas o donde necesitas saltos sin espacio --&gt;</span>
+      &lt;p&gt;
+        <strong>Dirección de envío:</strong>&lt;br&gt;
+        Juan Pérez&lt;br&gt;
+        Calle San Martín 123&lt;br&gt;
+        Jardín América, Misiones&lt;br&gt;
+        Argentina
+      &lt;/p&gt;
+
+      <span class="comment">&lt;!-- Otro párrafo independiente con espaciado automático --&gt;</span>
+      &lt;p&gt;Hacemos envíos a todo el país.&lt;/p&gt;
+
+      <span class="comment">&lt;!-- hr crea una línea horizontal para separar secciones --&gt;</span>
+      &lt;hr&gt;
+
+      <span class="comment">&lt;!-- Nueva sección después de la línea separadora --&gt;</span>
+      &lt;p&gt;
+        <strong>Horario de atención:</strong>&lt;br&gt;
+        Lunes a Viernes: 9:00 - 18:00&lt;br&gt;
+        Sábados: 9:00 - 13:00
+      &lt;/p&gt;
+            </code>
+          </pre>
+          
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border: 2px solid #ccc; padding: 15px; background: white; margin: 10px 0;">
+            <p>Bienvenido a nuestra tienda online de tecnología.</p>
+            <p>
+              <strong>Dirección de envío:</strong><br>
+              Juan Pérez<br>
+              Calle San Martín 123<br>
+              Jardín América, Misiones<br>
+              Argentina
+            </p>
+            <p>Hacemos envíos a todo el país.</p>
+            <hr>
+            <p>
+              <strong>Horario de atención:</strong><br>
+              Lunes a Viernes: 9:00 - 18:00<br>
+              Sábados: 9:00 - 13:00
+            </p>
+          </div>
+        </details>
+      </article>
+
+      <article id="enlaces" aria-label="Enlaces o hipervínculos">
+        <h3>4. Enlaces (Links)</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Los enlaces se crean con la etiqueta <strong>&lt;a&gt;</strong> y el atributo <strong>href</strong>. Pueden apuntar a páginas externas, internas o secciones de la misma página. Son fundamentales para la <em>navegación web</em>.
+          </p>
+          
+          <h4>Ejemplo Práctico: Página de Contacto</h4>
+          <pre class="code-window">
+            <code>
+      &lt;h2&gt;Contacto&lt;/h2&gt;
+
+      <span class="comment">&lt;!-- Enlace externo a otro sitio web --&gt;</span>
+      <span class="comment">&lt;!-- href contiene la URL completa con https:// --&gt;</span>
+      &lt;p&gt;
+        Visita nuestro &lt;a href="https://www.facebook.com/mitienda"&gt;Facebook&lt;/a&gt;
+      &lt;/p&gt;
+
+      <span class="comment">&lt;!-- Enlace interno a otra página del mismo sitio --&gt;</span>
+      <span class="comment">&lt;!-- Solo necesita el nombre del archivo --&gt;</span>
+      &lt;p&gt;
+        Ver nuestros &lt;a href="productos.html"&gt;Productos&lt;/a&gt;
+      &lt;/p&gt;
+
+      <span class="comment">&lt;!-- Enlace a una sección específica de la misma página --&gt;</span>
+      <span class="comment">&lt;!-- El # indica que es un ancla dentro de la página --&gt;</span>
+      &lt;p&gt;
+        &lt;a href="#horarios"&gt;Ver horarios de atención&lt;/a&gt;
+      &lt;/p&gt;
+
+      <span class="comment">&lt;!-- Enlace de email - abre el programa de correo --&gt;</span>
+      <span class="comment">&lt;!-- mailto: seguido de la dirección de email --&gt;</span>
+      &lt;p&gt;
+        Email: &lt;a href="mailto:contacto@mitienda.com"&gt;contacto@mitienda.com&lt;/a&gt;
+      &lt;/p&gt;
+
+      <span class="comment">&lt;!-- Enlace de teléfono - en móviles permite llamar directamente --&gt;</span>
+      <span class="comment">&lt;!-- tel: seguido del número (con código de área) --&gt;</span>
+      &lt;p&gt;
+        Teléfono: &lt;a href="tel:+543764123456"&gt;(3764) 123-456&lt;/a&gt;
+      &lt;/p&gt;
+
+      <span class="comment">&lt;!-- Enlace que se abre en nueva pestaña --&gt;</span>
+      <span class="comment">&lt;!-- target="_blank" abre en nueva ventana/pestaña --&gt;</span>
+      <span class="comment">&lt;!-- rel="noopener" es por seguridad cuando usas target="_blank" --&gt;</span>
+      &lt;p&gt;
+        &lt;a href="https://www.google.com/maps" target="_blank" rel="noopener"&gt;
+          Ver ubicación en Google Maps
+        &lt;/a&gt;
+      &lt;/p&gt;
+
+      <span class="comment">&lt;!-- Enlace para descargar un archivo --&gt;</span>
+      <span class="comment">&lt;!-- download sugiere descargar en vez de abrir --&gt;</span>
+      &lt;p&gt;
+        &lt;a href="catalogo.pdf" download&gt;Descargar catálogo PDF&lt;/a&gt;
+      &lt;/p&gt;
+
+      <span class="comment">&lt;!-- Sección de destino para el enlace de ancla --&gt;</span>
+      <span class="comment">&lt;!-- El id debe coincidir con el href del enlace (sin el #) --&gt;</span>
+      &lt;h3 id="horarios"&gt;Horarios de Atención&lt;/h3&gt;
+      &lt;p&gt;Lunes a Viernes: 9:00 - 18:00&lt;/p&gt;
+      &lt;p&gt;Sábados: 9:00 - 13:00&lt;/p&gt;
+            </code>
+          </pre>
+          
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border: 2px solid #ccc; padding: 15px; background: white; margin: 10px 0;">
+            <h2 style="margin-top: 0;">Contacto</h2>
+            
+            <p>Visita nuestro <a href="https://www.facebook.com" target="_blank" rel="noopener" style="color: blue; text-decoration: underline;">Facebook</a></p>
+            
+            <p>Ver nuestros <a href="#productos-demo" style="color: blue; text-decoration: underline;">Productos</a> <span style="color: #666; font-size: 0.9em;">(link interno simulado)</span></p>
+            
+            <p><a href="#horarios-demo" style="color: blue; text-decoration: underline;">Ver horarios de atención</a> <span style="color: #666; font-size: 0.9em;">(salta a la sección de abajo)</span></p>
+            
+            <p>Email: <a href="mailto:contacto@mitienda.com" style="color: blue; text-decoration: underline;">contacto@mitienda.com</a> <span style="color: #666; font-size: 0.9em;">(abre tu programa de correo)</span></p>
+            
+            <p>Teléfono: <a href="tel:+543764123456" style="color: blue; text-decoration: underline;">(3764) 123-456</a> <span style="color: #666; font-size: 0.9em;">(en móviles permite llamar)</span></p>
+            
+            <p><a href="https://www.google.com/maps" target="_blank" rel="noopener" style="color: blue; text-decoration: underline;">Ver ubicación en Google Maps</a> <span style="color: #666; font-size: 0.9em;">(se abre en nueva pestaña)</span></p>
+            
+            <p><a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" download style="color: blue; text-decoration: underline;">Descargar catálogo PDF</a> <span style="color: #666; font-size: 0.9em;">(descarga un archivo de ejemplo)</span></p>
+            
+            <hr style="margin: 20px 0;">
+            
+            <h3 id="horarios-demo" style="background: #ffffcc; padding: 10px;">Horarios de Atención</h3>
+            <p>Lunes a Viernes: 9:00 - 18:00</p>
+            <p>Sábados: 9:00 - 13:00</p>
+            <p style="color: #666; font-style: italic;">⬆️ Este es el destino del enlace de ancla</p>
+          </div>
+        </details>
+      </article>
+
+      <article id="imagenes" aria-label="Imágenes en HTML">
+        <h3>5. Imágenes</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            La etiqueta <strong>&lt;img&gt;</strong> es auto-cerrada y requiere el atributo <strong>src</strong> (fuente de la imagen). El atributo <strong>alt</strong> es importante para <em>accesibilidad</em> y SEO, describe la imagen para personas con discapacidad visual.
+          </p>
+          
+          <h4>Ejemplo Práctico: Galería de Productos</h4>
+          <pre class="code-window">
+            <code>
+      &lt;h2&gt;Nuestros Productos&lt;/h2&gt;
+
+      <span class="comment">&lt;!-- Imagen básica --&gt;</span>
+      <span class="comment">&lt;!-- src: ruta del archivo de imagen --&gt;</span>
+      <span class="comment">&lt;!-- alt: descripción de la imagen (importante para accesibilidad) --&gt;</span>
+      &lt;img src="laptop.jpg" alt="Laptop HP Pavilion de 15 pulgadas"&gt;
+
+      <span class="comment">&lt;!-- Imagen con tamaño específico --&gt;</span>
+      <span class="comment">&lt;!-- width y height definen el ancho y alto en píxeles --&gt;</span>
+      &lt;img src="mouse.jpg" alt="Mouse inalámbrico Logitech" width="300" height="200"&gt;
+
+      <span class="comment">&lt;!-- Imagen desde una URL externa --&gt;</span>
+      <span class="comment">&lt;!-- src puede ser una URL completa de internet --&gt;</span>
+      &lt;img src="https://ejemplo.com/imagenes/teclado.jpg" alt="Teclado mecánico RGB"&gt;
+
+      <span class="comment">&lt;!-- Figure y figcaption para imágenes con pie de foto --&gt;</span>
+      <span class="comment">&lt;!-- figure agrupa la imagen con su descripción --&gt;</span>
+      &lt;figure&gt;
+        <span class="comment">&lt;!-- La imagen dentro del figure --&gt;</span>
+        &lt;img src="grafico-ventas.jpg" alt="Gráfico mostrando aumento de ventas" width="500"&gt;
+        <span class="comment">&lt;!-- figcaption es el pie de foto o descripción --&gt;</span>
+        &lt;figcaption&gt;Ventas del primer trimestre 2025 - Aumento del 35%&lt;/figcaption&gt;
+      &lt;/figure&gt;
+
+      <span class="comment">&lt;!-- Imagen como enlace clickeable --&gt;</span>
+      <span class="comment">&lt;!-- Envolvemos la imagen con una etiqueta a --&gt;</span>
+      &lt;a href="producto-detalle.html"&gt;
+        &lt;img src="auriculares.jpg" alt="Auriculares Sony WH-1000XM4" width="250"&gt;
+      &lt;/a&gt;
+      &lt;p&gt;Haz click en la imagen para ver más detalles&lt;/p&gt;
+
+      <span class="comment">&lt;!-- Imagen responsive que se adapta al tamaño de pantalla --&gt;</span>
+      <span class="comment">&lt;!-- style="max-width: 100%" hace que nunca sea más ancha que su contenedor --&gt;</span>
+      <span class="comment">&lt;!-- height="auto" mantiene las proporciones --&gt;</span>
+      &lt;img src="banner.jpg" alt="Banner de ofertas especiales" 
+          style="max-width: 100%; height: auto;"&gt;
+            </code>
+          </pre>
+          
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border: 2px solid #ccc; padding: 15px; background: white; margin: 10px 0;">
+            <h2 style="margin-top: 0;">Nuestros Productos</h2>
+            <div style="background: #f0f0f0; padding: 10px; margin: 10px 0; text-align: center;">
+              <div style="width: 300px; height: 200px; background: #ddd; display: inline-flex; align-items: center; justify-content: center; margin: 5px;">
+                [Imagen: laptop.jpg]
+              </div>
+            </div>
+            <div style="background: #f0f0f0; padding: 10px; margin: 10px 0; text-align: center;">
+              <div style="width: 300px; height: 200px; background: #ddd; display: inline-flex; align-items: center; justify-content: center; margin: 5px;">
+                [Imagen: mouse.jpg - 300x200px]
+              </div>
+            </div>
+            <figure style="border: 1px solid #ccc; padding: 10px; margin: 10px 0; display: inline-block;">
+              <div style="width: 500px; height: 300px; background: #ddd; display: flex; align-items: center; justify-content: center;">
+                [Gráfico de ventas]
+              </div>
+              <figcaption style="text-align: center; margin-top: 5px; font-style: italic;">
+                Ventas del primer trimestre 2025 - Aumento del 35%
+              </figcaption>
+            </figure>
+            <div style="margin: 10px 0;">
+              <a href="#" style="color: blue;">
+                <div style="width: 250px; height: 150px; background: #ddd; display: inline-flex; align-items: center; justify-content: center; border: 2px solid blue;">
+                  [Imagen clickeable: auriculares.jpg]
+                </div>
+              </a>
+              <p>Haz click en la imagen para ver más detalles</p>
+            </div>
+          </div>
+        </details>
+      </article>
+
+      <article id="listas" aria-label="Listas ordenadas y desordenadas">
+        <h3>6. Listas</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Hay tres tipos de listas: <strong>&lt;ul&gt;</strong> (desordenada con viñetas), <strong>&lt;ol&gt;</strong> (ordenada con números) y <strong>&lt;dl&gt;</strong> (de definición para términos y descripciones).
+          </p>
+          
+          <h4>Ejemplo Práctico: Lista de Compras y Receta</h4>
+          <pre class="code-window">
+      <code><span class="comment">&lt;!-- Lista desordenada (ul = unordered list) --&gt;</span>
+      <span class="comment">&lt;!-- Se usa cuando el orden NO es importante --&gt;</span>
+      <span class="comment">&lt;!-- Muestra viñetas (bullets) por defecto --&gt;</span>
+      &lt;h3&gt;Lista de Compras&lt;/h3&gt;
+      &lt;ul&gt;
+        <span class="comment">&lt;!-- li = list item (elemento de lista) --&gt;</span>
+        &lt;li&gt;Leche&lt;/li&gt;
+        &lt;li&gt;Pan&lt;/li&gt;
+        &lt;li&gt;Huevos&lt;/li&gt;
+        &lt;li&gt;Manteca&lt;/li&gt;
+      &lt;/ul&gt;
+
+      <span class="comment">&lt;!-- Lista ordenada (ol = ordered list) --&gt;</span>
+      <span class="comment">&lt;!-- Se usa cuando el orden SÍ es importante --&gt;</span>
+      <span class="comment">&lt;!-- Muestra números automáticamente --&gt;</span>
+      &lt;h3&gt;Receta de Panqueques&lt;/h3&gt;
+      &lt;ol&gt;
+        &lt;li&gt;Batir los huevos en un bowl&lt;/li&gt;
+        &lt;li&gt;Agregar la leche y mezclar&lt;/li&gt;
+        &lt;li&gt;Añadir la harina poco a poco&lt;/li&gt;
+        &lt;li&gt;Calentar la sartén con manteca&lt;/li&gt;
+        &lt;li&gt;Cocinar hasta que dore&lt;/li&gt;
+      &lt;/ol&gt;
+
+      <span class="comment">&lt;!-- Lista de definición (dl = definition list) --&gt;</span>
+      <span class="comment">&lt;!-- Se usa para términos y sus definiciones --&gt;</span>
+      &lt;h3&gt;Glosario de Programación&lt;/h3&gt;
+      &lt;dl&gt;
+        <span class="comment">&lt;!-- dt = definition term (término) --&gt;</span>
+        &lt;dt&gt;HTML&lt;/dt&gt;
+        <span class="comment">&lt;!-- dd = definition description (descripción) --&gt;</span>
+        &lt;dd&gt;Lenguaje de marcado para estructurar páginas web&lt;/dd&gt;
+        
+        &lt;dt&gt;CSS&lt;/dt&gt;
+        &lt;dd&gt;Hojas de estilo para diseñar y dar formato visual&lt;/dd&gt;
+        
+        &lt;dt&gt;JavaScript&lt;/dt&gt;
+        &lt;dd&gt;Lenguaje de programación para interactividad&lt;/dd&gt;
+      &lt;/dl&gt;
+
+      <span class="comment">&lt;!-- Lista anidada (lista dentro de otra lista) --&gt;</span>
+      &lt;h3&gt;Cursos Disponibles&lt;/h3&gt;
+      &lt;ul&gt;
+        &lt;li&gt;Desarrollo Web
+          <span class="comment">&lt;!-- Lista interna con sus propios elementos --&gt;</span>
+          &lt;ul&gt;
+            &lt;li&gt;HTML Básico&lt;/li&gt;
+            &lt;li&gt;CSS Avanzado&lt;/li&gt;
+            &lt;li&gt;JavaScript&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+        &lt;li&gt;Diseño Gráfico
+          &lt;ul&gt;
+            &lt;li&gt;Photoshop&lt;/li&gt;
+            &lt;li&gt;Illustrator&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;</code>
+          </pre>
+          
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border: 2px solid #ccc; padding: 15px; background: white; margin: 10px 0;">
+            <h3 style="margin-top: 0;">Lista de Compras</h3>
+            <ul>
+              <li>Leche</li>
+              <li>Pan</li>
+              <li>Huevos</li>
+              <li>Manteca</li>
+            </ul>
+            
+            <h3>Receta de Panqueques</h3>
+            <ol>
+              <li>Batir los huevos en un bowl</li>
+              <li>Agregar la leche y mezclar</li>
+              <li>Añadir la harina poco a poco</li>
+              <li>Calentar la sartén con manteca</li>
+              <li>Cocinar hasta que dore</li>
+            </ol>
+            
+            <h3>Glosario de Programación</h3>
+            <dl>
+              <dt><strong>HTML</strong></dt>
+              <dd>Lenguaje de marcado para estructurar páginas web</dd>
+              <dt><strong>CSS</strong></dt>
+              <dd>Hojas de estilo para diseñar y dar formato visual</dd>
+              <dt><strong>JavaScript</strong></dt>
+              <dd>Lenguaje de programación para interactividad</dd>
+            </dl>
+            
+            <h3>Cursos Disponibles</h3>
+            <ul>
+              <li>Desarrollo Web
+                <ul>
+                  <li>HTML Básico</li>
+                  <li>CSS Avanzado</li>
+                  <li>JavaScript</li>
+                </ul>
+              </li>
+              <li>Diseño Gráfico
+                <ul>
+                  <li>Photoshop</li>
+                  <li>Illustrator</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </details>
+      </article>
+
+      <article id="formato-texto" aria-label="Formato de texto">
+        <h3>7. Formato de Texto</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            HTML ofrece etiquetas para dar <em>formato</em> al texto: <strong>negrita</strong>, <em>cursiva</em>, <u>subrayado</u>, <mark>resaltado</mark>, etc. Algunas tienen significado semántico y otras son solo visuales.
+          </p>
+          
+          <h4>Ejemplo Práctico: Artículo con Formatos</h4>
+          <pre class="code-window">
+      <code>&lt;h2&gt;Guía de HTML5&lt;/h2&gt;
+
+      <span class="comment">&lt;!-- strong: texto importante (negrita con significado) --&gt;</span>
+      <span class="comment">&lt;!-- Los lectores de pantalla enfatizan este contenido --&gt;</span>
+      &lt;p&gt;
+        &lt;strong&gt;Importante:&lt;/strong&gt; HTML5 es la última versión de HTML.
+      &lt;/p&gt;
+
+      <span class="comment">&lt;!-- b: negrita visual sin significado especial --&gt;</span>
+      &lt;p&gt;
+        &lt;b&gt;Nota:&lt;/b&gt; Usa siempre etiquetas semánticas.
+      &lt;/p&gt;
+
+      <span class="comment">&lt;!-- em: énfasis (cursiva con significado) --&gt;</span>
+      <span class="comment">&lt;!-- Cambia el significado de la oración --&gt;</span>
+      &lt;p&gt;
+        &lt;em&gt;Realmente&lt;/em&gt; necesitas aprender HTML.
+      &lt;/p&gt;
+
+      <span class="comment">&lt;!-- i: cursiva visual (sin énfasis especial) --&gt;</span>
+      <span class="comment">&lt;!-- Útil para términos técnicos o palabras extranjeras --&gt;</span>
+      &lt;p&gt;
+        El término &lt;i&gt;responsive design&lt;/i&gt; significa diseño adaptable.
+      &lt;/p&gt;
+
+      <span class="comment">&lt;!-- u: texto subrayado --&gt;</span>
+      &lt;p&gt;
+        &lt;u&gt;Advertencia:&lt;/u&gt; Guarda tu trabajo frecuentemente.
+      &lt;/p&gt;
+
+      <span class="comment">&lt;!-- s o del: texto tachado (eliminado) --&gt;</span>
+      &lt;p&gt;
+        Precio: &lt;s&gt;$500&lt;/s&gt; ahora $350
+      &lt;/p&gt;
+
+      <span class="comment">&lt;!-- mark: texto resaltado como con marcador --&gt;</span>
+      &lt;p&gt;
+        Busca la palabra &lt;mark&gt;HTML&lt;/mark&gt; en el documento.
+      &lt;/p&gt;
+
+      <span class="comment">&lt;!-- small: texto más pequeño (letra chica) --&gt;</span>
+      &lt;p&gt;
+        Oferta válida hasta fin de mes. &lt;small&gt;Sujeto a disponibilidad.&lt;/small&gt;
+      &lt;/p&gt;
+
+      <span class="comment">&lt;!-- sup: superíndice (texto arriba) --&gt;</span>
+      &lt;p&gt;
+        La fórmula del agua es H&lt;sub&gt;2&lt;/sub&gt;O y E=mc&lt;sup&gt;2&lt;/sup&gt;
+      &lt;/p&gt;
+
+      <span class="comment">&lt;!-- Combinando múltiples formatos --&gt;</span>
+      &lt;p&gt;
+        &lt;strong&gt;&lt;em&gt;Muy importante:&lt;/em&gt;&lt;/strong&gt; Siempre cierra tus etiquetas.
+      &lt;/p&gt;</code>
+          </pre>
+          
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border: 2px solid #ccc; padding: 15px; background: white; margin: 10px 0;">
+            <h2 style="margin-top: 0;">Guía de HTML5</h2>
+            
+            <p><strong>Importante:</strong> HTML5 es la última versión de HTML.</p>
+            
+            <p><b>Nota:</b> Usa siempre etiquetas semánticas.</p>
+            
+            <p><em>Realmente</em> necesitas aprender HTML.</p>
+            
+            <p>El término <i>responsive design</i> significa diseño adaptable.</p>
+            
+            <p><u>Advertencia:</u> Guarda tu trabajo frecuentemente.</p>
+            
+            <p>Precio: <s>$500</s> ahora $350</p>
+            
+            <p>Busca la palabra <mark>HTML</mark> en el documento.</p>
+            
+            <p>Oferta válida hasta fin de mes. <small>Sujeto a disponibilidad.</small></p>
+            
+            <p>La fórmula del agua es H<sub>2</sub>O y E=mc<sup>2</sup></p>
+            
+            <p><strong><em>Muy importante:</em></strong> Siempre cierra tus etiquetas.</p>
+          </div>
+        </details>
+      </article>
+
+      <article id="div-span" aria-label="Contenedores genéricos">
+        <h3>8. Div y Span</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            <strong>&lt;div&gt;</strong> es un contenedor de <em>bloque</em> para agrupar elementos (ocupa todo el ancho). <strong>&lt;span&gt;</strong> es un contenedor <em>en línea</em> para aplicar estilos a partes específicas de texto (solo ocupa el espacio necesario).
+          </p>
+          
+          <h4>Ejemplo Práctico: Tarjeta de Producto</h4>
+          <pre class="code-window">
+      <code><span class="comment">&lt;!-- div es un contenedor de bloque --&gt;</span>
+      <span class="comment">&lt;!-- Se usa para agrupar y organizar secciones --&gt;</span>
+      <span class="comment">&lt;!-- Cada div empieza en una nueva línea --&gt;</span>
+      &lt;div style="border: 1px solid #ccc; padding: 20px; width: 300px;"&gt;
+        <span class="comment">&lt;!-- Encabezado de la tarjeta --&gt;</span>
+        &lt;h3&gt;Laptop HP Pavilion&lt;/h3&gt;
+        
+        <span class="comment">&lt;!-- Sección de precio --&gt;</span>
+        &lt;div style="background: #f0f0f0; padding: 10px; margin: 10px 0;"&gt;
+          &lt;p&gt;Precio: &lt;strong&gt;$850&lt;/strong&gt;&lt;/p&gt;
+        &lt;/div&gt;
+        
+        <span class="comment">&lt;!-- Descripción con span para resaltar palabras --&gt;</span>
+        <span class="comment">&lt;!-- span es en línea: NO rompe el flujo del texto --&gt;</span>
+        &lt;p&gt;
+          Procesador &lt;span style="color: blue; font-weight: bold;"&gt;Intel i5&lt;/span&gt;, 
+          memoria &lt;span style="color: green; font-weight: bold;"&gt;8GB RAM&lt;/span&gt;, 
+          disco &lt;span style="color: red; font-weight: bold;"&gt;256GB SSD&lt;/span&gt;
+        &lt;/p&gt;
+        
+        <span class="comment">&lt;!-- Sección de acciones --&gt;</span>
+        &lt;div style="text-align: center; margin-top: 15px;"&gt;
+          &lt;button&gt;Comprar Ahora&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      <span class="comment">&lt;!-- Ejemplo de span vs div --&gt;</span>
+      &lt;h3&gt;Diferencia entre div y span&lt;/h3&gt;
+
+      <span class="comment">&lt;!-- Con div: cada elemento en nueva línea (bloque) --&gt;</span>
+      &lt;div&gt;Elemento 1&lt;/div&gt;
+      &lt;div&gt;Elemento 2&lt;/div&gt;
+      &lt;div&gt;Elemento 3&lt;/div&gt;
+
+      <span class="comment">&lt;!-- Con span: todo en la misma línea (en línea) --&gt;</span>
+      &lt;p&gt;
+        &lt;span&gt;Elemento 1&lt;/span&gt;
+        &lt;span&gt;Elemento 2&lt;/span&gt;
+        &lt;span&gt;Elemento 3&lt;/span&gt;
+      &lt;/p&gt;</code>
+          </pre>
+          
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border: 2px solid #ccc; padding: 15px; background: white; margin: 10px 0;">
+            <div style="border: 1px solid #ccc; padding: 20px; width: 300px; margin: 0 auto;">
+              <h3 style="margin-top: 0;">Laptop HP Pavilion</h3>
+              
+              <div style="background: #f0f0f0; padding: 10px; margin: 10px 0; border-radius: 5px;">
+                <p style="margin: 0;">Precio: <strong style="font-size: 1.2em;">$850</strong></p>
+              </div>
+              
+              <p>
+                Procesador <span style="color: blue; font-weight: bold;">Intel i5</span>, 
+                memoria <span style="color: green; font-weight: bold;">8GB RAM</span>, 
+                disco <span style="color: red; font-weight: bold;">256GB SSD</span>
+              </p>
+              
+              <div style="text-align: center; margin-top: 15px;">
+                <button style="background: #2196F3; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px;">Comprar Ahora</button>
+              </div>
+            </div>
+            
+            <h3>Diferencia entre div y span</h3>
+            
+            <p><strong>Con div (cada uno en nueva línea):</strong></p>
+            <div style="background: #ffe0e0; padding: 5px; margin: 2px 0;">Elemento 1</div>
+            <div style="background: #e0ffe0; padding: 5px; margin: 2px 0;">Elemento 2</div>
+            <div style="background: #e0e0ff; padding: 5px; margin: 2px 0;">Elemento 3</div>
+            
+            <p style="margin-top: 15px;"><strong>Con span (todo en la misma línea):</strong></p>
+            <p>
+              <span style="background: #ffe0e0; padding: 5px; margin: 2px;">Elemento 1</span>
+              <span style="background: #e0ffe0; padding: 5px; margin: 2px;">Elemento 2</span>
+              <span style="background: #e0e0ff; padding: 5px; margin: 2px;">Elemento 3</span>
+            </p>
+          </div>
+        </details>
+      </article>      
+
+    </section>
+
+    <section id="nivel-intermedio" class="content-narrow">
+
+      <h2>Nivel Intermedio</h2>
+
+      <article id="tablas" aria-label="Tablas en HTML">
+        <h3>9. Tablas</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Las tablas se crean con <strong>&lt;table&gt;</strong> y contienen <strong>&lt;thead&gt;</strong> (encabezado), <strong>&lt;tbody&gt;</strong> (cuerpo) y <strong>&lt;tfoot&gt;</strong> (pie). Cada fila es <strong>&lt;tr&gt;</strong> y cada celda <strong>&lt;td&gt;</strong> o <strong>&lt;th&gt;</strong>.
+          </p>
+          
+          <h4>Ejemplo Práctico: Lista de Estudiantes</h4>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- table: contenedor principal de la tabla --&gt;</span>
+<span class="comment">&lt;!-- border="1" agrega bordes visibles --&gt;</span>
+&lt;table border="1"&gt;
+
+<span class="comment">&lt;!-- thead: sección de encabezado de la tabla --&gt;</span>
+&lt;thead&gt;
+<span class="comment">&lt;!-- tr: table row (fila de la tabla) --&gt;</span>
+&lt;tr&gt;
+<span class="comment">&lt;!-- th: table header (celda de encabezado, en negrita) --&gt;</span>
+&lt;th&gt;Nombre&lt;/th&gt;
+&lt;th&gt;Edad&lt;/th&gt;
+&lt;th&gt;Ciudad&lt;/th&gt;
+&lt;th&gt;Promedio&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+<span class="comment">&lt;!-- tbody: sección del cuerpo con los datos --&gt;</span>
+&lt;tbody&gt;
+<span class="comment">&lt;!-- Primera fila de datos --&gt;</span>
+&lt;tr&gt;
+<span class="comment">&lt;!-- td: table data (celda de datos) --&gt;</span>
+&lt;td&gt;Juan Pérez&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;Posadas&lt;/td&gt;
+&lt;td&gt;8.5&lt;/td&gt;
+&lt;/tr&gt;
+
+<span class="comment">&lt;!-- Segunda fila de datos --&gt;</span>
+&lt;tr&gt;
+&lt;td&gt;María González&lt;/td&gt;
+&lt;td&gt;30&lt;/td&gt;
+&lt;td&gt;Buenos Aires&lt;/td&gt;
+&lt;td&gt;9.2&lt;/td&gt;
+&lt;/tr&gt;
+
+<span class="comment">&lt;!-- Tercera fila de datos --&gt;</span>
+&lt;tr&gt;
+&lt;td&gt;Carlos López&lt;/td&gt;
+&lt;td&gt;28&lt;/td&gt;
+&lt;td&gt;Jardín América&lt;/td&gt;
+&lt;td&gt;7.8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+
+<span class="comment">&lt;!-- tfoot: pie de tabla para totales o resumen --&gt;</span>
+&lt;tfoot&gt;
+&lt;tr&gt;
+<span class="comment">&lt;!-- colspan="3" hace que esta celda ocupe 3 columnas --&gt;</span>
+&lt;td colspan="3"&gt;&lt;strong&gt;Promedio General&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;8.5&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tfoot&gt;
+&lt;/table&gt;
+            </code>
+          </pre>
+          
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border: 2px solid #ccc; padding: 15px; background: white; margin: 10px 0;">
+            <table border="1" style="width: 100%; border-collapse: collapse;">
+              <thead style="background-color: #2196F3; color: white;">
+                <tr>
+                  <th style="padding: 10px;">Nombre</th>
+                  <th style="padding: 10px;">Edad</th>
+                  <th style="padding: 10px;">Ciudad</th>
+                  <th style="padding: 10px;">Promedio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background-color: #f9f9f9;">
+                  <td style="padding: 8px;">Juan Pérez</td>
+                  <td style="padding: 8px;">25</td>
+                  <td style="padding: 8px;">Posadas</td>
+                  <td style="padding: 8px;">8.5</td>
+                </tr>
+                <tr>
+                  <td style="padding: 8px;">María González</td>
+                  <td style="padding: 8px;">30</td>
+                  <td style="padding: 8px;">Buenos Aires</td>
+                  <td style="padding: 8px;">9.2</td>
+                </tr>
+                <tr style="background-color: #f9f9f9;">
+                  <td style="padding: 8px;">Carlos López</td>
+                  <td style="padding: 8px;">28</td>
+                  <td style="padding: 8px;">Jardín América</td>
+                  <td style="padding: 8px;">7.8</td>
+                </tr>
+              </tbody>
+              <tfoot style="background-color: #e0e0e0; font-weight: bold;">
+                <tr>
+                  <td colspan="3" style="padding: 10px;"><strong>Promedio General</strong></td>
+                  <td style="padding: 10px;"><strong>8.5</strong></td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </details>
+      </article>
+
+      <article id="formularios" aria-label="Formularios HTML">
+        <h3>10. Formularios Básicos</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Los formularios recogen <em>información del usuario</em>. Incluyen diferentes tipos de <strong>inputs</strong> y botones de envío.
+          </p>
+          
+          <h4>Ejemplo Práctico: Formulario de Contacto</h4>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- form: contenedor del formulario --&gt;</span>
+<span class="comment">&lt;!-- action: URL donde se envían los datos --&gt;</span>
+<span class="comment">&lt;!-- method: POST (envía datos ocultos) o GET (visible en URL) --&gt;</span>
+&lt;form action="/procesar" method="POST"&gt;
+
+<span class="comment">&lt;!-- label: etiqueta descriptiva del input --&gt;</span>
+<span class="comment">&lt;!-- for debe coincidir con el id del input --&gt;</span>
+&lt;label for="nombre"&gt;Nombre:&lt;/label&gt;
+<span class="comment">&lt;!-- type="text": campo de texto normal --&gt;</span>
+<span class="comment">&lt;!-- required: campo obligatorio --&gt;</span>
+&lt;input type="text" id="nombre" name="nombre" required&gt;
+&lt;br&gt;&lt;br&gt;
+
+&lt;label for="email"&gt;Email:&lt;/label&gt;
+<span class="comment">&lt;!-- type="email": valida formato de email --&gt;</span>
+&lt;input type="email" id="email" name="email" required&gt;
+&lt;br&gt;&lt;br&gt;
+
+&lt;label for="password"&gt;Contraseña:&lt;/label&gt;
+<span class="comment">&lt;!-- type="password": oculta el texto con asteriscos --&gt;</span>
+&lt;input type="password" id="password" name="password" required&gt;
+&lt;br&gt;&lt;br&gt;
+
+&lt;label for="mensaje"&gt;Mensaje:&lt;/label&gt;
+<span class="comment">&lt;!-- textarea: área de texto para mensajes largos --&gt;</span>
+&lt;textarea id="mensaje" name="mensaje" rows="4" cols="30"&gt;&lt;/textarea&gt;
+&lt;br&gt;&lt;br&gt;
+
+<span class="comment">&lt;!-- button type="submit": envía el formulario --&gt;</span>
+&lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;
+            </code>
+          </pre>
+          
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border: 2px solid #ccc; padding: 15px; background: white; margin: 10px 0;">
+            <form>
+              <label for="nombre-demo" style="display: block; margin-bottom: 5px;">Nombre:</label>
+              <input type="text" id="nombre-demo" style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;" required>
+
+              <label for="email-demo" style="display: block; margin-bottom: 5px;">Email:</label>
+              <input type="email" id="email-demo" style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;" required>
+
+              <label for="password-demo" style="display: block; margin-bottom: 5px;">Contraseña:</label>
+              <input type="password" id="password-demo" style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;" required>
+
+              <label for="mensaje-demo" style="display: block; margin-bottom: 5px;">Mensaje:</label>
+              <textarea id="mensaje-demo" rows="4" style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;"></textarea>
+
+              <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">Enviar</button>
+            </form>
+          </div>
+        </details>
+      </article>
+
+      <article id="inputs-avanzados" aria-label="Tipos de inputs">
+        <h3>11. Tipos de Inputs</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            HTML5 incluye muchos tipos de <strong>inputs especializados</strong>: checkbox, radio, date, file, color, range, y más. Cada uno tiene una <em>funcionalidad específica</em>.
+          </p>
+          
+          <h4>Ejemplo Práctico: Formulario de Preferencias</h4>
+          <pre class="code-window">
+            <code>
+&lt;form&gt;
+<span class="comment">&lt;!-- type="text": campo de texto simple --&gt;</span>
+&lt;input type="text" placeholder="Texto normal"&gt;
+&lt;br&gt;&lt;br&gt;
+
+<span class="comment">&lt;!-- type="number": solo acepta números --&gt;</span>
+<span class="comment">&lt;!-- min y max: valores mínimo y máximo --&gt;</span>
+&lt;input type="number" min="0" max="100" placeholder="Edad"&gt;
+&lt;br&gt;&lt;br&gt;
+
+<span class="comment">&lt;!-- type="date": selector de fecha --&gt;</span>
+&lt;input type="date"&gt;
+&lt;br&gt;&lt;br&gt;
+
+<span class="comment">&lt;!-- type="time": selector de hora --&gt;</span>
+&lt;input type="time"&gt;
+&lt;br&gt;&lt;br&gt;
+
+<span class="comment">&lt;!-- type="color": selector de color --&gt;</span>
+&lt;input type="color"&gt;
+&lt;br&gt;&lt;br&gt;
+
+<span class="comment">&lt;!-- type="range": control deslizante --&gt;</span>
+&lt;input type="range" min="0" max="100"&gt;
+&lt;br&gt;&lt;br&gt;
+
+<span class="comment">&lt;!-- type="file": selector de archivos --&gt;</span>
+&lt;input type="file"&gt;
+&lt;br&gt;&lt;br&gt;
+
+<span class="comment">&lt;!-- type="checkbox": casillas (múltiples opciones) --&gt;</span>
+&lt;input type="checkbox" id="deportes"&gt;
+&lt;label for="deportes"&gt;Deportes&lt;/label&gt;
+&lt;br&gt;
+&lt;input type="checkbox" id="musica"&gt;
+&lt;label for="musica"&gt;Música&lt;/label&gt;
+&lt;br&gt;&lt;br&gt;
+
+<span class="comment">&lt;!-- type="radio": botones de opción (solo una) --&gt;</span>
+<span class="comment">&lt;!-- name debe ser igual para agruparlos --&gt;</span>
+&lt;input type="radio" name="genero" id="masculino"&gt;
+&lt;label for="masculino"&gt;Masculino&lt;/label&gt;
+&lt;br&gt;
+&lt;input type="radio" name="genero" id="femenino"&gt;
+&lt;label for="femenino"&gt;Femenino&lt;/label&gt;
+&lt;br&gt;&lt;br&gt;
+
+<span class="comment">&lt;!-- textarea: área de texto multilínea --&gt;</span>
+&lt;textarea rows="4" cols="50" placeholder="Comentarios"&gt;&lt;/textarea&gt;
+&lt;br&gt;&lt;br&gt;
+
+<span class="comment">&lt;!-- select: lista desplegable --&gt;</span>
+&lt;select&gt;
+<span class="comment">&lt;!-- option: cada opción del menú --&gt;</span>
+&lt;option value="1"&gt;Opción 1&lt;/option&gt;
+&lt;option value="2"&gt;Opción 2&lt;/option&gt;
+&lt;option value="3"&gt;Opción 3&lt;/option&gt;
+&lt;/select&gt;
+&lt;/form&gt;
+            </code>
+          </pre>
+          
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border: 2px solid #ccc; padding: 15px; background: white; margin: 10px 0;">
+            <form>
+              <input type="text" placeholder="Texto normal" style="padding: 8px; margin-bottom: 10px; display: block; width: 100%; box-sizing: border-box;">
+              
+              <input type="number" min="0" max="100" placeholder="Edad" style="padding: 8px; margin-bottom: 10px; display: block; width: 100%; box-sizing: border-box;">
+              
+              <input type="date" style="padding: 8px; margin-bottom: 10px; display: block;">
+              
+              <input type="time" style="padding: 8px; margin-bottom: 10px; display: block;">
+              
+              <input type="color" style="margin-bottom: 10px; display: block; width: 60px; height: 40px;">
+              
+              <input type="range" min="0" max="100" style="margin-bottom: 10px; display: block; width: 100%;">
+              
+              <input type="file" style="margin-bottom: 10px; display: block;">
+              
+              <div style="margin-bottom: 10px;">
+                <input type="checkbox" id="deportes-demo">
+                <label for="deportes-demo">Deportes</label>
+                <br>
+                <input type="checkbox" id="musica-demo">
+                <label for="musica-demo">Música</label>
+              </div>
+              
+              <div style="margin-bottom: 10px;">
+                <input type="radio" name="genero-demo" id="masculino-demo">
+                <label for="masculino-demo">Masculino</label>
+                <br>
+                <input type="radio" name="genero-demo" id="femenino-demo">
+                <label for="femenino-demo">Femenino</label>
+              </div>
+              
+              <textarea rows="4" cols="50" placeholder="Comentarios" style="padding: 8px; margin-bottom: 10px; width: 100%; box-sizing: border-box;"></textarea>
+              
+              <select style="padding: 8px; display: block;">
+                <option value="1">Opción 1</option>
+                <option value="2">Opción 2</option>
+                <option value="3">Opción 3</option>
+              </select>
+            </form>
+          </div>
+        </details>
+      </article>
+            
+      <article id="semantica" aria-label="HTML Semántico">
+        <h3>12. Etiquetas Semánticas</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            HTML5 introdujo <strong>etiquetas semánticas</strong> que dan <em>significado</em> al contenido: <strong>&lt;header&gt;</strong>, <strong>&lt;nav&gt;</strong>, <strong>&lt;main&gt;</strong>, <strong>&lt;article&gt;</strong>, <strong>&lt;section&gt;</strong>, <strong>&lt;aside&gt;</strong>, <strong>&lt;footer&gt;</strong>.
+          </p>
+          
+          <h4>Ejemplo Práctico: Estructura de un Blog</h4>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- header: encabezado del sitio (logo, título, menú) --&gt;</span>
+&lt;header&gt;
+<span class="comment">&lt;!-- Título principal del sitio --&gt;</span>
+&lt;h1&gt;Mi Blog de Tecnología&lt;/h1&gt;
+
+<span class="comment">&lt;!-- nav: sección de navegación (menú) --&gt;</span>
+&lt;nav&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#inicio"&gt;Inicio&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#articulos"&gt;Artículos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#contacto"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/header&gt;
+
+<span class="comment">&lt;!-- main: contenido principal (solo uno por página) --&gt;</span>
+&lt;main&gt;
+
+<span class="comment">&lt;!-- article: contenido independiente (artículo de blog) --&gt;</span>
+&lt;article&gt;
+&lt;h2&gt;Introducción a HTML5&lt;/h2&gt;
+
+<span class="comment">&lt;!-- section: sección temática dentro del article --&gt;</span>
+&lt;section&gt;
+&lt;h3&gt;¿Qué es HTML5?&lt;/h3&gt;
+&lt;p&gt;HTML5 es la última versión del lenguaje...&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+&lt;h3&gt;Características principales&lt;/h3&gt;
+&lt;p&gt;Incluye etiquetas semánticas, video, audio...&lt;/p&gt;
+&lt;/section&gt;
+&lt;/article&gt;
+
+<span class="comment">&lt;!-- aside: contenido relacionado pero secundario --&gt;</span>
+&lt;aside&gt;
+&lt;h3&gt;Artículos Relacionados&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#"&gt;CSS3 Básico&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;JavaScript para principiantes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/aside&gt;
+
+&lt;/main&gt;
+
+<span class="comment">&lt;!-- footer: pie de página (copyright, enlaces) --&gt;</span>
+&lt;footer&gt;
+&lt;p&gt;© 2025 Mi Blog - Todos los derechos reservados&lt;/p&gt;
+&lt;/footer&gt;
+            </code>
+          </pre>
+          
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border: 2px solid #ccc; background: white; margin: 10px 0;">
+            <header style="background: #2196F3; color: white; padding: 20px;">
+              <h1 style="margin: 0;">Mi Blog de Tecnología</h1>
+              <nav style="margin-top: 10px;">
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                  <li style="display: inline; margin-right: 15px;"><a href="#inicio" style="color: white;">Inicio</a></li>
+                  <li style="display: inline; margin-right: 15px;"><a href="#articulos" style="color: white;">Artículos</a></li>
+                  <li style="display: inline;"><a href="#contacto" style="color: white;">Contacto</a></li>
+                </ul>
+              </nav>
+            </header>
+            
+            <div style="display: flex; padding: 20px;">
+              <main style="flex: 3; padding-right: 20px;">
+                <article style="margin-bottom: 20px;">
+                  <h2 style="margin-top: 0;">Introducción a HTML5</h2>
+                  <section style="margin-bottom: 15px;">
+                    <h3>¿Qué es HTML5?</h3>
+                    <p>HTML5 es la última versión del lenguaje...</p>
+                  </section>
+                  <section>
+                    <h3>Características principales</h3>
+                    <p>Incluye etiquetas semánticas, video, audio...</p>
+                  </section>
+                </article>
+              </main>
+              
+              <aside style="flex: 1; background: #f0f0f0; padding: 15px;">
+                <h3 style="margin-top: 0;">Artículos Relacionados</h3>
+                <ul>
+                  <li><a href="#" style="color: blue;">CSS3 Básico</a></li>
+                  <li><a href="#" style="color: blue;">JavaScript para principiantes</a></li>
+                </ul>
+              </aside>
+            </div>
+            
+            <footer style="background: #333; color: white; padding: 15px; text-align: center;">
+              <p style="margin: 0;">© 2025 Mi Blog - Todos los derechos reservados</p>
+            </footer>
+          </div>
+        </details>
+      </article>
+
+      <article id="multimedia" aria-label="Audio y Video">
+        <h3>13. Audio y Video</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            HTML5 permite incrustar <strong>audio</strong> y <strong>video</strong> nativamente sin plugins externos. Se pueden incluir <em>controles</em> y especificar múltiples fuentes.
+          </p>
+          
+          <h4>Ejemplo Práctico: Reproductor Multimedia</h4>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- video: elemento para videos --&gt;</span>
+<span class="comment">&lt;!-- width y height: dimensiones del reproductor --&gt;</span>
+<span class="comment">&lt;!-- controls: muestra botones de play, pausa, volumen --&gt;</span>
+&lt;video width="640" height="360" controls&gt;
+<span class="comment">&lt;!-- source: especifica el archivo de video --&gt;</span>
+<span class="comment">&lt;!-- type: tipo de archivo (mp4, webm, ogg) --&gt;</span>
+&lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;source src="video.webm" type="video/webm"&gt;
+<span class="comment">&lt;!-- Texto alternativo si el navegador no soporta video --&gt;</span>
+Tu navegador no soporta video HTML5.
+&lt;/video&gt;
+
+<span class="comment">&lt;!-- audio: elemento para archivos de audio --&gt;</span>
+<span class="comment">&lt;!-- controls: muestra los controles de reproducción --&gt;</span>
+&lt;audio controls&gt;
+<span class="comment">&lt;!-- Múltiples fuentes para compatibilidad --&gt;</span>
+&lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;source src="audio.ogg" type="audio/ogg"&gt;
+Tu navegador no soporta audio HTML5.
+&lt;/audio&gt;
+
+<span class="comment">&lt;!-- Video con más atributos --&gt;</span>
+<span class="comment">&lt;!-- autoplay: inicia automáticamente --&gt;</span>
+<span class="comment">&lt;!-- loop: se repite al finalizar --&gt;</span>
+<span class="comment">&lt;!-- muted: sin sonido (necesario para autoplay) --&gt;</span>
+&lt;video width="400" controls autoplay loop muted&gt;
+&lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+            </code>
+          </pre>
+          
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border: 2px solid #ccc; padding: 15px; background: white; margin: 10px 0;">
+            <h3 style="margin-top: 0;">Reproductor de Video</h3>
+            <video width="100%" height="360" controls style="max-width: 640px; background: #000;">
+              <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+              Tu navegador no soporta video HTML5.
+            </video>
+            
+            <h3>Reproductor de Audio</h3>
+            <audio controls style="width: 100%; max-width: 500px;">
+              <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+              Tu navegador no soporta audio HTML5.
+            </audio>
+          </div>
+        </details>
+      </article>
+
+      <article id="iframe" aria-label="iframes">
+        <h3>14. iFrame (Marcos Embebidos)</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Los <strong>iframes</strong> permiten incrustar otra página HTML dentro de la actual. Útil para <em>mapas</em>, videos de YouTube, o contenido de terceros.
+          </p>
+          
+          <h4>Ejemplo Práctico: Incrustar Contenido Externo</h4>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- iframe: marco embebido para contenido externo --&gt;</span>
+<span class="comment">&lt;!-- src: URL de la página a incrustar --&gt;</span>
+<span class="comment">&lt;!-- width y height: dimensiones del iframe --&gt;</span>
+<span class="comment">&lt;!-- title: descripción para accesibilidad --&gt;</span>
+&lt;iframe 
+src="https://www.openstreetmap.org/export/embed.html"
+width="600"
+height="400"
+title="Mapa de ejemplo"
+&gt;&lt;/iframe&gt;
+
+<span class="comment">&lt;!-- Incrustar video de YouTube --&gt;</span>
+<span class="comment">&lt;!-- allowfullscreen: permite ver en pantalla completa --&gt;</span>
+&lt;iframe 
+src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+width="560"
+height="315"
+title="Video de YouTube"
+allowfullscreen
+&gt;&lt;/iframe&gt;
+
+<span class="comment">&lt;!-- Incrustar Google Maps --&gt;</span>
+&lt;iframe 
+src="https://www.google.com/maps/embed?pb=..."
+width="600"
+height="450"
+style="border:0;"
+allowfullscreen=""
+loading="lazy"
+&gt;&lt;/iframe&gt;
+            </code>
+          </pre>
+          
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border: 2px solid #ccc; padding: 15px; background: white; margin: 10px 0;">
+            <h3 style="margin-top: 0;">Mapa de OpenStreetMap</h3>
+            <iframe 
+              src="https://www.openstreetmap.org/export/embed.html?bbox=-55.9,-27.4,-55.8,-27.3&layer=mapnik" 
+              width="100%" 
+              height="400" 
+              style="border: 1px solid #ccc; max-width: 600px;"
+              title="Mapa de ejemplo">
+            </iframe>
+            
+            <h3>Video de YouTube</h3>
+            <iframe 
+              width="100%" 
+              height="315" 
+              style="max-width: 560px;"
+              src="https://www.youtube.com/embed/QqheS8yJ7QU?start=1"
+              title="Video de YouTube" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+
+          </div>
+        </details>
+      </article>
+
+      <article id="meta-tags" aria-label="Meta tags">
+        <h3>15. Meta Tags</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Las <strong>meta tags</strong> proporcionan información sobre la página para navegadores y motores de búsqueda. Son esenciales para <em>SEO</em> y compartir en redes sociales.
+          </p>
+          
+          <h4>Ejemplo Práctico: Meta Tags Completas</h4>
+          <pre class="code-window">
+            <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+<span class="comment">&lt;!-- charset: define la codificación de caracteres (UTF-8 es estándar) --&gt;</span>
+&lt;meta charset="UTF-8"&gt;
+
+<span class="comment">&lt;!-- viewport: hace la página responsive en móviles --&gt;</span>
+<span class="comment">&lt;!-- width=device-width: ancho igual al dispositivo --&gt;</span>
+<span class="comment">&lt;!-- initial-scale=1.0: zoom inicial al 100% --&gt;</span>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+<span class="comment">&lt;!-- Título que aparece en la pestaña del navegador --&gt;</span>
+&lt;title&gt;Mi Blog de Tecnología - Tutoriales y Noticias&lt;/title&gt;
+
+<span class="comment">&lt;!-- description: resumen de la página (aparece en Google) --&gt;</span>
+<span class="comment">&lt;!-- Importante para SEO (máximo 155 caracteres) --&gt;</span>
+&lt;meta name="description" content="Aprende HTML, CSS y JavaScript con tutoriales prácticos y ejemplos reales"&gt;
+
+<span class="comment">&lt;!-- keywords: palabras clave (menos importante hoy en día) --&gt;</span>
+&lt;meta name="keywords" content="HTML, CSS, JavaScript, tutorial, programación"&gt;
+
+<span class="comment">&lt;!-- author: autor de la página --&gt;</span>
+&lt;meta name="author" content="Juan Pérez"&gt;
+
+<span class="comment">&lt;!-- robots: indica a los motores de búsqueda qué hacer --&gt;</span>
+<span class="comment">&lt;!-- index: indexar la página, follow: seguir los enlaces --&gt;</span>
+&lt;meta name="robots" content="index, follow"&gt;
+
+<span class="comment">&lt;!-- Open Graph: para cuando se comparte en redes sociales --&gt;</span>
+<span class="comment">&lt;!-- og:title: título que aparece en Facebook, Twitter, etc --&gt;</span>
+&lt;meta property="og:title" content="Mi Blog de Tecnología"&gt;
+
+<span class="comment">&lt;!-- og:description: descripción para redes sociales --&gt;</span>
+&lt;meta property="og:description" content="Tutoriales de programación web"&gt;
+
+<span class="comment">&lt;!-- og:image: imagen que se muestra al compartir --&gt;</span>
+&lt;meta property="og:image" content="https://miblog.com/imagen-destacada.jpg"&gt;
+
+<span class="comment">&lt;!-- og:url: URL de la página --&gt;</span>
+&lt;meta property="og:url" content="https://miblog.com"&gt;
+
+<span class="comment">&lt;!-- og:type: tipo de contenido --&gt;</span>
+&lt;meta property="og:type" content="website"&gt;
+
+<span class="comment">&lt;!-- Twitter Card para Twitter específicamente --&gt;</span>
+&lt;meta name="twitter:card" content="summary_large_image"&gt;
+&lt;meta name="twitter:title" content="Mi Blog de Tecnología"&gt;
+&lt;meta name="twitter:description" content="Tutoriales de programación web"&gt;
+&lt;meta name="twitter:image" content="https://miblog.com/imagen-destacada.jpg"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Bienvenido a Mi Blog&lt;/h1&gt;
+&lt;p&gt;Contenido de la página...&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+          
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border: 2px solid #ccc; padding: 15px; background: white; margin: 10px 0;">
+            <div style="background: #f0f0f0; padding: 10px; margin-bottom: 15px; border-radius: 4px;">
+              <p style="margin: 0; font-size: 0.9em;"><strong>🔍 En Google aparecería así:</strong></p>
+              <div style="margin-top: 10px;">
+                <div style="color: #1a0dab; font-size: 1.2em; margin-bottom: 5px;">Mi Blog de Tecnología - Tutoriales y Noticias</div>
+                <div style="color: #006621; font-size: 0.9em; margin-bottom: 5px;">https://miblog.com</div>
+                <div style="color: #545454; font-size: 0.9em;">Aprende HTML, CSS y JavaScript con tutoriales prácticos y ejemplos reales</div>
+              </div>
+            </div>
+            
+            <div style="background: #f0f0f0; padding: 10px; border-radius: 4px;">
+              <p style="margin: 0; font-size: 0.9em;"><strong>📱 En redes sociales aparecería así:</strong></p>
+              <div style="margin-top: 10px; border: 1px solid #ccc; max-width: 400px;">
+                <div style="background: #ddd; height: 200px; display: flex; align-items: center; justify-content: center; color: #666;">
+                  [Imagen destacada]
+                </div>
+                <div style="padding: 10px; background: white;">
+                  <div style="font-weight: bold; margin-bottom: 5px;">Mi Blog de Tecnología</div>
+                  <div style="color: #666; font-size: 0.9em;">Tutoriales de programación web</div>
+                  <div style="color: #999; font-size: 0.8em; margin-top: 5px;">miblog.com</div>
+                </div>
+              </div>
+            </div>
+            
+            <div style="margin-top: 20px;">
+              <h1>Bienvenido a Mi Blog</h1>
+              <p>Contenido de la página...</p>
+            </div>
+          </div>
+        </details>
+      </article>
+
+      <article id="enlaces-recursos" aria-label="Enlaces a recursos">
+        <h3>16. Enlaces a CSS y JavaScript</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Para conectar archivos <strong>CSS</strong> y <strong>JavaScript</strong> externos, se usan las etiquetas <strong>&lt;link&gt;</strong> y <strong>&lt;script&gt;</strong> dentro del <em>&lt;head&gt;</em> o antes de cerrar <em>&lt;/body&gt;</em>.
+          </p>
+          
+          <h4>Ejemplo Práctico: Conectar Archivos Externos</h4>
+          <pre class="code-window">
+            <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;title&gt;Mi Página con Estilos y Scripts&lt;/title&gt;
+
+<span class="comment">&lt;!-- link: enlaza archivos CSS externos --&gt;</span>
+<span class="comment">&lt;!-- rel="stylesheet": indica que es una hoja de estilos --&gt;</span>
+<span class="comment">&lt;!-- href: ruta del archivo CSS --&gt;</span>
+&lt;link rel="stylesheet" href="estilos.css"&gt;
+
+<span class="comment">&lt;!-- Enlazar múltiples archivos CSS --&gt;</span>
+&lt;link rel="stylesheet" href="css/normalize.css"&gt;
+&lt;link rel="stylesheet" href="css/main.css"&gt;
+
+<span class="comment">&lt;!-- icon: define el favicon (icono de la pestaña) --&gt;</span>
+&lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;
+
+<span class="comment">&lt;!-- Enlazar fuentes de Google Fonts --&gt;</span>
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"&gt;
+
+<span class="comment">&lt;!-- Script en el head (menos común, solo si es necesario antes del body) --&gt;</span>
+&lt;script src="configuracion.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+<span class="comment">&lt;!-- Contenido de la página --&gt;</span>
+&lt;h1&gt;Mi Página Web&lt;/h1&gt;
+&lt;p&gt;Contenido con estilos CSS aplicados&lt;/p&gt;
+&lt;button id="miBoton"&gt;Click aquí&lt;/button&gt;
+
+<span class="comment">&lt;!-- script: enlaza archivos JavaScript --&gt;</span>
+<span class="comment">&lt;!-- Se coloca antes de cerrar body para que cargue después del HTML --&gt;</span>
+<span class="comment">&lt;!-- src: ruta del archivo JavaScript --&gt;</span>
+&lt;script src="script.js"&gt;&lt;/script&gt;
+
+<span class="comment">&lt;!-- Enlazar múltiples archivos JS --&gt;</span>
+&lt;script src="js/funciones.js"&gt;&lt;/script&gt;
+&lt;script src="js/animaciones.js"&gt;&lt;/script&gt;
+
+<span class="comment">&lt;!-- defer: carga el script después del HTML (alternativa moderna) --&gt;</span>
+&lt;script src="app.js" defer&gt;&lt;/script&gt;
+
+<span class="comment">&lt;!-- JavaScript en línea (dentro del HTML) --&gt;</span>
+&lt;script&gt;
+console.log("Hola desde JavaScript");
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+          
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border: 2px solid #ccc; padding: 15px; background: white; margin: 10px 0;">
+            <div style="background: #f9f9f9; padding: 15px; border-left: 4px solid #2196F3; margin-bottom: 15px;">
+              <p style="margin: 0; font-weight: bold;">📁 Estructura de archivos:</p>
+              <pre style="margin: 10px 0; font-family: monospace; font-size: 0.9em;">
+      proyecto/
+      ├── index.html
+      ├── estilos.css
+      ├── script.js
+      ├── favicon.ico
+      ├── css/
+      │   ├── normalize.css
+      │   └── main.css
+      └── js/
+          ├── funciones.js
+          └── animaciones.js</pre>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+              <h3 style="margin-top: 0;">Página con estilos aplicados:</h3>
+              <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 8px;">
+                <h1 style="margin: 0; font-family: 'Arial', sans-serif;">Mi Página Web</h1>
+                <p style="margin: 10px 0;">Contenido con estilos CSS aplicados</p>
+                <button style="background: white; color: #667eea; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold;">
+                  Click aquí
+                </button>
+              </div>
+              <p style="color: #666; font-size: 0.9em; margin-top: 10px;">
+                ✨ Los estilos CSS hacen que la página se vea así de bonita<br>
+                🎯 El JavaScript agrega interactividad al botón
+              </p>
+            </div>
+            
+            <div style="background: #fff3cd; padding: 15px; border-left: 4px solid #ffc107; border-radius: 4px;">
+              <p style="margin: 0; font-weight: bold;">💡 Buenas prácticas:</p>
+              <ul style="margin: 10px 0; padding-left: 20px;">
+                <li>CSS siempre en el &lt;head&gt;</li>
+                <li>JavaScript al final del &lt;body&gt;</li>
+                <li>Usa archivos externos (no estilos inline)</li>
+                <li>Minifica archivos en producción</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+      </article>
+
+    </section>
+
+    <section id="nivel-avanzado" class="content-narrow">
+
+      <h2>Nivel Avanzado</h2>
+
+      <article id="data-attributes" aria-label="Atributos de datos personalizados">
+        <h3>17. Data Attributes (Atributos de Datos)</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Los atributos <strong>data-*</strong> permiten almacenar información personalizada en elementos HTML sin afectar la presentación. 
+            Son útiles para <em>JavaScript</em> y <em>CSS</em>, ya que facilitan el acceso a datos dinámicos.
+          </p>
+
+          <h4>Ejemplo Práctico: Almacenar Datos Personalizados</h4>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Contenedor con información personalizada de un usuario --&gt;</span>
+&lt;div 
+<span class="comment">  &lt;!-- data-user-id: identifica al usuario --&gt;</span>
+data-user-id="12345"
+<span class="comment">  &lt;!-- data-role: define su rol o nivel de permisos --&gt;</span>
+data-role="admin"
+<span class="comment">  &lt;!-- data-created: guarda la fecha de creación --&gt;</span>
+data-created="2025-01-15"
+&gt;
+Usuario Admin
+&lt;/div&gt;
+
+<span class="comment">&lt;!-- Botón con datos personalizados --&gt;</span>
+&lt;button 
+<span class="comment">  &lt;!-- data-action: define la acción a ejecutar --&gt;</span>
+data-action="delete" 
+<span class="comment">  &lt;!-- data-id: identifica el elemento asociado --&gt;</span>
+data-id="67890"&gt;
+Eliminar
+&lt;/button&gt;
+
+<span class="comment">&lt;!-- Acceso con JavaScript: element.dataset.userId --&gt;</span>
+            </code>
+          </pre>
+
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border: 2px solid #ccc; padding: 15px; background: white; margin: 10px 0;">
+            <div 
+              data-user-id="12345"
+              data-role="admin"
+              data-created="2025-01-15"
+              style="padding: 10px; background: #f0f8ff; border: 1px solid #99c;">
+              Usuario Admin
+            </div>
+            <button 
+              data-action="delete" 
+              data-id="67890" 
+              style="margin-top: 10px; padding: 5px 10px; background: #e74c3c; color: white; border: none; border-radius: 4px;">
+              Eliminar
+            </button>
+          </div>
+        </details>
+      </article>
+
+      <article id="aria" aria-label="Accesibilidad ARIA">
+        <h3>18. ARIA (Accesibilidad)</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            <strong>ARIA</strong> (Accessible Rich Internet Applications) proporciona atributos que mejoran la accesibilidad de las aplicaciones web, 
+            facilitando su uso por personas con discapacidades.
+          </p>
+
+          <h4>Ejemplo Práctico: Navegación Accesible</h4>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Menú de navegación principal accesible --&gt;</span>
+&lt;nav aria-label="Navegación principal"&gt;
+  &lt;ul role="menubar"&gt;
+    &lt;li role="none"&gt;
+      &lt;a href="#" role="menuitem"&gt;Inicio&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+<span class="comment">&lt;!-- Botón con etiqueta accesible y estado --&gt;</span>
+&lt;button 
+<span class="comment">  &lt;!-- aria-label: texto alternativo leído por lectores de pantalla --&gt;</span>
+aria-label="Cerrar ventana" 
+<span class="comment">  &lt;!-- aria-pressed: indica si el botón está activo o no --&gt;</span>
+aria-pressed="false"&gt;
+X
+&lt;/button&gt;
+
+<span class="comment">&lt;!-- Mensaje dinámico accesible --&gt;</span>
+&lt;div 
+<span class="comment">  &lt;!-- role="alert": indica contenido importante --&gt;</span>
+role="alert" 
+<span class="comment">  &lt;!-- aria-live="polite": lector de pantalla lo anuncia sin interrumpir --&gt;</span>
+aria-live="polite"&gt;
+Mensaje importante
+&lt;/div&gt;
+
+<span class="comment">&lt;!-- Campo de texto obligatorio y validado --&gt;</span>
+&lt;input 
+type="text" 
+<span class="comment">  &lt;!-- aria-required: indica que es obligatorio --&gt;</span>
+aria-required="true" 
+<span class="comment">  &lt;!-- aria-invalid: marca si tiene error --&gt;</span>
+aria-invalid="false"&gt;
+            </code>
+          </pre>
+
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border: 2px solid #ccc; padding: 15px; background: white; margin: 10px 0;">
+            <nav aria-label="Navegación principal">
+              <ul style="list-style: none; padding: 0;" role="menubar">
+                <li role="none"><a href="#" role="menuitem">Inicio</a></li>
+              </ul>
+            </nav>
+
+            <button aria-label="Cerrar ventana" aria-pressed="false" style="margin-top: 10px;">X</button>
+
+            <div role="alert" aria-live="polite" style="margin-top: 10px; background: #fff3cd; padding: 10px; border: 1px solid #ffeeba;">
+              Mensaje importante
+            </div>
+
+            <input type="text" aria-required="true" aria-invalid="false" placeholder="Campo obligatorio" style="margin-top: 10px; padding: 5px;">
+          </div>
+        </details>
+      </article>
+
+      <article id="picture" aria-label="Imágenes responsive con picture">
+        <h3>19. Picture (Imágenes Responsive)</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            El elemento <strong>&lt;picture&gt;</strong> permite mostrar diferentes imágenes según el tamaño de pantalla o el formato compatible del navegador, 
+            optimizando la carga y adaptabilidad del contenido visual.
+          </p>
+
+          <h4>Ejemplo Práctico: Imágenes Adaptables</h4>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Muestra diferentes imágenes según el ancho de pantalla --&gt;</span>
+&lt;picture&gt;
+<span class="comment">  &lt;!-- Imagen grande para pantallas grandes (&gt;=1200px) --&gt;</span>
+&lt;source media="(min-width: 1200px)" srcset="imagen-grande.jpg"&gt;
+<span class="comment">  &lt;!-- Imagen mediana para tablets o pantallas medianas --&gt;</span>
+&lt;source media="(min-width: 768px)" srcset="imagen-mediana.jpg"&gt;
+<span class="comment">  &lt;!-- Imagen pequeña para celulares --&gt;</span>
+&lt;source media="(min-width: 320px)" srcset="imagen-pequena.jpg"&gt;
+<span class="comment">  &lt;!-- Imagen por defecto si ninguna condición aplica --&gt;</span>
+&lt;img src="imagen-default.jpg" alt="Descripción"&gt;
+&lt;/picture&gt;
+
+<span class="comment">&lt;!-- Ejemplo con formato WebP y fallback JPEG --&gt;</span>
+&lt;picture&gt;
+<span class="comment">  &lt;!-- Imagen WebP (más liviana si el navegador la soporta) --&gt;</span>
+&lt;source srcset="imagen.webp" type="image/webp"&gt;
+<span class="comment">  &lt;!-- Fallback JPG si no soporta WebP --&gt;</span>
+&lt;source srcset="imagen.jpg" type="image/jpeg"&gt;
+<span class="comment">  &lt;!-- Imagen final visible --&gt;</span>
+&lt;img src="imagen.jpg" alt="Descripción"&gt;
+&lt;/picture&gt;
+            </code>
+          </pre>
+
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border: 2px solid #ccc; padding: 15px; background: white; margin: 10px 0;">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="https://placehold.co/800x300/0044cc/ffffff?text=Imagen+Grande">
+            <source media="(min-width: 768px)" srcset="https://placehold.co/600x250/0066ff/ffffff?text=Imagen+Mediana">
+            <source media="(min-width: 320px)" srcset="https://placehold.co/400x200/0099ff/ffffff?text=Imagen+Pequeña">
+            <img src="https://placehold.co/300x150/00ccff/ffffff?text=Imagen+Default" 
+                alt="Descripción de ejemplo" 
+                style="max-width: 100%; border-radius: 8px;">
+          </picture>
+
+          </div>
+        </details>
+      </article>
+            
+      <article id="details-summary" aria-label="Acordeones nativos">
+        <h3>20. Details y Summary (Acordeones)</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Las etiquetas <strong>&lt;details&gt;</strong> y <strong>&lt;summary&gt;</strong> crean 
+            <strong>elementos desplegables nativos</strong> sin necesidad de JavaScript.  
+            Son perfectas para construir <strong>acordeones</strong> o contenido <strong>colapsable</strong>.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Contenedor desplegable nativo --&gt;</span>
+&lt;details&gt;
+<span class="comment">&lt;!-- Resumen visible, se puede hacer clic --&gt;</span>
+&lt;summary&gt;Haz clic para ver más&lt;/summary&gt;
+<span class="comment">&lt;!-- Contenido que se oculta por defecto --&gt;</span>
+&lt;p&gt;Este contenido está oculto por defecto.&lt;/p&gt;
+&lt;/details&gt;
+
+&lt;details open&gt; <span class="comment">&lt;!-- Se abre por defecto --&gt;</span>
+&lt;summary&gt;Este está abierto por defecto&lt;/summary&gt;
+&lt;p&gt;Contenido visible.&lt;/p&gt;
+&lt;/details&gt;
+            </code>
+          </pre>
+
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border: 2px solid #ccc; padding: 15px; margin: 10px 0;">
+            <details>
+              <summary>Haz clic para ver más</summary>
+              <p>Este contenido está oculto por defecto.</p>
+            </details>
+            <details open style="margin-top:10px;">
+              <summary>Este está abierto por defecto</summary>
+              <p>Contenido visible.</p>
+            </details>
+          </div>
+        </details>
+      </article>
+
+      <article id="template" aria-label="Template tag">
+        <h3>21. Template (Plantillas HTML)</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            La etiqueta <strong>&lt;template&gt;</strong> contiene <strong>HTML no renderizado</strong> 
+            hasta que se activa con JavaScript.  
+            Útil para crear <strong>componentes dinámicos</strong> sin duplicar código.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Plantilla HTML oculta --&gt;</span>
+&lt;template id="mi-plantilla"&gt;
+<span class="comment">&lt;!-- Contenedor interno de la plantilla --&gt;</span>
+&lt;div&gt;
+&lt;h3&gt;Título&lt;/h3&gt; <span class="comment">&lt;!-- Título dentro de plantilla --&gt;</span>
+&lt;p&gt;Contenido de la plantilla&lt;/p&gt; <span class="comment">&lt;!-- Texto de la plantilla --&gt;</span>
+&lt;/div&gt;
+&lt;/template&gt;
+
+<span class="comment">&lt;!-- Clonar la plantilla con JavaScript --&gt;</span>
+const template = document.getElementById('mi-plantilla');
+const clone = template.content.cloneNode(true);
+            </code>
+          </pre>
+
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border:2px solid #ccc; padding:15px; margin:10px 0;">
+            <p style="color: gray; font-style: italic;">
+              La plantilla no se muestra hasta que se clona con JavaScript.
+            </p>
+          </div>
+        </details>
+      </article>
+
+      <article id="dialog" aria-label="Diálogos modales">
+        <h3>22. Dialog (Modales Nativos)</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            La etiqueta <strong>&lt;dialog&gt;</strong> permite crear <strong>ventanas modales nativas</strong> 
+            sin librerías externas.  
+            Se controla con JavaScript usando <strong>.showModal()</strong> y <strong>.close()</strong>.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Modal nativo --&gt;</span>
+&lt;dialog id="mi-modal"&gt;
+&lt;h2&gt;Título del Modal&lt;/h2&gt; <span class="comment">&lt;!-- Título del modal --&gt;</span>
+&lt;p&gt;Contenido del modal.&lt;/p&gt; <span class="comment">&lt;!-- Texto dentro del modal --&gt;</span>
+&lt;button onclick="this.closest('dialog').close()"&gt;Cerrar&lt;/button&gt; <span class="comment">&lt;!-- Botón para cerrar modal --&gt;</span>
+&lt;/dialog&gt;
+
+&lt;button onclick="document.getElementById('mi-modal').showModal()"&gt;Abrir Modal&lt;/button>
+<span class="comment">&lt;!-- Botón para abrir modal --&gt;</span>
+            </code>
+          </pre>
+
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border:2px solid #ccc; padding:15px; margin:10px 0;">
+            <dialog id="mi-modal">
+              <h2>Título del Modal</h2>
+              <p>Contenido del modal.</p>
+              <button onclick="this.closest('dialog').close()">Cerrar</button>
+            </dialog>
+            <button onclick="document.getElementById('mi-modal').showModal()" style="margin-top:10px;">Abrir Modal</button>
+          </div>
+        </details>
+      </article>
+
+      <article id="progress-meter" aria-label="Barras de progreso">
+        <h3>23. Progress y Meter</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            <strong>&lt;progress&gt;</strong> muestra el <strong>progreso de una tarea</strong>.  
+            <strong>&lt;meter&gt;</strong> representa una <strong>medición dentro de un rango</strong>, 
+            como nivel de batería o calificación.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">&lt;!-- Barra de progreso completada --&gt;</span>
+&lt;progress value="70" max="100"&gt;70%&lt;/progress&gt;
+
+<span class="comment">&lt;!-- Barra de progreso indeterminada --&gt;</span>
+&lt;progress&gt;&lt;/progress&gt;
+
+<span class="comment">&lt;!-- Medidor con rango y valores óptimos --&gt;</span>
+&lt;meter value="6" min="0" max="10" low="3" high="7" optimum="8"&gt;6 de 10&lt;/meter&gt;
+            </code>
+          </pre>
+
+          <h4>¿Cómo se vería en el navegador?</h4>
+          <div style="border:2px solid #ccc; padding:15px; margin:10px 0;">
+            <progress value="70" max="100" style="width:100%;">70%</progress>
+            <progress style="width:100%; margin-top:10px;"></progress>
+            <meter value="6" min="0" max="10" low="3" high="7" optimum="8" style="width:100%; margin-top:10px;">6 de 10</meter>
+          </div>
+        </details>
+      </article>
+
+    </section>
+  </main>
+
+<!-- ===================================================== -->
+<!-- PLACEHOLDERS DE COMPONENTES DINÁMICOS                 -->
+<!-- ===================================================== -->
+<!-- Estos contenedores reciben HTML inyectado vía JS     -->
+<!-- Permiten reutilizar componentes (footer, modales)   -->
+<!-- y mantener el HTML principal limpio y escalable      -->
+
+<div id="footer-placeholder"></div>
+<div id="contact-modal-placeholder"></div>
+
+
+<!-- ===================================================== -->
+<!-- SCRIPTS GLOBALES                                     -->
+<!-- ===================================================== -->
+<!-- Footer: se carga de forma diferida para no bloquear  -->
+<!-- el render inicial de la página                       -->
+
+<script src="../components/footer/footer.js" defer></script>
+
+<!-- Scripts generales del sitio (interacciones globales) -->
+<script src="/js/scripts.js"></script>
+
+
+<!-- ===================================================== -->
+<!-- CARGA DINÁMICA DEL CONTACT MODAL                     -->
+<!-- ===================================================== -->
+<!-- 1. Obtiene el HTML del modal desde el componente     -->
+<!-- 2. Lo inyecta en su placeholder correspondiente      -->
+<!-- 3. Carga el JS del modal de forma desacoplada        -->
+<!-- Esto permite reutilizar el modal en cualquier página -->
+
+<script>
+  fetch('../components/contact-modal/contact-modal.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('No se pudo cargar el Contact Modal');
+      }
+      return response.text();
+    })
+    .then(modalHTML => {
+      // Inyección del HTML del modal en el placeholder
+      document.getElementById('contact-modal-placeholder').innerHTML = modalHTML;
+
+      // Carga dinámica del script del modal
+      const modalScript = document.createElement('script');
+      modalScript.src = '../components/contact-modal/contact-modal.js';
+      modalScript.defer = true;
+      document.body.appendChild(modalScript);
+    })
+    .catch(error => {
+      console.error('Error cargando el Contact Modal:', error);
+    });
+</script>
+</body>
+</html>
+

@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ========================= -->
+  <!-- METADATOS BÁSICOS -->
+  <!-- ========================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ========================= -->
+  <!-- SEO PRINCIPAL -->
+  <!-- ========================= -->
+  <title>Guía Básica de CSS | Introducción práctica y ejemplos</title>
+  <meta name="description" content="Guía básica de CSS con conceptos fundamentales, ejemplos prácticos y buenas prácticas para aprender estilos web desde cero.">
+
+  <!-- ========================= -->
+  <!-- AUTOR -->
+  <!-- ========================= -->
+  <meta name="author" content="José Alberto Santacruz">
+  <meta name="robots" content="index, follow">
+
+  <!-- ========================= -->
+  <!-- URL CANÓNICA -->
+  <!-- ========================= -->
+  <link rel="canonical" href="https://santacruzprogramador.github.io/santacruzjose/pages/intro-css.html">
+
+  <!-- ========================= -->
+  <!-- OPEN GRAPH -->
+  <!-- ========================= -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Guía Básica de CSS">
+  <meta
+    property="og:description"
+    content="Aprende CSS desde cero con ejemplos claros y fundamentos esenciales del diseño web."
+  >
+  <meta
+    property="og:url"
+    content="https://santacruzprogramador.github.io/santacruzjose/pages/intro-css.html"
+  >
+  <meta
+    property="og:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+  <meta property="og:site_name" content="Portfolio José Santacruz">
+
+  <!-- ========================= -->
+  <!-- TWITTER CARD -->
+  <!-- ========================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Guía Básica de CSS">
+  <meta name="twitter:description" content="Conceptos esenciales de CSS explicados de forma clara y práctica.">
+  <meta name="twitter:image" content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg">
+
+<!-- ========================= -->
+<!-- FAVICON -->
+<!-- ========================= -->
+
+<link rel="icon" href="../assets/favicon/favicon.ico" sizes="any">
+
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="../assets/favicon/favicon-16x16.png"
+>
+
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="../assets/favicon/favicon-32x32.png"
+>
+
+<link
+  rel="icon"
+  type="image/png"
+  sizes="48x48"
+  href="../assets/favicon/favicon-48x48.png"
+>
+
+<link
+  rel="icon"
+  type="image/png"
+  sizes="192x192"
+  href="../assets/favicon/android-chrome-192x192.png"
+>
+
+<link
+  rel="icon"
+  type="image/png"
+  sizes="512x512"
+  href="../assets/favicon/android-chrome-512x512.png"
+>
+
+<link
+  rel="apple-touch-icon"
+  href="../assets/favicon/apple-touch-icon.png"
+>
+
+<link
+  rel="manifest"
+  href="../assets/favicon/site.webmanifest"
+>
+
+  <!-- ========================= -->
+  <!-- COLOR TEMA -->
+  <!-- ========================= -->
+  <meta name="theme-color" content="#0f172a">
+  
+  <!-- ========================= -->
+  <!-- ESTILOS -->
+  <!-- ========================= -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/intr_to_programming.css">
+  <link rel="stylesheet" href="../components/contact-modal/contact-modal.css">
+
+</head>
+
+<body>
+  <header class="page-title">
+    <h1 class="">Guía Básica de CSS</h1>
+  </header>
+
+  <a href="../#js" class="volver">← Inicio</a>
+  <main class="container section">
+
+    <section class="content-narrow">
+      <h2>Introducción a CSS</h2>
+
+      <article id="que-es-css" aria-label="¿Qué es CSS?">
+        <h3>¿Qué es CSS?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            CSS (Cascading Style Sheets) es el lenguaje que se utiliza para definir la <strong>presentación visual</strong> de documentos HTML. Mientras HTML estructura el contenido, CSS se encarga de los <strong>colores, fuentes, espaciados, diseño y toda la apariencia visual</strong> de una página web.
+          </p>
+        </details>
+      </article>
+
+      <article id="sintaxis-basica" aria-label="Sintaxis básica de CSS">
+        <h3>Sintaxis Básica</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            La sintaxis de CSS se compone de <strong>selectores, propiedades y valores</strong>. Un selector apunta al elemento HTML que queremos estilizar, seguido de <strong>llaves</strong> que contienen pares de <strong>propiedad-valor separados por punto y coma</strong>.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">/* Selector { propiedad: valor; } */</span>
+
+h1 {
+  color: blue;
+  font-size: 24px;
+}
+
+p {
+  color: gray;
+  line-height: 1.6;
+}
+        </code>
+      </pre>
+      <p><strong>Estructura HTML para probar:</strong></p>
+      <pre class="code-window">
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Sintaxis Básica CSS&lt;/title&gt;
+  &lt;style&gt;
+    h1 {
+      color: blue;
+      font-size: 24px;
+    }
+
+    p {
+      color: gray;
+      line-height: 1.6;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Este es un título en azul&lt;/h1&gt;
+  &lt;p&gt;Este es un párrafo en color gris con espaciado entre líneas.&lt;/p&gt;
+  &lt;p&gt;Otro párrafo con los mismos estilos aplicados.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="formas-incluir-css" aria-label="Formas de incluir CSS">
+        <h3>Tres Formas de Incluir CSS</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Existen tres maneras de aplicar estilos CSS: <strong>CSS inline</strong> (en línea), <strong>CSS interno</strong> (en el head) y <strong>CSS externo</strong> (archivo separado). La forma <strong>más recomendada es usar un archivo externo</strong> para mantener el código organizado y facilitar el mantenimiento.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">/* 1. CSS Inline - directamente en el elemento */</span>
+&lt;p style="color: red;"&gt;Texto rojo&lt;/p&gt;
+
+<span class="comment">/* 2. CSS Interno - dentro del head del HTML */</span>
+&lt;head&gt;
+  &lt;style&gt;
+    p { color: blue; }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+<span class="comment">/* 3. CSS Externo - archivo separado (RECOMENDADO) */</span>
+&lt;head&gt;
+  &lt;link rel="stylesheet" href="estilos.css"&gt;
+&lt;/head&gt;
+        </code>
+      </pre>
+      <p><strong>Estructura HTML para probar:</strong></p>
+      <pre class="code-window">
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Formas de Incluir CSS&lt;/title&gt;
+  &lt;style&gt;
+    <span class="comment">/* CSS Interno */</span>
+    .texto-interno {
+      color: blue;
+      font-size: 18px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;Ejemplos de las tres formas de CSS&lt;/h2&gt;
+  
+  <span class="comment">&lt;!-- 1. CSS Inline --&gt;</span>
+  &lt;p style="color: red; font-weight: bold;"&gt;
+    Este texto usa CSS inline (en línea)
+  &lt;/p&gt;
+  
+  <span class="comment">&lt;!-- 2. CSS Interno --&gt;</span>
+  &lt;p class="texto-interno"&gt;
+    Este texto usa CSS interno (en el head)
+  &lt;/p&gt;
+  
+  <span class="comment">&lt;!-- 3. CSS Externo (requiere crear archivo estilos.css) --&gt;</span>
+  &lt;p class="texto-externo"&gt;
+    Este texto usaría CSS externo
+  &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="selectores-basicos" aria-label="Selectores básicos">
+        <h3>Selectores Básicos</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Los selectores son <strong>patrones que permiten seleccionar elementos HTML</strong> para aplicarles estilos. Los más comunes son: <strong>selector de etiqueta</strong>, <strong>de clase</strong> (con punto), <strong>de ID</strong> (con numeral), <strong>universal</strong> (asterisco) y <strong>de atributo</strong>.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">/* Selector de etiqueta - selecciona todas las etiquetas del mismo tipo */</span>
+p {
+  color: black;
+}
+
+<span class="comment">/* Selector de clase - se usa con punto (.) */</span>
+.destacado {
+  font-weight: bold;
+  color: red;
+}
+
+<span class="comment">/* Selector de ID - se usa con numeral (#) */</span>
+#encabezado {
+  background-color: navy;
+  color: white;
+}
+
+<span class="comment">/* Selector universal - selecciona todos los elementos */</span>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+<span class="comment">/* Selector de atributo */</span>
+input[type="text"] {
+  border: 1px solid gray;
+}
+        </code>
+      </pre>
+      <p><strong>Estructura HTML para probar:</strong></p>
+      <pre class="code-window">
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Selectores Básicos CSS&lt;/title&gt;
+  &lt;style&gt;
+    <span class="comment">/* Selector universal */</span>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    <span class="comment">/* Selector de etiqueta */</span>
+    p {
+      color: black;
+      margin: 10px 0;
+    }
+
+    <span class="comment">/* Selector de clase */</span>
+    .destacado {
+      font-weight: bold;
+      color: red;
+      background-color: yellow;
+      padding: 5px;
+    }
+
+    <span class="comment">/* Selector de ID */</span>
+    #encabezado {
+      background-color: navy;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    <span class="comment">/* Selector de atributo */</span>
+    input[type="text"] {
+      border: 2px solid gray;
+      padding: 8px;
+      margin: 5px;
+    }
+
+    input[type="email"] {
+      border: 2px solid blue;
+      padding: 8px;
+      margin: 5px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header id="encabezado"&gt;
+    &lt;h1&gt;Selectores CSS&lt;/h1&gt;
+  &lt;/header&gt;
+
+  &lt;main style="padding: 20px;"&gt;
+    &lt;p&gt;Este es un párrafo normal con selector de etiqueta.&lt;/p&gt;
+    &lt;p class="destacado"&gt;Este párrafo usa la clase "destacado".&lt;/p&gt;
+    &lt;p&gt;Otro párrafo normal.&lt;/p&gt;
+    &lt;p class="destacado"&gt;Otro párrafo destacado.&lt;/p&gt;
+
+    &lt;h3&gt;Selectores de atributo:&lt;/h3&gt;
+    &lt;input type="text" placeholder="Campo de texto"&gt;
+    &lt;input type="email" placeholder="Campo de email"&gt;
+  &lt;/main&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="colores" aria-label="Colores en CSS">
+        <h3>Colores</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            CSS permite definir colores de múltiples formas: <strong>nombres de colores</strong> en inglés, <strong>códigos hexadecimales</strong>, <strong>RGB</strong>, <strong>RGBA</strong> (con transparencia), <strong>HSL</strong> y <strong>HSLA</strong>. Los <strong>códigos hexadecimales y RGB son los más utilizados</strong>.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">/* Nombres de colores */</span>
+color: red;
+color: blue;
+
+<span class="comment">/* Hexadecimal - formato #RRGGBB */</span>
+color: #ff0000;
+background-color: #3498db;
+
+<span class="comment">/* RGB - Red, Green, Blue (0-255) */</span>
+color: rgb(255, 0, 0);
+background-color: rgb(52, 152, 219);
+
+<span class="comment">/* RGBA - con canal alpha para transparencia (0-1) */</span>
+background-color: rgba(52, 152, 219, 0.5);
+
+<span class="comment">/* HSL - Hue, Saturation, Lightness */</span>
+color: hsl(0, 100%, 50%);
+        </code>
+      </pre>
+      <p><strong>Estructura HTML para probar:</strong></p>
+      <pre class="code-window">
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Colores CSS&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .caja {
+      width: 200px;
+      height: 100px;
+      margin: 15px;
+      display: inline-block;
+      padding: 15px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      line-height: 70px;
+    }
+
+    <span class="comment">/* Nombres de colores */</span>
+    .nombre-color {
+      background-color: red;
+    }
+
+    <span class="comment">/* Hexadecimal */</span>
+    .hex-color {
+      background-color: #3498db;
+    }
+
+    <span class="comment">/* RGB */</span>
+    .rgb-color {
+      background-color: rgb(46, 204, 113);
+    }
+
+    <span class="comment">/* RGBA con transparencia */</span>
+    .rgba-color {
+      background-color: rgba(155, 89, 182, 0.7);
+    }
+
+    <span class="comment">/* HSL */</span>
+    .hsl-color {
+      background-color: hsl(39, 100%, 50%);
+      color: black;
+    }
+
+    <span class="comment">/* HSLA con transparencia */</span>
+    .hsla-color {
+      background-color: hsla(204, 70%, 53%, 0.6);
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Formas de Definir Colores en CSS&lt;/h1&gt;
+
+  &lt;div class="caja nombre-color"&gt;
+    red
+  &lt;/div&gt;
+
+  &lt;div class="caja hex-color"&gt;
+    #3498db
+  &lt;/div&gt;
+
+  &lt;div class="caja rgb-color"&gt;
+    rgb(46, 204, 113)
+  &lt;/div&gt;
+
+  &lt;div class="caja rgba-color"&gt;
+    rgba(155, 89, 182, 0.7)
+  &lt;/div&gt;
+
+  &lt;div class="caja hsl-color"&gt;
+    hsl(39, 100%, 50%)
+  &lt;/div&gt;
+
+  &lt;div class="caja hsla-color"&gt;
+    hsla(204, 70%, 53%, 0.6)
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="texto-fuentes" aria-label="Texto y fuentes">
+        <h3>Texto y Fuentes</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            CSS ofrece múltiples propiedades para controlar la apariencia del texto: <strong>tipo de fuente, tamaño, peso, estilo, alineación, decoración, transformación, espaciado</strong> entre letras y líneas. Es fundamental para la <strong>legibilidad y jerarquía visual</strong>.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">/* Familia de fuentes */</span>
+font-family: Arial, Helvetica, sans-serif;
+font-family: 'Times New Roman', serif;
+
+<span class="comment">/* Tamaño de fuente */</span>
+font-size: 16px;
+font-size: 1.2em;
+font-size: 1rem;
+
+<span class="comment">/* Peso de fuente */</span>
+font-weight: normal;
+font-weight: bold;
+font-weight: 700;
+
+<span class="comment">/* Estilo de fuente */</span>
+font-style: italic;
+font-style: normal;
+
+<span class="comment">/* Alineación de texto */</span>
+text-align: left;
+text-align: center;
+text-align: right;
+text-align: justify;
+
+<span class="comment">/* Decoración de texto */</span>
+text-decoration: none;
+text-decoration: underline;
+text-decoration: line-through;
+
+<span class="comment">/* Transformación de texto */</span>
+text-transform: uppercase;
+text-transform: lowercase;
+text-transform: capitalize;
+
+<span class="comment">/* Espaciado */</span>
+letter-spacing: 2px;
+line-height: 1.6;
+        </code>
+      </pre>
+      <p><strong>Estructura HTML para probar:</strong></p>
+      <pre class="code-window">
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Texto y Fuentes CSS&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    .ejemplo {
+      background: white;
+      padding: 15px;
+      margin: 10px 0;
+      border-left: 4px solid #3498db;
+    }
+
+    <span class="comment">/* Familia de fuentes */</span>
+    .fuente-arial {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .fuente-times {
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    <span class="comment">/* Tamaños de fuente */</span>
+    .tamano-grande {
+      font-size: 24px;
+    }
+
+    .tamano-mediano {
+      font-size: 16px;
+    }
+
+    <span class="comment">/* Peso de fuente */</span>
+    .peso-normal {
+      font-weight: normal;
+    }
+
+    .peso-bold {
+      font-weight: bold;
+    }
+
+    <span class="comment">/* Estilo */</span>
+    .cursiva {
+      font-style: italic;
+    }
+
+    <span class="comment">/* Alineación */</span>
+    .alinear-izquierda {
+      text-align: left;
+    }
+
+    .alinear-centro {
+      text-align: center;
+    }
+
+    .alinear-derecha {
+      text-align: right;
+    }
+
+    .justificar {
+      text-align: justify;
+    }
+
+    <span class="comment">/* Decoración */</span>
+    .subrayado {
+      text-decoration: underline;
+    }
+
+    .tachado {
+      text-decoration: line-through;
+    }
+
+    <span class="comment">/* Transformación */</span>
+    .mayusculas {
+      text-transform: uppercase;
+    }
+
+    .minusculas {
+      text-transform: lowercase;
+    }
+
+    .capitalizar {
+      text-transform: capitalize;
+    }
+
+    <span class="comment">/* Espaciado */</span>
+    .espaciado-letras {
+      letter-spacing: 3px;
+    }
+
+    .espaciado-lineas {
+      line-height: 2;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Propiedades de Texto y Fuentes&lt;/h1&gt;
+
+  &lt;div class="ejemplo fuente-arial"&gt;
+    &lt;strong&gt;Font-family Arial:&lt;/strong&gt; Este texto usa la fuente Arial.
+  &lt;/div&gt;
+
+  &lt;div class="ejemplo fuente-times"&gt;
+    &lt;strong&gt;Font-family Times:&lt;/strong&gt; Este texto usa la fuente Times New Roman.
+  &lt;/div&gt;
+
+  &lt;div class="ejemplo tamano-grande"&gt;
+    &lt;strong&gt;Font-size grande (24px)&lt;/strong&gt;
+  &lt;/div&gt;
+
+  &lt;div class="ejemplo peso-bold"&gt;
+    &lt;strong&gt;Font-weight bold:&lt;/strong&gt; Este texto está en negrita.
+  &lt;/div&gt;
+
+  &lt;div class="ejemplo cursiva"&gt;
+    &lt;strong&gt;Font-style italic:&lt;/strong&gt; Este texto está en cursiva.
+  &lt;/div&gt;
+
+  &lt;div class="ejemplo alinear-centro"&gt;
+    Text-align center: Este texto está centrado.
+  &lt;/div&gt;
+
+  &lt;div class="ejemplo alinear-derecha"&gt;
+    Text-align right: Este texto está alineado a la derecha.
+  &lt;/div&gt;
+
+  &lt;div class="ejemplo justificar"&gt;
+    Text-align justify: Este es un texto más largo para demostrar la justificación. La justificación distribuye el texto de manera uniforme entre los márgenes izquierdo y derecho, creando líneas de igual longitud.
+  &lt;/div&gt;
+
+  &lt;div class="ejemplo subrayado"&gt;
+    &lt;strong&gt;Text-decoration underline:&lt;/strong&gt; Este texto está subrayado.
+  &lt;/div&gt;
+
+  &lt;div class="ejemplo tachado"&gt;
+    &lt;strong&gt;Text-decoration line-through:&lt;/strong&gt; Este texto está tachado.
+  &lt;/div&gt;
+
+  &lt;div class="ejemplo mayusculas"&gt;
+    Text-transform uppercase: este texto se muestra en mayúsculas.
+  &lt;/div&gt;
+
+  &lt;div class="ejemplo capitalizar"&gt;
+    text-transform capitalize: cada palabra comienza con mayúscula.
+  &lt;/div&gt;
+
+  &lt;div class="ejemplo espaciado-letras"&gt;
+    &lt;strong&gt;Letter-spacing:&lt;/strong&gt; ESPACIADO ENTRE LETRAS
+  &lt;/div&gt;
+
+  &lt;div class="ejemplo espaciado-lineas"&gt;
+    &lt;strong&gt;Line-height:&lt;/strong&gt; Este texto tiene mayor espaciado entre líneas.
+    Esto mejora la legibilidad cuando hay múltiples líneas de texto.
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="modelo-caja" aria-label="Modelo de caja">
+        <h3>Modelo de Caja (Box Model)</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Cada elemento HTML es una <strong>caja rectangular</strong> compuesta por cuatro áreas: <strong>contenido, padding (relleno interno), border (borde) y margin (margen externo)</strong>. Comprender este modelo es <strong>fundamental para controlar el espaciado y diseño</strong> de los elementos.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">/* Ancho y alto del contenido */</span>
+width: 300px;
+height: 200px;
+
+<span class="comment">/* Padding - espacio interno entre contenido y borde */</span>
+padding: 20px;
+padding: 10px 20px;
+padding: 10px 15px 20px 25px;
+padding-top: 10px;
+padding-right: 15px;
+padding-bottom: 20px;
+padding-left: 25px;
+
+<span class="comment">/* Border - borde del elemento */</span>
+border: 1px solid black;
+border-width: 2px;
+border-style: solid;
+border-color: red;
+border-radius: 10px;
+
+<span class="comment">/* Margin - espacio externo fuera del borde */</span>
+margin: 20px;
+margin: 10px 20px;
+margin: 10px auto;
+margin-top: 10px;
+
+<span class="comment">/* Box-sizing - controla cómo se calculan width y height */</span>
+box-sizing: border-box;
+        </code>
+      </pre>
+      <p><strong>Estructura HTML para probar:</strong></p>
+      <pre class="code-window">
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Modelo de Caja CSS&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      padding: 30px;
+      background-color: #ecf0f1;
+      font-family: Arial, sans-serif;
+    }
+
+    .contenedor {
+      background-color: #bdc3c7;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    <span class="comment">/* Ejemplo 1: Caja con padding */</span>
+    .caja-padding {
+      width: 200px;
+      height: 100px;
+      background-color: #3498db;
+      color: white;
+      padding: 20px;
+      margin: 10px;
+    }
+
+    <span class="comment">/* Ejemplo 2: Caja con border */</span>
+    .caja-border {
+      width: 200px;
+      height: 100px;
+      background-color: #2ecc71;
+      color: white;
+      padding: 15px;
+      border: 5px solid #27ae60;
+      margin: 10px;
+    }
+
+    <span class="comment">/* Ejemplo 3: Caja con margin */</span>
+    .caja-margin {
+      width: 200px;
+      height: 100px;
+      background-color: #e74c3c;
+      color: white;
+      padding: 15px;
+      border: 3px solid #c0392b;
+      margin: 30px;
+    }
+
+    <span class="comment">/* Ejemplo 4: Border radius */</span>
+    .caja-redonda {
+      width: 200px;
+      height: 100px;
+      background-color: #9b59b6;
+      color: white;
+      padding: 15px;
+      border: 3px solid #8e44ad;
+      border-radius: 15px;
+      margin: 10px;
+    }
+
+    <span class="comment">/* Ejemplo 5: Box-sizing */</span>
+    .caja-content-box {
+      width: 200px;
+      height: 100px;
+      background-color: #f39c12;
+      color: white;
+      padding: 20px;
+      border: 5px solid #e67e22;
+      margin: 10px;
+      box-sizing: content-box;
+    }
+
+    .caja-border-box {
+      width: 200px;
+      height: 100px;
+      background-color: #16a085;
+      color: white;
+      padding: 20px;
+      border: 5px solid #1abc9c;
+      margin: 10px;
+      box-sizing: border-box;
+    }
+
+    .etiqueta {
+      display: inline-block;
+      background-color: #34495e;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Modelo de Caja (Box Model)&lt;/h1&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="etiqueta"&gt;Padding: 20px&lt;/div&gt;
+    &lt;div class="caja-padding"&gt;
+      Caja con padding de 20px en todos los lados
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="etiqueta"&gt;Border: 5px solid&lt;/div&gt;
+    &lt;div class="caja-border"&gt;
+      Caja con borde de 5px
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="etiqueta"&gt;Margin: 30px&lt;/div&gt;
+    &lt;div class="caja-margin"&gt;
+      Caja con margen de 30px (nota el espacio alrededor)
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="etiqueta"&gt;Border-radius: 15px&lt;/div&gt;
+    &lt;div class="caja-redonda"&gt;
+      Caja con bordes redondeados
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="etiqueta"&gt;Box-sizing: content-box (predeterminado)&lt;/div&gt;
+    &lt;div class="caja-content-box"&gt;
+      Width 200px + padding + border = tamaño total mayor
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="etiqueta"&gt;Box-sizing: border-box (recomendado)&lt;/div&gt;
+    &lt;div class="caja-border-box"&gt;
+      Width 200px incluye padding y border = tamaño total 200px
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="bordes-sombras" aria-label="Bordes y sombras">
+        <h3>Bordes y Sombras</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            CSS ofrece propiedades para crear <strong>bordes personalizados</strong> y agregar <strong>sombras</strong> tanto a elementos (box-shadow) como a texto (text-shadow), lo que permite crear <strong>efectos visuales y profundidad</strong> en el diseño.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">/* Bordes básicos */</span>
+border: 2px solid black;
+border-top: 1px dashed red;
+border-radius: 10px;
+border-radius: 50%;
+
+<span class="comment">/* Sombra de caja - offset-x offset-y blur spread color */</span>
+box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+<span class="comment">/* Múltiples sombras */</span>
+box-shadow: 
+  0 2px 4px rgba(0,0,0,0.1),
+  0 4px 8px rgba(0,0,0,0.1);
+
+<span class="comment">/* Sombra de texto */</span>
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+<span class="comment">/* Outline - contorno que no afecta el layout */</span>
+outline: 2px solid blue;
+outline-offset: 5px;
+        </code>
+      </pre>
+      <p><strong>Estructura HTML para probar:</strong></p>
+      <pre class="code-window">
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Bordes y Sombras CSS&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      padding: 30px;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .contenedor {
+      display: inline-block;
+      margin: 20px;
+      text-align: center;
+    }
+
+    .caja {
+      width: 200px;
+      height: 150px;
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+
+    <span class="comment">/* Borde sólido */</span>
+    .border-solid {
+      border: 3px solid #3498db;
+    }
+
+    <span class="comment">/* Borde punteado */</span>
+    .border-dotted {
+      border: 3px dotted #2ecc71;
+    }
+
+    <span class="comment">/* Borde discontinuo */</span>
+    .border-dashed {
+      border: 3px dashed #e74c3c;
+    }
+
+    <span class="comment">/* Bordes individuales */</span>
+    .border-individual {
+      border-top: 5px solid #3498db;
+      border-right: 3px dashed #2ecc71;
+      border-bottom: 5px solid #e74c3c;
+      border-left: 3px dotted #f39c12;
+    }
+
+    <span class="comment">/* Border radius */</span>
+    .border-radius {
+      border: 3px solid #9b59b6;
+      border-radius: 15px;
+    }
+
+    <span class="comment">/* Border radius circular */</span>
+    .border-circle {
+      border: 3px solid #1abc9c;
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+    }
+
+    <span class="comment">/* Box shadow simple */</span>
+    .shadow-simple {
+      border: 1px solid #ddd;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    <span class="comment">/* Box shadow suave */</span>
+    .shadow-soft {
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    <span class="comment">/* Box shadow elevado */</span>
+    .shadow-elevated {
+      border: 1px solid #ddd;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    <span class="comment">/* Múltiples sombras */</span>
+    .shadow-multiple {
+      border: 1px solid #ddd;
+      box-shadow: 
+        0 2px 4px rgba(0,0,0,0.1),
+        0 4px 8px rgba(0,0,0,0.1),
+        0 8px 16px rgba(0,0,0,0.1);
+    }
+
+    <span class="comment">/* Sombra interna */</span>
+    .shadow-inset {
+      border: 1px solid #ddd;
+      box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    <span class="comment">/* Sombra de color */</span>
+    .shadow-color {
+      border: 1px solid #ddd;
+      box-shadow: 0 5px 15px rgba(52, 152, 219, 0.5);
+    }
+
+    <span class="comment">/* Text shadow */</span>
+    .text-shadow-simple {
+      font-size: 32px;
+      font-weight: bold;
+      color: #3498db;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .text-shadow-glow {
+      font-size: 32px;
+      font-weight: bold;
+      color: #2ecc71;
+      text-shadow: 0 0 10px rgba(46, 204, 113, 0.8);
+    }
+
+    .text-shadow-3d {
+      font-size: 32px;
+      font-weight: bold;
+      color: #e74c3c;
+      text-shadow: 
+        1px 1px 0 #c0392b,
+        2px 2px 0 #c0392b,
+        3px 3px 0 #c0392b,
+        4px 4px 5px rgba(0,0,0,0.3);
+    }
+
+    <span class="comment">/* Outline */</span>
+    .outline-simple {
+      border: 2px solid #3498db;
+      outline: 3px solid #2ecc71;
+      outline-offset: 5px;
+    }
+
+    .etiqueta {
+      font-size: 14px;
+      color: #555;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Bordes y Sombras en CSS&lt;/h1&gt;
+
+  &lt;h2&gt;Estilos de Bordes&lt;/h2&gt;
+  
+  &lt;div class="contenedor"&gt;
+    &lt;div class="caja border-solid"&gt;
+      Borde Sólido
+    &lt;/div&gt;
+    &lt;p class="etiqueta"&gt;border: 3px solid&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="caja border-dotted"&gt;
+      Borde Punteado
+    &lt;/div&gt;
+    &lt;p class="etiqueta"&gt;border: 3px dotted&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="caja border-dashed"&gt;
+      Borde Discontinuo
+    &lt;/div&gt;
+    &lt;p class="etiqueta"&gt;border: 3px dashed&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="caja border-individual"&gt;
+      Bordes Individuales
+    &lt;/div&gt;
+    &lt;p class="etiqueta"&gt;Cada lado diferente&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;h2&gt;Border Radius&lt;/h2&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="caja border-radius"&gt;
+      Bordes Redondeados
+    &lt;/div&gt;
+    &lt;p class="etiqueta"&gt;border-radius: 15px&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="caja border-circle"&gt;
+      Círculo
+    &lt;/div&gt;
+    &lt;p class="etiqueta"&gt;border-radius: 50%&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;h2&gt;Box Shadow&lt;/h2&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="caja shadow-simple"&gt;
+      Sombra Simple
+    &lt;/div&gt;
+    &lt;p class="etiqueta"&gt;5px 5px 10px&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="caja shadow-soft"&gt;
+      Sombra Suave
+    &lt;/div&gt;
+    &lt;p class="etiqueta"&gt;0 4px 6px&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="caja shadow-elevated"&gt;
+      Sombra Elevada
+    &lt;/div&gt;
+    &lt;p class="etiqueta"&gt;0 10px 20px&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="caja shadow-multiple"&gt;
+      Múltiples Sombras
+    &lt;/div&gt;
+    &lt;p class="etiqueta"&gt;3 capas de sombra&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="caja shadow-inset"&gt;
+      Sombra Interna
+    &lt;/div&gt;
+    &lt;p class="etiqueta"&gt;inset 0 4px 8px&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="caja shadow-color"&gt;
+      Sombra de Color
+    &lt;/div&gt;
+    &lt;p class="etiqueta"&gt;Con color azul&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;h2&gt;Text Shadow&lt;/h2&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="caja"&gt;
+      &lt;span class="text-shadow-simple"&gt;Texto&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;p class="etiqueta"&gt;Sombra simple&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="caja"&gt;
+      &lt;span class="text-shadow-glow"&gt;Brillo&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;p class="etiqueta"&gt;Efecto glow&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="caja"&gt;
+      &lt;span class="text-shadow-3d"&gt;3D&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;p class="etiqueta"&gt;Efecto 3D&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;h2&gt;Outline&lt;/h2&gt;
+
+  &lt;div class="contenedor"&gt;
+    &lt;div class="caja outline-simple"&gt;
+      Con Outline
+    &lt;/div&gt;
+    &lt;p class="etiqueta"&gt;outline + outline-offset&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="transiciones" aria-label="Transiciones">
+        <h3>Transiciones</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Las transiciones permiten crear <strong>animaciones suaves cuando cambian las propiedades CSS</strong> de un elemento, generalmente al hacer hover o cambiar estados. Se especifica <strong>qué propiedad animar, la duración, el timing y el delay</strong>.
+          </p>
+          <pre class="code-window">
+            <code>
+<span class="comment">/* Transición básica */</span>
+.boton {
+  background-color: blue;
+  transition: background-color 0.3s;
+}
+
+.boton:hover {
+  background-color: red;
+}
+
+<span class="comment">/* Transición completa con todos los valores */</span>
+transition: property duration timing-function delay;
+transition: all 0.3s ease-in-out 0s;
+
+<span class="comment">/* Múltiples propiedades */</span>
+transition: 
+  background-color 0.3s,
+  transform 0.2s,
+  box-shadow 0.3s;
+
+<span class="comment">/* Timing functions comunes */</span>
+transition-timing-function: ease;
+transition-timing-function: linear;
+transition-timing-function: ease-in;
+transition-timing-function: ease-out;
+transition-timing-function: ease-in-out;
+        </code>
+      </pre>
+      <p><strong>Estructura HTML para probar:</strong></p>
+      <pre class="code-window">
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Transiciones CSS&lt;/title&gt;
+  &lt;style&gt;
+    body {
+      padding: 30px;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    .seccion {
+      margin-bottom: 40px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .boton {
+      display: inline-block;
+      padding: 15px 30px;
+      margin: 10px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    <span class="comment">/* Transición de color */</span>
+    .transition-color {
+      transition: background-color 0.3s;
+    }
+
+    .transition-color:hover {
+      background-color: #e74c3c;
+    }
+
+    <span class="comment">/* Transición de tamaño */</span>
+    .transition-scale {
+      transition: transform 0.3s;
+    }
+
+    .transition-scale:hover {
+      transform: scale(1.1);
+    }
+
+    <span class="comment">/* Transición de sombra */</span>
+    .transition-shadow {
+      transition: box-shadow 0.3s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .transition-shadow:hover {
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    <span class="comment">/* Transición múltiple */</span>
+    .transition-multiple {
+      transition: 
+        background-color 0.3s,
+        transform 0.3s,
+        box-shadow 0.3s;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .transition-multiple:hover {
+      background-color: #2ecc71;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    <span class="comment">/* Timing: ease (por defecto) */</span>
+    .timing-ease {
+      transition: transform 1s ease;
+    }
+
+    .timing-ease:hover {
+      transform: translateX(100px);
+    }
+
+    <span class="comment">/* Timing: linear */</span>
+    .timing-linear {
+      transition: transform 1s linear;
+    }
+
+    .timing-linear:hover {
+      transform: translateX(100px);
+    }
+
+    <span class="comment">/* Timing: ease-in */</span>
+    .timing-ease-in {
+      transition: transform 1s ease-in;
+    }
+
+    .timing-ease-in:hover {
+      transform: translateX(100px);
+    }
+
+    <span class="comment">/* Timing: ease-out */</span>
+    .timing-ease-out {
+      transition: transform 1s ease-out;
+    }
+
+    .timing-ease-out:hover {
+      transform: translateX(100px);
+    }
+
+    <span class="comment">/* Timing: ease-in-out */</span>
+    .timing-ease-in-out {
+      transition: transform 1s ease-in-out;
+    }
+
+    .timing-ease-in-out:hover {
+      transform: translateX(100px);
+    }
+
+    <span class="comment">/* Transición con delay */</span>
+    .transition-delay {
+      transition: background-color 0.5s 0.3s;
+    }
+
+    .transition-delay:hover {
+      background-color: #9b59b6;
+    }
+
+    <span class="comment">/* Tarjeta con transición */</span>
+    .tarjeta {
+      width: 250px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: inline-block;
+      margin: 10px;
+      vertical-align: top;
+    }
+
+    .tarjeta:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    }
+
+    .tarjeta h3 {
+      color: #3498db;
+      margin-top: 0;
+    }
+
+    <span class="comment">/* Rotate transition */</span>
+    .transition-rotate {
+      transition: transform 0.5s;
+    }
+
+    .transition-rotate:hover {
+      transform: rotate(360deg);
+    }
+
+    <span class="comment">/* Width transition */</span>
+    .barra {
+      width: 100px;
+      height: 30px;
+      background-color: #3498db;
+      border-radius: 5px;
+      transition: width 0.5s;
+      color: white;
+      text-align: center;
+      line-height: 30px;
+      cursor: pointer;
+    }
+
+    .barra:hover {
+      width: 300px;
+    }
+
+    .nota {
+      background-color: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 10px;
+      margin: 20px 0;
+      border-radius: 5px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Transiciones en CSS&lt;/h1&gt;
+
+  &lt;div class="nota"&gt;
+    &lt;strong&gt;Nota:&lt;/strong&gt; Pasa el cursor sobre los elementos para ver las transiciones en acción.
+  &lt;/div&gt;
+
+  &lt;div class="seccion"&gt;
+    &lt;h2&gt;Transiciones Básicas&lt;/h2&gt;
+    
+    &lt;button class="boton transition-color"&gt;
+      Cambio de Color
+    &lt;/button&gt;
+
+    &lt;button class="boton transition-scale"&gt;
+      Escalar
+    &lt;/button&gt;
+
+    &lt;button class="boton transition-shadow"&gt;
+      Cambio de Sombra
+    &lt;/button&gt;
+
+    &lt;button class="boton transition-multiple"&gt;
+      Múltiples Transiciones
+    &lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div class="seccion"&gt;
+    &lt;h2&gt;Timing Functions&lt;/h2&gt;
+    &lt;p&gt;Diferentes velocidades de animación:&lt;/p&gt;
+    
+    &lt;div&gt;
+      &lt;button class="boton timing-ease"&gt;ease&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;button class="boton timing-linear"&gt;linear&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;button class="boton timing-ease-in"&gt;ease-in&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;button class="boton timing-ease-out"&gt;ease-out&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;button class="boton timing-ease-in-out"&gt;ease-in-out&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="seccion"&gt;
+    &lt;h2&gt;Transición con Delay&lt;/h2&gt;
+    &lt;button class="boton transition-delay"&gt;
+      Espera 0.3s antes de cambiar
+    &lt;/button&gt;
+  &lt;/div&gt;
+
+  &lt;div class="seccion"&gt;
+    &lt;h2&gt;Ejemplos Prácticos&lt;/h2&gt;
+    
+    &lt;div class="tarjeta"&gt;
+      &lt;h3&gt;Tarjeta 1&lt;/h3&gt;
+      &lt;p&gt;Pasa el cursor para ver el efecto de elevación.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="tarjeta"&gt;
+      &lt;h3&gt;Tarjeta 2&lt;/h3&gt;
+      &lt;p&gt;Transición suave con sombra y movimiento.&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;div class="tarjeta"&gt;
+      &lt;h3&gt;Tarjeta 3&lt;/h3&gt;
+      &lt;p&gt;Efecto hover para mejor UX.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="seccion"&gt;
+    &lt;h2&gt;Otras Transiciones&lt;/h2&gt;
+    
+    &lt;button class="boton transition-rotate"&gt;
+      Rotar 360°
+    &lt;/button&gt;
+
+    &lt;br&gt;&lt;br&gt;
+
+    &lt;div class="barra"&gt;
+      Expandir
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </code>
+          </pre>
+        </details>
+      </article>
+
+    </section>
+
+  </main>
+
+<!-- ===================================================== -->
+<!-- PLACEHOLDERS DE COMPONENTES DINÁMICOS                 -->
+<!-- ===================================================== -->
+<!-- Estos contenedores reciben HTML inyectado vía JS     -->
+<!-- Permiten reutilizar componentes (footer, modales)   -->
+<!-- y mantener el HTML principal limpio y escalable      -->
+
+<div id="footer-placeholder"></div>
+<div id="contact-modal-placeholder"></div>
+
+
+<!-- ===================================================== -->
+<!-- SCRIPTS GLOBALES                                     -->
+<!-- ===================================================== -->
+<!-- Footer: se carga de forma diferida para no bloquear  -->
+<!-- el render inicial de la página                       -->
+
+<script src="../components/footer/footer.js" defer></script>
+
+<!-- Scripts generales del sitio (interacciones globales) -->
+<script src="/js/scripts.js"></script>
+
+
+<!-- ===================================================== -->
+<!-- CARGA DINÁMICA DEL CONTACT MODAL                     -->
+<!-- ===================================================== -->
+<!-- 1. Obtiene el HTML del modal desde el componente     -->
+<!-- 2. Lo inyecta en su placeholder correspondiente      -->
+<!-- 3. Carga el JS del modal de forma desacoplada        -->
+<!-- Esto permite reutilizar el modal en cualquier página -->
+
+<script>
+  fetch('../components/contact-modal/contact-modal.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('No se pudo cargar el Contact Modal');
+      }
+      return response.text();
+    })
+    .then(modalHTML => {
+      // Inyección del HTML del modal en el placeholder
+      document.getElementById('contact-modal-placeholder').innerHTML = modalHTML;
+
+      // Carga dinámica del script del modal
+      const modalScript = document.createElement('script');
+      modalScript.src = '../components/contact-modal/contact-modal.js';
+      modalScript.defer = true;
+      document.body.appendChild(modalScript);
+    })
+    .catch(error => {
+      console.error('Error cargando el Contact Modal:', error);
+    });
+</script>
+
+</body>
+</html>
+

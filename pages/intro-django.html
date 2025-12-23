@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ========================= -->
+  <!-- METADATOS BÁSICOS -->
+  <!-- ========================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ========================= -->
+  <!-- SEO PRINCIPAL -->
+  <!-- ========================= -->
+  <title>Introducción a Django | Framework web con Python</title>
+  <meta
+    name="description"
+    content="Introducción a Django, el framework web de Python. Conoce sus conceptos básicos, arquitectura MVT y cómo crear aplicaciones web escalables."
+  >
+
+  <!-- ========================= -->
+  <!-- AUTOR -->
+  <!-- ========================= -->
+  <meta name="author" content="José Alberto Santacruz">
+  <meta name="robots" content="index, follow">
+
+  <!-- ========================= -->
+  <!-- URL CANÓNICA -->
+  <!-- ========================= -->
+  <link
+    rel="canonical"
+    href="https://santacruzprogramador.github.io/santacruzjose/pages/intro-django.html"
+  >
+
+  <!-- ========================= -->
+  <!-- OPEN GRAPH -->
+  <!-- ========================= -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Introducción a Django">
+  <meta
+    property="og:description"
+    content="Aprende los fundamentos de Django, el framework web de Python para desarrollar aplicaciones robustas y escalables."
+  >
+  <meta
+    property="og:url"
+    content="https://santacruzprogramador.github.io/santacruzjose/pages/intro-django.html"
+  >
+  <meta
+    property="og:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+  <meta property="og:site_name" content="Portfolio José Santacruz">
+
+  <!-- ========================= -->
+  <!-- TWITTER CARD -->
+  <!-- ========================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Introducción a Django">
+  <meta
+    name="twitter:description"
+    content="Conceptos esenciales para comenzar a desarrollar aplicaciones web con Django."
+  >
+  <meta
+    name="twitter:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+
+  <!-- ========================= -->
+  <!-- FAVICON -->
+  <!-- ========================= -->
+  <link
+    rel="icon"
+    href="../assets/favicon/favicon.ico"
+    type="image/x-icon"
+  >
+
+  <!-- ========================= -->
+  <!-- COLOR TEMA -->
+  <!-- ========================= -->
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- ========================= -->
+  <!-- ESTILOS -->
+  <!-- ========================= -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/intr_to_programming.css">
+  <link rel="stylesheet" href="../components/contact-modal/contact-modal.css">
+</head>
+
+<body>
+
+  <header class="page-title">
+    <h1 class="">Introduccion a Django</h1>
+  </header>
+
+
+  <a href="../#django" class="volver">← Inicio</a>
+  <main class="containesr section">
+
+    <section class="content-narrow">
+      <h2 >Django</h2>
+
+      <article id="que-es-un-framework" aria-labelledby="Que es un framework">
+        <h3>¿Qué es un framework en el desarrollo de software?</h3>
+        <details aria-labelledby="que-es-poo">
+          <summary>Leer explicación</summary>
+        <p>
+          Un <strong>framework</strong> es una <strong>estructura</strong> o conjunto de 
+          <strong>herramientas, bibliotecas y reglas</strong> que facilita el desarrollo de software, 
+          guiando cómo se debe organizar y escribir el código.
+        </p>
+        <p>
+          Puede entenderse como una <strong>plantilla base</strong> sobre la cual se construyen programas, 
+          permitiendo que el desarrollador se enfoque más en la <strong>lógica del negocio</strong> en lugar 
+          de preocuparse por los detalles de bajo nivel.
+        </p>
+        <p>
+          Los frameworks suelen proveer <strong>estándares</strong>, buenas prácticas y una 
+          <strong>arquitectura predefinida</strong>, lo que ayuda a mejorar la productividad, 
+          la mantenibilidad y la escalabilidad de las aplicaciones.
+        </p>
+        <p>
+          Ejemplos comunes de frameworks son: <strong>Django</strong> (para desarrollo web en Python), 
+          <strong>React</strong> (para interfaces de usuario) y <strong>Spring</strong> (para aplicaciones en Java).
+        </p>
+        </details>
+      </article>
+
+      <article id="que-es-django" aria-labelledby="Que es django">
+        <h3>¿Qué es Django y cuáles son sus principales características?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            <strong>Django</strong> es un <strong>framework de desarrollo web</strong> de 
+            <strong>código abierto</strong> escrito en <strong>Python</strong>. 
+            Está diseñado para facilitar la creación de aplicaciones web de manera 
+            <strong>rápida y eficiente</strong>, siguiendo el principio 
+            <strong>“No repetir código” (DRY)</strong>.
+          </p>
+          <p>
+            Entre sus características más destacadas se incluyen:
+          </p>
+          <ul>
+            <li><strong>Sistema de administración automático</strong> para gestionar contenido.</li>
+            <li><strong>Autenticación y autorización de usuarios</strong> integrada.</li>
+            <li><strong>ORM (Object Relational Mapper)</strong> para interactuar con bases de datos sin escribir SQL.</li>
+            <li><strong>Seguridad incorporada</strong> contra ataques comunes como XSS, CSRF o inyección SQL.</li>
+            <li><strong>Escalabilidad y modularidad</strong>, permitiendo crear proyectos pequeños o grandes.</li>
+            <li><strong>Soporte para internacionalización</strong> y localización de aplicaciones.</li>
+          </ul>
+          <p>
+            Gracias a estas funcionalidades, los desarrolladores pueden centrarse en la 
+            <strong>lógica de la aplicación</strong> en lugar de invertir tiempo en 
+            <strong>tareas repetitivas</strong>.
+          </p>
+        </details>
+      </article>
+
+      <article id="arquitectura-mtv-de-django" aria-labelledby="Arquitectura MTV de Django">
+        <h3>¿En qué consiste la arquitectura MTV de Django y cómo se diferencia del patrón MVC tradicional?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            Django utiliza la arquitectura <strong>MTV (Model - Template - View)</strong>, 
+            que es muy similar al patrón <strong>MVC (Model - View - Controller)</strong> 
+            pero con una <strong>diferencia en la terminología</strong>.
+          </p>
+          
+          <p>Los componentes de MTV en Django son:</p>
+          <ul>
+            <li>
+              <strong>Model:</strong> se encarga de la <strong>gestión de los datos</strong> 
+              y la interacción con la base de datos a través del <strong>ORM de Django</strong>.
+            </li>
+            <li>
+              <strong>Template:</strong> es el <strong>capa de presentación</strong>, 
+              donde se definen las <strong>interfaces de usuario</strong> mediante HTML, CSS y otras tecnologías.
+            </li>
+            <li>
+              <strong>View:</strong> actúa como la <strong>lógica de negocio</strong>. 
+              Procesa las solicitudes del usuario, interactúa con el modelo y envía la información al template.
+            </li>
+          </ul>
+          
+          <p>
+            La diferencia principal con el patrón <strong>MVC</strong> es que en Django:
+          </p>
+          <ul>
+            <li>El <strong>Controller</strong> tradicional es reemplazado por el propio <strong>framework</strong>, que gestiona el enrutamiento y la lógica de control.</li>
+            <li>Lo que Django llama <strong>View</strong> corresponde en realidad al <strong>Controller</strong> en MVC.</li>
+            <li>El <strong>Template</strong> de Django equivale a la <strong>View</strong> en MVC.</li>
+          </ul>
+          
+          <p>
+            En resumen: Django sigue el mismo principio que <strong>MVC</strong>, 
+            pero con una <strong>adaptación terminológica</strong> donde el framework asume parte 
+            de las responsabilidades del controlador.
+          </p>
+        </details>
+      </article>
+
+      <article id="estructura-proyecto-django" aria-labelledby="Estructura del Proyecto Django en formato visual tipo árbol">
+        <h3>Estructura del Proyecto Django en formato visual tipo árbol</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <pre class="code-window">
+            <code>
+# Estructura del Proyecto Django
+
+mi_proyecto/                 # Carpeta raíz del proyecto
+│── manage.py                # Script de gestión de Django
+│── db.sqlite3               # Archivo de base de datos (si usas SQLite)
+│── requirements.txt         # Lista de dependencias (opcional)
+│── .gitignore               # Archivos y carpetas a ignorar en Git
+│
+├── mi_proyecto/             # Carpeta del proyecto (configuración global)
+│   │── __init__.py          # Hace que la carpeta sea un paquete Python
+│   │── settings.py          # Configuración del proyecto
+│   │── urls.py              # Enrutamiento principal
+│   │── wsgi.py              # Configuración para servidores WSGI
+│   │── asgi.py              # Configuración para servidores ASGI
+│
+├── mi_app/                  # Aplicación Django (puedes tener varias)
+│   │── migrations/          # Migraciones de base de datos
+│   │   │── __init__.py
+│   │── __init__.py          # Hace que la carpeta sea un paquete Python
+│   │── admin.py             # Configuración del panel de administración
+│   │── apps.py              # Configuración de la app
+│   │── models.py            # Definición de modelos de datos(clases que se convierten en tablas de SQL)
+│   │── views.py             # Lógica de vistas
+│   │── urls.py              # Enrutamiento específico de la app (opcional)
+│   │── forms.py             # Formularios (opcional)
+│   │── tests.py             # Pruebas unitarias
+│
+├── templates/               # Archivos de plantillas HTML
+│   ├── base.html            # Plantilla base para extender
+│   ├── home.html            # Ejemplo de plantilla para la página de inicio
+│   └── ...                  # Otras plantillas según necesidad
+│
+├── static/                  # Archivos estáticos (CSS, JavaScript, imágenes)
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+└── venv/                    # Entorno virtual (opcional)
+
+settings.py                # Archivo de configuración principal de Django
+│
+├── BASE_DIR               # Ruta base del proyecto
+├── SECRET_KEY             # Clave secreta (para producción debe ocultarse)
+├── DEBUG                  # True = modo desarrollo | False = producción
+├── ALLOWED_HOSTS          # Lista de dominios permitidos
+│
+├── INSTALLED_APPS         # Aplicaciones registradas (propias y de Django)
+│   ├── django.contrib.admin
+│   ├── django.contrib.auth
+│   ├── ...                # Otros módulos por defecto
+│   └── mi_app             # Tu aplicación personalizada
+│
+├── MIDDLEWARE             # Lista de middlewares que procesan las solicitudes
+│
+├── ROOT_URLCONF           # Archivo principal de rutas (urls.py)
+│
+├── TEMPLATES              # Configuración de plantillas HTML
+│   ├── BACKEND            # Motor de plantillas usado
+│   ├── DIRS               # Carpeta donde están las plantillas
+│   ├── APP_DIRS           # Habilita plantillas dentro de apps
+│   └── context_processors # Variables disponibles en las plantillas
+│
+├── WSGI_APPLICATION       # Entrada para servidores WSGI (modo síncrono)
+│
+├── DATABASES              # Configuración de base de datos (por defecto SQLite)
+│
+├── AUTH_PASSWORD_VALIDATORS  # Validadores de contraseñas
+│
+├── LANGUAGE_CODE          # Idioma del sitio (por ej. 'es-ar')
+├── TIME_ZONE              # Zona horaria del proyecto
+├── USE_I18N               # Activar internacionalización
+├── USE_TZ                 # Activar soporte de zona horaria
+│
+├── STATIC_URL             # URL base para archivos estáticos
+├── STATICFILES_DIRS       # Carpeta(s) donde se guardan archivos estáticos
+│
+├── MEDIA_URL              # URL base para archivos subidos por el usuario
+└── MEDIA_ROOT             # Ruta donde se almacenan archivos multimedia
+
+# settings.py — Configuración principal del proyecto
+
+import os
+from pathlib import Path
+
+# BASE_DIR: Ruta base del proyecto
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# SECRET_KEY: Clave secreta para seguridad (¡no compartir en producción!)
+SECRET_KEY = 'tu-clave-secreta-aqui'
+
+# DEBUG: Activa modo desarrollo (True) o producción (False)
+DEBUG = True
+
+# ALLOWED_HOSTS: Dominios o IPs permitidos para acceder al sitio
+ALLOWED_HOSTS = []
+
+# Aplicaciones instaladas en el proyecto
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'mi_app',  # Tu aplicación personalizada
+]
+
+# Middleware: Procesos que se ejecutan entre la petición y la respuesta
+MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+# ROOT_URLCONF: Archivo principal de rutas
+ROOT_URLCONF = 'mi_proyecto.urls'
+
+# Templates: Configuración para las plantillas HTML
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [BASE_DIR / 'templates'],  # Carpeta de plantillas personalizadas
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
+# WSGI application: punto de entrada para servidores WSGI
+WSGI_APPLICATION = 'mi_proyecto.wsgi.application'
+
+# Base de datos (por defecto: SQLite)
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+# Validación de contraseñas
+AUTH_PASSWORD_VALIDATORS = [
+    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
+    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
+]
+
+# Idioma y zona horaria
+LANGUAGE_CODE = 'es-ar'        # Idioma español (Argentina)
+TIME_ZONE = 'America/Argentina/Buenos_Aires'
+USE_I18N = True
+USE_TZ = True
+
+# Archivos estáticos (CSS, JS, imágenes)
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']
+
+# Archivos multimedia (subidos por el usuario)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+# Redirección después del login (opcional)
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/login/'
+
+            </code>
+          </pre>
+        </details>
+      </article>
+
+      <article id="ejemplo-proyectos" aria-labelledby="Ejemplo proyectos que puedes hacer con Django">
+        <h3>Ejemplos de proyectos que puedes hacer con Django</h3>
+        <details>
+          <summary>Leer explicación</summary>
+        <ul>
+          <li>
+            <strong>Sitios web dinámicos y blogs:</strong>
+            <ul>
+              <li><strong>Portafolio personal:</strong> muestra tus proyectos y habilidades.</li>
+              <li><strong>Blog de noticias:</strong> publica contenido que se actualiza frecuentemente.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Aplicaciones de gestión de tareas:</strong>
+            <ul>
+              <li><strong>Lista de tareas (To-Do List):</strong> organiza tareas pendientes de manera eficiente.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Plataformas de aprendizaje en línea:</strong>
+            <ul>
+              <li><strong>Cursos en línea:</strong> ofrece cursos de educación online, similar a plataformas como <em>Udemy</em>.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Sitios web de e-commerce o tienda en línea:</strong>
+            <ul>
+              <li><strong>Tienda en línea:</strong> crea una plataforma para gestionar productos y pedidos.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Aplicaciones de redes sociales:</strong>
+            <ul>
+              <li><strong>Plataforma de comentarios:</strong> similar a <em>Disqus</em>, para gestionar comentarios en sitios web.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Proyectos de gestión de datos:</strong>
+            <ul>
+              <li><strong>Sistema de gestión de inventarios:</strong> controla el inventario de productos.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>APIs RESTful:</strong>
+            <ul>
+              <li><strong>API para intercambio de datos:</strong> con <em>Django REST Framework</em>, permite que distintas aplicaciones intercambien información.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Sitios web de noticias y publicaciones:</strong>
+            <ul>
+              <li><strong>Portal de noticias:</strong> publica artículos, reportajes y permite comentarios.</li>
+            </ul>
+          </li>
+        </ul>
+        </details>
+      </article>
+
+      <article id="proyectos-django" aria-labelledby="Que-proyecto-se-desrrollaron-en-Django">
+        <h3>¿Qué proyectos o plataformas famosas se han desarrollado utilizando Django?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+        <ul>
+          <li><strong>Instagram:</strong> utiliza Django en su <strong>backend</strong> para gestionar millones de usuarios y contenido gracias a su <strong>escalabilidad</strong> y <strong>flexibilidad</strong>.</li>
+          <li><strong>Pinterest:</strong> aunque migró parcialmente a Flask, sigue usando Django en partes de su plataforma por su <strong>robustez</strong> para manejar imágenes y recomendaciones personalizadas.</li>
+          <li><strong>Spotify:</strong> emplea Django en el <strong>backend</strong> para gestionar perfiles de usuarios y canciones, ofreciendo una experiencia <strong>fluida y personalizada</strong>.</li>
+          <li><strong>Disqus:</strong> sistema de <strong>comentarios en línea</strong> que usa Django para gestionar interacciones en tiempo real de manera <strong>segura y escalable</strong>.</li>
+          <li><strong>The Washington Post:</strong> implementa Django en su plataforma web para la <strong>publicación y gestión de artículos</strong> y la interacción con lectores.</li>
+          <li><strong>Udemy:</strong> plataforma de <strong>educación en línea</strong> que utiliza Django en su backend, aunque no en toda su infraestructura.</li>
+          <li><strong>Platzi:</strong> confía en Django desde sus inicios para su plataforma educativa.</li>
+          <li><strong>Mozilla:</strong> emplea Django en servicios como la página de <strong>add-ons</strong> y soporte de Firefox.</li>
+          <li><strong>Doordash:</strong> plataforma de <strong>entrega de comida</strong> que utiliza Django en su web.</li>
+          <li><strong>Prezi:</strong> aplicación para <strong>presentaciones en línea</strong> desarrollada en Django.</li>
+          <li><strong>YouTube:</strong> aunque no exclusivamente, ha utilizado Django en procesos de <strong>backend</strong> junto a otras tecnologías.</li>
+        </ul>
+
+        <h3>Referencias</h3>
+        <ol>
+          <li><a href="https://diegoamorin.com/webs-que-usan-django/" target="_blank">Diego Amorín – Webs que usan Django</a></li>
+          <li><a href="https://educacionprofesional.ing.uc.cl/10-programas-en-python-que-serian-estas-grandes-marcas-sin-este-lenguaje-de-programacion/" target="_blank">Universidad de Chile – Programas en Python</a></li>
+          <li><a href="https://codica.la/blog/por-que-django-es-el-mejor-framework-para-desarrollo-de-sitios-web" target="_blank">Codica – Por qué Django es el mejor framework</a></li>
+          <li><a href="https://es.linkedin.com/posts/azul-web_django-descubre-las-empresas-famosas-que-activity-7191934927427239936-9Swg" target="_blank">LinkedIn – Empresas que usan Django</a></li>
+        </ol>
+        </details>
+      </article>
+
+      <article id="planificacion-django" aria-labelledby="Antes-de-programar-aspectos-deben-considerarse">
+        <h3>¿Qué aspectos de diseño y planificación deben considerarse antes de comenzar a programar en Django?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <ol>
+            <li>
+              <p><strong>Definir el propósito y alcance del proyecto:</strong></p>
+              <ul>
+                <li>Identifica qué problema o necesidad va a resolver tu aplicación.</li>
+                <li>Establece los objetivos principales y las funcionalidades clave.</li>
+              </ul>
+            </li>
+
+            <li>
+              <p><strong>Crear un diagrama de casos de uso:</strong></p>
+              <ul>
+                <li>Describe las interacciones entre los usuarios y el sistema.</li>
+                <li>Identifica los roles de los usuarios y las acciones que pueden realizar.</li>
+              </ul>
+            </li>
+
+            <li>
+              <p><strong>Diseñar la estructura de datos:</strong></p>
+              <ul>
+                <li>Define los modelos de datos que necesitarás (por ejemplo, usuarios, productos, pedidos).</li>
+                <li>Establece las relaciones entre estos modelos.</li>
+              </ul>
+            </li>
+
+            <li>
+              <p><strong>Planificar la interfaz de usuario (UI) y la experiencia del usuario (UX):</strong></p>
+              <ul>
+                <li>Crea bocetos o prototipos de las pantallas principales de tu aplicación.</li>
+                <li>Considera la navegación, la presentación de la información y la interacción del usuario.</li>
+              </ul>
+            </li>
+
+            <li>
+              <p><strong>Crear un diagrama de flujo de la aplicación:</strong></p>
+              <ul>
+                <li>Visualiza el flujo de navegación entre las diferentes pantallas.</li>
+                <li>Identifica los puntos de decisión y las acciones que se realizan en cada paso.</li>
+              </ul>
+            </li>
+
+            <li>
+              <p><strong>Planificar la arquitectura del proyecto:</strong></p>
+              <ul>
+                <li>Decide cómo se organizarán los componentes del proyecto (por ejemplo, apps en Django).</li>
+                <li>Considera la escalabilidad y el rendimiento futuro.</li>
+              </ul>
+            </li>
+
+            <li>
+              <p><strong>Establecer un plan de pruebas:</strong></p>
+              <ul>
+                <li>Identifica qué funcionalidades necesitan pruebas unitarias y funcionales.</li>
+                <li>Considera cómo se realizarán las pruebas y qué herramientas se utilizarán.</li>
+              </ul>
+            </li>
+          </ol>
+
+          <p><strong>Herramientas para el diseño:</strong></p>
+          <ul>
+            <li><strong>Figma:</strong> Ideal para diseñar interfaces de usuario y prototipos.</li>
+            <li><strong>Lucidchart:</strong> Útil para crear diagramas de flujo, casos de uso y estructuras de datos.</li>
+            <li><strong>Draw.io:</strong> Herramienta gratuita para crear diagramas y esquemas en línea.</li>
+          </ul>
+
+        </details>
+      </article>
+
+      <article id="que-es-e-commerse-tienda" aria-labelledby="Que-es-e-commerce-o-tienda-en-linea">
+        <h3>¿Qué es una tienda en línea o e-commerce?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+        <p><strong>Definición:</strong> Una <strong>tienda en línea</strong> es lo mismo que un <strong>sitio de e-commerce</strong>. Es un sitio web donde los usuarios pueden <strong>comprar productos o servicios a través de Internet</strong>, sin necesidad de acudir a un local físico. Permite gestionar pagos, envíos y atención al cliente de manera digital.</p>
+
+        <p><strong>Características principales:</strong></p>
+        <ul>
+          <li><strong>Catálogo de productos:</strong> Muestra los productos o servicios disponibles, con imágenes, descripciones y precios.</li>
+          <li><strong>Carrito de compras:</strong> Permite a los usuarios seleccionar y revisar los productos antes de realizar el pago.</li>
+          <li><strong>Procesamiento de pagos:</strong> Integración con pasarelas de pago seguras (tarjetas, transferencias, billeteras electrónicas).</li>
+          <li><strong>Gestión de pedidos:</strong> Control de pedidos, seguimiento de envíos y notificaciones al cliente.</li>
+          <li><strong>Seguridad:</strong> Protección de datos del usuario y transacciones mediante certificados SSL y medidas de seguridad.</li>
+          <li><strong>Interfaz amigable:</strong> Diseño intuitivo que facilite la navegación y la experiencia del usuario (UX).</li>
+          <li><strong>Soporte al cliente:</strong> Chat, correo electrónico o formularios de contacto para resolver dudas y problemas.</li>
+        </ul>
+        </details>
+      </article>
+
+    </section>
+  </main>
+
+<!-- ===================================================== -->
+<!-- PLACEHOLDERS DE COMPONENTES DINÁMICOS                 -->
+<!-- ===================================================== -->
+<!-- Estos contenedores reciben HTML inyectado vía JS     -->
+<!-- Permiten reutilizar componentes (footer, modales)   -->
+<!-- y mantener el HTML principal limpio y escalable      -->
+
+<div id="footer-placeholder"></div>
+<div id="contact-modal-placeholder"></div>
+
+
+<!-- ===================================================== -->
+<!-- SCRIPTS GLOBALES                                     -->
+<!-- ===================================================== -->
+<!-- Footer: se carga de forma diferida para no bloquear  -->
+<!-- el render inicial de la página                       -->
+
+<script src="../components/footer/footer.js" defer></script>
+
+<!-- Scripts generales del sitio (interacciones globales) -->
+<script src="/js/scripts.js"></script>
+
+
+<!-- ===================================================== -->
+<!-- CARGA DINÁMICA DEL CONTACT MODAL                     -->
+<!-- ===================================================== -->
+<!-- 1. Obtiene el HTML del modal desde el componente     -->
+<!-- 2. Lo inyecta en su placeholder correspondiente      -->
+<!-- 3. Carga el JS del modal de forma desacoplada        -->
+<!-- Esto permite reutilizar el modal en cualquier página -->
+
+<script>
+  fetch('../components/contact-modal/contact-modal.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('No se pudo cargar el Contact Modal');
+      }
+      return response.text();
+    })
+    .then(modalHTML => {
+      // Inyección del HTML del modal en el placeholder
+      document.getElementById('contact-modal-placeholder').innerHTML = modalHTML;
+
+      // Carga dinámica del script del modal
+      const modalScript = document.createElement('script');
+      modalScript.src = '../components/contact-modal/contact-modal.js';
+      modalScript.defer = true;
+      document.body.appendChild(modalScript);
+    })
+    .catch(error => {
+      console.error('Error cargando el Contact Modal:', error);
+    });
+</script>
+</body>
+</html>
+
+

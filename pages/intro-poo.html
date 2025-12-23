@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ========================= -->
+  <!-- METADATOS BÁSICOS -->
+  <!-- ========================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ========================= -->
+  <!-- SEO PRINCIPAL -->
+  <!-- ========================= -->
+  <title>Programación Orientada a Objetos | Conceptos y principios básicos</title>
+  <meta
+    name="description"
+    content="Introducción a la Programación Orientada a Objetos (POO). Aprende conceptos como clases, objetos, herencia, encapsulamiento y polimorfismo."
+  >
+
+  <!-- ========================= -->
+  <!-- AUTOR -->
+  <!-- ========================= -->
+  <meta name="author" content="José Alberto Santacruz">
+  <meta name="robots" content="index, follow">
+
+  <!-- ========================= -->
+  <!-- URL CANÓNICA -->
+  <!-- ========================= -->
+  <link
+    rel="canonical"
+    href="https://santacruzprogramador.github.io/santacruzjose/pages/intro-poo.html"
+  >
+
+  <!-- ========================= -->
+  <!-- OPEN GRAPH -->
+  <!-- ========================= -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Programación Orientada a Objetos">
+  <meta
+    property="og:description"
+    content="Conceptos fundamentales de la Programación Orientada a Objetos explicados de forma clara y práctica."
+  >
+  <meta
+    property="og:url"
+    content="https://santacruzprogramador.github.io/santacruzjose/pages/intro-poo.html"
+  >
+  <meta
+    property="og:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+  <meta property="og:site_name" content="Portfolio José Santacruz">
+
+  <!-- ========================= -->
+  <!-- TWITTER CARD -->
+  <!-- ========================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Programación Orientada a Objetos">
+  <meta
+    name="twitter:description"
+    content="Principios esenciales de la Programación Orientada a Objetos (POO)."
+  >
+  <meta
+    name="twitter:image"
+    content="https://santacruzprogramador.github.io/santacruzjose/assets/hero-image-1.jpg"
+  >
+
+  <!-- ========================= -->
+  <!-- FAVICON -->
+  <!-- ========================= -->
+  <link
+    rel="icon"
+    href="../assets/favicon/favicon.ico"
+    type="image/x-icon"
+  >
+
+  <!-- ========================= -->
+  <!-- COLOR TEMA -->
+  <!-- ========================= -->
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- ========================= -->
+  <!-- ESTILOS -->
+  <!-- ========================= -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/intr_to_programming.css">
+  <link rel="stylesheet" href="../components/contact-modal/contact-modal.css">
+</head>
+
+<body>
+
+  <header class="page-title">
+    <h1 class="">Fundamentos de la Programación Orientada a Objetos</h1>
+  </header>
+  <a href="../#poo" class="volver">← Inicio</a>
+  <main class="container section">
+    <section id="introduccion-a-programacion-prientada-a-objetos" class="content-narrow">
+
+      <h2>Introducción a Programación Orientada a Objetos</h2>
+      <article aria-labelledby="cuantos-paradigmas">
+        <h3 id="cuantos-paradigmas">¿Cuántos paradigmas de programación existen?</h3>
+        <details aria-labelledby="cuantos-paradigmas">
+          <summary>Leer explicación</summary>
+            <p>
+                Existen varios paradigmas de programación, cada uno con su enfoque y forma de estructurar el código. Los principales son:
+            </p>
+            <ul>
+                <li><strong>Programación Imperativa:</strong> Se centra en instrucciones que cambian el estado del programa.</li>
+                <li><strong>Programación Estructurada:</strong> Subtipo de la imperativa, usa bloques y estructuras de control claras como bucles y condicionales.</li>
+                <li><strong>Programación Orientada a Objetos (POO):</strong> Organiza el código en clases y objetos, usando conceptos como herencia, encapsulación y polimorfismo.</li>
+                <li><strong>Programación Funcional:</strong> Basada en funciones puras y evita estados mutables, promoviendo la inmutabilidad.</li>
+                <li><strong>Programación Lógica:</strong> Basada en reglas y hechos, como en Prolog, donde se define el "qué" más que el "cómo".</li>
+                <li><strong>Programación Declarativa:</strong> El programador describe el resultado deseado sin especificar paso a paso cómo lograrlo.</li>
+            </ul>
+        </details>
+      </article>
+      <article aria-labelledby="que-es-poo">
+        <h3 id="que-es-poo">¿Qué es la programación POO?</h3>
+        <details aria-labelledby="que-es-poo">
+          <summary>Leer explicación</summary>
+          <p>
+            La programación orientada a objetos es la capacidad de desarrollar estructura de código legible, para que en el futuro sea sencillo escalarlo.
+          </p>
+        </details>
+      </article>
+      <article aria-labelledby="beneficios-poo">
+        <h3 id="beneficios-poo">¿Beneficios de POO?</h3>
+        <details aria-labelledby="beneficios-poo">
+          <summary>Leer explicación</summary>
+          <p>La Programación Orientada a Objetos (POO) permite organizar el código en objetos que combinan datos y comportamientos, 
+          lo que facilita la reutilización de código, la escalabilidad de aplicaciones, el mantenimiento y el modelado de sistemas complejos de manera más intuitiva.</p>
+        </details>
+      </article>
+      <article aria-labelledby="clases-utilidad">
+        <h3 id="clases-utilidad">¿Qué son las clases y para qué se utilizan?</h3>
+        <details aria-labelledby="clases-utilidad">
+          <summary>Leer explicación</summary>
+          <p>
+            Es una plantilla o prototipos para generar copias.
+          </p>
+          <p>
+            Tiene 3 partes:
+          </p>
+          <ul>
+            <li>
+              <strong>Clase:</strong> Nombre de la clase que representa un objeto o entidad.
+            </li>
+            <li>
+              <strong>Atributos (variables):</strong> Características o propiedades del objeto.
+            </li>
+            <li>
+              <strong>Métodos (funcionalidades):</strong> Acciones o comportamientos que el objeto puede realizar.
+            </li>
+          </ul>
+          <pre>
+            <code>
+            1. Nombre de la clase         ___ 
+            +----------------------------+   |
+            |          Usuario           |   | 
+            +----------------------------+   |
+                                             |
+            2. Atributos(variables)          |
+            +----------------------------+   |
+            | - nombre                   |   |
+            | - apellido                 |   |
+            | - correo                   |   |   <---- Clase
+            | - contraseña               |   |
+            +----------------------------+   |
+                                             |
+            3. Metodos (funciones)           |
+            +----------------------------+   |
+            | + crearAutor()             |   |
+            | + mostrarAutor()           |   |
+            | + obtenerPorCorreo()       |   |
+            +----------------------------+   |
+                                          ___|
+            </code>
+          </pre>
+          <article class="code-window">
+            <h3>Ejemplo JavaScript</h3>
+            <pre>
+              <code>
+              <span class="comment">// Nombre de la clase</span>
+              class Usuario {
+              <span class="comment">// Atributos (propiedades del objeto)</span>
+                constructor(nombre, apellido, correo, contrasena, telefono) {
+                    this.nombre = nombre;
+                    this.apellido = apellido;
+                    this.correo = correo;
+                    this.contrasena = contrasena;
+                    this.telefono = telefono;
+                }
+              <span class="comment">// Funciones (métodos de la clase)</span>
+                encriptarContrasena(contrasena) {
+                    // Lógica para encriptar la contraseña
+                }
+
+                verificarContrasena(contrasena) {
+                    // Lógica para verificar si la contraseña ingresada es correcta
+                }
+
+                obtenerPorEmail(correo) {
+                    // Lógica para obtener un objeto Usuario a partir de su correo electrónico
+                }
+            }
+
+              </code>
+            </pre>
+
+          </article>
+          <article class="code-window">
+            <h3>Ejemplo Python</h3>
+
+            <pre>
+              <code>
+              <span class="comment"># Nombre de la clase</span>
+              class Usuario:
+                  <span class="comment"># Atributos (propiedades del objeto)</span>
+                  def __init__(self, nombre, apellido, correo, contraseña, telefono):
+                      self.nombre = nombre
+                      self.apellido = apellido
+                      self.correo = correo
+                      self.contraseña = contraseña
+                      self.telefono = telefono
+
+                  <span class="comment"># Funciones (métodos de la clase)</span>
+                  def encriptarContraseña(self):
+                      # encriptar la contraseña
+                      pass
+
+                  def verificarContraseña(self, contraseña):
+                      # verificar la contraseña del usuario
+                      pass
+
+                  def obtenerPorEmail(self, correo):
+                      # obtener usuario por email
+                      pass
+              </code>
+            </pre>
+
+          </article>
+        </details>
+      </article>
+      <article aria-labelledby="que-es-abstraccion">
+        <h3 id="que-es-abstraccion">¿Qué es la abstracción?</h3>
+        <details aria-labelledby="que-es-abstraccion">
+          <summary>Leer explicación</summary>
+          <p>La abstracción consiste en ocultar los detalles complejos de la implementación y exponer únicamente lo esencial. 
+          Permite centrarse en lo que un objeto hace, en lugar de cómo lo hace, facilitando la comprensión y el uso del código.</p>
+          <p>
+            Por ejemplo:
+          </p>
+          <p>
+            Cuando manejas un auto solo necesitas usar el volante, el acelerador y el freno, sin preocuparte por cómo funciona el motor, la transmisión o los sistemas internos; de la misma forma, en POO la abstracción permite usar un objeto a través de funciones simples sin necesidad de conocer la complejidad de su funcionamiento interno.
+          </p>
+        </details>
+      </article>
+      <article aria-labelledby="que-es-herencia">
+        <h3 id="que-es-herencia">¿Qué es la herencia?</h3>
+        <details aria-labelledby="que-es-herencia">
+          <summary>Leer explicación</summary>
+          <p>
+            La herencia es un mecanismo que permite a una clase derivada heredar atributos y métodos de una clase base. 
+            Esto promueve la reutilización de código, evita duplicaciones y permite crear jerarquías de clases más organizadas y fáciles de mantener.
+          </p>
+          <pre>
+            <code>
+              
+                          Vehiculo
+                    ┌────────────────────┐
+                    │ - modelo           │
+                    │ - marca            │
+                    │ - velocidad        │
+                    │ - año              │
+                    │                    │
+                    │ + acelerar(cant)   │
+                    │ + frenar(velocidad)│
+                    └────────────────────┘
+                           ▲    ▲
+                           │    │
+          ┌────────────────┘    └────────────────┐
+          │                                      │
+      Motocicleta                            Autobus
+    ┌───────────────────┐             ┌─────────────────────┐
+    │ - modelo          │             │ - modelo            │
+    │ - marca           │             │ - marca             │
+    │ - velocidad       │             │ - velocidad         │
+    │ - año             │             │ - año               │
+    │ - numero_de_ruedas│             │ - numero_de_asientos│
+    │                   │             │ - numero_puertas    │
+    │                   │             │                     │
+    │ + acelerar()      │             │ + acelerar()        │
+    │ + frenar(cantidad)│             │ + frenar(velocidad) │
+    └───────────────────┘             └─────────────────────┘
+            </code>
+          </pre>
+        </details>
+      </article>
+      <article aria-labelledby="que-es-polimorfismo">
+        <h3 id="que-es-polimorfismo">¿Qué es el polimorfismo?</h3>
+        <details aria-labelledby="que-es-polimorfismo">
+          <summary>Leer explicación</summary>
+          <p>
+            Es la capacidad de un objeto de tomar diferentes formas o comportamientos según el contexto. Permite que un mismo método pueda comportarse de distintas maneras en clases diferentes o incluso en la misma clase mediante sobrecarga o redefinición.
+        </p>
+        <pre>
+          <code>
+            
+                              ┌────────────┐
+                              │  Forma     │
+                              ├────────────┤
+                              │ + x        │
+                              │ + y        │
+                              │ + ancho    │
+                              │ + alto     │
+                              ├────────────┤
+                              │ + dibujar()│
+                              └────────────┘
+                                     │
+              ┌──────────────────────┼───────────────────────┐
+              │                      │                       │
+              ▼                      ▼                       ▼
+      ┌──────────────────┐  ┌───────────────────┐  ┌──────────────────┐
+      │Circulo           │  │Triangulo          │  │Rectangulo        │
+      ├──────────────────┤  ├───────────────────┤  ├──────────────────┤
+      │+ dibujar()       │  │+ dibujar()        │  │+ dibujar()       │
+      │  → base.dibujar()│  │  → base.dibujar() │  │  → base.dibujar()│
+      └──────────────────┘  └───────────────────┘  └──────────────────┘
+
+          </code>
+        </pre>
+        </details>
+      </article>
+      <article aria-labelledby="que-es-encapsulamiento">
+        <h3 id="que-es-encapsulamiento">¿Qué es el encapsulamiento?</h3>
+        <details aria-labelledby="que-es-encapsulamiento">
+          <summary>Leer explicación</summary>
+        <p>
+          Es el principio de la Programación Orientada a Objetos que 
+          <strong>controla el acceso</strong> a los atributos y métodos de una clase, 
+          definiéndolos como <em>públicos, privados o protegidos</em>. 
+          Su objetivo es <strong>proteger los datos internos</strong> y asegurar que 
+          solo puedan modificarse de manera controlada, evitando cambios directos desde otras clases.
+        </p>
+        <p><strong>Ejemplo práctico:</strong> Si una clase <code>CuentaBancaria</code> tiene un atributo 
+          <code>saldo</code> privado, solo se podrá modificar mediante métodos como 
+          <code>depositar()</code> o <code>retirar()</code>, evitando alterar la lógica interna de la clase.
+        </p>
+        <pre>
+          <code>
+            ┌────────────────────────────┐
+            │          Clase             │
+            ├────────────────────────────┤
+            │        Atributos           │
+            │  ┌────────────────────────┐│
+            │  │ - atributo 1(privado)  ││
+            │  │ + atributo 2(público)  ││
+            │  │ # atributo 3(protegido)││
+            │  └────────────────────────┘│
+            │                            │
+            │         Métodos            │
+            │  ┌────────────────────────┐│
+            │  │ - metodoDeClase()      ││
+            │  │ + metodoDeClase1()     ││
+            │  │ + metodoDeClase2()     ││
+            │  └────────────────────────┘│
+            └────────────────────────────┘
+      </pre>
+          </code>
+        </pre>
+        </details>
+      </article>
+    </section>
+    <section id="programacipn-orientada-a-objetos-en-Python" class="content-narrow">
+      <h2>Programación Orientada a Objetos en Python</h2>
+      <article id="clases" aria-label="Clases">
+        <h3>Clases</h3>
+        <details>
+          <summary>Leer explicación</summary>
+            <p>
+              las clases son plantillas para crear objetos. Un objeto es una instancia de una clase. Las clases encapsulan datos y comportamientos relacionados, permitiendo la creación de estructuras de datos complejas y reutilizables.
+              las clase tienen 3 componentes principales:  
+            </p>
+            <ul>
+              <li><strong>Nombre de la clase:</strong> Identifica al objeto (ejemplo: <code>Auto</code>, <code>Persona</code>).</li>
+              <li><strong>Atributos (variables):</strong> Son las características o datos del objeto (ejemplo: color, edad, saldo).</li>
+              <li><strong>Métodos (funcionalidades):</strong> Son las acciones que el objeto puede realizar (ejemplo: arrancar, hablar, depositar).</li>
+            </ul>
+          <article class="code-window">
+            <h3>Ejemplo en Python</h3>
+            <pre>
+              <code>
+                <span class="comment">#1) Nombre de la clase</span>
+                class Persona():
+                    <span class="comment"># Metodo constructor</span>
+                    def __init__(self): 
+                        <span class="comment">#2) Atributos(variables de instancia)  </span>                           
+                        self._nombre = "" <span class="comment"># Variable de instancia</span>
+                        self._edad = None <span class="comment"># Variable de instancia </span>
+                        
+                    @property
+                    def nombre(self):
+                        return self._nombre
+                    @nombre.setter
+                    def nombre(self, valor):
+                        self._nombre = valor
+                    @nombre.deleter
+                    def nombre(self):
+                        del self._nombre
+                        
+                    @property
+                    def edad(self):
+                        return self._edad
+                    @edad.setter
+                    def edad(self, valor):
+                        if valor < 0:
+                            raise ValueError("La edad no puede ser negativa")
+                        self._edad = valor
+                    @edad.deleter
+                    def edad(self):
+                        del self._edad
+                    
+                    <span class="comment">#3) Metodos (funcionalidades) </span>
+                    def hablar(self, mensaje):
+                        print(f"{self.nombre}: {mensaje}")
+                        
+                    def comer(self, alimento):
+                        print(f"{self.nombre} esta comiendo {alimento}")
+              </code>
+            </pre>
+          </article>
+        </details>
+      </article>
+      <article id="objetos" aria-label="Objetos">
+        <h3>Abstracción </h3>
+        <details>
+          <summary>Leer explicación</summary>
+            <p>No es necesario conocer cómo funciona internamente, solo cómo utilizarlo.</p>
+
+            <p>El programador únicamente necesita saber que, al invocar el método <code>conducir</code>, el objeto <code>Auto</code> realizará la acción de conducir.</p>
+
+            <p>La <strong>abstracción</strong> en Programación Orientada a Objetos (POO) consiste en <em>ocultar la complejidad de la implementación</em> y mostrar únicamente las <em>funcionalidades esenciales</em> que permiten interactuar con el objeto de forma sencilla y efectiva.</p>
+
+          <article class="code-window">
+            <h3>Ejemplo en Python</h3>
+            <pre>
+              <code>
+                class Auto:
+                    def __init__(self):
+                        self._estado = "apagado"
+
+                    def encender(self):
+                        self._estado = "encendido"
+                        print("El auto está encendido")
+
+                    def conducir(self):
+                        if self._estado == "apagado":
+                            self.encender()
+                        print("Conduciendo el auto")
+
+                <span class="comment"># Ejemplo de uso</span>
+                if __name__ == "__main__":
+                    mi_auto = Auto()
+                    mi_auto.conducir()
+
+              </code>
+            </pre>
+          </article>
+        </details>
+      </article>
+      <article id="herencia" aria-label="Herencia">
+        <h3>Herencia(subclase, derivada)</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            La <strong>herencia</strong> en Programación Orientada a Objetos (POO) es el mecanismo que permite a una clase 
+            (<em>subclase</em> o <em>clase derivada</em>) adquirir los atributos y métodos de otra clase 
+            (<em>superclase</em> o <em>clase base</em>). 
+            De esta forma, se promueve la reutilización del código y la creación de jerarquías que reflejan 
+            relaciones del mundo real.
+          </p>
+
+          <article class="code-window">
+            <h3>Ejemplo en Python</h3>
+            <pre>
+              <code>
+                from persona import Persona
+          
+ 
+                <span class="comment"># 1) Clase Deportista que hereda de la clase base Persona</span>
+                class Deportista(Persona):
+                    <span class="comment"># Método constructor de Deportista, con un atributo adicional 'deporte'</span>
+                    def __init__(self, nombre="", edad=None, deporte=""):
+
+                        <span class="comment"># Reutiliza el constructor de la superclase Persona para inicializar 'nombre' y 'edad'</span>
+                        super().__init__(nombre, edad)
+
+                        <span class="comment"># Atributo adicional específico del Deportista que indica el deporte que practica</span>
+                        self._deporte = deporte
+
+                    <span class="comment"># Propiedad 'deporte' para acceder al atributo privado '_deporte'</span>
+                    @property
+                    def deporte(self):
+                        return self._deporte
+
+                    <span class="comment"># Setter para modificar el valor de 'deporte'</span>
+                    @deporte.setter
+                    def deporte(self, valor):
+                        self._deporte = valor
+                    
+                    <span class="comment"># Deleter para eliminar el valor de 'deporte'</span>
+                    @deporte.deleter
+                    def deporte(self):
+                        del self._deporte
+                        
+                    <span class="comment"># Método que simula el entrenamiento del deportista en su deporte</span>
+                    def entrenar(self):
+                        print(f"{self.nombre} está entrenando {self.deporte}")
+                        
+                    <span class="comment"># Método especial __str__ para definir la representación en cadena del objeto</span>
+                    <span class="comment"># Incluye la información heredada de Persona y el deporte del Deportista</span>
+                    def __str__(self):
+                        return f"""
+                {super().__str__()}
+                Deporte: {self.deporte}"""
+
+              </code>
+            </pre>
+          </article>
+        </details>
+      </article>
+      <article id="herencia-jerarquica" aria-label="Herencia-jerarquica">
+        <h3>Herencia jerárquica</h3>
+        <details>
+          <summary>Leer explicación</summary>
+            <p>
+            La <strong>herencia jerárquica</strong> en POO ocurre cuando una única clase base (superclase) es extendida por varias clases derivadas (subclases), 
+            permitiendo que todas compartan atributos y métodos comunes, mientras cada subclase puede añadir sus propias características específicas; 
+            por ejemplo, una clase <em>Animal</em> podría tener subclases <em>Perro</em>, <em>Gato</em> y <em>Ave</em> que heredan sus propiedades generales pero implementan comportamientos particulares como <em>ladrar()</em> o <em>volar()</em>.
+            </p>
+            <pre>
+              <code>
+                          Persona
+                             │
+             ┌───────────────┼───────────────┐
+             │               │               │
+           Jefe         Estudiante        Empleado
+              </code>
+            </pre>
+
+
+        </details>
+      </article>
+      <article id="herencia-multiple" aria-label="Herencia-multiple">
+        <h3>Herencia múltiple</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            La <strong>herencia múltiple</strong> en POO ocurre cuando una clase derivada hereda atributos y métodos de más de una clase base, 
+            permitiendo combinar funcionalidades de diferentes clases en una sola.
+          </p>
+          <article class="code-window">
+          <pre>
+            <code>
+              class Persona:
+                  def __init__(self, nombre, edad, nacionalidad):
+                      self.nombre = nombre
+                      self.edad = edad
+                      self.nacionalidad = nacionalidad
+
+                  def hablar(self):
+                      print("Hola, estoy hablando un poco")
+
+              class Artista:
+                  def __init__(self, habilidad):
+                      self.habilidad = habilidad
+
+                  def mostrar_habilidad(self):
+                      print(f"Mi habilidad es: {self.habilidad}")
+
+              <span class="comment"># Herencia múltiple</span>
+              class EmpleadoArtista(Persona, Artista):
+                  def __init__(self, nombre, edad, nacionalidad, habilidad, salario, empresa):
+                      Persona.__init__(self, nombre, edad, nacionalidad)
+                      Artista.__init__(self, habilidad)
+                      self.salario = salario
+                      self.empresa = empresa
+
+                  def mostrar_habilidad(self):
+                      print("no tengo jaja")
+
+                  def presentarse(self):
+                      return f"{super().mostrar_habilidad()}"
+
+            </code>
+          </pre>
+          </article>
+
+
+        </details>
+      </article>
+      <article id="polimorfismo" aria-label="Polimorfismo">
+        <h3>Polimorfismo</h3>
+        <details>
+          <summary>Leer explicación</summary>
+            <p>
+              El <strong>polimorfismo</strong> permite que un mismo método se comporte de manera diferente 
+              según la <strong>clase</strong> que lo implemente. En Python, esto significa que 
+              distintas clases pueden tener métodos con el mismo nombre, pero cada uno ejecuta su propia 
+              lógica.
+            </p>
+            <p><strong>Ejemplo práctico:</strong></p>
+
+            <p>Un método <code>atacar()</code> en las clases <code>Momia</code>, 
+              <code>Zombi</code> y <code>Vampiro</code> realiza ataques distintos, aunque se llame igual.</p>
+              <p>
+                <strong>Enemigo</strong> es una <em>clase base</em> que define los atributos y métodos comunes 
+                a todos los enemigos de un juego:
+              </p>
+              <ul>
+                <li><strong>tipo:</strong> indica si es <code>Momia</code>, <code>Zombi</code> o <code>Vampiro</code>.</li>
+                <li><strong>ataque:</strong> describe el ataque que realiza.</li>
+                <li><strong>energia:</strong> cuánta energía tiene.</li>
+                <li><strong>fuerza:</strong> cuánto daño puede causar.</li>
+              </ul>
+
+              <p>
+                La clase <strong>Enemigo</strong> tiene un método <code>atacar()</code> que imprime el ataque y 
+                el daño causado. Todas las clases derivadas pueden usar este método, pero cada una tiene sus 
+                propios valores de atributos.
+              </p>
+
+              <p>
+                <strong>Clases derivadas:</strong>
+              </p>
+              <ul>
+                <li><strong>Momia:</strong> hereda de <code>Enemigo</code> y tiene ataque <em>"Bendaje Sangriento"</em>, 
+                    energía 12 y fuerza 8.</li>
+                <li><strong>Zombi:</strong> hereda de <code>Enemigo</code> y tiene ataque <em>"Zarpazo Violento"</em>, 
+                    energía 15 y fuerza 12.</li>
+                <li><strong>Vampiro:</strong> hereda de <code>Enemigo</code>, tiene ataque <em>"Mordisco Letal"</em>, 
+                    energía 12, fuerza 10 y un atributo extra <em>recuperacion = 4</em>.</li>
+              </ul>
+
+              <p>
+                Aunque todas usan el mismo método <code>atacar()</code>, <strong>cada enemigo se comporta diferente</strong> 
+                gracias al <strong>polimorfismo</strong>.
+              </p>
+          <pre class="code-window">
+            <h3>Python</h3>
+            <code>
+      <span class="comment"># Costantes para cada tipo de enemigo.</span>
+      MOMIA = 0
+      ZOMBI = 1
+      VAMPIRO = 2
+
+      
+      <span class="comment"># Costantes para cada tipo de enemigo.</span>
+      tipos = [MOMIA, ZOMBI, VAMPIRO]
+
+      class Enemigo:
+          def __init__(self, tipo="", ataque="",  energia=5, fuerza=5):
+              self._tipo = tipo
+              self._ataque = ataque
+              self._energia = energia
+              self._fuerza = fuerza
+              
+          @property
+          def tipo(self):
+              return self._tipo
+          @tipo.setter
+          def tipo(self, valor):
+              self._tipo = valor
+          @tipo.deleter
+          def tipo(self):
+              del self._tipo  
+          
+          @property
+          def ataque(self):
+              return self._ataque
+          @ataque.setter
+          def ataque(self, valor):
+              self._ataque = valor
+          @ataque.deleter
+          def ataque(self):
+              del self._ataque  
+              
+          @property
+          def energia(self):
+              return self._energia
+          @energia.setter
+          def energia(self, valor):
+              self._energia = valor
+          @energia.deleter
+          def energia(self):
+              del self._energia  
+              
+          @property
+          def fuerza(self):
+              return self._fuerza
+          @fuerza.setter
+          def fuerza(self, valor):
+              self._fuerza = valor
+          @fuerza.deleter
+          def fuerza(self):
+              del self._fuerza  
+          
+          <span class="comment"># Metodo atacar</span>
+          def atacar(self):
+              print(f"{self.tipo} ha atacado con {self.ataque}.") 
+              print(f"{self.tipo} ha causado {self.fuerza} de daño.") 
+
+      
+      <span class="comment"># Heredan de Enemigo.</span>
+      class Momia(Enemigo):
+          def __init__(self):
+              super().__init__("Momia", "Bendaje Sangriento", 12, 8)
+              
+      class Zombi(Enemigo):
+          def __init__(self):
+              super().__init__("Zombi", "Zarpazo Violento", 15, 12)
+              
+      class Vampiro(Enemigo):
+          def __init__(self):
+              super().__init__("Vampiro", "Mordisco letal", 12, 10)
+              self.recuperacion = 4
+        
+            </code>
+          </pre>
+        </details>
+      </article>
+      <article id="encapsulamiento" aria-label="Encapsulamiento">
+        <h3>Encapsulamiento</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>
+            <strong>El encapsulamiento</strong> en <strong>Python</strong> es un principio de la 
+            <strong>Programación Orientada a Objetos (POO)</strong> que consiste en 
+            <strong>restringir el acceso directo</strong> a los atributos de un objeto. 
+            En lugar de acceder a los atributos directamente, se utilizan métodos especiales 
+            llamados <strong>getters</strong> y <strong>setters</strong> (propiedades con @property) 
+            para <strong>leer y modificar</strong> esos valores de forma segura.
+          </p>
+          <p>Esto sirve para:</p>
+          <ul>
+            <li>Proteger los datos de cambios no deseados.</li>
+            <li>Mantener la integridad del objeto.</li>
+            <li>Hacer que el uso de la clase sea más seguro y ordenado.</li>
+          </ul>
+          <pre class="code-window">
+            <code>
+<span class="comment">
+"""
+Ejemplo de Encapsulamiento en Python
+Niveles de acceso: público, protegido y privado.
+"""
+</span>
+
+
+class Persona:
+    def __init__(self, nombre, edad, dni):
+        <span class="comment"># Atributo público → se puede acceder libremente desde cualquier parte</span>
+        self.nombre = nombre  
+
+        <span class="comment"># Atributo protegido → convención: solo debe usarse dentro de la clase y subclases</span>
+        self._edad = edad      
+
+        <span class="comment"># Atributo privado → el intérprete aplica "name mangling"</span>
+        <span class="comment"># para evitar accesos directos accidentales</span>
+        self.__dni = dni       
+
+    <span class="comment"># Getter para atributo privado</span>
+    def get_dni(self):
+        return self.__dni
+
+    <span class="comment"># Setter con validación para atributo privado</span>
+    def set_dni(self, nuevo_dni):
+        if isinstance(nuevo_dni, str) and nuevo_dni.isdigit():
+            self.__dni = nuevo_dni
+        else:
+            print("DNI no válido.")
+
+<span class="comment"># ===================== EJEMPLO DE USO =====================</span>
+persona = Persona("Ana", 25, "12345678")
+
+<span class="comment"># Público → acceso directo permitido</span>
+print(persona.nombre)  <span class="comment"># Ana</span>
+
+<span class="comment"># Protegido → se puede acceder, pero no es recomendable hacerlo fuera de la clase</span>
+print(persona._edad)   <span class="comment"># 25 (no está realmente protegido)</span>
+
+<span class="comment"># Privado → no se puede acceder directamente (lanza AttributeError)</span>
+<span class="comment"># print(persona.__dni)  # ❌ Error</span>
+<span class="comment"># Acceso correcto mediante métodos (getters/setters)</span>
+print(persona.get_dni())  <span class="comment"># 12345678</span>
+persona.set_dni("87654321")
+print(persona.get_dni())  <span class="comment"># 87654321</span>
+
+
+            </code>
+          </pre>
+        </details>
+      </article>
+      <article id="pilares-poo" aria-label="Pilares-poo">
+        <h3>¿Cuáles son los 4 pilares de la Programación Orientada a Objetos (POO)?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+          <p>Los cuatro pilares de la Programación Orientada a Objetos (POO) son principios fundamentales que facilitan el diseño, la reutilización y el mantenimiento del software:</p>
+          <ul>
+            <li><strong>Abstracción:</strong> Ocultar los detalles internos y exponer solo lo necesario para usar un objeto.</li>
+            <li><strong>Herencia:</strong> Reutilizar y extender comportamiento mediante la derivación de clases.</li>
+            <li><strong>Encapsulación:</strong> Proteger y controlar el acceso a los datos mediante atributos y métodos con niveles de acceso.</li>
+            <li><strong>Polimorfismo:</strong> Permitir que diferentes clases respondan a la misma interfaz o método de forma distinta.</li>
+          </ul>
+
+        </details>
+      </article>
+      <article id="sobrecarga-operadores" aria-label="Sobrecarga-operadores">
+        <h3>¿Qué es la sobrecarga de operadores en Python?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+        <p><strong>En Python, la sobrecarga de operadores</strong> permite redefinir el comportamiento de los operadores para los objetos de las clases personalizadas. Esto se hace implementando métodos especiales en una clase.</p>
+        <pre class="code-window">
+          <code>
+Operadores Aritméticos:
+Suma +:                         __add__(self, other)
+Resta -:                        __sub__(self, other)
+Multiplicación *:               __mul__(self, other)
+División / :                    __truediv__(self, other)
+División entera //:             __floordiv__(self, other)
+Módulo %:                       __mod__(self, other)
+Potencia **:                    __pow__(self, other)
+
+Operadores Relacionales:
+Menor que <:                    __lt__(self, other)
+Menor o igual que <=:           __le__(self, other)
+Igual que ==:                   __eq__(self, other)
+No igual que !=:                __ne__(self, other)
+Mayor que >:                    __gt__(self, other)
+Mayor o igual que >=:           __ge__(self, other)
+
+Operadores de Asignación:
++= : __iadd__(self, other)
+-= : __isub__(self, other)
+*= : __imul__(self, other)
+/= : __itruediv__(self, other)
+//=: __ifloordiv__(self, other)
+%= : __imod__(self, other)
+**=: __ipow__(self, other[, modulo])
+@= : __imatmul__(self, other)
+          </code>
+        </pre>
+
+        </details>
+      </article>
+      <article id="sobrecar-operadores-ejemplo" aria-label="Sobrecar-operadores-ejemplo">
+        <h3>Ejemplo uso sobrecarga de operadores</h3>
+        <details>
+          <summary>Leer explicación</summary>
+            <p>
+
+            </p>
+            <pre class="code-window">
+              <code>
+<span class="comment">
+"""
+pelicula.py
+Modelo sencillo de una pelicula.
+Atributos
+    titulo      --titulo de la pelicula.
+    director    --director de la pelicula.
+    anio        --año de estreno.
+    duracion    --duracion en minutos de la pelicula.
+    
+definir una funsion que devuelva los atributos de Pelicula.  
+    
+Usar metodos especiales para.
+1-ordenar titulo alfabeticamente.
+2-si el titulo/anion son iguales notificar
+3-
+"""
+</span>
+
+
+class Pelicula:
+    def __init__(self, titulo="", director="", anio=None, duracion=None):
+        self._titulo = titulo
+        self._director = director
+        self._anio = anio
+        self._duracion = duracion
+             
+    def __str__(self):
+        ESPACIOS = 10
+        return f"""{'titulo:': <{ESPACIOS}}{self.titulo}
+{"Director: ": <{ESPACIOS}}{self.director}
+{"Año:": <{ESPACIOS}}{self.anio}
+{"Duracion:": <{ESPACIOS}}{self.duracion} min """
+    
+    <span class="comment">#sobrecargar operadores</span>
+    <span class="comment">#Lower than</span>
+    def __lt__(self, otro):   <span class="comment">#En este caso ordena alfabeticamente</span>
+        return self.titulo < otro.titulo
+        
+    def __eq__(self, otro):
+        return self.titulo == otro.titulo and self.anio == otro.anio
+    
+    def __le__(self, otro):
+        return self < otro or self == otro
+    
+              </code>
+            </pre>
+        </details>
+      </article>
+      <article id="principio-solid" aria-label="Principio-SOLID">
+        <h3>¿Qué es el principio SOLID?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+        <p>El principio <strong>SOLID</strong> es un conjunto de cinco principios de diseño de software que tienen como objetivo hacer que el código sea más comprensible, flexible y fácil de mantener. Estos principios fueron propuestos por <strong>Robert C. Martin</strong> y son ampliamente utilizados en el desarrollo orientado a objetos (OOP), incluido Python.</p>
+
+        <p><strong>SOLID</strong> es un acrónimo que representa los siguientes principios:</p>
+
+        <ol>
+          <li>
+            <strong>S - Single Responsibility Principle (Principio de Responsabilidad Única):</strong>
+            <p>Una clase debe tener una única responsabilidad o razón para cambiar. En otras palabras, una clase debería encargarse de una única cosa.</p>
+          </li>
+          <li>
+            <strong>O - Open/Closed Principle (Principio Abierto/Cerrado):</strong>
+            <p>El código debe estar abierto para la extensión pero cerrado para la modificación. Esto significa que deberías poder agregar nuevas funcionalidades al código existente sin modificar el código ya escrito.</p>
+          </li>
+          <li>
+            <strong>L - Liskov Substitution Principle (Principio de Sustitución de Liskov):</strong>
+            <p>Los objetos de una clase derivada deben poder sustituir a objetos de la clase base sin alterar el comportamiento del programa.</p>
+          </li>
+          <li>
+            <strong>I - Interface Segregation Principle (Principio de Segregación de Interfaces):</strong>
+            <p>Los clientes no deberían estar obligados a depender de interfaces que no utilizan. Es mejor tener muchas interfaces pequeñas y específicas que una sola interfaz grande y general.</p>
+          </li>
+          <li>
+            <strong>D - Dependency Inversion Principle (Principio de Inversión de Dependencias):</strong>
+            <p>Las dependencias deben invertirse, es decir, las clases de alto nivel no deben depender de las clases de bajo nivel; ambas deben depender de abstracciones. Las abstracciones no deben depender de los detalles; los detalles deben depender de las abstracciones.</p>
+          </li>
+        </ol>
+
+        </details>
+      </article>
+      <article id="formato-json" aria-label="Formato-JSON">
+        <h3>¿Qué es el formato JSON?</h3>
+        <details>
+          <summary>Leer explicación</summary>
+            <p>
+              <strong>JSON (JavaScript Object Notation)</strong> es un formato de texto ligero utilizado para el intercambio de datos entre aplicaciones. Es fácil de leer y escribir tanto para humanos como para máquinas, y permite representar estructuras de datos complejas como objetos, arreglos, números, cadenas de texto y valores booleanos. JSON se usa ampliamente en APIs, configuraciones y almacenamiento de datos, siendo compatible con la mayoría de los lenguajes de programación modernos.
+            </p>
+        </details>
+      </article>
+    </section>
+  </main>
+
+<!-- ===================================================== -->
+<!-- PLACEHOLDERS DE COMPONENTES DINÁMICOS                 -->
+<!-- ===================================================== -->
+<!-- Estos contenedores reciben HTML inyectado vía JS     -->
+<!-- Permiten reutilizar componentes (footer, modales)   -->
+<!-- y mantener el HTML principal limpio y escalable      -->
+
+<div id="footer-placeholder"></div>
+<div id="contact-modal-placeholder"></div>
+
+
+<!-- ===================================================== -->
+<!-- SCRIPTS GLOBALES                                     -->
+<!-- ===================================================== -->
+<!-- Footer: se carga de forma diferida para no bloquear  -->
+<!-- el render inicial de la página                       -->
+
+<script src="../components/footer/footer.js" defer></script>
+
+<!-- Scripts generales del sitio (interacciones globales) -->
+<script src="/js/scripts.js"></script>
+
+
+<!-- ===================================================== -->
+<!-- CARGA DINÁMICA DEL CONTACT MODAL                     -->
+<!-- ===================================================== -->
+<!-- 1. Obtiene el HTML del modal desde el componente     -->
+<!-- 2. Lo inyecta en su placeholder correspondiente      -->
+<!-- 3. Carga el JS del modal de forma desacoplada        -->
+<!-- Esto permite reutilizar el modal en cualquier página -->
+
+<script>
+  fetch('../components/contact-modal/contact-modal.html')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('No se pudo cargar el Contact Modal');
+      }
+      return response.text();
+    })
+    .then(modalHTML => {
+      // Inyección del HTML del modal en el placeholder
+      document.getElementById('contact-modal-placeholder').innerHTML = modalHTML;
+
+      // Carga dinámica del script del modal
+      const modalScript = document.createElement('script');
+      modalScript.src = '../components/contact-modal/contact-modal.js';
+      modalScript.defer = true;
+      document.body.appendChild(modalScript);
+    })
+    .catch(error => {
+      console.error('Error cargando el Contact Modal:', error);
+    });
+</script>
+</body>
+</html>
+
+
