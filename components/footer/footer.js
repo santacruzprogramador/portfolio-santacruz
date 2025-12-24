@@ -3,7 +3,7 @@
 function loadFooter() {
 
   // fetch obtiene el archivo externo (footer.html)
-  fetch("./components/footer/footer.html")
+  fetch("../components/footer/footer.html")
 
     // Convierte la respuesta en texto HTML
     .then(response => response.text())
