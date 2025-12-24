@@ -10,13 +10,20 @@ Thumbs.db
 .vscode/
 !.vscode/settings.json
 
-# =========================
-# Logs (por si a futuro)
-# =========================
-*.log
 
 # =========================
 # Entornos (por si a futuro)
 # =========================
 .env
 .env.*
+
+# =========================
+# Ignorar la carpeta node_modules porque contiene dependencias instaladas con npm
+# y no deben subirse al repositorio (se regeneran con 'npm install')
+# =========================
+node_modules/
+
+# =========================
+# Ignorar archivos de logs que se generan automáticamente
+# =========================
+*.log
