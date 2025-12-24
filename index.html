@@ -79,9 +79,9 @@
   <!-- ========================= -->
   <!-- ESTILOS CSS -->
   <!-- ========================= -->
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="components/footer/footer.css">
-  <link rel="stylesheet" href="components/contact-modal/contact-modal.css">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./components/footer/footer.css">
+  <link rel="stylesheet" href="./components/contact-modal/contact-modal.css">
 </head>
 
 <body>
@@ -463,11 +463,11 @@
   <div id="contact-modal-placeholder"></div>
 
   <!-- SCRIPTS -->
-  <script src="js/scripts.js"></script>
-  <script src="components/footer/footer.js" defer></script>
+  <script src="./js/scripts.js"></script>
+  <script src="./components/footer/footer.js" defer></script>
   <!-- CARGA DEL COMPONENTE MODAL -->
   <script>
-    fetch('components/contact-modal/contact-modal.html')
+    fetch('./components/contact-modal/contact-modal.html')
       .then(r => {
         if (!r.ok) throw new Error('No se pudo cargar el modal');
         return r.text();
