@@ -1,0 +1,23 @@
+commit b1fc13a43e4128d991e605ab94224c7fb9806ef2
+Author: José Alberto Santacruz <santacruzprogramador@gmail.com>
+Date:   Wed Dec 24 12:22:14 2025 -0300
+
+    fix: corregir rutas relativas en pages y carga de componentes
+
+commit 3b8d8888d033dd38da23b2ec4a9e0c8284963e4b
+Author: José Alberto Santacruz <santacruzprogramador@gmail.com>
+Date:   Wed Dec 24 12:04:20 2025 -0300
+
+    fix: corregir rutas de estilos y scripts en index y fetch del footer
+
+commit bd0677aa0243785e67f0109065a4214cac07511c
+Author: José Alberto Santacruz <santacruzprogramador@gmail.com>
+Date:   Wed Dec 24 11:07:42 2025 -0300
+
+    Agregar .gitignore y dependencias del proyecto
+
+commit c61a24a34d69ca5e987360e0671daba483b1be07
+Author: José Alberto Santacruz <santacruzprogramador@gmail.com>
+Date:   Tue Dec 23 12:26:31 2025 -0300
+
+    first commit
