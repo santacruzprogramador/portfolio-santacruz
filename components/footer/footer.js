@@ -1,18 +1,35 @@
-// Esta función carga el contenido del archivo footer.html
-// y lo inserta dentro del contenedor con id="footer-placeholder"
-function loadFooter() {
+// Módulo autoejecutable para manejar la carga del footer
+(function () {
 
-  // fetch obtiene el archivo externo (footer.html)
-  fetch("../components/footer/footer.html")
+  // Función que se encarga de cargar el footer
+  function loadFooter() {
 
-    // Convierte la respuesta en texto HTML
-    .then(response => response.text())
+    // Busca el contenedor donde se insertará el footer
+    const footer = document.getElementById("footer-placeholder");
 
-    // Inserta ese HTML dentro del div donde irá el footer
-    .then(data => {
-      document.getElementById("footer-placeholder").innerHTML = data;
-    });
-}
+    // Si el contenedor no existe, se corta la ejecución
+    // Esto evita errores en páginas que no tengan footer
+    if (!footer) return;
 
-// Ejecuta la carga del footer cuando la página termina de cargarse
-document.addEventListener("DOMContentLoaded", loadFooter);
+    // Obtiene el HTML del footer desde la carpeta components
+    fetch("/components/footer/footer.html")
+
+      // Convierte la respuesta en texto HTML
+      .then(response => response.text())
+
+      // Inserta el HTML dentro del contenedor del footer
+      .then(html => {
+        footer.innerHTML = html;
+      })
+
+      // Captura y muestra cualquier error de carga
+      .catch(error => {
+        console.error("Error cargando el footer:", error);
+      });
+  }
+
+  // Espera a que el DOM esté completamente cargado
+  // antes de ejecutar la carga del footer
+  document.addEventListener("DOMContentLoaded", loadFooter);
+
+})();
