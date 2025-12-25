@@ -458,13 +458,12 @@
     </div>
   </section>
 
-  <!-- FOOTER Y MODAL DE CONTACTO -->
-  <div id="footer-placeholder"></div>
+  <!-- MODAL DE CONTACTO -->
   <div id="contact-modal-placeholder"></div>
 
   <!-- SCRIPTS -->
   <script src="./js/scripts.js"></script>
-  <script src="./components/footer/footer.js" defer></script>
+
   <!-- CARGA DEL COMPONENTE MODAL -->
   <script>
     fetch('./components/contact-modal/contact-modal.html')
@@ -482,6 +481,17 @@
       })
       .catch(err => console.error('Error cargando el modal:', err));
   </script> 
+
+  <!-- FOOTER FIJO (SIN JS) -->
+  <footer>
+      <p>Santacruz José Alberto — Backend con habilidades Frontend</p>
+      <div class="social-links">
+          <a href="https://github.com/santacruzprogramador" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/jobs/" target="_blank">LinkedIn</a>
+          <a href="mailto:santacruzprogramador@gmail.com">Email</a>
+      </div>
+      <p>© 2025 — Todos los derechos reservados.</p>
+  </footer>
 
 </body>
 </html>
