@@ -49,8 +49,8 @@
   /* ========================= */
   /* Imágenes / UI visual      */
   /* ========================= */
-  /* --hero-image: url(assets/hero-image.png); */
-  --hero-image: url(../assets/hero-image-1.jpg);
+  /* --hero-image: url(assets/hero-image.webp); */
+  --hero-image: url(../assets/hero-image.webp);
   --hero-attachment: fixed;
 
   /* ========================= */
