@@ -52,7 +52,7 @@
   max-width: 480px;
   max-height: calc(90vh - 2rem);
   overflow-y: auto;
-  background: var(--modal-bg);
+  /* background: var(--modal-bg); */
   background: var(--dark-bg);
   color: var(--modal-text);
   border-radius: var(--modal-radius-lg);
