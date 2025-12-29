@@ -80,7 +80,7 @@
   <!-- ESTILOS CSS -->
   <!-- ========================= -->
   <link rel="stylesheet" href="./css/styles.css">
-  <link rel="preload" href="./components/footer/footer.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="stylesheet" href="./components/footer/footer.css">
   <link rel="preload" href="./components/contact-modal/contact-modal.css" as="style" onload="this.rel='stylesheet'">
 </head>
 
@@ -487,22 +487,31 @@
   <script src="./js/scripts.js" defer></script>
 
   <!-- CARGA DEL COMPONENTE MODAL -->
-  <script>
-    fetch('./components/contact-modal/contact-modal.html')
-      .then(r => {
-        if (!r.ok) throw new Error('No se pudo cargar el modal');
-        return r.text();
-      })
-      .then(html => {
-        document.getElementById('contact-modal-placeholder').innerHTML = html;
 
-        const script = document.createElement('script');
-        script.src = 'components/contact-modal/contact-modal.js';
-        script.defer = true;
-        document.body.appendChild(script);
-      })
-      .catch(err => console.error('Error cargando el modal:', err));
-  </script> 
+  <!-- Loader del modal (mínimo y aislado) -->
+  <script defer>
+    window.addEventListener('DOMContentLoaded', () => {
+      fetch('./components/contact-modal/contact-modal.html')
+        .then(r => r.text())
+        .then(html => {
+          document.getElementById('contact-modal-placeholder').innerHTML = html;
+
+          // CSS del modal (lazy)
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = './components/contact-modal/contact-modal.css';
+          document.head.appendChild(link);
+
+          // JS del modal (componente)
+          const script = document.createElement('script');
+          script.src = './components/contact-modal/contact-modal.js';
+          script.defer = true;
+          document.body.appendChild(script);
+        })
+        .catch(console.error);
+    });
+  </script>
+
 
   <!-- FOOTER FIJO (SIN JS) -->
   <footer>
