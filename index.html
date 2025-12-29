@@ -81,7 +81,11 @@
   <!-- ========================= -->
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./components/footer/footer.css">
-  <link rel="preload" href="./components/contact-modal/contact-modal.css" as="style" onload="this.rel='stylesheet'">
+  <link rel="preload" href="./components/contact-modal/contact-modal.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+<noscript>
+  <link rel="stylesheet" href="./components/contact-modal/contact-modal.css">
+</noscript>
 </head>
 
 <body>
