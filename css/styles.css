@@ -414,6 +414,54 @@ p {
 #s5:checked ~ .items .item2,
 #s5:checked ~ .items .item3 {transform:translateZ(-200px) scale(.6);z-index:1;}
 
+
+.project-slide {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+/* Project Badge – Tarjeta de proyecto para slider */
+
+.badge {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+
+  text-align: center;
+  color: var(--text-white);
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.badge h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-white);
+}
+
+.badge span {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Hover sutil */
+.project-slide:hover .badge {
+  transform: translateY(-3px);
+  box-shadow: var(--modal-shadow-lg);
+  border-color: var(--primary-color);
+}
+
+
 /* Botones (círculos) */
 .nav {
   position:absolute;
