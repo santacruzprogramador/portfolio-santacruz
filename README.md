@@ -1,111 +1,78 @@
-<div align="center">
-  <img src="./assets/hero-image.png" alt="Banner del Portafolio" width="100%">
-</div>
+# Santacruz José Alberto
+### Desarrollador Full Stack Junior · Autodidacta
 
-# Portafolio Web
-
-Bienvenido a mi portafolio profesional.  
-Este proyecto fue creado con el objetivo de **conseguir trabajo**, **mostrar mis proyectos**, y **compartir conocimientos** que fui adquiriendo a lo largo de mi camino como desarrollador.
-
----
-
-## Sobre mí
-
-Soy **Santacruz José Alberto**, desarrollador **Backend con habilidades Frontend**, ubicado en **Jardín América, Misiones — Argentina**.  
-
-Mi objetivo principal es aportar valor a una empresa, crecer junto a su equipo, desarrollarme profesionalmente y seguir creando soluciones eficientes.
+📍 [Jardín América, Misiones, Argentina](https://www.google.com/maps/search/?api=1&query=Jardín+América+Misiones+Argentina)  
+📧 [santacruzprogramador@gmail.com](mailto:santacruzprogramador@gmail.com)  
+📞 [WhatsApp](https://wa.me/543743615520?text=Hola%20José,%20vi%20tu%20portfolio%20y%20quisiera%20contactarte.)  
+🌐 [Portfolio](https://santacruzprogramador.github.io/santacruzjose/)  
+💼 [LinkedIn](https://www.linkedin.com/in/jos%C3%A9-alberto-santacruz-28410439a/)
 
 
 ---
 
-## Tecnologías y Herramientas
 
-### **Frontend**
-- Figma  
-- HTML5  
-- CSS3  
-- JavaScript  
+## Stack Tecnológico
 
-### **Backend**
-- Python  
-- Programación Orientada a Objetos (POO)  
-- SQL (MySQL)  
-- NoSQL (MongoDB)  
-- Django  
-- Django REST Framework  
-- Diseño de Bases de Datos  
-
-### **Otros**
-- Git & GitHub  
-- Normalización de bases de datos  
-- Diagramas entidad-relación  
-
----
+| Área           | Tecnologías |
+|---------------|-------------|
+| **Backend**   | Python · Django · Django REST Framework |
+| **Frontend**  | HTML5 · CSS3 · JavaScript |
+| **Bases de Datos** | MySQL · MariaDB · MongoDB |
+| **Herramientas** | Git · GitHub · Visual Studio Code · Figma |
+| **Conceptos** | POO · APIs REST · Diseño y modelado de bases de datos · Control de versiones |
 
 
 ---
 
-## Secciones del Portafolio
+## Proyectos Destacados
 
-✔ Inicio  
-✔ Blog 
-✔ Proyectos  
-✔ CV  
-✔ Contacto  
+### Portfolio Web Personal
+Sitio web personal desarrollado con **HTML, CSS y JavaScript**, enfocado en:
+- rendimiento y optimización (PageSpeed alto)
+- estructura semántica y SEO
+- código modular y mantenible
 
----
-
-## Proyecto Destacado: Mi Portafolio
-
-Este repositorio corresponde a mi portafolio personal, donde muestro mis tecnologías, proyectos, experiencia y conocimientos.
-
-**Características principales:**
-- Diseño responsive  
-- Estructura modular  
-- Código limpio y organizado  
-- Integración de secciones educativas  
-- Uso eficiente de assets e imágenes  
+🔗 **Demo:** https://santacruzprogramador.github.io/santacruzjose/  
 
 ---
 
-## Contacto
+## Educación
 
-Si deseas comunicarte conmigo, aquí tienes mis canales genéricos:
+**Técnico Superior en Administración Computarizada de Empresas**  
+Escuela Superior de Comercio N°2  
+📍 Jardín América, Misiones, Argentina  
 
-- **Email:** contacto@ejemplo.com  
-- **GitHub:** https://github.com/usuario  
-- **LinkedIn:** https://linkedin.com/in/usuario  
-- **Portafolio:** (enlace cuando esté publicado)  
-- **CV:** disponible bajo solicitud  
-
-*Puedes reemplazar estos enlaces por los reales cuando los tengas listos.*
+**Secundario – Economía y Gestión de las Organizaciones**  
+Escuela Superior de Comercio N°2  
+📅 Año de egreso: 2011
 
 ---
 
-## Licencia
+## Agradecimientos
 
-Este proyecto es de uso personal.  
-Puedes explorar, aprender o tomar ideas de la estructura, pero no está permitido copiarlo íntegramente como portafolio propio.
+Este proceso de aprendizaje fue posible gracias a un enfoque constante de
+**investigar, contrastar y validar información**, apoyándome en diversas fuentes.
 
+Agradezco especialmente a:
+
+- **La documentación oficial** de las tecnologías utilizadas, como principal
+  referencia para el desarrollo de buenas prácticas.
+- **Creadores de contenido educativo**, como:  
+  - **Jon MirCha** — https://www.youtube.com/@jonmircha  
+  - **Soy Dalto** — https://www.youtube.com/@soydalto  
+  por compartir conocimiento claro y accesible para desarrolladores en formación.
+- **La comunidad de desarrollo**, incluyendo personas que crean y mantienen
+  sitios web, blogs técnicos y foros de programación, que aportan soluciones,
+  debates y experiencias reales.
+- **Herramientas de inteligencia artificial**, como **ChatGPT**, utilizadas
+  como apoyo para reforzar conceptos, analizar alternativas y mejorar el proceso
+  de aprendizaje.
+  
 ---
 
-## Notas técnicas y resolución de problemas
+## Estado actual
+- En búsqueda de **mi primer empleo en IT**
+- Aprendiendo y practicando continuamente
+- Abierto a oportunidades **Junior / Trainee**
 
-### 🛠 Bug no corregido (Modal dinámico)
-
-- El modal cargado con `fetch()` no se inicializaba correctamente en Chrome.
-- Causa: uso de `DOMContentLoaded` en scripts que se ejecutaban después de que el evento ya había ocurrido.
-- El problema no pudo resolverse inicialmente utilizando ChatGPT u otras herramientas automáticas,
-  por lo que fue necesario realizar análisis manual del flujo de ejecución y pruebas en distintos navegadores.
-- Solución final: inicialización segura usando `document.readyState`
-  junto con `script.onload` para garantizar el orden correcto de carga del HTML y el JavaScript.
-
-
-### 🛠 Bug corregido (Modal dinámico)
-
-- El modal de contacto cargado dinámicamente con `fetch()` no se inicializaba correctamente en **Chrome, Brave y Edge**.
-- Causa: uso de `DOMContentLoaded` en scripts que se ejecutaban después de que el evento ya había ocurrido, debido a la carga asíncrona del HTML.
-- El problema no fue solucionado inicialmente con ChatGPT, por lo que fue necesario realizar análisis manual del flujo de ejecución y pruebas en múltiples navegadores.
-- Solución final: cambio a un patrón de auto-ejecución (IIFE) en `contact-modal.js` y garantía de carga secuencial mediante control explícito del orden de inserción del script dinámico.
-
-
+---
