@@ -258,6 +258,7 @@ p {
   width: auto;
   position: static;
   align-items: center;
+  gap: 2rem;
 }
 }
 
