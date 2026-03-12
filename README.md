@@ -4,7 +4,7 @@
 📍 [Jardín América, Misiones, Argentina](https://www.google.com/maps/search/?api=1&query=Jardín+América+Misiones+Argentina)  
 📧 [santacruzprogramador@gmail.com](mailto:santacruzprogramador@gmail.com)  
 📞 [WhatsApp](https://wa.me/543743615520?text=Hola%20José,%20vi%20tu%20portfolio%20y%20quisiera%20contactarte.)  
-🌐 [Portfolio](https://santacruzprogramador.github.io/santacruzjose/)  
+🌐 [Portfolio](https://santacruzprogramador.github.io/portfolio-santacruz//)  
 💼 [LinkedIn](https://www.linkedin.com/in/jos%C3%A9-alberto-santacruz-28410439a/)
 
 
@@ -32,7 +32,7 @@ Sitio web personal desarrollado con **HTML, CSS y JavaScript**, enfocado en:
 - estructura semántica y SEO
 - código modular y mantenible
 
-🔗 **Demo:** https://santacruzprogramador.github.io/santacruzjose/  
+🔗 **Demo:** https://santacruzprogramador.github.io/portfolio-santacruz//  
 
 ---
 
